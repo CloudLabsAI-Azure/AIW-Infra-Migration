@@ -41,15 +41,15 @@ In this exercise, you will deploy a Test Failover to the replicated Virtual Mach
     
  >**Note:** We have successfully configured the test failover over the replicated Virtual Machine.
   
-1. Go back to **Recovery Service Vault** page, click on **Replicated Items (1)** under **Protected Items** and select **AzureArcVM (2)**.
+11. Go back to **Recovery Service Vault** page, click on **Replicated Items (1)** under **Protected Items** and select **AzureArcVM (2)**.
 
     ![Screenshot of the replicate items.](Images/hol3-e3-s2.png "replicate items") 
     
-1. On the **AzureArcVM** page, click on **Cleanup test failover**.  
+12. On the **AzureArcVM** page, click on **Cleanup test failover**.  
 
     ![Screenshot of the Cleanup test failover.](Images/hol3-e3-s8.png "Cleanup test failover") 
     
-1. On the **Test failover cleanup** page, enter `Test failover ok.` under **Notes (1)** and **check for the Testing is complete. Delete test failover virtual machines (2)** and then click on **Ok (3)**
+13. On the **Test failover cleanup** page, enter `Test failover ok.` under **Notes (1)** and **check for the Testing is complete. Delete test failover virtual machines (2)** and then click on **Ok (3)**
 
     ![Screenshot of the Cleanup test failover.](Images/hol3-e3-s9.png "Cleanup test failover") 
         
