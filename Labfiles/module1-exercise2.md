@@ -1,8 +1,5 @@
 ### HOL1: Exercise 2: Set up your environment on Azure to migrate servers
 
-## Before the hands-on lab
-
-Refer to the [Before the HOL - Line-of-business application migration]([./Before%20the%20HOL%20-%20Line-of-business%20application%20migration.md](https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Infra-Migration/main/Labfiles/Landingzone.md)) setup guide manual to understand the lab setup.
 
 > **Note**: The resources are already pre-deployed in the environement. Users do not have to deploy the landing zone.
 
@@ -12,7 +9,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
 1. Select **Assess** under **Azure Migrate: Discovery and assessment** and click on **Azure VM** to start a new migration assessment.
 
-   ![Screenshot of the Azure Migrate portal blade, with the '+Assess' button highlighted.](Images/upd-start-assess-v2.png "Start assessment")
+   ![Screenshot of the Azure Migrate portal blade, with the '+Assess' button highlighted.](Images/e2-t1-s1.png "Start assessment")
 
 2. On the Basics blade, ensure the Assessment type to be **Azure VM** and Discovery Source to be **Servers discovered from Migrate Appliance**. Under **Assessment settings**, select **Edit**.
 
@@ -41,7 +38,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
 6. In Azure Migrate, on the **Servers, databases, and web apps** blade, select **Refresh** periodically until the number of assessments shown is **1** (This may take few minutes). Once the assessments count is updated, click on **1** that is next to **Total** under **Assessments**.  
 
-    ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/upd-E1T4S6.png "Azure Migrate - Assessments (count)")
+    ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/e2-t1-s6.png "Azure Migrate - Assessments (count)")
     
 7. Select **Assessments** under **Azure Migrate: Discovery and assessment** to see a list of assessments. Then select the actual assessment.
 
@@ -55,7 +52,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 1. Return to the **Azure Migrate** blade in the Azure Portal, select **Servers, databases and web apps (1)**. Under **Discovery and assessment** select **Groups (2)**.
 
-    ![](Images/upd-E1T5S1.png)   
+    ![](Images/e2-t2-s1.png)   
 
 2. Select the **SmartHotel VMs** group to see the group details. 
 
@@ -90,7 +87,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 9. From **Hyper-V Manager** console, select **smarthotelweb1** and select **Connect**.
 
-   ![Screenshot from Hyper-V manager highlighting the 'Connect' button for the smarthotelweb1 VM.](Images/Hyperv4.png "Connect to smarthotelweb1")
+   ![Screenshot from Hyper-V manager highlighting the 'Connect' button for the smarthotelweb1 VM.](Images/e2-t2-s9.png "Connect to smarthotelweb1")
 
 10. Select **Connect** again when prompted and log in to the **Administrator** account using the password **<inject key="SmartHotelHost Admin Password" />**.
 

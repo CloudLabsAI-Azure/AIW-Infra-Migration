@@ -35,7 +35,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
 6. On the **Servers, databases and web apps** blade, select **Refresh** periodically until the number of assessments shown is **1** (This may take few minutes). Once the assessments count is updated, click on **1** that is next to **Total** under **Assessments**.  
 
-    ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/E1T4S6.png "Azure Migrate - Assessments (count)")
+   ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/E1T4S6.png "Azure Migrate - Assessments (count)")
     
 7. Select **Assessments** under **Azure Migrate: Discovery and assessment** to see a list of assessments. Then select the actual assessment.
 
@@ -49,7 +49,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 1. Return to the **Azure Migrate** blade in the Azure Portal, select **Servers, databases and web apps (1)**. Under **Discovery and assessment** select **Groups (2)**,
 
-    ![](Images/E1T5S1.png)   
+   ![](Images/E1T5S1.png)   
 
 2. Select the **Linux VMs** group to see the group details. 
 
@@ -68,7 +68,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
    - Log Analytics workspace: Click on **Create new** and enter **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" />**
    - Log Analytics workspace location: Select **East US** from the dropdown.
 
-  ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](Images/createLAW.png "OMS Workspace settings")
+   ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](Images/createLAW.png "OMS Workspace settings")
 
 6. Wait for the workspace to be deployed. Once it is deployed, navigate to **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" />** by clicking on it.
 
@@ -126,7 +126,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
     sh InstallDependencyAgent-Linux64.bin -s
     ```
 
-    ![Screenshot showing that the Dependency Agent install on Linux was successful.](Images/da-linux-done.png "Dependency Agent installation was successful")
+   ![Screenshot showing that the Dependency Agent install on Linux was successful.](Images/da-linux-done.png "Dependency Agent installation was successful")
     
 
 17. Return to the Azure Portal and refresh the Azure Migrate **SmartHotel VMs** VM group blade. The 3 VMs on which the dependency agent was installed should now show their status as **Installed**. (If not, refresh the page **using the browser refresh button**, not the refresh button in the blade.  It may take up to **5 minutes** after installation for the status to be updated.)
@@ -141,7 +141,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
    
 19. Take a few minutes to explore the dependencies view. Expand each server to show the processes running on that server. Select a process to see process information. See which connections each server makes.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](Images/dependencies1.png "Dependency map")
+    [Screenshot showing the dependencies view in Azure Migrate.](Images/dependencies1.png "Dependency map")
  
 #### Task summary 
 
