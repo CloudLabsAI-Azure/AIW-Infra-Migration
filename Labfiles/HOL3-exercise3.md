@@ -11,7 +11,7 @@ In this exercise, you will deploy a Test Failover to the replicated Virtual Mach
    
     ![Screenshot of the search Recovery service vaults.](Images/upd-search-asr.png "Recovery service vaults")
     
-1. Select the Recovery service vault that you used in the previous exercise.    
+1. Select the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-MigrateVault-_xxx_** that you used in the previous exercise.    
     
 1. On the **Recovery Service Vault** page, click on **Replicated Items (1)** under **Protected Items** and select **AzureArcVM (2)** that you replicated in the previous exercise.     
 
