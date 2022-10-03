@@ -1,6 +1,6 @@
 ### HOL3: Exercise 4: Failover the infrastructure to Azure Cloud.
 
-In this exercise, you will deploy the Failover from on-premises to Azure. After setting up replication to Azure for on-premises machines, when your on-premises site goes down, you fail those machines over to Azure. After failover, Azure VMs are created from replicated data.
+In this exercise, you will deploy the Failover from on-premises to Azure. After setting up replication to Azure for on-premises machine, when your on-premises site goes down, you fail the machine over to Azure. After failover, Azure VM is created from replicated data.
 
 1. If you are not logged in already, click on Azure portal shortcut that is available on the desktop and log in with below Azure credentials.
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
@@ -10,9 +10,9 @@ In this exercise, you will deploy the Failover from on-premises to Azure. After 
    
    ![Screenshot of the search Recovery service vaults.](Images/upd-search-asr.png "Recovery service vaults")
     
-1. Select the Recovery service vault that you used in the previous exercise.    
+1. Select the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-MigrateVault-_xxx_** that you used in the previous exercise.    
     
-1. On the **Recovery Service Vault page**, click **Replicated Items (1)** under **Protected Items** and select **smartholweb1 (2)** that you replicated in the previous exercise.     
+1. On the **Recovery Service Vault page**, click **Replicated Items (1)** under **Protected Items** and select **AzureArcVM (2)** that you replicated in the previous exercise.     
 
    ![Screenshot of the replicate items.](Images/hol3-e4-s4.png "replicate items") 
    
