@@ -35,7 +35,7 @@ In this exercise, you will deploy disaster recovery of on-premises Hyper-V VM to
 
    - Post-failover resource group: **SmartHotelRG (1)**
    
-   - Storage account: **migrate _xxxx_ (2)** (default storage account that was auto-created in previous HOL1)
+   - Storage account: **migrate _xxxx_ (2)** (default storage account that was auto-created previously in HOL1)
    
    - Virtual network: **SmartHotelVNet (3)**
 
@@ -49,7 +49,7 @@ In this exercise, you will deploy disaster recovery of on-premises Hyper-V VM to
 
    ![Screenshot of the vm selection.](Images/hol3-e2-s8.png "vm selection")
 
-1. Under **Replication settings** tab, select **Windows** as OS-disk type for AzureArcVM from the drop-down list.
+1. Under **Replication settings** tab, select **Windows (1)** as OS-disk type for AzureArcVM from the drop-down list and then click on **Next (2)**.
 
    ![Screenshot of the Replication settings.](Images/hol3-e2-s9.png "Replication settings")
     
@@ -62,5 +62,5 @@ In this exercise, you will deploy disaster recovery of on-premises Hyper-V VM to
 1. Select **Refresh (1)** occasionally and wait until the replicated AzureArcVM have a **Protected (2)** status, which shows the initial replication is complete. This will take 15-20 minutes.
 
 
-   ![Screenshot of the status-protected.](Images/hol3-e2-s11.png "status-protected")
+   ![Screenshot of the status-protected.](Images/hol3-e2-s13.png "status-protected")
    
