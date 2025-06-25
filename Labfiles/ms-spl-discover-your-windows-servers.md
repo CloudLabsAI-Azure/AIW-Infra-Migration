@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 90 minutes
 
-In this Hands-on Lab, you will discover on-prem servers using use Azure Migrate Appliance. The Azure Migrate appliance is a tool provided by Microsoft to assist in the discovery and assessment of on-premises infrastructure for migration to Azure. It collects detailed information about servers, applications, databases, and workloads in your environment, including configuration, performance, and dependencies.
+In this Hands-on Lab, you will discover on-prem servers using the Azure Migrate Appliance. The Azure Migrate appliance is a tool provided by Microsoft to assist in the discovery and assessment of on-premises infrastructure for migration to Azure. It collects detailed information about servers, applications, databases, and workloads in your environment, including configuration, performance, and dependencies.
 
 ## Lab Objectives:
 
@@ -27,7 +27,7 @@ In this task, you will setup your Azure Migrate project to discover the Hyper-V 
  
     ![](Images/DAA-image5.png)
  
-1. Under **Are your servers virtualized?**, select **Yes, with Hyper-V** from the **drop-down** menu.
+1. Under **Are your servers virtualized?**, from the **drop-down (1)** menu, select **Yes, with Hyper-V (2)**.
 
     ![](Images/DAA-image4.png)
 
@@ -54,11 +54,11 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
 1. Now, to Connect to your on-premises environment, Go to **Start (1)** button in the VM, search for **Hyper-V Manager (2)** there and select it. You will be accessing your infrastructure from the hyper-V manager and will be connecting to the Azure Migrate Appliance VM to start the process of discovery.  
 
-    > You can also open the **Hyper-V manager** by clicking on the ![](Images/Icon-hyperv.png) icon that is present in the taskbar. 
+    >**Note**: You can also open the **Hyper-V manager** by clicking on the ![](Images/Icon-hyperv.png) icon that is present in the taskbar. 
 
       ![](Images/DAA-image9.png)
     
-1. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (1)**. You should now see the AzureMigrateAppliance VM and seven VMs(2) that comprise the on-premises SmartHotel application and will be used in the next HOLs.
+1. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (1)**. You should now see the AzureMigrateAppliance VM and seven **VMs (2)** that comprise the on-premises SmartHotel application and will be used in the next HOLs.
 
     ![](Images/DAA-image10.png)
      
@@ -100,7 +100,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      ![](Images/DAA-image17.png)
 
-1. Wait for the **Appliance auto-update status (1)** to complete and select **Login (2)**. 
+1. Wait for the **Appliance auto-update status** to complete and select **Login**. 
 
     ![](Images/DAA-image18.png)
    
@@ -173,13 +173,13 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
 1. Wait for the Azure Migrate status to show **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table.
 
-1. Return to the **JumpVM** then to **Azure Migrate** blade in the Azure portal.  Select **Servers, databases, and web apps (1)**, then select **Refresh (2)**.  Under **Azure Migrate: Servers, databases and web apps** you should see a **count (3)** of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 7 discovered servers are shown. This may take several minutes.
-
    ![](Images/DAA-image31.png)
-
 
    >**Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
 
+1. Return to the **JumpVM** then to **Azure Migrate** blade in the Azure portal.  Select **Servers, databases, and web apps (1)**, then select **Refresh (2)**.  Under **Azure Migrate: Servers, databases and web apps** you should see a **count (3)** of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 7 discovered servers are shown. This may take several minutes.
+
+    ![](Images/DAA-image31(1).png)
 
 ## Summary 
 
