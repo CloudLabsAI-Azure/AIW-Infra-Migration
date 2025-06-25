@@ -55,9 +55,9 @@ Welcome to your Discover And Assess On-premises Windows & SQL Servers Workshop! 
 
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and **Lab Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![](./Images/lab-guide.png)
+![](./Images/lab-guide(1).png)
 
 ### Virtual Machine & Lab Guide
  
@@ -67,19 +67,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](./Images/environment-tab.png)
+![](./Images/environment-tab(1).png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](./Images/split-window.png)
+![](./Images/split-window(1).png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![](./Images/resources-tab.png)
+![](./Images/resources-tab(1).png)
 
 ## Lab Guide Zoom In/Zoom Out
 
