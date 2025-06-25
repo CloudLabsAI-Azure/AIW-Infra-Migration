@@ -1,6 +1,6 @@
 # Discover And Assess On-premises Windows & SQL Servers
 
-### Overall Estimated Duration: 4 hours
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
 
@@ -14,9 +14,9 @@ In this Hands-On Lab, you will use Azure Migrate: Server Assessment to evaluate 
 
 - **Discover your Windows Server:** Leverage the Azure Migrate Appliance to comprehensively discover and assess your Windows Server environment with Hyper-V, enabling detailed analysis and readiness evaluation for a seamless migration to Azure.
 
-- **Set up your environment on Azure to migrate servers:** Develop a migration assessment and configure dependency visualization to facilitate seamless system transition and dependency analysis for seamless server migration. This includes preparing the discovered on-premises servers, configuring necessary permissions, deploying tools, and ensuring connectivity between on-premises infrastructure and Azure.
+- **Set up your environment on Azure to migrate servers:** Develop a migration assessment and configure dependency visualization to facilitate seamless system transition and dependency analysis for seamless server migration. This includes preparing the discovered on-premises servers, configuring necessary permissions, deploying tools, and ensuring connectivity between the on-premises infrastructure and Azure.
 
-- **Perform database assessments:** Use Azue SQL Migration extension in Azure Data Studio to assess on-premises database named WideWorldImporters for Azure readiness. Evaluate performance metrics, compatibility issues, and dependencies to create a comprehensive migration strategy that ensures a smooth transition to the Azure platform.
+- **Perform database assessments:** Use the Azure SQL Migration extension in Azure Data Studio to assess the on-premises database named WideWorldImporters for Azure readiness. Evaluate performance metrics, compatibility issues, and dependencies to create a comprehensive migration strategy that ensures a smooth transition to the Azure platform.
 
 ## Prerequisites
 
