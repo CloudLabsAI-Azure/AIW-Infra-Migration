@@ -14,21 +14,21 @@
 
 4. Select **smarthotelweb1** VM to create image.
 
-2. On the page for the VM, on the upper menu, select **Capture** and then select **Image** in the dropdown.
+5. On the page for the VM, on the upper menu, select **Capture** and then select **Image** in the dropdown.
    
    ![](Images/upd-capture-1.png)
 
-4. To create the image in a gallery, select **Yes, share it to a gallery as an image version** under **Instance details**.
+6. To create the image in a gallery, select **Yes, share it to a gallery as an image version** under **Instance details**.
 
-   ![](Images/md1-ex-4-t1-s6.png)
+   ![](Images/create-image-6-0407.png)
 
-5. In **Gallery details**, create a new gallery by selecting **Create new (1)** and enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)** and click **Ok (3)**.
+7. In **Gallery details**, create a new gallery by selecting **Create new (1)** and enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)** and click **Ok (3)**.
 
-   ![](Images/upd-e4-t1-s7.png)
+   ![](Images/create-image-7-0407.png)
 
-6. In the Operating System state, select **Specialized**.
+8. In the Operating System state, select **Specialized**.
 
-7. Select an image definition and click **Create new (1)** and create a VM Image definition by providing the following details, and then click **Ok (6)**: 
+9. Select an image definition and click **Create new (1)** and create a VM Image definition by providing the following details, and then click **Ok (6)**: 
   
    - Image VM definition name: **imagedefinition<inject key="DeploymentID" enableCopy="false" /> (2)**
 
@@ -38,29 +38,27 @@
   
    - SKU: **migration (5)**
 
-   ![](Images/upd-4-t1-s9.png)
+       ![](Images/create-image-9-0407.png)
 
-8. Enter an **image version** number. If this is the first version of this image, type **1.0.0**
+10. Enter an **image version** number. If this is the first version of this image, type **1.0.0**
 
-9. Select **Review + create**.
+11. Select **Review + create**.
 
-10. After validation passes, select **Create** to create the image and wait for the image creation.
+12. After validation passes, select **Create** to create the image and wait for the image creation. Once the image is created, click on **Go to resource**. 
 
-11. On the page for the image gallery, on the upper menu, select **+ Create VMSS**.
+13. On the page for the image gallery, on the upper menu, select **+ Create VMSS**.
 
-    ![](Images/upd-vmss1.png)
+    ![](Images/image-overview-0407.png)
 
-12. Under the Basics tab, enter the **Virtual Machine name scale set** name as **migrationscaleset<inject key="DeploymentID" enableCopy="false" />**
+14. Under the Basics tab, enter the **Virtual Machine name scale set** name as **migrationscaleset<inject key="DeploymentID" enableCopy="false" />**
 
-    ![](Images/upd-vmname.png)
+    ![](Images/createvmss1-0407.png)
 
-13. Select **Standard_D2s_v3** for the **size**.
+15. Select **Standard_D2s_v3 (1)** for the **size**.
 
-14. Select the License type as **Windows Server**.
+16. Select the License type as **Windows Server (2)** and click on **Review + create (3)** and then **Create**.
 
-     ![](Images/upd-License.png)
-
-15. Select **Review + create** and then **Create**.
+     ![](Images/createvmss2-0407.png)
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click on the Validate button.
@@ -70,9 +68,13 @@
     
     <validation step="3435fc35-adbc-4789-885e-d2231cc767d4" />
 
+#### Task summary 
+
+In this task, you have created an Image from the smarhotelweb1 virtual machine, and using that image, you successfully created a Virtual machine scale set (VMSS).
+
 ### Task 2: Azure auto manage
 
-In this task, you will enable Automanage on existing machines.
+Azure Automanage automatically configures best practice services like backup, monitoring, and security on your virtual machines. When enabled on an existing machine, it applies these configurations without manual setup. This helps ensure compliance, operational efficiency, and reduces management overhead. In this task, you will enable Automanage on existing machines.
 
 1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials below.
     
@@ -80,11 +82,11 @@ In this task, you will enable Automanage on existing machines.
     
     * Azure Password: <inject key="AzureAdUserPassword"></inject>
 
-2. In the search bar, search for and select **Automanage – Azure machine best practices**.
+2. In the search bar, search for and select **Automanage**.
 
 3. From the left side panel select **Automanage machines (1)** and click on **+Enable on existing VM (2)**.
    
-   ![](Images/upd-zero-vm-list-view.png)
+   ![](Images/T2S3-0407.png)
 
 4. Under **Configuration profile**, select your profile type: **Azure Best Practices - Production or Azure Best Practices - Dev/Test, or Custom profile**.
    
@@ -106,18 +108,16 @@ In this task, you will enable Automanage on existing machines.
 
 6. Click **Create**.
 
-  ## You have successfully completed the Lab
+#### Task summary 
 
-  >**Note**: If you complete the lab ahead of the allotted time, please review and validate. Once validation is successful, you may proceed to delete the respective lab.
+In this task, you have successfully enabled Automanage on a virtual machine. 
 
-- Here are the steps to delete the lab:
+### Summary
 
-1. On the environment page, click the **delete icon (1)** in the top right corner.
-   
-2. Ensure all validations are successful.
-   
-3. Click **Proceed to Delete (2)**.
+In this lab, you learned about:
+ - How to create an image using an existing virtual machine
+ - How to create a Virtual Machine Scale Set (VMSS) using the image
+ - and how to enable Automanage on a virtual machine.
 
-![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/dlt-1.jpg "Replication summary")
+## You have successfully completed the Lab
 
-![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/dlt-2.jpg "Replication summary")
