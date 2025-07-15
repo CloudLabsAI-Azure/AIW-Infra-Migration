@@ -21,94 +21,99 @@ After completing this exercise, you will:
  
     ![Screenshot of the All services overview blade.](Images/Allservices1new.png "All services Overview blade")
 
-1. In the search bar, search for **Azure Migrate** and select it from the suggestions to open the Azure Migrate Overview blade, as shown below. 
+2. In the search bar, search for **Azure Migrate** and select it from the suggestions to open the Azure Migrate Overview blade, as shown below. 
  
     ![Screenshot of the Azure migrate overview blade.](Images/hol1-ex-1-s3new.png "Azmigrate Overview blade")
 
-1. Under **Migration goals**, click **Servers, databases and web apps (1)** and then select **Discover (2)** and choose **Using appliance (3)** under **Azure Migrate: Discovery and assessment** to open the **Discover** blade.
+3. Under **Migration goals**, click **Servers, databases and web apps (1)** and then select **Discover (2)** and choose **Using appliance (3)** under **Azure Migrate: Discovery and assessment** to open the **Discover** blade.
  
     ![](Images/18-04-2024(1)new.png)
  
-1. In the **Discover** blade, under **Are your servers virtualized? (1)**, select **Yes, with Hyper-V (2)** from the drop-down list.
+4. In the **Discover** blade, under **Are your servers virtualized? (1)**, select **Yes, with Hyper-V (2)** from the drop-down list.
 
     ![](Images/mod-1-ex1-s5new.png)
 
-1.  In **1: Generate project key**, provide the below name for the **Azure Migrate appliance (1)** that you will set up for the discovery of Hyper-V VMs. Select **Generate key (2)** to start the creation of the required Azure resources.
+5.  In **Step 1: Generate project key**, enter a name for the **Azure Migrate appliance (1)** to be used for discovering Hyper-V VMs, then click **Generate key (2)** to initiate the creation of the necessary Azure resources.
 
      ```
      SmartHotelAppl
      ```
     ![Screenshot of the Azure Migrate 'Discover machines' blade showing the 'Generate Azure Migrate project key' section.](Images/azmigrate-03new.png "Generate Azure Migrate project key")
 
-1.  **Wait** for the key to be generated, then copy the **Azure Migrate project key** to your clipboard.
+6.  Wait for the **Azure Migrate project key** to be generated, then click the **copy icon** to securely copy the key to your clipboard. This key will be required during the appliance registration process.
 
     ![Screenshot of the Azure Migrate 'Discover machines' blade showing the Azure Migrate project key.](Images/upd-keynew.png "Azure Migrate project key")
 
-1.  Read through the instructions on how to download, deploy and configure the Azure Migrate appliance, then close the 'Discover machines' blade by clicking on cross button **X** (do **not** download the .VHD file or .ZIP file, the .VHD has already been downloaded for you). 
- 
+7.  Review the steps for downloading, deploying, and configuring the Azure Migrate appliance, then click the **Close** button to exit the Discover blade (do not download the .VHD or .ZIP file, as the .VHD has already been provided.)
+
     ![Screenshot of the closing the blade.](Images/hol1-ex-1-s8new.png "Closing the Azure migrate appliance blade")
 
-1. As we have created the Azure Migrate project key for the Discover and Assessment, you will be accessing the Hyper-V manager in the next tasks to start the discovery process with the help of the Azure Migrate Appliance.
+8. Now that the Azure Migrate project key has been generated, you will proceed to access Hyper-V Manager in the next task to initiate the discovery process using the Azure Migrate appliance.
 
 ## Task 2: Deploy, configure, and connect the Azure Migrate appliance
 
 **Objective:** In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect it to your Azure Migrate project.
 
-1. Now, to connect to your on-premises environment, go to the **Start (1)** button in the VM, search for **Hyper-V Manager (2)** there and select it. You will be accessing your infrastructure from the hyper-V manager and will be connecting to the Azure Migrate Appliance VM to start the process of discovery.  
-
-    > You can also open the **Hyper-V manager** by clicking on the ![](Images/Icon-hyperv.png) icon that is present in the taskbar. 
+1. To connect to your on-premises environment, Click the **Start (1)** button, type **Hyper-V Manager (2)** in the search bar, and select **Hyper-V Manager (3)** from the results. You will access your infrastructure through Hyper-V Manager and connect to the Azure Migrate Appliance VM to begin the discovery process.
 
       ![Screenshot of Hyper-V Manager, with the 'Hyper-V Manager' action highlighted.](Images/upd-hyper-v-managernew.png "Hyper-V Manager")
 
-1. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (1)**. You should now see the AzureMigrateAppliance VM and seven VMs that comprise the on-premises SmartHotel application and will be used in the next HOLs.
+2. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (1)**. You will see the **AzureMigrateAppliance VM (2)** along with seven other VMs that make up the on-premises SmartHotel application, which will be used in the upcoming hands-on labs.
 
     ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/HOL1-EX1-S11new.png "Hyper-V Manager")
-     
-1. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then select **Start (2)** on the right if not already running.
+
+3. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Start (2)** on the right pane if the VM is not already running.
 
     ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/HOL1-EX1-S12new.png "Start AzureMigrateAppliance")
     
-     > **Note:** If you get an error pop while starting the **AzureMigrateAppliance** VM try to **Turn off** the **AzureArcVM**, then start the **AzureMigrateAppliance** VM again.
 
-1. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then select **Connect (2)** on the right.
+
+     > **Note:** If an error occurs while starting the **AzureMigrateAppliance** VM, try turning off the **AzureArcVM** first, then start the **AzureMigrateAppliance** VM again.
+
+4. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Connect (2)** on the right pane.
 
     ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/HOL1-EX1-S13new.png "Connect to AzureMigrateAppliance")    
-   
-1. Under Connect to AzureMigrateAppliance, click **Connect** and then log into the VM with the administrator password **<inject key="SmartHotel Admin Password" />** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
+
+
+5. Click **Connect** to initiate the virtual machine session for **AzureMigrateAppliance**.
  
     ![Screenshot of the Connect to AzureMigrateAppliance.](Images/HOL1-EX1-S14new.png)
 
-1. Launch the **Azure Migrate appliance configuration Manager wizard** using the shortcut available on the desktop (wait for a minute or two, the browser will open showing the Azure Migrate appliance configuration wizard)
+6. Log into the VM using the administrator password **<inject key="SmartHotel Admin Password" />**.
+    
+    ![Screenshot of the Connect to AzureMigrateAppliance.](Images/login-vmnew.png)
 
-     > **Note:** If you are prompted with New updates available pop-up when connected with AzureMigrateAppliance VM, just click on View updates and then close the settings panel for now.
+7. Launch the **Azure Migrate appliance configuration Manager wizard** by double-clicking the shortcut on the desktop.
+
+     > **Note:** If a New updates available pop-up appears when connected to the AzureMigrateAppliance VM, click View updates, then close the settings panel for now.
 
     ![Screenshot of the Azure Migrate appliance terms of use.](Images/HOL1-EX1-S15new.png "Desktop shortcut")
     
     >**Note:** If you receive a prompt asking for credentials after launching the **Azure Migrate appliance configuration wizard** using the shortcut available on the desktop, please follow the instructions from [here](https://github.com/CloudLabsAI-Azure/Know-Before-You-Go/blob/main/AIW-KBYG/AIW-Infrastructure-Migration.md#1-exercise1---task3---step3) to connect to the Azure Migrate appliance configuration wizard.
 
-1. On opening the appliance configuration wizard, if a pop-up with the license terms appears, accept the terms by selecting **I agree**.
+8. When the Azure Migrate appliance configuration wizard opens, you may see a pop-up with the license terms. Please read and accept the terms by clicking the **I agree** button to proceed.
 
     ![Screenshot of the Azure Migrate appliance terms of use.](Images/upd-terms.png "Terms of use")
 
-1. Under **Set up prerequisites**, the following two steps to verify Internet connectivity and time synchronization should pass automatically.
+9. Under **Set up prerequisites**, ensure that both **Check connectivity to Azure** and **Check time is in sync with Azure** complete successfully. These steps validate internet connectivity and time synchronization and should complete automatically.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the first step 'Set up prerequisites' in progress. The internet connectivity and time sync steps have been completed.](Images/upd-prereqnew.png "Set up prerequisites")
 
-1. At the next phase of the wizard, **Check latest updates and register appliance**, paste the **Azure Migrate project key (1)** that you copied from the Azure portal earlier and select **Verify (2)** to verify the Azure Migrate project key.
+10. At the next step, **Check latest updates and register appliance**, paste the **Azure Migrate project key (1)** that you copied from the Azure portal earlier, then click **Verify (2)** to validate the project key.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/azmigrate-04.1new.png "Register with Azure Migrate")
 
-1. **Wait** for some time while the wizard installs the latest Azure Migrate updates. If prompted for credentials, enter username **Administrator** and password **<inject key="SmartHotel Admin Password" />**. Once the Azure Migrate updates are completed, you may see a pop-up if the management app restart is required, and if so, select **Refresh** to restart the app.  
+11. **Wait** for some time while the wizard installs the latest Azure Migrate updates. If prompted for credentials, enter username **Administrator** and password **<inject key="SmartHotel Admin Password" />**. Once the Azure Migrate updates are completed, you may see a pop-up if the management app restart is required, and if so, select **Refresh** to restart the app.  
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the prompt to restart the management app after installing updates.](Images/upd-refreshnew.png "New update installed - Refresh")
 
-1. Wait for the **Appliance auto-update status (1)** to complete and select **Login (2)**. Please note that it can take up to 5 minutes for the Appliance status to complete.
+12. Wait for the **Appliance auto-update status (1)** to complete and select **Login (2)**. Please note that it can take up to 5 minutes for the Appliance status to complete.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/30052025(7)new.png "Azure Migrate login code")
    
     > Now, follow the instructions below to complete the login process.
     
-1. At first, you will be presented with a **Continue with Azure login** pop-up. On the **Continue with Azure login** pop-up dialog, click on **Copy code & Login**.
+13. At first, you will be presented with a **Continue with Azure login** pop-up. On the **Continue with Azure login** pop-up dialog, click on **Copy code & Login**.
    
      ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/azmigrate-05new.png "Azure Migrate login code")
   
