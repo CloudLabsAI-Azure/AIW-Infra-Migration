@@ -107,21 +107,21 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the prompt to restart the management app after installing updates.](Images/upd-refreshnew.png "New update installed - Refresh")
 
-12. Wait for the **Appliance auto-update status (1)** to complete and select **Login (2)**. Please note that it can take up to 5 minutes for the Appliance status to complete.
+12. Wait for the **Appliance auto-update status (1)** to show success (may take up to 5 minutes), then click **Login (2)** to proceed.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/30052025(7)new.png "Azure Migrate login code")
    
     > Now, follow the instructions below to complete the login process.
-    
-13. At first, you will be presented with a **Continue with Azure login** pop-up. On the **Continue with Azure login** pop-up dialog, click on **Copy code & Login**.
+
+13. When the **Continue with Azure Login** pop-up appears, click **Copy code & Login** to copy the device code and open the Azure authentication page.
    
      ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/azmigrate-05new.png "Azure Migrate login code")
   
-1. This will open an Azure login prompt in a new browser tab (if it doesn't appear, make sure the pop-up blocker in the browser is disabled). Paste the **code (1)** and click on **Next (2)**. You will then be asked for your Azure portal credentials to complete the login process.
+14. This will open an Azure login prompt in a new browser tab (disable pop-up blocker if it doesn't appear), paste the **code (1)**, click **Next (2)**, and enter your Azure portal credentials to complete the login process.
 
      ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/azmigrate-06new.png "Azure Migrate Microsoft login")
 
-1. Login using the below Azure credentials and select **Continue** on the **Are you trying to sign in to Microsoft Azure PowerShell?** window to complete the login process. Once you have logged in, return to the Azure Migrate Appliance tab and the appliance registration will start automatically and display the below message once the registration is successful.
+15. Login using the provided Azure credentials and click **Continue** on the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt. After successful login, return to the **Azure Migrate Appliance** tab, registration will begin automatically and show the success message once complete.
     
      * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
      
@@ -135,13 +135,13 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 
 In this task, you will configure discovery settings, initiate VM discovery, and validate the results in Azure Migrate.
 
-1. In **Step 1: Provide Hyper-V host credentials for the discovery of Hyper-V VMs** under **2. Manage credentials and discovery sources**, select **Add credentials**.
+1. To begin adding Hyper-V host credentials for VM discovery, click **Add credentials** under **Step 1** on the **Manage credentials and discovery sources** page.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](Images/addcredsssnew.png)
 
-1. Specify the following details on the **Add credentials** blade for the Hyper-V host/cluster that the appliance will use to discover VMs and select **Save (4)**.
- 
-      1. Friendly name: Enter **hostlogin (1)** 
+1. Specify the following details on the **Add credentials** blade for the Hyper-V host/cluster the appliance will use to discover VMs, then click **Save (4)**:
+
+      1. Friendly name: **hostlogin (1)** 
       
       2. Username: **<inject key="SmartHotelHost Admin Username" /> (2)**
       
@@ -149,9 +149,9 @@ In this task, you will configure discovery settings, initiate VM discovery, and 
 
          ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' panel.](Images/upd-add-credsnew.png "Credentials")
 
-         > **Note:** The Azure Migrate appliance may not have picked up your local keyboard mapping. Select the 'eyeball' in the password box to check that the password was entered correctly.
+         > **Note:** If the Azure Migrate appliance isn’t recognizing your local keyboard mapping, click the ‘eyeball’ icon in the password box to verify that your password was entered correctly..
 
-1. In **Step 2: Provide Hyper-V host/cluster details**, select **Add discovery source** to specify the Hyper-V host/cluster IP address/FQDN and the friendly name for credentials to connect to the host/cluster.
+1. To provide **Hyper-V host/cluster** details, click **Add discovery source** under **Step 2** on the **Manage credentials and discovery sources** page.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' button.](Images/adddscvryyynew.png "Add discovery source")
 
@@ -161,15 +161,15 @@ In this task, you will configure discovery settings, initiate VM discovery, and 
       
       1. IP Address / FQDN:  Enter **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (2)** 
       
-      1. Friendly name: Select **hostlogin (3)** from the dropdown and 
+      1. Map credentials: Select **hostlogin (3)** from the dropdown.
       
-      1. Select **Save (4)**.
+      1. Click **Save (4)** to add the discovery source.
 
          ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](Images/HOL1-EX1-S24new.png "Discovery source - SmartHotelHost")
 
-         > **Note:** You can either **Add single item** at a time or **Add multiple items** in one go. There is also an option to provide Hyper-V host/cluster details through **Import CSV**.
+         > **Note:** You can add discovery sources one at a time using **Add single item**, add multiple items at once with **Add multiple items**, or upload details via **Import CSV**.
 
-1. The appliance will validate the connection to the Hyper-V hosts/clusters added and show the **Validation status** in the table against each host/cluster
+5. The appliance will validate the connection to each added Hyper-V host or cluster and display the validation status in the table under the **Status** column.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the successful validation of the configured discovery source.](Images/HOL1-EX1-S25new.png "Discovery source - validation successful")
 
@@ -180,7 +180,7 @@ In this task, you will configure discovery settings, initiate VM discovery, and 
     > - You can't remove a specific host from a cluster. You can only remove the entire cluster.
     > - You can add a cluster, even if there are issues with specific hosts in the cluster.
 
-1. In **Step 3: Provide server credentials to perform software inventory and agentless dependency analysis**, **Disable the slider (1)** and select **Start discovery (2)** to kick off VM discovery from the successfully validated hosts/clusters.
+6. In **Step 3**, disable the **slider (1)** and click **Start discovery (2)** to begin VM discovery from the successfully validated hosts/clusters.
 
      > **Note:** The discovery process can take up to 10 minutes. 
    
@@ -188,11 +188,11 @@ In this task, you will configure discovery settings, initiate VM discovery, and 
     
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Start discovery' button.](Images/startdscvry1new.png)
 
-1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table.
+7. Wait for the Azure Migrate status to confirm that **Discovery has been successfully initiated**, which may take several minutes. Once initiated, you can monitor the discovery status for each host or cluster in the table.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/30052025(6)new.png "Azure Migrate login code")
 
-1. Return to the **JumpVM** and navigate to the **Azure Migrate** blade in the Azure portal. Select **Servers, databases, and web apps (1)**, then click **Refresh (2)**. Under **Azure Migrate: Servers, databases, and web apps**, you should see a count of the servers discovered so far. If discovery is still in progress, continue refreshing periodically until **7 servers (3)** are shown. This process may take several minutes.
+8. Return to the **JumpVM**, open the **Azure Migrate** blade in the Azure portal, select **Servers, databases, and web apps (1)**, click **Refresh (2)**, and wait until **7 servers** are shown under **Discovered servers (3)**. This process may take several minutes.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/30052025(8)new.png "Azure Migrate login code")
      
@@ -210,4 +210,4 @@ In this task, you will configure discovery settings, initiate VM discovery, and 
 
 In this exercise, you explored an Azure Migrate project and the default built-in tools for server assessment and server migration. You have also configured the Azure Migrate appliance in the on-premises Hyper-V environment and started the migration assessment discovery process using Azure Migrate.
 
-### You have successfully completed the lab.
+### You have successfully completed the Hands-on Lab.
