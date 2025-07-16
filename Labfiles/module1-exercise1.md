@@ -15,7 +15,7 @@ After completing this exercise, you will:
 
 ## Task 1: Explore Azure Migrate and understand the appliance's role
 
-**Objective:** In this task, you will explore the Azure Migrate service and understand how the appliance facilitates migration assessments.
+In this task, you will explore the Azure Migrate service and understand how the appliance facilitates migration assessments.
 
 1. Click on **Show Portal Menu (☰) (1)**  bar and select **All services (2)** from the left navigation pane.
  
@@ -52,7 +52,7 @@ After completing this exercise, you will:
 
 ## Task 2: Deploy, configure, and connect the Azure Migrate appliance
 
-**Objective:** In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect it to your Azure Migrate project.
+In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect it to your Azure Migrate project.
 
 1. To connect to your on-premises environment, Click the **Start (1)** button, type **Hyper-V Manager (2)** in the search bar, and select **Hyper-V Manager (3)** from the results. You will access your infrastructure through Hyper-V Manager and connect to the Azure Migrate Appliance VM to begin the discovery process.
 
@@ -133,7 +133,7 @@ After completing this exercise, you will:
 
 ## Task 3: Discover on-premises VMs and validate migration readiness
 
-**Objective:** In this task, you will configure discovery settings, initiate VM discovery, and validate the results in Azure Migrate.
+In this task, you will configure discovery settings, initiate VM discovery, and validate the results in Azure Migrate.
 
 1. In **Step 1: Provide Hyper-V host credentials for the discovery of Hyper-V VMs** under **2. Manage credentials and discovery sources**, select **Add credentials**.
 
