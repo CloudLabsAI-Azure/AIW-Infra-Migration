@@ -129,10 +129,11 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 
        ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/are-you-trying.png "Appliance registered")
 
-16. After successful login, return to the **Azure Migrate Appliance** tab, registration will begin automatically and show the success message once complete.
-        ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/registrdsfdvdnew.png "Appliance registered")
+16. After successful login, return to the **Azure Migrate Appliance** tab, registration will begin automatically and show the success message once complete.   
+        
+    ![](Images/are-you-trying.png "Appliance registered")
 
-       Once the registration has been completed, you can proceed to the next panel, **Manage credentials and discovery sources**.
+    Once the registration has been completed, you can proceed to the next panel, **Manage credentials and discovery sources**.
 
 ## Task 3: Discover on-premises VMs and validate migration readiness
 
