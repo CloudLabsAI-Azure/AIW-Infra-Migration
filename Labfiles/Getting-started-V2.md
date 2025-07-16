@@ -77,7 +77,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 4. If **Action required** pop-up window appears, click on **Ask later**.
 
-      ![](./Images/ask-later-01.png)
+      ![](./Images/ask-later-01new.png)
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
