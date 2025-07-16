@@ -131,7 +131,7 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 
 16. After successful login, return to the **Azure Migrate Appliance** tab, registration will begin automatically and show the success message once complete.   
         
-    ![](Images/are-you-trying.png "Appliance registered")
+    ![](Images/registrdsfdvdnew.png "Appliance registered")
 
     Once the registration has been completed, you can proceed to the next panel, **Manage credentials and discovery sources**.
 
