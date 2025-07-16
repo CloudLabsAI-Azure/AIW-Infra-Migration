@@ -93,7 +93,7 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 
 8. When the Azure Migrate appliance configuration wizard opens, you may see a pop-up with the license terms. Please read and accept the terms by clicking the **I agree** button to proceed.
 
-    ![Screenshot of the Azure Migrate appliance terms of use.](Images/upd-terms.png "Terms of use")
+    ![Screenshot of the Azure Migrate appliance terms of use.](Images/upd-termsnew.png "Terms of use")
 
 9. Under **Set up prerequisites**, ensure that both **Check connectivity to Azure** and **Check time is in sync with Azure** complete successfully. These steps validate internet connectivity and time synchronization and should complete automatically.
 
@@ -105,7 +105,7 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 
 11. **Wait** for some time while the wizard installs the latest Azure Migrate updates. If prompted for credentials, enter username **Administrator** and password **<inject key="SmartHotel Admin Password" />**. Once the Azure Migrate updates are completed, you may see a pop-up if the management app restart is required, and if so, select **Refresh** to restart the app.  
 
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the prompt to restart the management app after installing updates.](Images/upd-refreshnew.png "New update installed - Refresh")
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the prompt to restart the management app after installing updates.](Images/upd-refreshnew1.png "New update installed - Refresh")
 
 12. Wait for the **Appliance auto-update status (1)** to show success (may take up to 5 minutes), then click **Login (2)** to proceed.
 
@@ -121,13 +121,16 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 
      ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/azmigrate-06new.png "Azure Migrate Microsoft login")
 
-15. Login using the provided Azure credentials and click **Continue** on the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt. After successful login, return to the **Azure Migrate Appliance** tab, registration will begin automatically and show the success message once complete.
+15. Login using the provided Azure credentials and click **Continue** on the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt.
     
      * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
      
      * Azure Password: <inject key="AzureAdUserPassword"></inject> 
 
-       ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/registrdsfdvdnew.png "Appliance registered")
+       ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/are-you-trying.png "Appliance registered")
+
+16. After successful login, return to the **Azure Migrate Appliance** tab, registration will begin automatically and show the success message once complete.
+        ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/registrdsfdvdnew.png "Appliance registered")
 
        Once the registration has been completed, you can proceed to the next panel, **Manage credentials and discovery sources**.
 
