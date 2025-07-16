@@ -8,17 +8,21 @@ In this hands-on lab, you will walk through the end-to-end process of discoverin
 You will then configure the appliance, connect it to your Azure Migrate project, add discovery credentials and sources, and initiate the discovery of virtual machines. Once discovery is complete, you will validate that the VMs have been successfully identified in the Azure portal. This setup helps you assess migration readiness and plan future cloud migration steps confidently.
 
 ## Objectives
-Understand how to set up Azure Migrate, configure the appliance, and perform discovery of on-premises virtual machines. By the end of this lab, you will be able to:
+Understand how to set up **Azure Migrate**, configure the **Azure Migrate appliance**, and perform discovery of **on-premises virtual machines**.
 
-- **Explore Azure Migrate:** Learn the purpose and structure of Azure Migrate and understand how it supports assessment and migration of on-premises workloads to Azure.
+- **Discovery, Assess, and Plan – Evaluate your current environment**
 
-- **Deploy and configure the Azure Migrate appliance:** Gain experience in registering the appliance with Azure, validating connectivity, and completing the initial setup.
+   - Explore Azure Migrate and the appliance’s role: Understand how Azure Migrate supports discovery and assessment of on-premises workloads, and how the appliance facilitates data collection.
 
-- **Add credentials and discovery sources:** Learn how to securely add Hyper-V host or cluster credentials and configure discovery sources for VM data collection.
+   - Deploy and configure the Azure Migrate appliance: Set up the appliance in a Hyper-V environment, validate connectivity and time sync, and register it using a generated project key.
 
-- **Initiate and monitor VM discovery:** Start the discovery process and track its progress within the Azure portal to verify that VMs have been identified correctly.
+   - Register and connect the appliance to Azure: Complete Azure sign-in from the appliance to establish secure communication with your Azure Migrate project.
 
-- **Validate discovered servers:** Ensure that the appliance has discovered the expected number of VMs and confirm their appearance in the Azure Migrate project dashboard.
+   - Add credentials and discovery sources: Enter and validate credentials for your Hyper-V host or cluster, and configure the discovery source.
+
+   - Initiate and monitor VM discovery: Begin the discovery process and monitor its progress through the Azure Migrate interface and Azure portal.
+
+   - Validate discovered servers: Confirm that the expected virtual machines are discovered and appear in the Azure Migrate dashboard for further assessment.
 
 ## Pre-requisites
 To complete this lab, you should have a basic understanding of Microsoft Azure, virtual machines, and on-premises Hyper-V environments. Familiarity with the Azure portal, Hyper-V Manager, and VM credential management will help you navigate the setup and discovery process effectively.
