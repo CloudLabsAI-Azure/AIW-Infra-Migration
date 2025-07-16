@@ -8,21 +8,9 @@ In this hands-on lab, you will walk through the end-to-end process of discoverin
 You will then configure the appliance, connect it to your Azure Migrate project, add discovery credentials and sources, and initiate the discovery of virtual machines. Once discovery is complete, you will validate that the VMs have been successfully identified in the Azure portal. This setup helps you assess migration readiness and plan future cloud migration steps confidently.
 
 ## Objectives
-Understand how to set up **Azure Migrate**, configure the **Azure Migrate appliance**, and perform discovery of **on-premises virtual machines**.
+Learn how to assess and prepare your on-premises environment for migration using Azure Migrate. By the end of this lab, you will be able to:
 
-- **Discovery, Assess, and Plan – Evaluate your current environment**
-
-   - Explore Azure Migrate and the appliance’s role: Understand how Azure Migrate supports discovery and assessment of on-premises workloads, and how the appliance facilitates data collection.
-
-   - Deploy and configure the Azure Migrate appliance: Set up the appliance in a Hyper-V environment, validate connectivity and time sync, and register it using a generated project key.
-
-   - Register and connect the appliance to Azure: Complete Azure sign-in from the appliance to establish secure communication with your Azure Migrate project.
-
-   - Add credentials and discovery sources: Enter and validate credentials for your Hyper-V host or cluster, and configure the discovery source.
-
-   - Initiate and monitor VM discovery: Begin the discovery process and monitor its progress through the Azure Migrate interface and Azure portal.
-
-   - Validate discovered servers: Confirm that the expected virtual machines are discovered and appear in the Azure Migrate dashboard for further assessment.
+- **Discovery, Assess, and Plan – Evaluate your current environment:** Explore Azure Migrate, deploy and configure the appliance in a Hyper-V environment, and discover on-premises virtual machines to validate migration readiness. 
 
 ## Pre-requisites
 To complete this lab, you should have a basic understanding of Microsoft Azure, virtual machines, and on-premises Hyper-V environments. Familiarity with the Azure portal, Hyper-V Manager, and VM credential management will help you navigate the setup and discovery process effectively.
