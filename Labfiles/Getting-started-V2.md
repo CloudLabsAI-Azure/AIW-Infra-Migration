@@ -1,30 +1,59 @@
-# **Getting Started with Your Guided Lab - Infrastructure Migration**
+# Guided Lab : Infrastructure Migration
  
-Welcome to your Guided Lab-Infrastructure Migration workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+### Overall Estimated Duration: 4 Hours
+
+## Overview
+In this hands-on lab, you will walk through the end-to-end process of discovering and assessing on-premises workloads for cloud migration using Azure Migrate. You will begin by exploring the Azure Migrate service and understanding the role of the Azure Migrate appliance, which is deployed in your Hyper-V environment. The appliance is responsible for collecting VM metadata and securely sending it to Azure.
+
+You will then configure the appliance, connect it to your Azure Migrate project, add discovery credentials and sources, and initiate the discovery of virtual machines. Once discovery is complete, you will validate that the VMs have been successfully identified in the Azure portal. This setup helps you assess migration readiness and plan future cloud migration steps confidently.
+
+## Objectives
+Understand how to set up Azure Migrate, configure the appliance, and perform discovery of on-premises virtual machines. By the end of this lab, you will be able to:
+
+- **Explore Azure Migrate:** Learn the purpose and structure of Azure Migrate and understand how it supports assessment and migration of on-premises workloads to Azure.
+
+- **Deploy and configure the Azure Migrate appliance:** Gain experience in registering the appliance with Azure, validating connectivity, and completing the initial setup.
+
+- **Add credentials and discovery sources:** Learn how to securely add Hyper-V host or cluster credentials and configure discovery sources for VM data collection.
+
+- **Initiate and monitor VM discovery:** Start the discovery process and track its progress within the Azure portal to verify that VMs have been identified correctly.
+
+- **Validate discovered servers:** Ensure that the appliance has discovered the expected number of VMs and confirm their appearance in the Azure Migrate project dashboard.
+
+## Pre-requisites
+To complete this lab, you should have a basic understanding of Microsoft Azure, virtual machines, and on-premises Hyper-V environments. Familiarity with the Azure portal, Hyper-V Manager, and VM credential management will help you navigate the setup and discovery process effectively.
+
+## Architecture
+In this hands-on lab, you will work through the architecture flow illustrated in the diagram below, focusing on server discovery and assessment using Azure Migrate. The process begins in your on-premises environment, where a pre-configured Azure Migrate appliance is deployed on a Hyper-V host. This appliance securely connects to the Azure Migrate service in the cloud using a project key. Once registered, the appliance collects metadata and performance data from on-premises virtual machines. The information is then sent to the Azure Migrate project, where it's used for discovery, assessment, and migration planning. This setup enables seamless inventory and evaluation of your on-premises infrastructure in preparation for cloud migration.
+
+## Architecture Diagram
+
+## Getting Started with the Lab
+Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.
+
+## Accessing Your Lab Environment
  
-## **Accessing Your Lab Environment**
- 
-Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and Guide will be right at your fingertips within your web browser.
 
    ![](./Images/30052025(1).png)
 
-## **Virtual Machine & Lab Guide**
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
-## **Exploring Your Lab Resources**
+## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
    ![](./Images/30052025(2).png)
  
-## **Utilizing the Split Window Feature**
+## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
    ![](./Images/30052025(3).png)
  
-## **Managing Your Virtual Machine**
+## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
