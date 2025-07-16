@@ -67,7 +67,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
     ![](./Images/GS1new.png)
  
