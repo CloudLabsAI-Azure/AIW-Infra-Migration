@@ -1,12 +1,22 @@
 # Lab 01: Migrate Windows Servers from Hyper-V to Azure
 
-Duration: 4 Hours
+### Estimated Duration: 4 hours
 
-## Exercise 1: Migrating your apps and your data, leveraging Microsoft services and tools, including Azure Migrate: Server Migration
-
+## Overview
 In this Guided Lab, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
 
-### Task 1: Create a Storage Account
+## Lab objectives
+
+In this exercise, you will complete the following tasks:
+
+- Task 1: Create a Storage Account
+- Task 2: Register the Hyper-V Host with Migration and modernization
+- Task 3: Enable Replication from Hyper-V to Azure Migrate
+- Task 4: Server migration
+- Task 5: Pointers around Azure Networking and Azure Network Security (Read only)
+- Task 6: Migrating VMware VMs to Azure (Read only)
+
+## Task 1: Create a Storage Account
 
 In this task, you will create a new Azure Storage Account that will be used by Migration and for the storage of your virtual machine data during migration.
 
@@ -46,11 +56,9 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
     ![](Images/30052025(20).png)
 
-#### Task summary 
+    You created a new Azure Storage Account to support the migration and modernization process, providing the necessary storage for virtual machine replication data.
 
-In this task, you created a new Azure Storage Account that will be used for Migration and modernization.
-
-### Task 2: Register the Hyper-V Host with Migration and modernization
+## Task 2: Register the Hyper-V Host with Migration and modernization
 
 In this task, you will register your Hyper-V host(LabVM) with the Migration and Modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
 
@@ -139,11 +147,9 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
     <validation step="a6405ea6-b97d-4e45-8cf8-c8997009392d" />
    
 
-#### Task summary 
+    You successfully registered your Hyper-V host with the Azure Migrate Server Migration service, enabling discovery and replication of on-premises virtual machines to Azure.
 
-In this task, you registered your Hyper-V host with the Azure Migrate Server Migration service.
-
-### Task 3: Enable Replication from Hyper-V to Azure Migrate
+## Task 3: Enable Replication from Hyper-V to Azure Migrate
 
 In this task, you will configure and enable the replication of your on-premises virtual machines from Hyper-V to the Azure Migrate Server Migration service.
 
@@ -227,12 +233,9 @@ In this task, you will configure and enable the replication of your on-premises 
     
     <validation step="216eebdd-a59b-4f61-a316-af714d0c342e" />
 
+    You enabled replication from your Hyper-V host to Azure Migrate and configured the virtual machine sizes to match target Azure specifications, preparing the VMs for migration.
 
-#### Task summary 
-
-In this task, you enabled replication from the Hyper-V host to Azure Migrate and configured the replicated VM size in Azure.
-
-### Task 4: Server migration
+## Task 4: Server migration
 
 In this task, you will perform a migration of the UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines to Azure.
 
@@ -277,7 +280,7 @@ In this task, you will perform a migration of the UbuntuWAF, smarthotelweb1, and
     <validation step="e9fd6a73-9493-4184-b9c0-7bd0a4d4fce2" />
 
 
-### Task 5: Pointers around Azure Networking and Azure Network Security (Read only)
+## Task 5: Pointers around Azure Networking and Azure Network Security (Read only)
 
 Design and implementation of Azure networking is one of the most critical steps in migrating your infrastructure as a service (IaaS) and platform as a service (PaaS) implementations in Azure.
 
@@ -311,7 +314,7 @@ Design and implementation of Azure networking is one of the most critical steps 
 
 - Once the NSGs are created and configured, we can run a test failover to verify scripted NSG associations and post-failover VM connectivity.
 
-### Task 6:  Migrating VMware VMs to Azure (Read only)
+## Task 6:  Migrating VMware VMs to Azure (Read only)
 
 Azure Migrate is a free tool from Microsoft that allows VMware administrators to replicate their VMs from on-prem to Azure. It is an extremely powerful tool that even allows for pre-migration tests to run.
 
@@ -343,8 +346,8 @@ Azure Migrate has two migration options:
 
 In the portal, you can select up to 10 machines at once for replication. To replicate more machines, add in batches of 10.
 
-### Summary 
+## Summary 
 
 In this lab, you learned how to migrate Windows Servers from Hyper-V to Azure using Azure Migrate: Server Migration. You created a storage account for migration data, registered your Hyper-V host with Azure Migrate, and configured replication for virtual machines. You set up networking with static IPs for replicated VMs, performed a migration, and reviewed network and security best practices. The lab provided essential knowledge on discovery, replication, and migration to Azure.
 
-### You have successfully completed the lab.
+### You have successfully completed the Hands-on Lab.
