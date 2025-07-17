@@ -22,11 +22,16 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
 > **Note:** This lab focuses on the technical tools required for workload migration. In a real-world scenario, more consideration should go into the long-term plan prior to migrating assets. The landing zone required to host VMs should also include considerations for network traffic, access control, resource organization, and governance. For example, the CAF Migration Blueprint and CAF Foundation Blueprint can be used to deploy a pre-defined landing zone and demonstrate the potential of an Infrastructure as Code (IaC) approach to infrastructure resource management. For more information, see [Azure Landing Zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) and [Cloud Adoption Framework Azure Migration landing zone Blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/).
 
-1. In the Azure portal's left navigation, select **+ Create a resource**, then search for and select **Storage account**, followed by **Create**.
+1. In the Azure portal, in the search bar at the top, type **Storage account** **(1)** and select **Storage accounts** **(2)** from the Services list.
 
-    ![](Images/30052025(9).png)
+    ![](Images/30052025(9)new.png)
 
-2. In the **Create storage account** blade, on the **Basics** tab, enter or select the following values and click on **Review + create (7)**.
+
+2. On the **Storage accounts** page, click **Create** to start creating a new storage account.
+
+    ![](Images/create-sanew.png)
+
+3. In the **Create a storage account** page , on the **Basics** tab, enter the following values:
 
    - Subscription: **Select your Azure subscription (1)**.
   
@@ -34,25 +39,31 @@ In this task, you will create a new Azure Storage Account that will be used by M
   
    - Storage account name: **migrationstorage<inject key="DeploymentID" enableCopy="false" /> (3)**
 
-   - Location: Select **<inject key="Region" enableCopy="false" /> (4)** from the dropdown.
+   - Region: Select **<inject key="Region" enableCopy="false" /> (4)** from the dropdown.
     
-   - Performance: **Standard (5)**
+   - Primary Service: **Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**
+
+   - Performance: **Standard (6)**
   
-   - Redundancy: **Locally-redundant storage (LRS) (6)**
+   - Redundancy: **Locally-redundant storage (LRS) (7)**
+   
+   - Click **Review + create** to continue **(8)**
 
-     ![](Images/30052025(10).png)
+     ![](Images/30052025(10)new.png)
 
-3. Review the configuration, then select **Create**.
+4. On the **Review + create** tab, verify the entered details. Click **Create** to deploy the storage account.
 
-    ![](Images/30052025(11).png)
+    ![](Images/30052025(11)new.png)
 
-4. Once the storage account is deployed, click on **Go to resource** to open it.
+5. Once the storage account is successfully deployed, select **Go to resource** to open the newly created storage account.
 
-5. Go to the **Data management (1)** section and select **Data protection (1)**. To meet the requirement for enabling replication on Virtual Machines (which does **not** support soft delete-enabled storage accounts), uncheck the boxes for **Enable soft delete for blobs (2)** and **Enable soft delete for containers (2)**. Once done, click **Save (3)** to apply the changes.
+    ![](Images/go-t-resnew.png)
 
-   ![](Images/30052025(12).png)
+6. Go to the **Data management (1)** section and select **Data protection (2)**. To enable replication for Virtual Machines, uncheck **Enable soft delete for blobs (3)** and **Enable soft delete for containers (4)**. Click **Save (5)** to apply the changes.
 
-1. Navigate to the **Data management** section and select **Object replication (1)**. Click on **Advanced settings (2)**, then check the box labelled **Allow cross-tenant replication (3)**. Finally, click **OK (4)** to confirm your changes.
+   ![](Images/30052025(12)new.png)
+
+7. In the **Data management** section, select **Object replication (1)**. Click on **Advanced settings (2)**, check the box for **Allow cross-tenant replication (3)** and then click **OK (4)** to confirm your changes.
 
     ![](Images/30052025(20).png)
 
