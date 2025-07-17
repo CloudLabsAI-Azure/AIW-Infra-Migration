@@ -1,6 +1,6 @@
 # Guided Lab : Infrastructure Migration
  
-### Overall Estimated Duration: 4 Hours
+### Overall Estimated Duration: 6 Hours
 
 ## Overview
 In this hands-on lab, you will go through the end-to-end process of migrating Windows Servers from a Hyper-V environment to Microsoft Azure using Azure Migrate. You will begin by creating a storage account in Azure to hold the data for virtual machine migration. Next, you will register your Hyper-V host with the Azure Migrate service and configure the Azure Site Recovery provider for replication.
