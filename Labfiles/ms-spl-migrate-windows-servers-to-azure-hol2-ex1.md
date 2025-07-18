@@ -252,7 +252,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
 ## Task 4: Server migration
 
-In this task, you will perform a migration of the UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines to Azure.
+In this task, you will perform a migration of the smarthotelweb1, and smarthotelweb2 machines to Azure.
 
 > **Note:** In a real-world scenario, you would perform a test migration before the final migration. To save time, you will skip the test migration in this lab. The test migration process is very similar to the final migration.
 
