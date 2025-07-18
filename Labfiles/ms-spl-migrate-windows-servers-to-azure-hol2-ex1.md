@@ -51,7 +51,7 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
 4. On the **Review + create** tab, verify the entered details. Click **Create** to deploy the storage account.
 
-    ![](Images/30052025(11)new.png)
+    ![](Images/30052025(11)new11.png)
 
 5. Once the storage account is successfully deployed, select **Go to resource** to open the newly created storage account.
 
