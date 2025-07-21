@@ -7,7 +7,7 @@ In this lab, you will learn how to enhance the scalability, resiliency, and mana
 
 You will also explore Azure Automanage, a service that simplifies VM management by automatically applying best practice configurations for monitoring, backup, security, and more. By enabling Automanage on existing virtual machines, you can ensure consistent operational standards and reduce manual administration.
 
-## Objectives
+## Objective
 Learn how to create and manage Virtual Machine Scale Sets (VMSS) in Azure by capturing images from existing virtual machines and automating best practices with Azure Automanage. By the end of this lab, you will be able to:
 
 - **Creating VM Scale sets from Azure VMs:** Capture a specialized image from an existing virtual machine and use it to deploy a Virtual Machine Scale Set (VMSS) that enables high availability, automatic scaling, and efficient workload distribution, while also configuring Azure Automanage to apply best practices like backup, monitoring, and security.

@@ -7,7 +7,7 @@ In this hands-on lab, you will walk through the end-to-end process of discoverin
 
 You will then configure the appliance, connect it to your Azure Migrate project, add discovery credentials and sources, and initiate the discovery of virtual machines. Once discovery is complete, you will validate that the VMs have been successfully identified in the Azure portal. This setup helps you assess migration readiness and plan future cloud migration steps confidently.
 
-## Objectives
+## Objective
 Learn how to assess and prepare your on-premises environment for migration using Azure Migrate. By the end of this lab, you will be able to:
 
 - **Discovery, Assess, and Plan – Evaluate your current environment:** Explore Azure Migrate, deploy and configure the appliance in a Hyper-V environment, and discover on-premises virtual machines to validate migration readiness. 

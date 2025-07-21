@@ -5,7 +5,7 @@
 ## Overview
 In this lab, you will learn how to migrate Linux-based virtual machines from an on-premises Hyper-V environment to Microsoft Azure using Azure Migrate and Azure Site Recovery (ASR). The process involves preparing a Red Hat Linux VM, registering the Hyper-V host with Azure Migrate, and enabling replication to Azure. You will also configure networking for the VM and perform the migration, ensuring it aligns with best practices for scalability and security in Azure. By completing this lab, you will gain hands-on experience with migrating Linux servers to Azure, leveraging Microsoft services and tools for a seamless transition to the cloud.
 
-## Objectives
+## Objective
 Learn how to create and manage Virtual Machine Scale Sets (VMSS) in Azure by capturing images from existing virtual machines and automating best practices with Azure Automanage. By the end of this lab, you will be able to:
 
 - **Migrate Linux Workloads from Hyper-V to Azure:** Successfully migrate Linux Server from Hyper-V to Azure by preparing the environment, configuring replication, executing the migration, and applying core networking and security best practices.

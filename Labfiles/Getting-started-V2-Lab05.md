@@ -5,7 +5,7 @@
 ## Overview
 In this lab, you will onboard on-premises Hyper-V VMs to Azure Arc by deploying the Azure Connected Machine Agent on a Windows VM. This will enable you to manage the VM through Azure Arc. By the end, you'll gain hands-on experience extending Azure management to your hybrid and on-premises resources.
 
-## Objectives
+## Objective
 In this lab, you will learn how to onboard on-premises Hyper-V virtual machines to Azure Arc for management. By the end of this lab, you will be able to:
 
 - **Run Workloads Anywhere and manage with Azure Arc:** Deploy the Azure Connected Machine Agent on a Windows VM to enable management through Azure Arc and extend Azure's management capabilities to your on-premises and hybrid environments.

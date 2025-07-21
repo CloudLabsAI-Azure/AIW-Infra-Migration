@@ -7,7 +7,7 @@ In this hands-on lab, you will go through the end-to-end process of migrating Wi
 
 Once registration is complete, you will enable replication for virtual machines from your on-premises environment to Azure, ensuring that data is synced and ready for migration. Following this, you will migrate the selected virtual machines to Azure and validate the migration process. The lab also covers key networking and security best practices to ensure your migrated VMs are securely integrated into the Azure environment. By the end of the lab, you will have a solid understanding of how to migrate workloads to Azure and ensure their readiness for cloud deployment.
 
-## Objectives
+## Objective
 Learn how to prepare, replicate, and migrate Windows Servers from an on-premises Hyper-V environment to Azure using Azure Migrate. By the end of this lab, you will be able to:
 
 - **Migrate Windows Servers from Hyper-V to Azure:** Successfully migrate Windows Servers from Hyper-V to Azure by preparing the environment, configuring replication, executing the migration, and applying core networking and security best practices.
