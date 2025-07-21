@@ -1,6 +1,6 @@
-## Lab 01: Migrate Linux Servers from Hyper-V to Azure
+# Lab 01: Migrate Linux Servers from Hyper-V to Azure
 
-## Estimated duration: 45 minutes
+### Estimated duration: 45 minutes
 
 ## Exercise 1: Migrating your apps and your data, leveraging Microsoft services and tools like Azure Migrate, the Azure Hybrid Benefit, and other tools and programs
 
@@ -17,21 +17,21 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will access the Hyper-V Manager to start and connect to the redhat VM, which contains an OSS Database. You'll log into this Red Hat server, preparing it for migration to Azure using Azure Migrate.
  
-1. Go to **Start** button in the VM, search for **Hyper-V Manager** there and select it. 
+1. Click the **Start (1)** button, type **Hyper-V Manager (2)** in the search bar, and select **Hyper-V Manager (3)** from the results.
 
-    ![Screenshot of Hyper-V Manager, with the 'Hyper-V Manager' action highlighted.](Images/hyper-v-managerupd.png "Hyperv Manager")
+    ![Screenshot of Hyper-V Manager, with the 'Hyper-V Manager' action highlighted.](Images/upd-hyper-v-managernew.png "Hyperv Manager")
      
-1. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" />**. You should now see the **redhat** VM and 6 other VMs that we are going to use in other HOLs.
+1. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (1)**. You will see the **redhat VM (2)** along with six other VMs that will be used in the upcoming hands-on labs.
 
-    ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/upd-redhatnew.png "Hyper-V Manager")
+    ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/HOL1-EX1-S11new.png "Hyper-V Manager")
      
 1. In Hyper-V Manager, select the **redhat (1)**, then select **Start (2)** on the right if not already running.
 
-    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/HOL2-EX1-T2-S3.png "Start AzureMigrateAppliance")
+    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/HOL2-EX1-T2-S3new1.png "Start AzureMigrateAppliance")
 
 1. In Hyper-V Manager, select the **redhat (1)**, then select **Connect (2)** on the right.
 
-    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/HOL2-EX1-T2-S4.png "Connect to AzureMigrateAppliance")
+    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/HOL2-EX1-T2-S4new1.png "Connect to AzureMigrateAppliance")
 
 1. Log into the VM with the **Administrator password**: **<inject key="SmartHotel Admin Password" />** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
 
