@@ -281,7 +281,7 @@ In this task, you will perform a migration of the redhat machine to Azure.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-   <validation step="fca01519-165a-49c3-897e-6f25ea3468a6" />
+   <validation step="8bfe92e8-9f21-4236-91e8-b1c10057b564" />
    
     
 
