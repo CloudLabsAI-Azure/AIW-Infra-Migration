@@ -12,13 +12,6 @@ After completing this exercise, you will:
 - Task 1: Using VM Scale Sets to Drive Business Resiliency
 - Task 2: Enabling Azure Automanage on Virtual Machines
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the below Azure credentials.
-    
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
-
-
 ## Task 1: Using VM Scale Sets to Drive Business Resiliency
 
 In this task, you will capture a specialized image from an existing virtual machine and use it to create a Virtual Machine Scale Set (VMSS). This enables scalable deployment of identical VMs, ensuring high availability and consistent performance for business-critical applications.
@@ -87,48 +80,37 @@ In this task, you will capture a specialized image from an existing virtual mach
 
 ## Task 2: Enabling Azure Automanage on Virtual Machines
 
-Azure Automanage automatically configures best practice services like backup, monitoring, and security on your virtual machines. When enabled on an existing machine, it applies these configurations without manual setup. This helps ensure compliance, operational efficiency, and reduces management overhead. In this task, you will enable Automanage on existing machines.
+Azure Automanage automatically applies best practice configurations like backup, monitoring, and security to your VMs, simplifying management and ensuring compliance. In this task, you will enable Automanage on existing machines.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials below.
-    
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
+2. In the **Azure portal**, search for **Automanage (1)** in the top search bar and select the **Automanage (2)** service from the results.
 
-2. In the search bar, search for and select **Automanage**.
+   ![](Images/Task2-Step3a.png)
 
-3. From the left side panel select **Automanage machines (1)** and click on **+Enable on existing VM (2)**.
+3. From the left side panel, expand **Machine best practices (1)**, select **Automanage machines (2)**, and click **Enable on existing machine (3)** to onboard a VM to Automanage.
    
-   ![](Images/T2S3-0407.png)
+   ![](Images/T2S3-0407new.png)
 
-4. Under **Configuration profile**, select your profile type: **Azure Best Practices - Production or Azure Best Practices - Dev/Test, or Custom profile**.
+4. On the **Enable Automanage** blade, select **Azure best practices: Production (1)**, then click **Next: Machines > (2)** to continue.
    
-   ![](Images/upd-existing-vm-quick-create.png)
+   ![](Images/upd-existing-vm-quick-createnew.png)
    
    > Click **View best practice profiles** to see the differences between the environments.
     
-   ![](Images/upd-browse-production-profile.png)
+   ![](Images/upd-browse-production-profilenew.png)
 
-5. On the **Select Machines** blade:
-
-   a. Filter the list by your Subscription and Resource group and click on **Check eligibility on machines (1)**.
+5. On the **Machines** blade, click **Check eligibility on machines (1)**, select the VM named **smarthotelweb1 (2)**, and then click **Review + Create (3)**.
    
-   b. **Check the checkbox of the virtual machine (2)** you want to onboard. (for example: let's enable automanage for smarthotelweb2.)
-   
-   c. Click the **Review + Create (3)** button.
-   
-   ![](Images/updt-existing-vm-select-machine.png)
+   ![](Images/updt-existing-vm-select-machinenew.png)
 
 6. Click **Create**.
+
+   ![](Images/Task2-Step6new.png)
 
    In this task, you have successfully enabled Automanage on a virtual machine. 
 
 ## Summary
 
-In this lab, you learned about:
- - How to create an image using an existing virtual machine
- - How to create a Virtual Machine Scale Set (VMSS) using the image
- - and how to enable Automanage on a virtual machine.
+In this lab, you learned how to create an image from an existing virtual machine, use that image to deploy a Virtual Machine Scale Set (VMSS), and enable Automanage on a virtual machine for simplified management.
 
-## You have successfully completed the Lab
+## You have successfully completed the Hands-on Lab.
 
