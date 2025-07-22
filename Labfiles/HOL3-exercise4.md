@@ -89,7 +89,7 @@ In this exercise, you will complete the following task:
 
 In this exercise, you explored how to fail over on-premises physical servers that are replicating to Azure with Azure Site Recovery. After you've failed over, you fail back from Azure to your on-premises site when it's available.
 
-### You have successfully completed the lab.
+### You have successfully completed the Hands-on Lab.
 
 >**Note**: If you complete the lab ahead of the allotted time, please review and validate . Once validation is successful, you may proceed to delete the lab.
 
