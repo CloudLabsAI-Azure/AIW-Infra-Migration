@@ -25,7 +25,7 @@ Once the environment is provisioned, a virtual machine (LabVM) and lab guide wil
  
 Once you're ready to dive in, your virtual machine and Guide will be right at your fingertips within your web browser.
 
-   ![](./Images/30052025(1)new.png)
+   ![](./Images/FIRST_Page-lab07.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -58,8 +58,8 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
- 
-    ![](./Images/FIRST_Page-lab07.png)
+
+    ![](./Images/GS1new.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
