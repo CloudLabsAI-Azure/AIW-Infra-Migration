@@ -24,19 +24,19 @@ In this task, I configured Azure Site Recovery (ASR) to replicate on-premises Hy
 
 1. In the **Recovery Services vault** page, on the left panel, scroll down and click **Manage (1)** to expand the options. Under **Manage**, select **Site Recovery infrastructure (2)**.
 
-    ![Screenshot of the Site Recovery Infrastructure.](Images/image63.png)
+    ![Screenshot of the Site Recovery Infrastructure.](Images/image63new.png)
 
 1. In the **Site Recovery infrastructure** blade, expand **For Hyper-V Sites (1)** on the left menu. Click on **Hyper-V Hosts (2)**. In the list of hosts, locate your server and ensure its **Connection status** is **Connected (3)**.
 
-    ![Screenshot of the hyper-v-host.](Images/image64.png "hyper-v-host")  
+    ![Screenshot of the hyper-v-host.](Images/image64new.png "hyper-v-host")  
 
 1. Go back to your **Recovery service vault page**, expand the **Protected items (1)** section on the left panel, click **Replicated Items (2)**. Click the **+ Replicate (3)** button at the top. From the dropdown menu, select **Hyper-V machines to Azure (4)**
 
-    ![Screenshot of the add replicate items.](Images/image65.png "add replicate items") 
+    ![Screenshot of the add replicate items.](Images/image65new.png "add replicate items") 
    
 1. In the **Source environment** tab of the replication wizard, select the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-HyperVSite (1)** from the **Source location** dropdown and then click on **Next (2)**.
  
-    ![Screenshot of the Source environment.](Images/image66.png "Source environment") 
+    ![Screenshot of the Source environment.](Images/image66new.png "Source environment") 
 
 1. Under the **Target environment** tab, fill in the following details:
 
@@ -52,7 +52,7 @@ In this task, I configured Azure Site Recovery (ASR) to replicate on-premises Hy
    
    - Leave other values as default and click on **Next (6)**
    
-    ![Screenshot of the target environment.](Images/image67.png "Source environment")    
+    ![Screenshot of the target environment.](Images/image67new.png "Source environment")    
     
 1. Under **Virtual machine selection** tab, check for **AzureArcVM (1)** and click on **Next (2)**.
 
@@ -64,17 +64,17 @@ In this task, I configured Azure Site Recovery (ASR) to replicate on-premises Hy
      
 1. Under **Replication policy** tab, select **defaultSmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-HyperVSite-policy (1)** from the drop-down and click on **Next (2)**.  
 
-    ![Screenshot of the Replication settings.](Images/image610.png "Replication settings")
+    ![Screenshot of the Replication settings.](Images/image610new.png "Replication settings")
    
 1. Under **Review** tab, click on **Enable Replication**.
 
-    ![](Images/image611.png "Replication settings")
+    ![](Images/image611new.png "Replication settings")
 
 1. The replication process can take **15-20 minutes** to complete. Once the Replication is completed, the status of the replicated AzureArcVM will now become **Protected (2)**.
 
    > **Note:** You might have to **Refresh (1)** a couple of times.
 
-    ![Screenshot of the status-protected.](Images/image612.png "status-protected")
+    ![Screenshot of the status-protected.](Images/image612new.png "status-protected")
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
