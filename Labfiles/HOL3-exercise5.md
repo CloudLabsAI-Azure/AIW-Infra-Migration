@@ -69,11 +69,11 @@ In this task, you will enable Microsoft Defender for Cloud to enhance the securi
 
 12. Under the **Upgrade tab** select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (1)** workspace and click on **Upgrade (2)**.
 
-     ![Screenshot of the setup workspace](Images/lab07-t1s9b.png "setup workspace")
+     ![Screenshot of the setup workspace](Images/lab07-t1s9b1.png "setup workspace")
 
 1. The **Microsoft Defender for Cloud Overview page** offers a consolidated perspective for security experts. This section combines various independent cloud security components, such as **Secure Score, Regulatory Compliance, and Workloads Protection**, and provides detailed insights on the security posture on a distinct dashboard
 
-    ![Screenshot of the overview page](Images/imagelab07t12.png "overview page")
+    ![Screenshot of the overview page](Images/imagelab07t121.png "overview page")
 
 1. In the Microsoft Defender for Cloud portal, click **General (1)**, then select **Recommendations (2)** to view risk-based recommendations and resource health insights..
     
