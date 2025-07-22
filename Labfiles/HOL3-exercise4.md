@@ -40,7 +40,7 @@ In this exercise, you will complete the following task:
    
 1. On the **Failover** page, review the settings and click on **Ok**.  
 
-   ![Screenshot of the failover page.](Images/image647.png "failover page") 
+   ![Screenshot of the failover page.](Images/image647new.png "failover page") 
    
 1. Go back to the Replicated items page and select **Site Recovery Jobs (2)** under **Monitoring (1)** from the left-hand side panel and click on **Failover (3)** to view the job status.      
 
@@ -72,7 +72,7 @@ In this exercise, you will complete the following task:
 
 1. Under the **Virtual Machines** page, select the **AzureArcVM**, which is automatically created from replicated data after a Failover.
 
-    ![Screenshot of the vm-created.](Images/image6414.png "vm-created") 
+    ![Screenshot of the vm-created.](Images/image6414new.png "vm-created") 
    
 1. On the **AzureArcVM** page, verify that the status of the VM is in the **Running state**.  
 
