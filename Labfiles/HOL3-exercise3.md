@@ -51,4 +51,6 @@ In this exercise, you will complete the following task:
 
 In this exercise, you learnt how to validate the replication and disaster recovery strategy by testing a failover, that too without any data loss or downtime.
 
-Click on **Next** from the lower right corner to move on to the next page.
+Now, click on the **Next** button in the lower right corner to move to the next page.
+
+   ![](./Images/Lab06-Nextpagebutton.png)

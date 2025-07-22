@@ -101,6 +101,6 @@ Learner Support Contacts:
 
 Now, click on the **Next** button in the lower right corner to move to the next page.
 
-   ![](./Images/GS4new12.png)
+   ![](./Images/Lab06-Nextpagebutton.png)
 
 ### Happy Learning!!
