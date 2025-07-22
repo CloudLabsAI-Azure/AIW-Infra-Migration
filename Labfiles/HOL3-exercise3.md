@@ -38,7 +38,7 @@ In this exercise, you will complete the following task:
 
 1. On the **Virtual machines** page, select **AzureArcVM-test** which is automatically created after the test failover..
 
-    ![Screenshot of the Test vm.](Images/image627.png "Test vm") 
+    ![Screenshot of the Test vm.](Images/image627new.png "Test vm") 
   
 1. On the **AzureArcVM-test** page, confirm the VM is in **Running** state **(1)**, then click **Connect** **(2)** and select **Connect** from the dropdown **(3)**. On the **Connect** pane, under **Most common**, select **Download RDP file** to connect via **Native RDP**.   
 
