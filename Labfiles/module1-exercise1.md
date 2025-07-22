@@ -201,10 +201,9 @@ In this task, you will configure discovery settings, initiate VM discovery, and 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/30052025(8)new.png "Azure Migrate login code")
      
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click on the validate button.
-    > - If you receive a success message, congratulations — the lab has been completed successfully!
-    > - If you receive an error message, review it carefully and retry the step by following the lab guide instructions.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 <validation step="f46f663f-2c8d-473c-99b3-15243457b6ec" />
 
