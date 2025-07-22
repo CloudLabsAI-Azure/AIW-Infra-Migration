@@ -59,7 +59,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![](./Images/GS1new.png)
+    ![](./Images/FIRST_Page-lab07.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
