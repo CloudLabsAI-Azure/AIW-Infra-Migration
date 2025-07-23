@@ -1,4 +1,4 @@
-# Guided Lab : Infrastructure Migration
+# Lab01 : Infrastructure Migration - Discovery, Assess, and Plan: Evaluate your current environment
  
 ### Overall Estimated Duration: 4 Hours
 
