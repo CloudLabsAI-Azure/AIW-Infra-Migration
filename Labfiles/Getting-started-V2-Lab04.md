@@ -18,6 +18,8 @@ In this hands-on lab, you will follow the architecture flow illustrated in the d
 
 ## Architecture Diagram
 
+   ![](./Images/akArch4.png)
+
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.
 

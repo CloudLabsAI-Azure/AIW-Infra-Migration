@@ -18,7 +18,9 @@ To effectively complete this lab, you need basic knowledge of Microsoft Azure, H
 ## Architecture
 In this hands-on lab, you will work through the architecture flow illustrated in the diagram, focusing on discovering, replicating, and migrating Windows Servers from a Hyper-V environment to Azure. You’ll start by registering your on-premises Hyper-V host with Azure Migrate and deploying the Azure Site Recovery provider. Next, you’ll enable replication to synchronize your virtual machines’ data to an Azure Storage account. Finally, you’ll perform the migration of these VMs to Azure as IaaS instances. Throughout the lab, you’ll apply networking and security best practices to ensure a secure and efficient cloud migration.
 
-## Architecture Diagram
+## Architecture Diagram 
+
+   ![](./Images/akArch2.png)
 
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.

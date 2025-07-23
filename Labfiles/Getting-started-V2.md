@@ -18,7 +18,9 @@ To complete this lab, you should have a basic understanding of Microsoft Azure, 
 ## Architecture
 In this hands-on lab, you will work through the architecture flow illustrated in the diagram below, focusing on server discovery and assessment using Azure Migrate. The process begins in your on-premises environment, where a pre-configured Azure Migrate appliance is deployed on a Hyper-V host. This appliance securely connects to the Azure Migrate service in the cloud using a project key. Once registered, the appliance collects metadata and performance data from on-premises virtual machines. The information is then sent to the Azure Migrate project, where it's used for discovery, assessment, and migration planning. This setup enables seamless inventory and evaluation of your on-premises infrastructure in preparation for cloud migration.
 
-## Architecture Diagram
+## Architecture Diagram 
+
+   ![](./Images/akArch1.png)
 
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.
