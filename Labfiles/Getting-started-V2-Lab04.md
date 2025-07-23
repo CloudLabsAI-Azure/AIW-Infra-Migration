@@ -1,4 +1,4 @@
-# Guided Lab : Infrastructure Migration
+# Lab04 : Infrastructure Migration - Migrate Linux Workloads from Hyper-V to Azure
  
 ### Overall Estimated Duration: 6 Hours
 

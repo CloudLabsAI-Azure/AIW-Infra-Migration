@@ -1,11 +1,10 @@
-# Lab 01: Creating VM Scale sets from Azure VMs
+# Exercise 01: Application and Data Migration Using Microsoft Services and Azure Migrate: Server Migration
 
 ### Estimated Duration: 3 hours
 
-## Exercise 01: Migrating your apps and your data, leveraging Microsoft services and tools, including Azure Migrate: Server Migration
-
 ## Overview
-In this Guided Lab, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
+
+In this exercise, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
      `
 ## Lab objectives
 

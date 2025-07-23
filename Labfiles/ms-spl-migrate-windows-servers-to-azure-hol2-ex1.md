@@ -1,9 +1,10 @@
-# Exercise 1: Migrate Windows Servers from Hyper-V to Azure
+# Exercise 01: Migrate Windows Servers from Hyper-V to Azure
 
 ### Estimated Duration: 3 hours
 
 ## Overview
-In this Guided Lab, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
+
+In this exercise, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
 
 ## Lab objectives
 

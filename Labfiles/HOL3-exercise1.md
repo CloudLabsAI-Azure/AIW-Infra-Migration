@@ -1,10 +1,10 @@
-# Lab 01: Run workloads anywhere with Azure Arc
+# Exercise 01: Run workloads anywhere with Azure cloud services
 
-### Estimated Duration: 6 hours
+### Estimated Duration: 3 hours
 
 ## Overview
 
-In this Lab, you will use Azure Migrate: Discovery and assessment tool that describes how to onboard on-premises Hyper-V VMs to Azure Arc for Azure Management.
+In this exercise, you will use Azure Migrate: Discovery and assessment tool that describes how to onboard on-premises Hyper-V VMs to Azure Arc for Azure Management.
 Azure Arc allows you to manage your hybrid IT estate with a single pane of glass by extending the Azure management experience to your on-premises servers that are not ideal candidates for migration. 
 
 ## Lab objective
@@ -123,17 +123,3 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 In this exercise, you explored how to deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure. You learnt  about creating Azure Arc-enabled servers so that they can manage the Windows machine.
 
 ### You have successfully completed the Hands-on Lab.
-
->**Note**: If you complete the lab ahead of the allotted time, please review and validate . Once validation is successful, you may proceed to delete the lab.
-
-- Here are the steps to delete the lab:
-
-1. On the environment page, click the **delete icon (1)** in the top right corner.
-   
-2. Ensure all validations are successful.
-   
-3. Click **Proceed to Delete (2)**.
-
-![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/dlt-1.jpg "Replication summary")
-
-![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/dlt-2.jpg "Replication summary")

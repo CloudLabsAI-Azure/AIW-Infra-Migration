@@ -1,4 +1,4 @@
-# Exercise 1: Discovery, Assess, and Plan - Evaluate your current environment
+# Exercise 01: Discovery, Assess, and Plan - Evaluate your current environment
 
 ### Estimated Duration: 4 hours
 

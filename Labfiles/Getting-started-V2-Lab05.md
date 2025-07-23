@@ -1,4 +1,4 @@
-# Guided Lab : Infrastructure Migration
+# Lab05 : Infrastructure Migration - Run Workloads Anywhere and manage with Azure Arc
  
 ### Overall Estimated Duration: 6 Hours
 

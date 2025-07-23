@@ -1,4 +1,4 @@
-# Exercise 2: Creating VM Scale sets from Azure VMs
+# Exercise 02: Creating VM Scale sets from Azure VMs
 
 ### Estimated Duration: 3 hours
 
@@ -9,6 +9,7 @@ In this exercise, you will create a Virtual Machine Scale Set (VMSS) from an exi
 ## Lab objectives
 
 After completing this exercise, you will:
+
 - Task 1: Using VM Scale Sets to Drive Business Resiliency
 - Task 2: Enabling Azure Automanage on Virtual Machines
 

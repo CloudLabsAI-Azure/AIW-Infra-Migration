@@ -1,4 +1,4 @@
-# Guided Lab : Infrastructure Migration
+# Lab03 : Infrastructure Migration - Creating VM Scale sets from Azure VMs
  
 ### Overall Estimated Duration: 6 Hours
 

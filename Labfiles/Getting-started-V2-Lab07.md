@@ -1,4 +1,4 @@
-# Guided Lab : Infrastructure Migration
+# Lab07 : Infrastructure Migration - Secure Infra workloads with Defender for Cloud
  
 ### Overall Estimated Duration: 4 Hours
 

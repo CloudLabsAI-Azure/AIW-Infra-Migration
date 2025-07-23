@@ -1,8 +1,10 @@
-# Lab 01: Migrate Linux Servers from Hyper-V to Azure
+# Exercise 01: Migrating Applications and Data Using Microsoft Services, Azure Migrate, and the Azure Hybrid Benefit
 
-### Estimated duration: 45 minutes
+### Estimated duration: 3 Hours
 
-## Exercise 1: Migrating your apps and your data, leveraging Microsoft services and tools like Azure Migrate, the Azure Hybrid Benefit, and other tools and programs
+## Overview
+
+In this exercise, you will migrate an on-premises Linux VM and database to Azure using Azure Migrate, Azure Site Recovery, and the Azure Hybrid Benefit. You'll walk through the key steps of discovery, replication, networking, and final migration—gaining hands-on experience with Microsoft's end-to-end migration tools.
 
 ## Lab objectives
 In this exercise, you will complete the following tasks:
@@ -290,18 +292,4 @@ In this task, you will perform a migration of the redhat machine to Azure.
 In this lab, you logged into the Red Hat VM in Hyper-V Manager to prepare for migration, reviewed the registered Hyper-V host in Azure Migrate Server Migration, enabled replication from Hyper-V to Azure while configuring the VM size, set a static private IP for the replicated VM to match on-premises settings, and used Azure Migrate to create an Azure VM with the replicated data.
 
 ### You have successfully completed the lab.
-
->**Note**: If you complete the lab ahead of the allotted time, please review and validate . Once validation is successful, you may proceed to delete the lab.
-
-- Here are the steps to delete the lab:
-
-1. On the environment page, click the **delete icon (1)** in the top right corner.
-   
-2. Ensure all validations are successful.
-   
-3. Click **Proceed to Delete (2)**.
-
-![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/dlt-1.jpg "Replication summary")
-
-![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/dlt-2.jpg "Replication summary")
 
