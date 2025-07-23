@@ -22,6 +22,14 @@ In this hands-on lab, you will work through the process of creating a scalable a
 
    ![](./Images/akArch3.png)
 
+## Explanation of Components
+
+- **Existing Azure Virtual Machine:** Start with a pre-configured VM running your app/workload.
+- **Capture Specialized VM Image:** Capture a specialized image of the VM to replicate its configuration.
+- **Virtual Machine Scale Set:** Create a VMSS using the captured image for consistency and scale.
+- **Azure Automanage:** Apply best practices like backup, monitoring, and security automatically.
+- **Auto-scaling:** Scale out/in VMs based on workload demand for cost and performance optimization.
+
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.
 

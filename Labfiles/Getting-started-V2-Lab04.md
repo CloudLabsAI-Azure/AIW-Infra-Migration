@@ -20,6 +20,14 @@ In this hands-on lab, you will follow the architecture flow illustrated in the d
 
    ![](./Images/akArch4.png)
 
+## Explanation of Components
+
+- **On-Premises Hyper-V Host:** Source environment for Linux VMs.
+- **Azure Migrate Project:** Central hub to initiate and manage discovery and migration.
+- **Replicate VMs:** Using Azure Site Recovery unde the hood.
+- **Azure Virtual Machines:** Target IaaS VMs created in Azure.
+- **Networking & Security:** Configure NSGs, VNets and IPs as needed post migration.
+
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.
 

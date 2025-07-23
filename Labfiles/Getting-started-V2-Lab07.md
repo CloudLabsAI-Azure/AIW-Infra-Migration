@@ -20,6 +20,14 @@ In this hands-on lab, you will configure security and monitoring for your Azure 
 
    ![](./Images/akArch7.png)
 
+## Explanation of Components
+
+- **Azure Infrastructure:** Resources being secured and monitored.
+- **Microsoft Defender for Cloud:** Security recommendations and threat protection.
+- **Azure Monitor:** Collects logs and metrics from Azure resources.
+- **Log Analytics Workspace:** Centralized data store for analysis.
+- **Microsoft Sentinel:** Threat detection, investigation, and automated response.
+
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.
 

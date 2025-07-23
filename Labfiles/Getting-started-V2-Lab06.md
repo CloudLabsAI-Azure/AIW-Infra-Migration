@@ -18,7 +18,14 @@ In this lab, you'll deploy Azure Site Recovery (ASR) to replicate on-premises Hy
 
 ## Architecture Diagram
 
-   ![](./Images/akArch6.png)
+   ![](./Images/akArch6new.png)
+
+## Explanation of Components
+
+- **On-Premises Hyper-V Host:** Your local server environment hosting virtual machines that need to be protected and replicated..
+- **Azure Site Recovery (ASR):** Azure service that continuously replicates your on-premises VMs to the cloud for disaster recovery..
+- **Failover to Azure VMs:** The process of switching workloads from on-premises to Azure VMs to ensure business continuity during outages.
+- **Azure Portal:** A unified web-based interface to monitor, manage, and control your Azure resources and disaster recovery operations.
 
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.

@@ -22,6 +22,13 @@ In this hands-on lab, you will work through the architecture flow illustrated in
 
    ![](./Images/akArch1.png)
 
+## Explanation of Components
+
+- **On-Premises Environment:** Hosts the VMs to be discovered and assessed
+- **Azure Migrate Appliance:** Collects VM metadata & performance data
+- **Azure Migrate Project:** Central service for discovery and assessment
+- **Discovery & Assessment:** Visualizes readiness, sizing, and cost planning for migration
+
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.
 

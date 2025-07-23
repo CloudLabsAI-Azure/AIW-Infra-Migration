@@ -20,6 +20,14 @@ In this hands-on lab, you will onboard on-premises Hyper-V virtual machines (VMs
 
    ![](./Images/akArch5.png)
 
+## Explanation of Components
+
+- **On-Premises Windows VM:** The non-Azure virtual machine (e.g., Hyper-V VM) you want to manage.
+- **Azure Connected Machine Agent:** Install this agent on the VM to enable communication with Azure.
+- **Azure Arc:** Registers the VM with Azure Arc, making it appear as a resource in Azure.
+- **Azure Services:** Azure services that can now be applied to the Arc-enabled VM.
+- **Azure Portal:** Centralized management from the Azure portal, just like native Azure VMs.
+
 ## Getting Started with the Lab
 Once the environment is provisioned, a virtual machine (LabVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises in the lab guide.
 
