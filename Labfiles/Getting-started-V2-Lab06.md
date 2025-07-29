@@ -1,4 +1,4 @@
-# Lab06 : Infrastructure Migration - Deploy Azure Site Recover and Failover to DR
+# Lab - 06: Infrastructure Migration - Deploy Azure Site Recover and Failover to DR
  
 ### Overall Estimated Duration: 8 Hours
 

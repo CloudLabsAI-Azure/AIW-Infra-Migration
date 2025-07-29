@@ -1,4 +1,4 @@
-# Lab02 : Infrastructure Migration - Migrate Windows Servers from Hyper-V to Azure
+# Lab - 02: Infrastructure Migration - Migrate Windows Servers from Hyper-V to Azure
 
 ### Overall Estimated Duration: 6 Hours
 

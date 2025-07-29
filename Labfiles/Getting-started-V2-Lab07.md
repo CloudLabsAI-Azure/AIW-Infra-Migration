@@ -1,4 +1,4 @@
-# Lab07 : Infrastructure Migration - Secure Infra workloads with Defender for Cloud
+# Lab - 07: Infrastructure Migration - Secure Infra workloads with Defender for Cloud
  
 ### Overall Estimated Duration: 4 Hours
 
