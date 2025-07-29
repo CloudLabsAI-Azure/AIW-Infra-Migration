@@ -1,4 +1,4 @@
-# Lab05 : Infrastructure Migration - Run Workloads Anywhere and manage with Azure Arc
+# Lab - 05: Infrastructure Migration - Run Workloads Anywhere and manage with Azure Arc
  
 ### Overall Estimated Duration: 6 Hours
 
