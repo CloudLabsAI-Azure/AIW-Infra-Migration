@@ -1,20 +1,37 @@
-# Migrate Windows Servers from Hyper-V to Azure
+# Exercise 01: Application and Data Migration Using Microsoft Services and Azure Migrate: Server Migration
 
-## Migrating your apps and your data, leveraging Microsoft services and tools, including Azure Migrate: Server Migration
+### Estimated Duration: 3 hours
 
-In this Guided Lab, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
+## Overview
 
-### Task 1: Create a Storage Account
+In this exercise, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
+     `
+## Lab objectives
+
+In this exercise, you will complete the following tasks:
+
+- Task 1: Create a Storage Account
+- Task 2: Register the Hyper-V Host with Migration and modernization
+- Task 3: Enable Replication from Hyper-V to Azure Migrate
+- Task 4: Configure Networking
+- Task 5: Server migration
+
+## Task 1: Create a Storage Account
 
 In this task, you will create a new Azure Storage Account that will be used by Migration and for the storage of your virtual machine data during migration.
 
 > **Note:** This lab focuses on the technical tools required for workload migration. In a real-world scenario, more consideration should go into the long-term plan prior to migrating assets. The landing zone required to host VMs should also include considerations for network traffic, access control, resource organization, and governance. For example, the CAF Migration Blueprint and CAF Foundation Blueprint can be used to deploy a pre-defined landing zone and demonstrate the potential of an Infrastructure as Code (IaC) approach to infrastructure resource management. For more information, see [Azure Landing Zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) and [Cloud Adoption Framework Azure Migration landing zone Blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/).
 
-1. In the Azure portal's left navigation, select **+ Create a resource**, then search for and select **Storage account**, followed by **Create**.
+1. In the Azure portal, in the search bar at the top, type **Storage account** **(1)** and select **Storage accounts** **(2)** from the Services list.
 
-    ![Screenshot of the Azure portal showing the create storage account navigation.](Images/1.1.png "Storage account - Create")
+    ![](Images/30052025(9)new.png)
 
-2. In the **Create storage account** blade, on the **Basics** tab, use the following values:
+
+2. On the **Storage accounts** page, click **Create** to start creating a new storage account.
+
+    ![](Images/create-sanew1.png)
+
+3. In the **Create a storage account** page , on the **Basics** tab, enter the following values:
 
    - Subscription: **Select your Azure subscription (1)**.
   
@@ -22,260 +39,277 @@ In this task, you will create a new Azure Storage Account that will be used by M
   
    - Storage account name: **migrationstorage<inject key="DeploymentID" enableCopy="false" /> (3)**
 
-   - Location: Select **<inject key="Region" enableCopy="false" /> (4)** from the dropdown.
+   - Region: Select **<inject key="Region" enableCopy="false" /> (4)** from the dropdown.
 
-   - Primary service: **Azure Blob Storage of Azure Data Lake Storage Gen 2 (5)**
-     
+   - Primary Service: **Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**
+
    - Performance: **Standard (6)**
   
    - Redundancy: **Locally-redundant storage (LRS) (7)**
+   
+   - Click **Review + create** to continue **(8)**
 
-     ![Screenshot of the Azure portal showing the create storage account blade.](Images/create-storage-0407.png "Storage account settings")
+     ![](Images/image(16).png)
 
-3. Select **Review + Create (8)**, then select **Create**.
+4. On the **Review + create** tab, verify the entered details. Click **Create** to deploy the storage account.
 
-4. Once the storage account is deployed, click on **Go to resource** to open it.
+    ![](Images/30052025(11)new.png)
 
-5. Select **Data protection** under **Data management** from the left-hand side menu of storage account.
+5. Once the storage account is successfully deployed, select **Go to resource** to open the newly created storage account.
 
-   ![Screenshot of the Azure portal showing the create storage account blade.](Images/storage-dataprotection-0107.png)
+    ![](Images/go-t-resnew1.png)
 
-6. Now, uncheck the box next to **Enable soft delete for blobs** and **Enable soft delete for containers** to disable the soft delete on blobs and containers, as the soft delete-enabled storage account is **not supported** for enabling replication on Virtual Machines. Click on **Save**.
+6. Go to the **Data management (1)** section and select **Data protection (2)**. To enable replication for Virtual Machines, uncheck **Enable soft delete for blobs (3)** and **Enable soft delete for containers (4)**. Click **Save (5)** to apply the changes.
 
-   ![Screenshot of the Azure portal showing the create storage account blade.](Images/1.4.png)
+   ![](Images/30052025(12)new.png)
 
-#### Task summary 
+7. In the **Data management** section, select **Object replication (1)**. Click on **Advanced settings (2)**, check the box for **Allow cross-tenant replication (3)** and then click **OK (4)** to confirm your changes.
 
-In this task, you created a new Azure Storage Account that will be used for Migration and modernization.
+    ![](Images/30052025(20).png)
 
-### Task 2: Register the Hyper-V Host with Migration and modernization
+    You created a new Azure Storage Account to support the migration and modernization process, providing the necessary storage for virtual machine replication data.
+
+## Task 2: Register the Hyper-V Host with Migration and modernization
 
 In this task, you will register your Hyper-V host(LabVM) with the Migration and Modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
 
-1. Search for **Azure Migrate** in the search blade in the Azure Portal, and select **Azure Migrate**
+1. Click on **Show Portal Menu (☰) (1)**  bar and select **All services (2)** from the left navigation pane.
+ 
+    ![](Images/Allservices1new.png "All services Overview blade")
 
-     ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](Images/E1T2S1-0107.png "Azure Migrate: Server Migration - Discover")
+2. In the search bar, search for **Azure Migrate** and select it from the suggestions to open the Azure Migrate Overview blade, as shown below. 
+ 
+    ![](Images/hol1-ex-1-s3new.png "Azmigrate Overview blade")
 
-1. Select **Servers, databases and web apps (1)** under **Migration goals** on the left. Under **Migration Tools**, select **Discover (2)**.
+3. On the  **Azure Migrate | Servers, databases and web apps** page, expand **Migration goals (1)** from the left menu, then select **Servers, databases and web apps (2)**. Under **Migration tools**, click **Discover (3)**.
 
-   **Note:** You may need to add the migration tool yourself by following the link below the **Migration Tools** section, selecting **Migration and modernization**, then selecting **Add tool(s)**.
+     ![](Images/30052025(13)new.png)
+
+4. On the **Discover** pane, provide the following configuration:
+
+   - For **Where do you want to migrate to?**, select **Azure VM (1)**.
+
+   - For **Are your machines virtualized?**, select **Yes, with Hyper-V (2)**.
+
+   - For **Target region**, select **<inject key="Region" enableCopy="false" />** **(3)** region.
+
+   - Check the box to **Confirm the target region for migration (4)**.
    
-     ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](Images/migrationtools.png "Azure Migrate: Server Migration - Discover")
+   - Click **Create resources (5)** to deploy the necessary Azure Site Recovery resources.
 
-2. In the **Discover** panel, provide the following details:
 
-   - Under **Where do you want to migrate to?**, select **Azure VM (1)**
+     ![](Images/30052025(14).png)
 
-   - Under **Are your machines virtualized**, select **Yes, with Hyper-V (2)**.
-
-   - Under **Target region (3)** make sure to select the **<inject key="Region"></inject>** region as same the Resource Group's region.
-
-   - Check the **confirmation (4)** checkbox and select **Create resources (5)** to begin the deployment of the Azure Site Recovery resource used by Migration and modernization for Hyper-V migrations.
-
-     ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](Images/upd-discover-new01.png "Discover machines - source hypervisor and target region")
-
-   Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
+     > **Note:** Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
   
-4. Click on the **Download** link for the Hyper-V replication provider software installer to download the Azure Site Recovery provider installer.
+5. On the **Discover** pane, under **Prepare Hyper-V host servers**, click the **Download** link to download the **Azure Site Recovery Provider** installer.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](Images/E1T2S3-0107.png?raw=true "Replication provider download link")
+     ![](Images/30052025(15).png)
 
-5. Return to the **Discover** page in your browser, select the blue **Download** button, and download the registration key file.
+6. Return to the **Discover** page in your browser, select the blue **Download** button and download the **registration key file**.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/E1T2S4-0107.png "Download registration key file")
+     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/image.png "Download registration key file")
 
-6. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off** and select **Next**. Accept the default installation location and select **Install**.
+7. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off (1)** and click on **Next (2)**. On the **Installation** screen, accept the default installation location and click **Install** to begin installation.
+
+     ![Screenshot of the ASR provider installer.](Images/image(1).png "Azure Site Recovery Provider Setup")
+
+     ![Screenshot of the ASR provider installer.](Images/image(2).png "Azure Site Recovery Provider Setup")
 
     > **Note:** If you are prompted with a pop-up, like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
-  
-     ![Screenshot of the ASR provider installer.](Images/upd-asr-provider-install.png "Azure Site Recovery Provider Setup")
 
-7. When the installation has completed, select **Register**. Browse to the location of the key file you downloaded. When the key is loaded, select **Next**.
+8. When the installation has completed, on the **Installation** pane, click on **Register**.
+    
+    ![Screenshot of the ASR provider registration settings.](Images/image(3).png "Key file registration")
 
-     ![Screenshot of the ASR provider registration settings.](Images/upd-asr-registration.png "Key file registration")
+9. On the **Vault Settings** page, click **Browse (1)** to locate the registration key file you downloaded earlier. In the **Open** dialog, select the downloaded registration key file **(2)**, then click **Open (3)**. Once the key file is loaded, click **Next (4)** to proceed with the registration process.
 
-8. Select **Connect directly to Azure Site Recovery without a proxy server (1)** and select **Next (2)**. The registration of the Hyper-V host with Azure Site Recovery will begin.
+     ![Screenshot of the ASR provider registration settings.](Images/image(5).png "Key file registration")
 
-     ![Screenshot of the ASR provider registration settings.](Images/upd-e3-t2-s8.png)
+     ![Screenshot of the ASR provider registration settings.](Images/image(6).png "Key file registration")
 
-9. Wait for registration to complete (this may take several minutes). Then select **Finish**.
+10. On the **Proxy Settings** pane, select **Connect directly to Azure Site Recovery without a proxy server (1)**, then click **Next (2)** to proceed. This will initiate the registration of the Hyper-V host with Azure Site Recovery.
 
-     ![Screenshot of the ASR provider showing successful registration.](Images/upd-asr-registered.png "Registration complete")
+     ![Screenshot of the ASR provider registration settings.](Images/image(7).png)
 
-10. Return to the Azure Migrate browser window. **Refresh** your browser, then re-open the **Discover machines** panel by selecting **Discover** under **Migration and modernization** and selecting **Azure VM** for **Where do you want to migrate to?** and **Yes, with Hyper-V** for **Are your machines virtualized?**.
+11. On the **Registration** pane, wait for the message **The server was registered in the Azure Site Recovery vault** to appear. Once registration is complete, select **Finish** to close the wizard.
 
-11. Select **Finalize registration**, which should now be enabled.
+     ![Screenshot of the ASR provider showing successful registration.](Images/image(8).png "Registration complete")
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/upd-e3-t2-s10-1-1.png?raw=true "Finalize registration")
+12. Return to the **Azure Migrate** browser window. Refresh the page, then under **Migration and modernization**, select **Discover** to reopen the panel.
+    
+      - Set **Where do you want to migrate to?** to **Azure VM (1)**
+      - Set **Are your machines virtualized?** to **Yes, with Hyper-V (2)**
+      - Select **Finalize registration (3)**
 
-12. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take several minutes.
+     ![](Images/image(9)1.png)
 
-     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/E1T2S11-0107.png "Finalizing registration...")
+13. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 5-10 minutes.
 
-13. Once the registration is complete, close the **Discover machines** panel using **X** button.
+     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/image(10)1.png "Finalizing registration...")
 
-     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](Images/E1T2S13-0107.png "Registration finalized")
+14. Once registration is complete, confirm the status shows **Registration finalized (1)**. Select **Close (2)** to exit the **Discover machines** panel.
 
-14. The **Migration and Modernization** panel should now show 7 discovered servers.
+     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](Images/image(11).png "Registration finalized")
 
-     ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/upd-newdscvr.png "Discovered servers")
+15. On the  **Azure Migrate | Servers, databases and web apps** page, In the left-hand navigation pane, expand **Migration goals (1)**, then select **Servers, databases and web apps (2)**. In the **Migration tools** section under **Migration and modernization**, verify that the **Discovered servers** count displays **7** **(3)**.
 
-#### Task summary 
+     ![](Images/image(12).png)
 
-In this task, you registered your Hyper-V host with the Azure Migrate Server Migration service.
+    You successfully registered your Hyper-V host with the Azure Migrate Server Migration service, enabling discovery and replication of on-premises virtual machines to Azure.
 
-### Task 3: Enable Replication from Hyper-V to Azure Migrate
+## Task 3: Enable Replication from Hyper-V to Azure Migrate
 
 In this task, you will configure and enable the replication of your on-premises virtual machines from Hyper-V to the Azure Migrate Server Migration service.
 
-1. Under the **Migration and modernization**, select **Replicate**. This opens the **Replicate** wizard.
+1. On the  **Azure Migrate | Servers, databases and web apps** page, In the left-hand navigation pane, expand **Migration goals (1)**, then select **Servers, databases and web apps (2)**. In the **Migration tools** section under **Migration and modernization**, select **Replicate** **(3)**.
 
-     ![Screenshot highlighting the 'Replicate' button in the 'Azure Migrate: Server Migration' panel of the Azure Migrate - Servers blade.](Images/replicatenw.png "Replicate link")
+     ![Screenshot highlighting the 'Replicate' button in the 'Azure Migrate: Server Migration' panel of the Azure Migrate - Servers blade.](Images/image(13).png "Replicate link")
    
-2. Under the **Specific Intent** page, provide the following details:
+2. Under the **Specific intent** page, provide the following details:
 
     -  What do you want to migrate? : Select **Servers or Virtual machines (VM)** **(1)**
     
     -  Where do you want to migrate to? : Select **Azure VM** **(2)**
+  
+    -  Are your machines virtualized? : Select **Yes, with Hyper-V (3)**
     
-    -  Are your machines virtualized? : Select **Yes, with Hyper-V (3)** from the drop-down. Click on **Continue (4)**
+    -  Click on **Continue (4)**
 
-         ![](Images/specify.png)
+       ![](Images/image(14).png)
 
-3. In the **Virtual machines** tab, under **Import migration settings from an assessment**, select **No, I'll specify the migration settings manually (1)**.
+       >**Note:** If you get any error kindly refresh the screen periodically or Please try signing in to the Azure portal using incognito mode.
 
-     ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The Azure Migrate assessment created earlier is selected.](Images/no1.png "Replicate - Virtual machines")
+3. On the **Virtual machines** tab, set **Import migration settings from an assessment** to **No, I'll specify the migration settings manually (1)**. Then, select the virtual machines **smarthotelweb1 (2)**, **UbuntuWAF (3)** and **smarthotelweb2 (4)**, and click **Next (5)** to proceed.
 
-4. The **Virtual machines** Tab . Select the **UbuntuWAF**, **smarthotelweb1**, and **smarthotelweb2** virtual machines, then select **Next**.
+     ![](Images/Task3-Step4done.png)
 
-     ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](Images/replicate1.png "Replicate - Virtual machines")
+1. On the **Target settings** tab, select the following information:
 
-5. On the **Target settings** tab, select the information below,
+    - Select your **Subscription (1)**
+        
+    - Select the existing **SmartHotelHostRG (2)** resource group. 
 
-   - Select your subscription and the existing **SmartHotelHostRG (1)** resource group. 
+    - For the **Cache storage account:** select the storage account you created in task 1 from the drop-down **(3)**. 
 
-   - **Cache storage account**: Select the storage account here from the drop-down that you created in task 1 **(2)**. 
+    - Under **Virtual Network**, choose **SmartHotelVNet (4)**. 
 
-   - **Virtual Network**: Select **SmartHotelVNet (3)**. 
+    - For the **Subnet:**, select **SmartHotel (5)**. 
 
-   - **Subnet**: Select **SmartHotel (4)**. 
-
-   - Leave other values as default and select **Next (5)**.
+    - Leave all other values as default and click **Next (6)**.
    
-     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/E1T3S5-0107.png)
+      ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/L1-T3-S5new.png)
 
-       > **Note:** For simplicity, in this lab, you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
+      > **Note:** For simplicity, in this lab, you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
-6. On the **Compute** tab, select the below configuration (1), and select **Next (2)**. 
+6. On the **Compute** tab, select the below configuration, and select **Next (4)**. 
 
-      | **Virtual Machine** | **VM Size**    | **OS Type** | **Operating System**    |
+      | **Virtual Machine** | **VM Size (1)**    | **OS Type (2)** | **Operating System (3)**    |
       |---------------------|----------------|-------------|-------------------------|
       | smarthotelweb1      | Standard_F2s_v2 | Windows    | Windows Server 2019     |
       | smarthotelweb2      | Standard_F2s_v2 | Windows    | Windows Server 2019     |
-      | UbuntuWAF           | Standard_F2s_v2 | Linux      | Redhat Enterprise 8     |  
+      | UbuntuWAF           | Standard_F2s_v2 | Linux      | Redhat Enterprise 8     |
 
-      ![Screenshot of the 'Compute' tab of the 'Replicate' wizard in Azure Migrate Server Migration. Each VM is configured to use a Standard_F2s_v2 SKU, and has the OS Type specified.](Images/replicate-server-0407.png "Replicate - Compute")    
-
-7. In the **Disks** tab, review the settings but do not make any changes. Select **Next: Tags**, then select **Replicate** to start the server replication.
-
-8. In the **Azure Migrate - Servers, databases and web apps** blade, under **Migration and modernization**, select the **Overview** button.
-
-     ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](Images/newoverviewreplication.png "T3S8-0407 link")
+      ![](Images/Task3-Step5done.png)
     
-9. Confirm that the 3 machines are replicating.
+1. In the **Disks** tab, review the configuration settings without making any changes. Select **Next**, then select **Replicate** to begin the server replication process.
 
-     ![Screenshot of the 'Azure Migrate: Server Migration' overview blade showing the replication state as 'Healthy' for 3 servers.](Images/T3S9-0407.png "Replication summary")
+    ![](Images/30052025(22)new22.png)
 
-10. Select **Replications (1)** under **Migration** on the left.  Select **Refresh (2)** occasionally and wait until all three machines have a **Protected (3)** status, which shows the initial replication is complete. This will take 5-10 minutes.
+    ![](Images/30052025(22)new.png)
 
-     ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/upd-replicate-09.png "Replication status")
+1. On the **Migration tools**, under **Migration and modernization**, select the **Overview** button.
 
-#### Task summary 
+     ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](Images/newoverviewreplicationnew.png "Overview link")
+    
+1. Confirm that the number next to **Azure VM** under the **Replicate** section shows **3**, indicating two machines are replicating.
 
-In this task, you enabled replication from the Hyper-V host to Azure Migrate and configured the replicated VM size in Azure.
+     ![](Images/Task3-Step8done.png)
 
-### Task 4: Configure Networking
+1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (3)** and wait until all three machines have a **Protected (4)** status, which shows the initial replication is complete. This will take 5-10 minutes.
+
+     ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/image(17).png "Replication status")
+
+    You enabled replication from your Hyper-V host to Azure Migrate and configured the virtual machine sizes to match target Azure specifications, preparing the VMs for migration.
+
+## Task 4: Configure Networking
 
 In this task, you will modify the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine.
 
-1. Still on  the **Azure Migrate: Server Migration**, select the **smarthotelweb1** virtual machine from the **Replication** blade. This opens a detailed migration and replication blade for this machine. Take a moment to study this information.
+1. In the **Azure Migrate: Server Migration** page, select the **smarthotelweb1** virtual machine. This opens a detailed migration and replication blade for this machine. Take a moment to study this information.
 
-    ![Screenshot from the 'Azure Migrate: Server Migration - Replicating machines' blade with the smarthotelweb1 machine highlighted.](Images/T4S1-0407.png "Replicating machines")
+    ![Screenshot from the 'Azure Migrate: Server Migration - Replicating machines' blade with the smarthotelweb1 machine highlighted.](Images/15-7-25-l2-31.png "Replicating machines")
 
-2. Select **Compute and Network (1)** under **General** on the left, and verify that the VM size is set to **F2s_V2**.
+1. On the left menu, expand **General (1)** and select **Compute and Network (2)**. Under the **Microsoft Azure** column, verify the **Size** is set to **F2s_v2** **(3)**.
 
-    ![Screenshot of the smarthotelweb1 blade with the 'Compute and Network' and 'Edit' links highlighted.](Images/T4S2-0407.png "Edit Compute and Network settings")
+    ![Screenshot of the smarthotelweb1 blade with the 'Compute and Network' and 'Edit' links highlighted.](Images/15-7-25-l2-32.png "Edit Compute and Network settings")
 
-3. Select the **Edit** option next to the Network interface. 
+1. In the **Compute and Network** section, scroll down to the **Network interfaces**. Select the **pencil icon** (✏️) next to the NIC name.
+    
+    ![Screenshot showing the link to edit the network interface settings for a replicated VM.](Images/15-7-25-l2-33.png "Network Interface settings link")
 
-    ![Screenshot of the smarthotelweb1 blade with the 'Compute and Network' and 'Edit' links highlighted.](Images/T4S3-0407.png "Edit Compute and Network settings")
+1. In the **Network interface** settings:
 
-4. On the **Network Interfaces** page, select the configurations below, and click on **Apply (4)**
+    - Under **IP address type**, select **Static** **(1)**.
+    - In the **Private IP address** field, enter: `192.168.0.4` **(2)**.
+    - Select **Apply** **(3)** to save the changes.
 
-    - Subnet: **SmartHotel (192.168.0.0/25) (1)**
-    - IP address type: **Static (2)**
-    - Private IP address: **192.168.0.4 (3)**
+       ![Screenshot showing a private IP address being configured for a replicated VM in ASR.](Images/15-7-25-l2-34.png "Network interface - static private IP address")
 
-    ![Screenshot showing the link to edit the network interface settings for a replicated VM.](Images/T4S4-0407.png "Network Interface settings link")
+1. Select **Save** to apply the changes to the VM's configuration.
 
-4. Select **Save** on the **smarthotelweb1** settings
+    ![](Images/15-7-25-l2-35.png)
 
-5. Repeat the above steps to configure the private IP address for the other VMs.
+1. Repeat these steps to configure the private IP address for the other VMs.
  
    - For **smarthotelweb2** use private IP address **192.168.0.5**
   
    - For **UbuntuWAF** use private IP address **192.168.0.8**
 
-#### Task summary 
+     In this task, you modified the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine
 
-In this task, you modified the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine
+## Task 5: Server migration
 
-> **Note**: Azure Migrate makes a "best guess" at the VM settings, but you have full control over the settings of migrated items. In this case, setting a static private IP address ensures the virtual machines in Azure retain the same IPs they had on-premises, which avoids having to reconfigure the VMs during migration (for example, by editing web.config files).
+In this task, you will perform a migration of the smarthotelweb1, and smarthotelweb2 machines to Azure.
 
-### Task 5: Server migration
+> **Note:** In a real-world scenario, you would perform a test migration before the final migration. To save time, you will skip the test migration in this lab. The test migration process is very similar to the final migration.
 
-In this task, you will perform a migration of the UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines to Azure.
+1. On the **Azure Migrate: Server Migration** page, click on **Overview (1)** section and under Migrate to Azure, select **Migrate (2)**.
 
-> **Note**: In a real-world scenario, you would perform a test migration before the final migration. To save time, you will skip the test migration in this lab. The test migration process is very similar to the final migration.
+    ![](Images/image(15).png)
 
-1. Return to the **Azure Migrate: Server Migration** overview blade. Under **Migrate**, select **Migrate**.
+1. On the **Specify intent** tab, Select **Azure VM (1)** under **Where do you want to migrate to?** and select **Continue (2)**.
 
-    ![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/T5S1-0407.png "Replication summary")
+    ![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/06-05-2024(7)new.png "Replication summary")
 
-2. On the **Specify intent** tab, Select **Azure VM** under Where do you want to migrate to? and select **Continue**.
+3. On the **Migrate** blade, select the virtual machines **smarthotelweb2, UbuntuWAF and smarthotelweb1 (1)**, choose **Yes, shutdown virtual machines (Ensure no data loss) (2)**, then select **Migrate (3)** to start the migration process.
 
-    ![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/06-05-2024(7).png "Replication summary")
+    ![](Images/image(18).png)
 
-3. On the **Migrate** blade, select the 3 virtual machines **(1)**, and select **yes (2)** for **Shutdown machines before migration to minimum data loss** then select **Migrate (3)** to start the migration process.
-
-    ![Screenshot of the 'Migrate' blade, with 3 machines selected and the 'Migrate' button highlighted.](Images/T5S3-0407.png "Migrate - VM selection")
-
-   > **Note**: Ignore any **Failed** error for the Test migration status.
-   
-   > **Note**: You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
+    > **Note:** You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
 
 4. The migration process will start.
 
-    ![Screenshot showing 3 VM migration notifications.](Images/upd-migrate-3.png "Migration started notifications")
+    ![Screenshot showing 3 VM migration notifications.](Images/Task4-Step4do.png "Migration started notifications")
 
-5. To monitor progress, select **Jobs (1)** under **Migration** on the left and review the status of the three **Planned failover (2)** jobs.
+5. On the **Azure Migrate: Server Migration** page, to monitor progress, expand **Migration (1)** on the left menu and select **Jobs (2)** and review the status of the three **Planned failover (3)** jobs.
 
-    ![Screenshot showing the **Jobs* link and a jobs list with 3 in-progress 'Planned failover' jobs.](Images/T5S5-0407.png "Migration jobs")
+    ![Screenshot showing the **Jobs* link and a jobs list with 3 in-progress 'Planned failover' jobs.](Images/Task4-Step5do.png "Migration jobs")
 
-6. **Wait** until all three **Planned failover** jobs show a **Status** of **Successful**. You should not need to refresh your browser. This could take up to 15 minutes.
+6. **Wait** until all two **Planned failover** jobs show **Status** to **Successful**. You should not need to refresh your browser. This could take up to **15 minutes**.
 
-    ![Screenshot showing the **Jobs* link and a jobs list with all 'Planned failover' jobs successful.](Images/upd-migrate-5.png "Migration status")
+    ![Screenshot showing the **Jobs* link and a jobs list with all 'Planned failover' jobs successful.](Images/Task4-Step6do.png "Migration status")
 
-7. Navigate to the **SmartHotelHostRG** resource group and check that the VM, network interface, and disk resources have been created for each of the virtual machines being migrated.
+7. Navigate to the resource group, on the **Resource group** page, select the **SmartHotelHostRG** resource group.
 
-    ![Screenshot showing resources created by the test failover (VMs, disks, and network interfaces).](Images/upd-migrate-6.png "Migrated resources")
+    ![](Images/rg-ak-new.png)
 
-#### Task summary
+7. Check that the **VM, network interface and disk** resources have been created for each of the migrated virtual machines.
 
-In this task, you migrated the **UbuntuWAF**, **smarthotelweb1**, and **smarthotelweb2** VMs to Azure. I initiated the migration process, monitored progress, and confirmed the successful creation of the resources in the **SmartHotelHostRG** resource group.
+    ![Screenshot showing resources created by the test failover (VMs, disks, and network interfaces).](Images/Task4-Step8do.png "Migrated resources")
 
-### Summary
+## Summary 
 
-In this lab, you learned to migrate Windows Servers from Hyper-V to Azure using Azure Migrate: Server Migration. Created a storage account for migration data, registered the Hyper-V host with Azure Migrate, and enabled replication of on-premises VMs. Configured static private IP addresses for the replicated VMs and performed their migration to Azure, ensuring successful deployment and resource creation in the target resource group.
+In this lab, you learned how to migrate Windows Servers from Hyper-V to Azure using Azure Migrate: Server Migration. You created a storage account for migration data, registered your Hyper-V host with Azure Migrate, and configured replication for virtual machines. The lab provided essential knowledge on discovery, replication, and migration to Azure.
 
-### Proceed to the next 
+### You have successfully completed the Hands-on Lab.
