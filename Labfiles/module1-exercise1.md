@@ -65,8 +65,6 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 3. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Start (2)** on the right pane if the VM is not already running.
 
     ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/HOL1-EX1-S12new.png "Start AzureMigrateAppliance")
-    
-
 
      > **Note:** If an error occurs while starting the **AzureMigrateAppliance** VM, try turning off the **AzureArcVM** first, then start the **AzureMigrateAppliance** VM again.
 
