@@ -96,8 +96,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
    - Check the box to **Confirm the target region for migration (4)**.
    
    - Click **Create resources (5)** to deploy the necessary Azure Site Recovery resources.
-
-
+     
      ![](Images/30052025(14).png)
 
      > **Note:** Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
