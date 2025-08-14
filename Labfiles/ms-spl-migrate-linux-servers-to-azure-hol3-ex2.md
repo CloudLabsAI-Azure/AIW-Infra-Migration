@@ -71,7 +71,6 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
    
    - Click **Create resources (5)** to deploy the necessary Azure Site Recovery resources.
 
-
      ![](Images/30052025(14).png)
 
      > **Note:** Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
@@ -292,4 +291,5 @@ In this task, you will perform a migration of the redhat machine to Azure.
 In this lab, you logged into the Red Hat VM in Hyper-V Manager to prepare for migration, reviewed the registered Hyper-V host in Azure Migrate Server Migration, enabled replication from Hyper-V to Azure while configuring the VM size, set a static private IP for the replicated VM to match on-premises settings, and used Azure Migrate to create an Azure VM with the replicated data.
 
 ### You have successfully completed the lab.
+
 
