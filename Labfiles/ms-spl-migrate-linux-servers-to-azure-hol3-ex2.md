@@ -276,10 +276,10 @@ In this task, you will perform a migration of the redhat machine to Azure.
     ![Screenshot showing resources created by the test failover (VMs, disks, and network interfaces).](Images/Task4-Step8donew.png "Migrated resources")
 
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
    <validation step="8bfe92e8-9f21-4236-91e8-b1c10057b564" />
@@ -291,5 +291,6 @@ In this task, you will perform a migration of the redhat machine to Azure.
 In this lab, you logged into the Red Hat VM in Hyper-V Manager to prepare for migration, reviewed the registered Hyper-V host in Azure Migrate Server Migration, enabled replication from Hyper-V to Azure while configuring the VM size, set a static private IP for the replicated VM to match on-premises settings, and used Azure Migrate to create an Azure VM with the replicated data.
 
 ### You have successfully completed the lab.
+
 
 
