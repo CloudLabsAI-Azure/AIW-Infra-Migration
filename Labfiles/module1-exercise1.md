@@ -110,6 +110,7 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/30052025(7)new.png "Azure Migrate login code")
    
     > Now, follow the instructions below to complete the login process.
+    
     > **Note:** If the appliance update fails, run the following command in **powershell as Administrator** to update the AzureMigrateAppliance Hyper-V Windows VM version. After the command executes successfully, click **OK**.
     >   ![appliance update error.](Images/errorappliance.png)
     > ```
