@@ -98,7 +98,6 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
    
    - Click **Create resources (5)** to deploy the necessary Azure Site Recovery resources.
 
-
      ![](Images/30052025(14).png)
 
      > **Note:** Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
@@ -370,3 +369,4 @@ In the portal, you can select up to 10 machines at once for replication. To repl
 In this lab, you learned how to migrate Windows Servers from Hyper-V to Azure using Azure Migrate: Server Migration. You created a storage account for migration data, registered your Hyper-V host with Azure Migrate, and configured replication for virtual machines. The lab provided essential knowledge on discovery, replication, and migration to Azure.
 
 ### You have successfully completed the Hands-on Lab.
+

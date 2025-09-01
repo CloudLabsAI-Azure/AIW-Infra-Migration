@@ -65,8 +65,6 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 3. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Start (2)** on the right pane if the VM is not already running.
 
     ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/HOL1-EX1-S12new.png "Start AzureMigrateAppliance")
-    
-
 
      > **Note:** If an error occurs while starting the **AzureMigrateAppliance** VM, try turning off the **AzureArcVM** first, then start the **AzureMigrateAppliance** VM again.
 
@@ -112,6 +110,14 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/30052025(7)new.png "Azure Migrate login code")
    
     > Now, follow the instructions below to complete the login process.
+    
+    > **Note:** If the appliance update fails, run the following command in **powershell as Administrator** to update the AzureMigrateAppliance Hyper-V Windows VM version. After the command executes successfully, click **OK**.
+    >   ![appliance update error.](Images/errorappliance.png)
+    > ```
+    > slmgr /rearm
+    > ```  
+    >   ![appliance update cmd.](Images/okforcommand.png)
+    > Restart AzureMigrateAppliance Hyper-V VM and reperform from Task 2, step 5.
 
 13. When the **Continue with Azure Login** pop-up appears, click **Copy code & Login** to copy the device code and open the Azure authentication page.
    
