@@ -66,7 +66,41 @@ In this task, you will deploy the Azure Migrate appliance in Hyper-V and connect
 
     ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/HOL1-EX1-S12new.png "Start AzureMigrateAppliance")
 
-     > **Note:** If an error occurs while starting the **AzureMigrateAppliance** VM, try turning off the **AzureArcVM** first, then start the **AzureMigrateAppliance** VM again.
+    > **Note:** If an error occurs while starting the **AzureMigrateAppliance** VM, try turning off the **AzureArcVM** first, then start the **AzureMigrateAppliance** VM again.
+
+    > **Note:** **Follow these steps and run the commands one-by-one from the code block.**
+
+    1. On the **Lab VM**, open **Windows PowerShell** (blue icon) **Run as administrator**.
+
+    1. Copy the code block below.
+
+    1. Paste **one line at a time** into PowerShell and press **Enter** after each line.
+
+    1. After the last line, confirm the VM **State** shows **Running**.
+
+        ```powershell
+        $vm = "AzureMigrateAppliance"
+
+        Import-Module Hyper-V -ErrorAction SilentlyContinue
+
+        if (-not (Get-Command Get-VM -ErrorAction SilentlyContinue)) { DISM /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V-Management-PowerShell /All }
+
+        Import-Module Hyper-V
+
+        Remove-VMSavedState -VMName $vm -ErrorAction SilentlyContinue
+
+        Stop-VM -Name $vm -TurnOff -ErrorAction SilentlyContinue
+
+        Set-VMProcessor -VMName $vm -CompatibilityForMigrationEnabled $true
+
+        Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 4096MB -MinimumBytes 2048MB -MaximumBytes 8192MB
+
+        Start-VM -Name $vm -ErrorAction SilentlyContinue
+
+        if ((Get-VM -Name $vm).State -ne 'Running') { Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 2048MB -MinimumBytes 1024MB -MaximumBytes 8192MB; Start-VM -Name $vm }
+
+        Get-VM -Name $vm | Select Name, State, Status, MemoryAssigned | Format-Table -Auto
+        ```
 
 4. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Connect (2)** on the right pane.
 
