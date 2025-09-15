@@ -224,7 +224,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
       ![](Images/30052025(21)new1.png)
     
-1. In the **Disks** tab, review the configuration settings without making any changes. Select **Next**, then select **Replicate** to begin the server replication process.
+1. In the **Disks** tab, review the configuration settings without making any changes. Select **Next**, then select **Next** in the **Tags** tab, and then **Replicate** to begin the server replication process.
 
     ![](Images/30052025(22)new22.png)
 
