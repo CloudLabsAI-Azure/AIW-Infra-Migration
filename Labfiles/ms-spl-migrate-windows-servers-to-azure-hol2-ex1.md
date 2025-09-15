@@ -204,9 +204,11 @@ In this task, you will configure and enable the replication of your on-premises 
 
     - For the **Subnet:**, select **SmartHotel (5)**. 
 
-    - Leave all other values as default and click **Next (6)**.
+    - Select **No infrastructure redundancy required (6)**.
+
+    - Leave all other values as default and click **Next (7)**.
    
-      ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/L1-T3-S5new.png)
+      ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/E2T3S4.png)
 
       > **Note:** For simplicity, in this lab, you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
