@@ -83,7 +83,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 1. In the **SmartHotel VMs** group details page. Note that each VM shows **Dependencies** status as **Requires agent installation**. Click on **Requires agent installation** for the **smarthotelweb1** VM to proceed with agent setup.
 
-    ![](Images/15-7-25-l2-11.png)
+    ![](Images/infra-l1-3.png)
 
 1. On the **Dependencies** tab, click on **Configure Log Analytics workspace**.
 
@@ -102,9 +102,9 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
      > **Note**: If you don't see the workspace here. You can attempt to close and reopen the Workspace, or you can try refreshing the browser page. This may have been caused by a temporary error in the portal.
 
-1. From the **Log Analytics workspace** screen: Select **Agents (2)** under **Settings (1)** from the left-hand side menu and Expand the **Log analytics agent instructions** and make a note of the **Workspace ID (3)** and **Primary Key (4)**. You can copy them using the copy icon and paste them into Notepad for later use.
+1. From the **Log Analytics workspace** screen: Select **Agents (2)** under **Settings (1)** from the left-hand side menu and Expand the **Log analytics agent instructions (3)** and make a note of the **Workspace ID (4)** and **Primary Key (5)**. You can copy them using the copy icon and paste them into Notepad for later use.
 
-    ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/lab2.png "OMS Workspace ID and primary key")
+    ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/infra-l1-4.png "OMS Workspace ID and primary key")
 
 1. On the **Dependencies** screen, under **Step 1**, right-click to copy the download links for **Windows 64-bit** and **Linux** versions of the **Microsoft Monitoring Agent (1)**, then under **Step 2**, copy the links for the **Windows 64-bit** and **Linux** versions of the **Dependency Agent (2)**, and save them along with the previously noted **Workspace ID** and **Primary Key** .
    
@@ -117,6 +117,8 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 1. When the **Connect to smarthotelweb1** window appears, click **Connect** to continue. Log in to the **Administrator** account using the password **<inject key="SmartHotel Admin Password" />**.
 
     ![](Images/15-7-25-l2-18.png)
+
+    ![](Images/infra-l1-5.png)
 
 1. On the **smarthotelweb1** VM. Open **Internet Explorer** from the **Start** menu. Paste the link to the **64-bit Microsoft Monitoring Agent for Windows** that you saved earlier. Once the download completes, click **Run** when prompted to start the installer.
 
@@ -146,7 +148,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 1. On the **Microsoft Update** screen, leave everything as default and select **Next**. 
 
-    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/updt-mma7.png "MMA installation")
+    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/infra-l1-7.png "MMA installation")
 
 1. On the **Ready to Install** screen, click on **Install**. 
 
@@ -163,19 +165,19 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 1. On the **License Agreement** screen, select **I Agree** to accept the agreement and continue. 
 
-    ![Screenshot for installing Dependency Agent.](Images/hol1-ex-2-s21.png "Dependency Agent installation") 
+    ![Screenshot for installing Dependency Agent.](Images/infra-l1-8.png "Dependency Agent installation") 
 
 1. On the **Completing Dependency Agent Setup** screen, select **Finish** to finish the installation process.
 
-    ![Screenshot for installing Dependency Agent.](Images/hol1-ex-2-s22.png "Dependency Agent installation") 
+    ![Screenshot for installing Dependency Agent.](Images/infra-l1-9.png "Dependency Agent installation") 
 
     > **Note**: You do not need to configure the workspace ID and key when installing the Dependency Agent, since it uses the same settings as the Microsoft Monitoring Agent, which must be installed beforehand.
 
 1. Close the virtual machine connection window for the **smarthotelweb1 VM**. Connect to the **smarthotelweb2 VM** and repeat the installation process (steps 10-22) for both agents (the administrator password is the same as for smarthotelweb1). Close the virtual machine connection window for the **smarthotelweb2 VM** once the installation of agents is done.
 
-1. On the **smarthotelweb1** VM desktop, double-click the **Command Prompt** shortcut to open a terminal window.
+1. On the **smarthotelweb1** VM desktop, type **cmd (1)** in the search bar and select **Command Prompt (2)** from the results to open a terminal window.
 
-     ![](Images/15-7-25-l2-27.png)
+     ![](Images/infra-l1-10.png)
     
      > **Note**: The SmartHotelHost runs Windows Server 2019 with the Windows Subsystem for Linux enabled. This allows the command prompt to be used as an SSH client. More info on supported Linux on Azure can be found here: https://Azure.com/Linux. 
 
