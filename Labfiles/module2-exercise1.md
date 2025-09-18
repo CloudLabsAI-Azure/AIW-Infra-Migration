@@ -8,10 +8,10 @@ In this HOL, you will use Azure Migrate: Server Assessment to assess the on-prem
 
 In this HOL, you will complete the following exercises:
 
-- Exercise 1: Migrate and Modernize Linux & OSS DB workloads to Azure
-- Exercise 2: Set up your environment on Azure to Migrate Servers
-- Exercise 3: Migrating your applications and data using Microsoft services and tools, such as Azure Migrate, the Azure Hybrid Benefit, and additional programs
-- Exercise 4: Optimizing newly Migrated Workloads, and Emphasizing commonalities across all Stacks
+- **Exercise 1:** Migrate and Modernize Linux & OSS DB workloads to Azure
+- **Exercise 2:** Set up your environment on Azure to Migrate Servers
+- **Exercise 3:** Migrating your applications and data using Microsoft services and tools, such as Azure Migrate, the Azure Hybrid Benefit, and additional programs
+- **Exercise 4:** Optimizing newly Migrated Workloads, and Emphasizing commonalities across all Stacks
 
 ## Exercise 1: Discovery, Assess, and Plan: Evaluate your current environment
 
@@ -47,7 +47,7 @@ In this task, you will review your on-premises Hyper-V Linux server and Open Sou
      
 1. In **Hyper-V Manager**, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" />**. You should now see the **redhat** VM along with 6 other virtual machines that will be used in upcoming HOLs.
 
-    ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/infra-l6-1.png "Hyper-V Manager")
+    ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/infra-l6-1-new.png "Hyper-V Manager")
      
 1. In Hyper-V Manager, select the **redhat (1)**, then select **Start (2)** on the right if not already running.
 

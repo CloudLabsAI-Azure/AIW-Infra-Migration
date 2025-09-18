@@ -126,7 +126,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
       - Set **Are your machines virtualized?** to **Yes, with Hyper-V (2)**
       - Select **Finalize registration (3)**
 
-        ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/infra-l3-2.png "Finalize registration")
+        ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/infra-l3-1.png "Finalize registration")
 
 1. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 5-10 minutes.
 
@@ -186,7 +186,7 @@ In this task, you will configure and enable the replication of your on-premises 
    - **Availability option:** Select **No infrastructure redundancy required (6)**
    - Leave other values as default and select **Next (7)**.
    
-     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](infra-l3-2.png)
+     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/infra-l3-2.png)
 
      > **Note:** For simplicity, in this lab, you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
      

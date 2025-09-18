@@ -32,7 +32,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 1. In the **Gallery details** section, in the **Target Azure compute gallery**, select **Create new (1)**, enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)**, and then click **OK (3)** to create a new Azure compute gallery.
 
-   ![](Images/15-7-25-l4-2.png)
+   ![](Images/infra-l4-2.png)
 
 1. On the **Target VM image definition**, click **Create new (1)** and create a VM Image definition by providing the following details, and then click **Ok (6)**: 
   
@@ -44,7 +44,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
   
    - SKU: **migration (5)**
 
-      ![](Images/15-7-25-l4-3.png)
+     ![](Images/infra-l4-3.png)
 
 1. In the **Operating system state** section, select **Specialized (1)** and enter the **Version Number**. If this is the first version of the image, type **1.0.0 (2)**. Select **Review + create (3)**.
 
@@ -52,7 +52,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 1. On the **Review + create** tab, verify that the validation has passed and all the details are correct. Then, select **Create** to begin creating the image.
 
-    ![](Images/15-7-25-l4-4.png)
+    ![](Images/infra-l4-4.png)
 
 1. Once the VM image version deployment is complete, click on **Go to resource**.
 
@@ -93,7 +93,7 @@ In this task, you will enable Automanage on existing machines.
 
     ![](Images/15-7-25-l4-l11.png)
 
-1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure best practices: Production**.
+1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure best practices: Production** and click **Next**.
    
     ![](Images/15-7-25-l4-l13.png)
    

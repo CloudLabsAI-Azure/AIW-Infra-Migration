@@ -64,7 +64,7 @@ The architecture diagram outlines a series of labs focused on migrating workload
 
 ## Architecture Diagram
 
-![A slide shows the on-premises SmartHotel application architecture.](Images/archdia.png "SmartHotel Migration Overview")
+![A slide shows the on-premises SmartHotel application architecture.](Images/archdia.png)
 
 ## Explanation of Components  
 
@@ -90,29 +90,29 @@ The architecture diagram outlines a series of labs focused on migrating workload
 
 Welcome to Infrastructure Migration. Ensure you have access to all required tools, accounts, and carefully read each task and follow the steps in sequence. Refer to the screenshots and tips provided for guidance throughout the lab.
 
-## **Accessing Your Lab Environment**
+## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
 ![](./Images/Infra-g2.png)
 
-## **Virtual Machine & Lab Guide**
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
-## **Exploring Your Lab Resources**
+## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
 
    ![](./Images/14-7-25-g2.png)
  
-## **Utilizing the Split Window Feature**
+## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
    ![](./Images/14-7-25-g3.png)
  
-## **Managing Your Virtual Machine**
+## Managing Your Virtual Machine
  
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
@@ -152,7 +152,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 6. From the **Azure Portal** Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
 
-   ![](Images/Infra-g2.png)
+   ![](Images/Infra-g1.png)
    
 7. On the **Resource groups** page in the Azure portal, confirm you have all resource groups present as shown below.
 

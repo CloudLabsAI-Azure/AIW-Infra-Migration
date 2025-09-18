@@ -12,12 +12,12 @@ Azure Arc allows you to manage your hybrid IT estate with a single pane of glass
 
 In this HOL, you will complete the following exercises:
 
-- Exercise 1: Run workloads anywhere with Azure cloud services
-- Exercise 2: Configure ASR for On-premises Infrastructure
-- Exercise 3: Setup Test Failover
-- Exercise 4: Failover the Infrastructure to Azure Cloud
-- Exercise 5: Enable Microsoft Defender for Cloud, Microsoft Sentinel, Azure Monitor, and setup Log Analytics for each resource.
-- Exercise 6: Business Case Analysis Capability (Read-only)
+- **Exercise 1:** Run workloads anywhere with Azure cloud services
+- **Exercise 2:** Configure ASR for On-premises Infrastructure
+- **Exercise 3:** Setup Test Failover
+- **Exercise 4:** Failover the Infrastructure to Azure Cloud
+- **Exercise 5:** Enable Microsoft Defender for Cloud, Microsoft Sentinel, Azure Monitor, and setup Log Analytics for each resource.
+- **Exercise 6:** Business Case Analysis Capability (Read-only)
 
 ### Exercise 1: Run workloads anywhere with Azure Cloud Services
 
@@ -57,9 +57,9 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 
     ![Screenshot of the copy script.](Images/15-7-25-l9-6.png "copy script")
     
-1. Go to the **Start (1)** button in the VM, type **Hyper-V Manager** and select **Hyper-V Manager (2)**.
+1. Go to the **Start** button in the VM, type **Hyper-V Manager (1)** and select **Hyper-V Manager (2)**.
 
-    ![Screenshot of Hyper-V Manager, with the 'Hyper-V Manager' action highlighted.](Images/upd-hyper-v-manager.png "Hyper-V Manager")
+    ![Screenshot of Hyper-V Manager, with the 'Hyper-V Manager' action highlighted.](Images/infra-l10-1.png "Hyper-V Manager")
 
    > **Note:** You can also open the **Hyper-V manager** by clicking on the icon that is present in the taskbar. 
     
@@ -73,19 +73,19 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 
     >**Note:** If you are unable to find the state for the **AzureArcVM (1)** VM as Running, then select **Start (2)** in the Actions pane on the right.
 
-    ![Screenshot of Hyper-V Manager showing the start button for the AzureArcVM.](Images/HOL3-EX1-S11.png "Start AzureArcVM")    
+    ![Screenshot of Hyper-V Manager showing the start button for the AzureArcVM.](Images/infra-l9-3.png "Start AzureArcVM")    
     
 1. In Hyper-V Manager, select the **AzureArcVM (1)** VM, then select **Connect (2)** in the Actions pane on the right.
 
-    ![Screenshot of Hyper-V Manager showing the connect button for the AzureArcVM.](Images/15-7-25-l9-1.png "Connect to AzureArcVM")  
+    ![Screenshot of Hyper-V Manager showing the connect button for the AzureArcVM.](Images/infra-l10-2.png "Connect to AzureArcVM")  
     
 1. Under Connect to AzureArcVM, click on **Connect** and then log into the VM with the **Administrator password**: **<inject key="SmartHotel Admin Password" />** (If the copy/paste is not working in the hyper-V machine, please try typing the password. The login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
  
-    ![Screenshot of the Connect to AzureArcVM.](Images/HOL3-EX1-S13.png)
+    ![Screenshot of the Connect to AzureArcVM.](Images/infra-l10-4.png)
     
-1. From the **Start (1)** menu of the AzureArcVM, search for **Windows Powershell (2)** and open it **(3)**.
+1. From the **Start** menu of the AzureArcVM, search for **Windows Powershell (1)** and open it **(2)**.
 
-    ![Screenshot of the PowerShell.](Images/upd-powershell.png)
+    ![Screenshot of the PowerShell.](Images/infra-l10-3.png)
       
 1. In PowerShell, run the following command to set the execution policy as unrestricted.
 
@@ -110,7 +110,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
    
    >**Note:** On the Welcome to Microsoft Edge page, select  **Start without your data**, on **Stay current with your browsing data** select **Confirm and continue**, and on the help for importing Google browsing data page, select the  **Continue without this data**  button. Then, proceed to select  **Confirm and start browsing**  on the next page has a context menu.
     
-    ![Screenshot of the PowerShell script.](Images/upd-package.png)
+    ![Screenshot of the PowerShell script.](Images/infra-l10-5.png)
      
  1. Close the AzureArcVM, navigate to **Azure Arc** page in the Azure portal, select **Machines (1)** under **Azure Arc resources** and now verify that a server is connected successfully **(2)**.
 
