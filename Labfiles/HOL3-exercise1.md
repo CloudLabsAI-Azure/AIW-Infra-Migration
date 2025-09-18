@@ -94,7 +94,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
     ```
    >**Note:** If you get an option, "Do you want to change the execution policy?", please type A and press Enter. 
 
-1. Now, run the whole script that you copied in Notepad earlier in **step 7**.
+1. Now, run the whole script that you copied in Notepad earlier in **step 6**.
 
 1. After running the script, packages will be installed, and then you will be directed to a pop-up browser page to log into your Azure account for authentication purposes. Use the below Azure credentials:
 

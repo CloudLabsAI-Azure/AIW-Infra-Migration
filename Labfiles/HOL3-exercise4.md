@@ -20,7 +20,7 @@ In this exercise, you will complete the following task:
     
 1. On the **Recovery service vaults** page, click on **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-MigrateVault-xxxx**.  
 
-    ![](Images/15-7-25-2.png "create Recovery service vaults")
+    ![](Images/infra-l11-1.png "create Recovery service vaults")
     
 1. On the **Recovery Service Vault page**, click on **Replicated Items (1)** under **Protected Items** section and select **AzureArcVM (2)**.     
 

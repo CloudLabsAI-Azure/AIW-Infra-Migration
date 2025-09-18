@@ -20,7 +20,7 @@ In this exercise, you will complete the following task:
     
 1. On the Recovery services vaults, click on **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-MigrateVault** which we have configured in the previous HOL1 task.
    
-    ![Screenshot of the Create Recovery service vaults.](Images/hol3-e2-s2.png "create Recovery service vaults")
+    ![Screenshot of the Create Recovery service vaults.](Images/infra-l11-1.png "create Recovery service vaults")
 
 1. In the **Recovery Services vault** page, on the left panel, scroll down and click **Manage (1)** to expand the options. Under **Manage**, select **Site Recovery infrastructure (2)**.
 
@@ -28,7 +28,7 @@ In this exercise, you will complete the following task:
 
 1. In the **Site Recovery infrastructure** blade, expand **For Hyper-V Sites (1)** on the left menu. Click on **Hyper-V Hosts (2)**. In the list of hosts, locate your server and ensure its **Connection status** is **Connected (3)**.
 
-    ![](Images/15-7-25-l10-new.png)
+    ![](Images/infra-l11-3.png)
 
 1. Go back to your **Recovery service vault page**, expand the **Protected items (1)** section on the left panel, click **Replicated Items (2)**. Click the **+ Replicate (3)** button at the top. From the dropdown menu, select **Hyper-V machines to Azure (4)**
 
@@ -42,7 +42,7 @@ In this exercise, you will complete the following task:
 
    - Post-failover resource group: **SmartHotelRG (1)**
    
-   - Storage type: **Storage account (2)**
+   - Replica Storage type: **Storage account (2)**
 
    - Storage account: select the storage account created in the previous HOL **migrationstorage<inject key="DeploymentID" enableCopy="false" /> (3)** available in the drop-down list.   
    
@@ -52,7 +52,7 @@ In this exercise, you will complete the following task:
    
    - Leave other values as default and click on **Next (6)**
    
-       ![](Images/15-7-25-l10-6.png)
+       ![](Images/infra-l11-2.png)
     
 1. In the **Virtual machine selection** tab, check the box next to **AzureArcVM (1)** and click on **Next (2)** to proceed.
 
@@ -68,12 +68,12 @@ In this exercise, you will complete the following task:
    
 1. Under **Review** tab, click on **Enable Replication**.
 
-   ![](Images/15-7-25-l10-10.png)
+   ![](Images/infra-l11-5.png)
 
 1. The replication process can take **15–20 minutes** to complete. Once the Replication is completed, the status of the replicated AzureArcVM will now become **Protected (2)**.
    > **Note:** You might have to refresh **(1)** a couple of times.
 
-      ![](Images/15-7-25-l10-11.png)
+      ![](Images/infra-l11-4.png)
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

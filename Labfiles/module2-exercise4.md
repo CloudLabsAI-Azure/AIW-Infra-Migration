@@ -18,7 +18,7 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
 1. In the Azure portal `https://portal.azure.com`, navigate to your newly migrated **Red Hat** VM and select it.
     
-    ![](Images/upd-redhatrg.png)
+    ![](Images/infra-l9-1.png)
     
 1. On the **redhat** virtual machine blade, expand **Security (1)** from the left-hand menu and select **Identity (2)**.
 

@@ -18,8 +18,9 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 1. In the Azure portal's navigation pane, select **Resource groups**. From the Resource groups page, select the **SmartHotelHostRG** resource group. Select **smarthotelweb1** VM to create an image.
 
-   ![](Images/15-7-25-l2-41.png)
+   ![](Images/infra-l3-5.png)
 
+   ![](Images/infra-l4-1.png)
 
 1. On the **smarthotelweb1** VM page, on the upper menu, select **Capture (1) -> Image (2)**.
    
@@ -31,7 +32,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 1. In the **Gallery details** section, in the **Target Azure compute gallery**, select **Create new (1)**, enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)**, and then click **OK (3)** to create a new Azure compute gallery.
 
-   ![](Images/15-7-25-l4-l2.png)
+   ![](Images/15-7-25-l4-2.png)
 
 1. On the **Target VM image definition**, click **Create new (1)** and create a VM Image definition by providing the following details, and then click **Ok (6)**: 
   
@@ -43,7 +44,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
   
    - SKU: **migration (5)**
 
-      ![](Images/15-7-25-l4-l3.png)
+      ![](Images/15-7-25-l4-3.png)
 
 1. In the **Operating system state** section, select **Specialized (1)** and enter the **Version Number**. If this is the first version of the image, type **1.0.0 (2)**. Select **Review + create (3)**.
 
@@ -51,7 +52,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 1. On the **Review + create** tab, verify that the validation has passed and all the details are correct. Then, select **Create** to begin creating the image.
 
-    ![](Images/15-7-25-l4-l5.png)
+    ![](Images/15-7-25-l4-4.png)
 
 1. Once the VM image version deployment is complete, click on **Go to resource**.
 
@@ -59,11 +60,11 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
    
 1. On the **VM image version** page, click **+ Create VMSS** to begin creating a Virtual Machine Scale Set using this image.
 
-    ![](Images/15-7-25-l4-l7.png)
+    ![](Images/infra-l4-5.png)
 
 1. On the **Create a Virtual Machine Scale Set (VMSS)** page, Under the **Basics** tab, enter the **Virtual machine scale set name** as **migrationscaleset<inject key="DeploymentID" enableCopy="false" />**
 
-    ![](Images/15-7-25-l4-l8.png)
+    ![](Images/infra-l4-6.png)
 
 1. On the **Size** section, select **Standard_D2s_v3 (1)** as the VM size and under **Licensing**, choose **Windows server (2)** for the License type. Once done, click **Review + create (3)**.
 

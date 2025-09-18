@@ -51,7 +51,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 1. Enter 'yes' when prompted **Are you sure you want to continue connecting** and enter the password **<inject key="SmartHotel Admin Password" />**.
 
-    ![Screenshot showing the command prompt with an SSH session to UbuntuWAF.](Images/upd-ssh.png "SSH session with UbuntuWAF")
+    ![Screenshot showing the command prompt with an SSH session to UbuntuWAF.](Images/infra-l7-1.png "SSH session with UbuntuWAF")
 
 1. Enter the following command, followed by the password **<inject key="SmartHotel Admin Password" />** when prompted:
   
@@ -91,7 +91,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
     sh InstallDependencyAgent-Linux64.bin -s
     ```
 
-    ![Screenshot showing that the Dependency Agent install on Linux was successful.](Images/upd-da-linux-done.png "Dependency Agent installation was successful")
+    ![Screenshot showing that the Dependency Agent install on Linux was successful.](Images/infra-l7-2.png "Dependency Agent installation was successful")
     
 
 1. Return to the Azure Portal and refresh the Azure Migrate **SmartHotel VMs** VM group blade. The Red Hat VM on which the dependency agent was installed should now show its status as **Installed**. (If not, refresh the page **using the browser refresh button**, not the refresh button in the blade.  It may take up to **5 minutes** after installation for the status to be updated.)
