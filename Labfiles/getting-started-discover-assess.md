@@ -1,6 +1,6 @@
 # Discover And Assess On-premises Windows & SQL Servers
 
-### Overall Estimated Duration: 4 Hours
+### Estimated Duration: 4 Hours
 
 ## Overview
 
@@ -51,7 +51,7 @@ The lab architecture involves integrating on-premises infrastructure with Azure 
 
 ## Getting started with the lab
 
-Welcome to your Discover And Assess On-premises Windows & SQL Servers Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+ We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  
@@ -67,19 +67,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](./Images/environment-tab(1).png)
+![](./Images/env1-2009.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](./Images/split-window(1).png)
+![](./Images/split-2009.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![](./Images/resources-tab(1).png)
+![](./Images/resources-2009.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
@@ -107,7 +107,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
-   ![](./Images/GS9.png)
+   ![](./Images/stay-signedin-2009.png)
 
 5. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
@@ -123,6 +123,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![](./Images/GS4.png)
+![](./Images/next-page-2009.png)
 
 ### Happy Learning!!
