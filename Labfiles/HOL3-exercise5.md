@@ -24,7 +24,7 @@ In this task, you will enable Microsoft Defender for Cloud to enhance the securi
 
 1. In the **search resources, services and docs** bar, type **Microsoft Defender for Cloud (1)** and select **Microsoft Defender for Cloud (2)** from Services list.
 
-    ![](Images/15-7-25-l12-1.png)
+    ![](Images/infra-l14-1.png)
     
     > **Note:** If you are prompted with a new upgrade pop-up, click on Skip.
     
@@ -34,15 +34,15 @@ In this task, you will enable Microsoft Defender for Cloud to enhance the securi
      
 1. On the **Defender plans** page, select **Defender plans** from the left-hand panel **(1)**, toggle the **Servers** plan to **On (2)**, and click **Save (3)** to apply the changes.
 
-    ![](Images/15-7-25-l12-3.png)
+    ![](Images/infra-l14-2.png)
     
 1. The **Microsoft Defender for Cloud Overview page** offers a consolidated perspective for security experts. This section combines various independent cloud security components, such as **Secure Score, Regulatory Compliance, and Workloads Protection**, and provides detailed insights on the security posture on a distinct dashboard.
 
-    ![Screenshot of the overview page](Images/H3E5S5.png "overview page")
+    ![Screenshot of the overview page](Images/infra-l14-2.1.png "overview page")
 
 1. In the Microsoft Defender for Cloud portal, click **General (1)**, then select **Recommendations (2)** to view risk-based recommendations and resource health insights..
     
-     ![](Images/15-7-25-l12-4.png)
+     ![](Images/infra-l14-4.png)
    
 1. On the **Security alerts page** under General, you can see the alerts that describe details of the affected resources, suggested remediation steps, and in some cases, an option to trigger a logic app in response. (The Remediation steps contain the remediation logic where you can remediate the selected resource/s. To simplify remediation, improve your environment's security, and increase your secure score, many recommendations include a Fix option. Fix helps you quickly remediate a recommendation on multiple resources.)
 
@@ -56,27 +56,27 @@ In this task, you will create and enable Microsoft Sentinel and review the Conte
     
 1. On the **Microsoft Sentinel** page, click on **+ Create** to start onboarding a workspace.   
 
-    ![Screenshot of the create Microsoft Sentinel.](Images/hol3-e5-t2-s2.png "Microsoft Sentinel")
+    ![Screenshot of the create Microsoft Sentinel.](Images/infra-l14-7.png "Microsoft Sentinel")
     
 1. On the **Add Microsoft Sentinel to a Workspace** page, select the **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (1)** workspace and click on **Add (2)**. If prompted, the Microsoft Sentinel free trial is activated. Click on **OK**.   
 
-   ![](Images/15-7-25-l12-7.png)
+   ![](Images/infra-l14-8.png)
     
-1. On the **News and guides (1)** window, go to the **Get started (2)** tab, and review the content. From the left pane under **Configuration**, select **Data connectors (3)**.   
+1. In the Microsoft Sentinel window, navigate to the left-hand pane and, under **Configuration (1)**, select **Data connectors (2)**. This will take you to the Data Connectors page.  
 
-    ![Screenshot of the get started.](Images/hol3-e5-t2-s4-01.png "get started")
+    ![Screenshot of the get started.](Images/infra-l14-7.1.png "get started")
     
-1. On the **Microsoft Sentinel | Data connectors** page, scroll down and click on **Go to Content hub** under **More data connectors** section.
+1. On the **Microsoft Sentinel | Data connectors** page, click **Content Hub** under the **More content at** section to view additional connectors.
 
-    ![Screenshot of the get started.](Images/hub.png "get started")
+    ![Screenshot of the get started.](Images/infra-l14-8-2.png "get started")
 
 1. You will now be directed to the **Content hub** page. Microsoft Sentinel comes with many connectors for Microsoft solutions that are available out of the box and provide real-time integration. For non-Microsoft solutions, Microsoft Sentinel provides built-in interfaces to the larger security and application ecosystems. Close the **Content hub** window.
 
-    ![Screenshot of the Data Connectors.](Images/hub1.png "Data Connectors")
+    ![Screenshot of the Data Connectors.](Images/infra-l14-8-2.png "Data Connectors")
 
 1. From the left pane, select **Analytics** present under **Configuration**. You can create custom analytics rules to help discover threats and anomalous behaviours in your environment. (Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and remediation processes.) 
 
-    ![Screenshot of the Analytics.](Images/hol3-e5-t2-s6.png "Analytics")
+    ![Screenshot of the Analytics.](Images/infra-l14-09.png "Analytics")
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -93,9 +93,9 @@ In this task, you will enable Azure Monitor to track and manage the performance 
 
      ![](Images/15-7-25-l12-6.png)
     
-1. On the **Monitor** page, from the left pane, select **Log Analytics Workspaces (1)** present under Insights (You will see your subscription and all the workspaces in it, listed here) and click on **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (2)** workspace under azuremigraterg.
+1. On the **Monitor** page, from the left pane, select **Log Analytics Workspaces (2)** present under **Insights (1)** (You will see your subscription and all the workspaces in it, listed here) and click on **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (3)** workspace under azuremigraterg.
 
-    ![Screenshot of the search Azure workspace Monitor.](Images/15-7-l12-1.png "Azure Monitor")
+    ![Screenshot of the search Azure workspace Monitor.](Images/infra-l14-9.png "Azure Monitor")
 
 1. On the **Log Analytics Workspaces (1)** page, under the **Monitoring (1)** section, click on **Insights (2)**, and in the **Overview (3)** tab, you will find the following:
 
@@ -106,7 +106,7 @@ In this task, you will enable Azure Monitor to track and manage the performance 
    - The daily cap set, and how much data was already ingested on the recent day
    - Ingestion anomalies - a list of identified spikes and dips in ingestion to these tables
        
-     ![Screenshot of the search Azure workspace Monitor.](Images/15-7-l12-2.png "Azure Monitor")
+     ![Screenshot of the search Azure workspace Monitor.](Images/infra-l14-10.png "Azure Monitor")
     
 1. On the **Usage tab**, you can see ingestion data by tables and defaults to the 5 most ingested tables in the selected time range.
    
@@ -114,11 +114,11 @@ In this task, you will enable Azure Monitor to track and manage the performance 
    - The percentage this table takes from the entire ingestion volume (during the selected time range). That helps identify the tables that affect your ingestion the most.
    - When was the last update of usage statistics regarding each table? We normally expect usage stats to refresh hourly.
    
-     ![Screenshot of the search Azure workspace Monitor.](Images/15-7-l12-3.png "Azure Monitor") 
+     ![Screenshot of the search Azure workspace Monitor.](Images/infra-l14-14.png "Azure Monitor") 
     
 1. On the **Health tab**, you can see the workspace's health state and when it was last reported, as well as operational errors and warnings.
         
-    ![Screenshot of the search Azure workspace Monitor.](Images/15-7-l12-4.png "Azure Monitor")
+    ![Screenshot of the search Azure workspace Monitor.](Images/infra-l14-12.png "Azure Monitor")
     
 1. On the **Agents tab**, you can see :
 
@@ -126,7 +126,7 @@ In this task, you will enable Azure Monitor to track and manage the performance 
    - Workspace agents - these are the agents that send logs to the workspace during the selected time range. You can see the agent's type and health state. 
    - Agents activity - this grid shows information on either all agents, healthy agents, or unhealthy agents.
       
-     ![Screenshot of the search Azure workspace Monitor.](Images/hol3-e5-t3-s6.png "Azure Monitor")  
+     ![Screenshot of the search Azure workspace Monitor.](Images/infra-l14-13.png "Azure Monitor")  
   
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

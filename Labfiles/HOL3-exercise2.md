@@ -14,6 +14,8 @@ In this exercise, you will complete the following task:
 
 ## Task 1: Configure ASR to on-premises infrastructure
 
+In this task, you will configure Azure Site Recovery (ASR) to replicate an on-premises Hyper-V VM to Azure.
+
 1. In the **search resources, services and docs bar**, type **Recovery services vaults (1)**. From the dropdown results under **Services**, click on **Recovery Services vaults (2)**.
    
     ![](Images/15-7-25-l10-1.png)

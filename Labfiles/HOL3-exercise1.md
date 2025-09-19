@@ -77,7 +77,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
     
 1. In Hyper-V Manager, select the **AzureArcVM (1)** VM, then select **Connect (2)** in the Actions pane on the right.
 
-    ![Screenshot of Hyper-V Manager showing the connect button for the AzureArcVM.](Images/infra-l10-2.png "Connect to AzureArcVM")  
+    ![Screenshot of Hyper-V Manager showing the connect button for the AzureArcVM.](Images/infra-l10-2-new.png "Connect to AzureArcVM")  
     
 1. Under Connect to AzureArcVM, click on **Connect** and then log into the VM with the **Administrator password**: **<inject key="SmartHotel Admin Password" />** (If the copy/paste is not working in the hyper-V machine, please try typing the password. The login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
  

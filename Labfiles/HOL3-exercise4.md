@@ -14,6 +14,8 @@ In this exercise, you will complete the following task:
 
 ### Task 1: Failover the Infrastructure to Azure Cloud
 
+In this task, you will perform a failover of the replicated VM from on-premises to Azure. This action brings the VM online in Azure and confirms disaster recovery readiness by committing the failover.
+
 1. In the **search resources, services and docs bar**, type **Recovery services vaults (1)**. From the dropdown results under **Services**, click on **Recovery Services vaults (2)**.
    
     ![](Images/15-7-25-l10-1.png)
@@ -78,7 +80,7 @@ In this exercise, you will complete the following task:
    
 1. On the **AzureArcVM** page, verify that the status of the VM is in the **Running state**. 
 
-    ![Screenshot of the vm-created status.](Images/5-7-25-h4-11.png)  
+    ![Screenshot of the vm-created status.](Images/infra-l12-7.png)  
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

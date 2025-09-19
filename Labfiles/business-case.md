@@ -30,7 +30,6 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
       ![](./Images/614-7-25-g7.png)
     
-
 1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
     ![Screenshot of the All services overview blade.](Images/15-7-25-1.png "All services Overview blade")
@@ -41,11 +40,11 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
 1. On the **Azure Migrate** | Servers, databases and web apps page, click **Migration goals (1)** from the left panel and select **Servers, databases and web apps (2)** 
  
-    ![](Images/15-7-read1.png)
+    ![](Images/infra-l15.png)
 
 1. Now, you should see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels for the current migration project, as shown below.
 
-    ![](Images/upd-E1T1S5_1.png)
+    ![](Images/infra-l15-2.png)
     
     >**Note**: If you are not able to see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels, please follow the instructions below to select the migration project.
 
@@ -69,7 +68,7 @@ To understand if Azure makes financial sense, we will start by creating a direct
    - **Currency**: Select **US Dollar ($)**
    - Click on **Build business case**
      
-       ![](Images/read.png)
+     ![](Images/read.png)
    
 8. Once the build has succeeded, you can start reviewing the business case that was created from the above inputs and industry benchmarks.
 
