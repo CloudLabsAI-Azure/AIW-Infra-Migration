@@ -93,9 +93,9 @@ In this task, you will enable Automanage on existing machines.
 
     ![](Images/15-7-25-l4-l11.png)
 
-1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure best practices: Production** and click **Next**.
+1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure best practices: Production (1)** and click **Next (2)**.
    
-    ![](Images/15-7-25-l4-l13.png)
+    ![](Images/infra-l9-2.png)
    
      > Click **View best practice profiles** to see the differences between the environments.
     

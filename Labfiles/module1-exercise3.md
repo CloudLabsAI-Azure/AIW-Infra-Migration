@@ -203,7 +203,7 @@ In this task, you will configure and enable the replication of your on-premises 
 1. On the **Compute** tab, configure the following settings for each virtual machine:
 
    - Select the **Azure VM Size** to **Standard_F2s_v2** for all VMs **(1)**. 
-   - Select **OS Type** `Windows` and **Operating System** `Windows Server` for the **smarthotelweb1**, **smarthotelweb2** virtual machines.
+   - Select **OS Type** `Windows` and **Operating System** `Windows Server 2019` for the **smarthotelweb1**, **smarthotelweb2** virtual machines.
    - Select the **Linux** operating system for the **UbuntuWAF** virtual machine. 
    - Click **Next (2)** to proceed. 
 

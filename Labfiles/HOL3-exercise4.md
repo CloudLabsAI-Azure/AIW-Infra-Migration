@@ -76,11 +76,11 @@ In this task, you will perform a failover of the replicated VM from on-premises 
 
 1. Under the **Virtual Machines** page, select the **AzureArcVM**, which is automatically created from replicated data after a Failover.
 
-   ![](Images/15-7-25-l11-5a.png) 
+   ![](Images/infra-l12-7.png) 
    
 1. On the **AzureArcVM** page, verify that the status of the VM is in the **Running state**. 
 
-    ![Screenshot of the vm-created status.](Images/infra-l12-7.png)  
+    ![Screenshot of the vm-created status.](Images/5-7-25-h4-11.png)  
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

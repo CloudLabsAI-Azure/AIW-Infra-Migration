@@ -72,7 +72,7 @@ In this task, you will create and enable Microsoft Sentinel and review the Conte
 
 1. You will now be directed to the **Content hub** page. Microsoft Sentinel comes with many connectors for Microsoft solutions that are available out of the box and provide real-time integration. For non-Microsoft solutions, Microsoft Sentinel provides built-in interfaces to the larger security and application ecosystems. Close the **Content hub** window.
 
-    ![Screenshot of the Data Connectors.](Images/infra-l14-8-2.png "Data Connectors")
+    ![Screenshot of the Data Connectors.](Images/infra-l14-8-3.png "Data Connectors")
 
 1. From the left pane, select **Analytics** present under **Configuration**. You can create custom analytics rules to help discover threats and anomalous behaviours in your environment. (Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and remediation processes.) 
 
@@ -97,7 +97,7 @@ In this task, you will enable Azure Monitor to track and manage the performance 
 
     ![Screenshot of the search Azure workspace Monitor.](Images/infra-l14-9.png "Azure Monitor")
 
-1. On the **Log Analytics Workspaces (1)** page, under the **Monitoring (1)** section, click on **Insights (2)**, and in the **Overview (3)** tab, you will find the following:
+1. On the **Log Analytics Workspaces** page, under the **Monitoring (1)** section, click on **Insights (2)**, and in the **Overview (3)** tab, you will find the following:
 
    - The monthly ingestion volume of the workspace
    - How many machines sent heartbeats, meaning - machines that are connected to this workspace (in the selected time range)
