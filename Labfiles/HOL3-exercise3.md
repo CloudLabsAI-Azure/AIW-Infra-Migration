@@ -14,13 +14,15 @@ In this exercise, you will complete the following task:
 
 ### Task 1: Setup Test Failover
 
+In this task, you will initiate a test failover for the replicated VM in Azure. This ensures the VM can be recovered successfully without impacting production workloads.
+
 1. On the **Recovery Service Vault page**, expand the **Protected Items (1)** and click on **Replicated Items (2)** and select **AzureArcVM (3)** that you replicated in the previous exercise.
    
     ![](Images/15-7-25-l11-1.png) 
    
 1. On the **AzureArcVM** page, click on **Test Failover**.  
 
-    ![](Images/15-7-25-l11-l4.png) 
+    ![](Images/infra-l12-3.png) 
    
 1. On the **Test failover** page, select **SmartHotelVNet (1)** under Azure virtual network and click **OK (2)** to initiate the test failover.
 
@@ -40,13 +42,18 @@ In this exercise, you will complete the following task:
 
 1. On the **Virtual machines** page, select **AzureArcVM-test** which is automatically created after the test failover.
 
-   ![](Images/15-7-25-l11-5a.png) 
+   ![](Images/infra-l12-vm.png) 
   
-1. On the **AzureArcVM-test** page, confirm the VM is in **Running** state **(1)**, then click **Connect** **(2)** and select **Connect** from the dropdown **(3)**. On the **Connect** pane, under **Most common**, select **Download RDP file** to connect via **Native RDP**.
+1. On the **AzureArcVM-test** page, confirm the VM is in **Running** state **(1)**, then click **Connect** **(2)** and select **Connect** from the dropdown **(3)**.
     
     ![Screenshot of the Test vm status.](Images/5-7-25-l11-6a.png) 
-   
-    ![Screenshot of the Test vm status.](Images/5-7-25-l11-7a.png) 
+
+1. On the **AzureArcVM-test | Connect** page, expand **More ways to connect (1)**, under **Native RDP** click **Connect via RDP (2)**, and on the **Connect using RDP file** page click **Download RDP file** to download and open the file for connection.
+
+
+    ![Screenshot of the Test vm status.](Images/infra-l11-6.png) 
+
+    ![Screenshot of the Test vm status.](Images/infra-l11-7.png) 
 
 ### Summary 
 

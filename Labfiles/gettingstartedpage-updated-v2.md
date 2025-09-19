@@ -64,57 +64,57 @@ The architecture diagram outlines a series of labs focused on migrating workload
 
 ## Architecture Diagram
 
-![A slide shows the on-premises SmartHotel application architecture.](Images/archdia.png "SmartHotel Migration Overview")
+![A slide shows the on-premises SmartHotel application architecture.](Images/archdia.png)
 
 ## Explanation of Components  
 
-- **Azure Migrate**: A centralized hub for discovering, assessing, and migrating on-premises servers, applications, and databases to Azure. It simplifies migration planning and execution by providing tools for workload analysis, cost estimation, and seamless migration.  
+- **Azure Migrate:** A centralized hub for discovering, assessing, and migrating on-premises servers, applications, and databases to Azure. It simplifies migration planning and execution by providing tools for workload analysis, cost estimation, and seamless migration.  
 
-- **Azure Arc**: Enables on-premises servers and other non-Azure resources to integrate with Azure's management tools, allowing organizations to manage, secure, and govern resources across hybrid environments through a unified Azure interface.  
+- **Azure Arc:** Enables on-premises servers and other non-Azure resources to integrate with Azure's management tools, allowing organizations to manage, secure, and govern resources across hybrid environments through a unified Azure interface.  
 
-- **Azure Site Recovery (ASR)**: A disaster recovery solution that replicates on-premises servers to Azure, enabling failover and failback of workloads to ensure business continuity during outages or system failures.  
+- **Azure Site Recovery (ASR):** A disaster recovery solution that replicates on-premises servers to Azure, enabling failover and failback of workloads to ensure business continuity during outages or system failures.  
 
-- **Microsoft Defender for Cloud**: A security management tool that provides visibility and protection for workloads running in Azure, on-premises, and other cloud platforms. It helps detect threats, manage security posture, and ensure compliance.  
+- **Microsoft Defender for Cloud:** A security management tool that provides visibility and protection for workloads running in Azure, on-premises, and other cloud platforms. It helps detect threats, manage security posture, and ensure compliance.  
 
-- **Microsoft Sentinel**: A cloud-native security information and event management (SIEM) and security orchestration, automated response (SOAR) solution that aggregates security data, detects threats, and enables incident response through playbooks and analytics.  
+- **Microsoft Sentinel:** A cloud-native security information and event management (SIEM) and security orchestration, automated response (SOAR) solution that aggregates security data, detects threats, and enables incident response through playbooks and analytics.  
 
-- **Azure Monitor**: A service that collects, analyzes, and acts on telemetry data from Azure resources, on-premises environments, and other clouds, providing insights into the performance and health of applications and infrastructure.  
+- **Azure Monitor:** A service that collects, analyzes, and acts on telemetry data from Azure resources, on-premises environments, and other clouds, providing insights into the performance and health of applications and infrastructure.  
 
-- **Log Analytics**: A tool within Azure Monitor that enables querying and analyzing log data from Azure resources to gain insights, troubleshoot issues, and improve operational efficiency.  
+- **Log Analytics:** A tool within Azure Monitor that enables querying and analyzing log data from Azure resources to gain insights, troubleshoot issues, and improve operational efficiency.  
 
-- **Azure Hybrid Benefit**: A licensing benefit that helps organizations reduce costs when migrating workloads to Azure by allowing them to use existing on-premises licenses for Windows Server and SQL Server in the cloud.  
+- **Azure Hybrid Benefit:** A licensing benefit that helps organizations reduce costs when migrating workloads to Azure by allowing them to use existing on-premises licenses for Windows Server and SQL Server in the cloud.  
 
-- **Business Case Analysis**: A read-only capability designed to help organizations assess the financial and operational benefits of migrating workloads to Azure, providing insights into cost optimization and ROI.  
+- **Business Case Analysis:** A read-only capability designed to help organizations assess the financial and operational benefits of migrating workloads to Azure, providing insights into cost optimization and ROI.  
 
 ## Getting Started with the Lab
 
 Welcome to Infrastructure Migration. Ensure you have access to all required tools, accounts, and carefully read each task and follow the steps in sequence. Refer to the screenshots and tips provided for guidance throughout the lab.
 
-## **Accessing Your Lab Environment**
+## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![](./Images/14-7-25-g1.png)
+![](./Images/Infra-g2.png)
 
-## **Virtual Machine & Lab Guide**
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
-## **Exploring Your Lab Resources**
+## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
 
    ![](./Images/14-7-25-g2.png)
  
-## **Utilizing the Split Window Feature**
+## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
    ![](./Images/14-7-25-g3.png)
  
-## **Managing Your Virtual Machine**
+## Managing Your Virtual Machine
  
-Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
   ![](./Images/14-7-25-g4.png)
 
@@ -148,15 +148,15 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 5. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
-     ![](Images/infra-s4.png)
+     ![](Images/Infra-g4.png)
 
 6. From the **Azure Portal** Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
 
-   ![](Images/infra-s5.png)
+   ![](Images/Infra-g1.png)
    
 7. On the **Resource groups** page in the Azure portal, confirm you have all resource groups present as shown below.
 
-   ![](Images/infra-s6.png)
+   ![](Images/Infra-g3.png)
 
 ## Support Contact
 

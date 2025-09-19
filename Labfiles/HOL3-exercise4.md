@@ -14,13 +14,15 @@ In this exercise, you will complete the following task:
 
 ### Task 1: Failover the Infrastructure to Azure Cloud
 
+In this task, you will perform a failover of the replicated VM from on-premises to Azure. This action brings the VM online in Azure and confirms disaster recovery readiness by committing the failover.
+
 1. In the **search resources, services and docs bar**, type **Recovery services vaults (1)**. From the dropdown results under **Services**, click on **Recovery Services vaults (2)**.
    
     ![](Images/15-7-25-l10-1.png)
     
 1. On the **Recovery service vaults** page, click on **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-MigrateVault-xxxx**.  
 
-    ![](Images/15-7-25-2.png "create Recovery service vaults")
+    ![](Images/infra-l11-1.png "create Recovery service vaults")
     
 1. On the **Recovery Service Vault page**, click on **Replicated Items (1)** under **Protected Items** section and select **AzureArcVM (2)**.     
 
@@ -74,7 +76,7 @@ In this exercise, you will complete the following task:
 
 1. Under the **Virtual Machines** page, select the **AzureArcVM**, which is automatically created from replicated data after a Failover.
 
-   ![](Images/15-7-25-l11-5a.png) 
+   ![](Images/infra-l12-7.png) 
    
 1. On the **AzureArcVM** page, verify that the status of the VM is in the **Running state**. 
 

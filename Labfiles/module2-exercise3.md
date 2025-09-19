@@ -18,9 +18,9 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will review the already registered Hyper-V host (LabVM) with the Migration and modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, we have already deployed the Azure Site Recovery Provider on your Hyper-V host in HOL1 and we will be using the same here as well.
 
-1. Return to the **Azure Migrate | Servers, databases and web apps** page in the Azure Portal, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Discovery and assessment**, you should be able to see 7 discovered servers **(3)**. Now, click on the **Discovered servers** to view all the servers that have been discovered with the help of Azure Migrate.
+1. Return to the **Azure Migrate | Servers, databases and web apps** page in the Azure Portal, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Azure Migrate: Discovery and assessment**, you should be able to see 7 discovered servers **(3)**. Now, click on the **Discovered servers** to view all the servers that have been discovered with the help of Azure Migrate.
 
-    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/15-7-25-l7-1.png "Discovered servers")
+    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/infra-l8-1.png "Discovered servers")
 
 1. On the **Discovered servers** page, locate the **redhat** VM in the list. We will be replicating this **redhat** VM in the next task using **Azure Migrate**.
 
@@ -53,7 +53,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
 1. On the **Virtual machines** tab, you’ll now see the VMs included in the selected assessment. Select the **redhat (1)** virtual machine, then click **Next (2)**.
 
-    ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](Images/15-7-25-l7-l6.png "Replicate - Virtual machines")
+    ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](Images/infra-l8-2.png "Replicate - Virtual machines")
 
 1. On the **Target settings** tab, configure the following values:
    
@@ -61,9 +61,10 @@ In this task, you will configure and enable the replication of your on-premises 
     - For **Cache storage account**, choose **migrationstorage1794187 (2)**.  
     - Under **Virtual network**, select **SmartHotelVNet (3)**.  
     - For **Subnet**, select **SmartHotel (4)**.  
-    - Click **Next (5)** to continue.
+    - **Availability option:** Select **No infrastructure redundancy required (5)**.
+    - Click **Next (6)** to continue.
  
-       ![](Images/15-7-25-l7-l7.png)
+       ![](Images/infra-l8-3.png)
 
        > **Note:** For simplicity, in this lab you will not configure the migrated VM for high availability, since each application tier is implemented using a single VM.
 
@@ -72,15 +73,15 @@ In this task, you will configure and enable the replication of your on-premises 
    - Select **Standard_F2s_v2** as the Azure VM size and set the **OS Type** to **Linux** **(1)**.  
    - Click **Next (2)** to proceed.
 
-   ![](Images/15-7-25-l7-l8.png)
+     ![](Images/15-7-25-l7-l8.png)
    
-1. In the **Disks** tab, review the settings but do not make any changes. Select **Next**.
+1. In the **Disks** tab, review the settings but do not make any changes. Select **Next**, then select **Next** in the **Tags** tab.
 
    ![](Images/15-7-25-l7-l9.png)
 
 1. On the **Review + Start replication** tab, review the selected configuration details. Once confirmed, click **Replicate** to start the replication process.
 
-    ![](Images/cor_1_3.png)
+    ![](Images/infra-l8-4.png)
 
 1. In the **Azure Migrate | Servers, databases and web apps** page, under **Migration and modernization**, select the **Overview** button.
 
@@ -170,7 +171,7 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
    
 1. In the **SmartHotelRG** resource group, verify that the **Virtual machine**, **Disk**, and **Network Interface** for **redhat** have been successfully created.
 
-    ![](Images/15-7-25-l7-l25.png)
+    ![](Images/infra-l8-5.png)
 
 ### Summary 
 

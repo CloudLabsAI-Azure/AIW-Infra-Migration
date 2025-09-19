@@ -30,7 +30,6 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
       ![](./Images/614-7-25-g7.png)
     
-
 1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
     ![Screenshot of the All services overview blade.](Images/15-7-25-1.png "All services Overview blade")
@@ -41,11 +40,11 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
 1. On the **Azure Migrate** | Servers, databases and web apps page, click **Migration goals (1)** from the left panel and select **Servers, databases and web apps (2)** 
  
-    ![](Images/15-7-read1.png)
+    ![](Images/infra-l15.png)
 
 1. Now, you should see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels for the current migration project, as shown below.
 
-    ![](Images/upd-E1T1S5_1.png)
+    ![](Images/infra-l15-2.png)
     
     >**Note**: If you are not able to see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels, please follow the instructions below to select the migration project.
 
@@ -67,9 +66,9 @@ To understand if Azure makes financial sense, we will start by creating a direct
    - **Savings Option** : Select **Reserved Instance + Azure Savings Plan (4)**
    - **Discount(%) on Pay as you go**: Enter **0 (5)**
    - **Currency**: Select **US Dollar ($)**
-   - Click on **Build business case**
+   - Click on **Build business case (6)**
      
-       ![](Images/read.png)
+     ![](Images/read.png)
    
 8. Once the build has succeeded, you can start reviewing the business case that was created from the above inputs and industry benchmarks.
 
@@ -105,4 +104,10 @@ To understand if Azure makes financial sense, we will start by creating a direct
      
 17. Learn more about the business case here: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/cloud-migration-business-case.
 
-### You have successfully completed the lab.
+### Summary
+
+In this exercise, you explored the Azure Migrate Business Case feature to evaluate the financial benefits of moving to Azure. You reviewed TCO and ROI comparisons, migration strategy recommendations, and cost-saving insights through IaaS and PaaS reports.
+
+### You have successfully completed this Hands-on lab.
+
+By completing this lab Infrastructure Migration, you gained hands-on experience in assessing, migrating, and protecting on-premises workloads using Azure. You began by exploring Azure Migrate projects, configuring the appliance, and performing assessments with dependency visualization. You then registered a Hyper-V host, created storage accounts, and enabled replication of VMs to Azure with Azure Site Recovery. Next, you tested migration scenarios by performing live VM migrations, setting static IPs, and enabling Automanage, AAD authentication, and Managed Identities for secure management. You also deployed Azure Arc-enabled servers to extend management to non-Azure machines. Finally, you validated disaster recovery strategies by configuring replication policies, performing test failovers, and executing a full failover to Azure to ensure business continuity.

@@ -8,22 +8,22 @@ In this HOL, you will use Azure Migrate: Server Assessment to assess the on-prem
 
 In this HOL, you will complete the following exercises:
 
-- Exercise 1: Migrating Windows & SQL Server Workloads
-- Exercise 2: Set up your environment on Azure to Migrate Servers
-- Exercise 3: Migrating your applications and data by utilizing Microsoft services and tools, such as Azure Migrate: Server Migration
-- Exercise 4: Optimizing newly Migrated Workloads, and emphasizing commonalities across all Stacks
+- **Exercise 1:** Migrating Windows & SQL Server Workloads
+- **Exercise 2:** Set up your environment on Azure to Migrate Servers
+- **Exercise 3:** Migrating your applications and data by utilizing Microsoft services and tools, such as Azure Migrate: Server Migration
+- **Exercise 4:** Optimizing newly Migrated Workloads, and emphasizing commonalities across all Stacks
 
 ### Task 1: Discovery, Assess, and Plan: Evaluate your current environment
 
 In this exercise, you will deploy the Azure Migrate appliance in the on-premises Hyper-V environment. This appliance communicates with the Hyper-V server to gather configuration and performance data about your on-premises VMs and returns that data to your Azure Migrate project.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the below Azure credentials.
+1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with the below Azure credentials.
     
-    - Enter your Username/Email: <inject key="AzureAdUserEmail"></inject> in the Sign in field. Click Next to continue.
+    - Enter your **Username/Email:** <inject key="AzureAdUserEmail"></inject> in the **Sign in** field. Click **Next** to continue.
       
       ![](./Images/614-7-25-g6.png)
       
-    - Enter Password: <inject key="AzureAdUserPassword"></inject> and click Sign in
+    - **Enter Password:** <inject key="AzureAdUserPassword"></inject> and click **Sign in**
 
       ![](./Images/614-7-25-g7.png)
 
@@ -33,9 +33,9 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
 1. In the search bar at the top of the Azure portal, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the Services section.
  
-    ![Screenshot of the Azure migrate overview blade.](Images/15-7-25-l1-1.png "Azmigrate Overview blade")
+    ![Screenshot of the Azure migrate overview blade.](Images/infra-l1-new.png "Azmigrate Overview blade")
 
-1. On the **Azure Migrate** | Servers, databases and web apps page, select **Servers, databases and web apps (1)** under **Migration goals** from the left panel, and then under **Azure Migrate: Discovery and assessment**, select **Discover (2)** -> **Using appliance (3)** to open the Discover blade.
+1. On the **Azure Migrate | Servers, databases and web apps** page, select **Servers, databases and web apps (1)** under **Migration goals** from the left panel, and then under **Azure Migrate: Discovery and assessment**, select **Discover (2)** -> **Using appliance (3)** to open the Discover blade.
  
     ![](Images/15-7-25-l1-2.png)
  
@@ -52,7 +52,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
 1. Once the project key is generated, click the **copy** icon to the right of the **Project key** field and save it in a Notepad for future reference.
 
-    ![Screenshot of the Azure Migrate 'Discover machines' blade showing the Azure Migrate project key.](Images/15-7-25-l1-5.png "Azure Migrate project key")
+    ![Screenshot of the Azure Migrate 'Discover machines' blade showing the Azure Migrate project key.](Images/infra-l1-1.png)
 
 1.  Read through the instructions on how to download, deploy, and configure the Azure Migrate appliance, then close the 'Discover machines' blade by clicking on the cross button **X** (do **not** download the .VHD file or .ZIP file, the .VHD has already been downloaded for you). 
  
@@ -72,7 +72,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
      
 1. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Start (2)** from the right-hand Actions pane if it is not already running.
 
-    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/HOL1-EX1-S12.png "Start AzureMigrateAppliance")
+    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/infra-l1-11.png "Start AzureMigrateAppliance")
     
      > **Note:** If you encounter an error while starting the **AzureMigrateAppliance** VM, try **turning off** the **AzureArcVM**, then start the **AzureMigrateAppliance** VM again.
 
@@ -86,7 +86,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
     ![Screenshot of the Connect to AzureMigrateAppliance.](Images/15-7-25-l1-11.png)
 
-1. On the desktop of the AzureMigrateAppliance VM, double-click the **Azure Migrate Appliance Configuration Manager** shortcut to launch the wizard. Wait a minute or two for the browser to open and display the configuration wizard.
+1. On the desktop of the **AzureMigrateAppliance** VM, double-click the **Azure Migrate Appliance Configuration Manager** shortcut to launch the wizard. Wait a minute or two for the browser to open and display the configuration wizard.
 
      > **Note:** If a New updates available pop-up appears, click View updates, then close the settings panel. You can proceed without applying the updates for now.
 
@@ -116,7 +116,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
    
     >**Note:** Now, follow the instructions below to complete the login process.
     
- 1. After clicking Login, the **Continue with Azure Login** pop-up dialog, click **Copy code & Login** to copy the device code.
+ 1. After clicking Login, in the **Continue with Azure Login** dialog, click **Copy code & Login** to copy the device code.
     
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/15-7-25-l1-18.png "Azure Migrate login code")
   
@@ -124,7 +124,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
      ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/15-7-25-l1-19.png "Azure Migrate Microsoft login")
 
- 1. Log in using the provided Azure credentials. On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue to complete the login**. 
+ 1. Log in using the provided Azure credentials. On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue** to complete the login. 
     
      - Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
         
@@ -136,7 +136,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
         ![](Images/15-7-25-l1-22.png)
        
-1. Once signed in, return to the Azure Migrate Appliance tab—the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
+1. Once signed in, return to the Azure Migrate Appliance tab the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/15-7-25-l1-23.png "Appliance registered")
 
@@ -180,7 +180,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
     > - You can't remove a specific host from a cluster. You can only remove the entire cluster.
     > - You can add a cluster, even if there are issues with specific hosts in the cluster.
 
-1. In **Step 3: Provide server credentials to perform software inventory and agentless dependency analysis**, **Disable the slider**, and then select **Start discovery**  to begin VM discovery from the validated Hyper-V hosts or clusters.
+1. In **Step 3: Provide server credentials to perform guest discovery of installed software, dependencies and workloads**, **Disable** the slider, and then select **Start discovery**  to begin VM discovery from the validated Hyper-V hosts or clusters.
 
    >**Note:** The discovery process may take up to 10 minutes to complete
    
@@ -190,7 +190,9 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
 1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table. (Wait for the Azure Migrate status to display . Discovery has been successfully initiated. This may take several minutes. Once initiated, you can view the discovery status for each host or cluster in the table.)
   
-1.  Return to the **JumpVM**, then navigate to the **Azure Migrate** page in the Azure portal. Under **Migration goals**, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the **Azure Migrate: Discovery and assessment** panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
+    ![](Images/infra-l1-2.png)
+
+1.  Return to the **LabvmVM**, then navigate to the **Azure Migrate** page in the Azure portal. Under **Migration goals**, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the **Azure Migrate: Discovery and assessment** panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
 
     ![](Images/15-7-25-l1-31.png) 
 

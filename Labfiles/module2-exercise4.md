@@ -18,7 +18,7 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
 1. In the Azure portal `https://portal.azure.com`, navigate to your newly migrated **Red Hat** VM and select it.
     
-    ![](Images/upd-redhatrg.png)
+    ![](Images/infra-l9-1.png)
     
 1. On the **redhat** virtual machine blade, expand **Security (1)** from the left-hand menu and select **Identity (2)**.
 
@@ -71,9 +71,9 @@ In this task, you will enable Automanage on existing machines.
    
    ![](Images/15-7-25-l8-10.png)
 
-1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure Best Practices - Production**.
+1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure Best Practices - Production (1)** and click **Next (2)**.
    
-   ![](Images/15-7-25-l8-11.png)
+   ![](Images/infra-l9-2.png)
    
    > **Note:** Click View best practice profiles to see the differences between the environments.
     

@@ -8,10 +8,10 @@ In this HOL, you will use Azure Migrate: Server Assessment to assess the on-prem
 
 In this HOL, you will complete the following exercises:
 
-- Exercise 1: Migrate and Modernize Linux & OSS DB workloads to Azure
-- Exercise 2: Set up your environment on Azure to Migrate Servers
-- Exercise 3: Migrating your applications and data using Microsoft services and tools, such as Azure Migrate, the Azure Hybrid Benefit, and additional programs
-- Exercise 4: Optimizing newly Migrated Workloads, and Emphasizing commonalities across all Stacks
+- **Exercise 1:** Migrate and Modernize Linux & OSS DB workloads to Azure
+- **Exercise 2:** Set up your environment on Azure to Migrate Servers
+- **Exercise 3:** Migrating your applications and data using Microsoft services and tools, such as Azure Migrate, the Azure Hybrid Benefit, and additional programs
+- **Exercise 4:** Optimizing newly Migrated Workloads, and Emphasizing commonalities across all Stacks
 
 ## Exercise 1: Discovery, Assess, and Plan: Evaluate your current environment
 
@@ -47,15 +47,15 @@ In this task, you will review your on-premises Hyper-V Linux server and Open Sou
      
 1. In **Hyper-V Manager**, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" />**. You should now see the **redhat** VM along with 6 other virtual machines that will be used in upcoming HOLs.
 
-    ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/upd-redhatnew.png "Hyper-V Manager")
+    ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/infra-l6-1-new.png "Hyper-V Manager")
      
 1. In Hyper-V Manager, select the **redhat (1)**, then select **Start (2)** on the right if not already running.
 
-    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/HOL2-EX1-T2-S3.png "Start AzureMigrateAppliance")
+    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/infra-l6-2.png "Start AzureMigrateAppliance")
 
 1. In **Hyper-V Manager**, select the **redhat** VM **(1)**, then click **Connect (2)** from the right-hand **Actions** menu.
 
-    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/cor_1_2.png "Connect to AzureMigrateAppliance")
+    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/infra-l7-3.png "Connect to AzureMigrateAppliance")
 
 1. Log into the VM with the **Administrator password**: **<inject key="SmartHotel Admin Password" />** then click **Sign In** to access the VM. (The login screen may pick up your local keyboard mapping; use the 'eyeball' icon to check.)
 
