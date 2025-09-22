@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 90 Minutes
 
-In this Hands-on Lab, you will use Azure Migrate: Server Assessment to assess the already discovered on-prem servers by creating a migration assessment in your Azure Migrate project and configuring dependencies for migration. Azure Migrate assessment is a feature within the Azure Migrate service that helps evaluate the readiness and suitability of on-premises workloads for migration to Azure. It analyzes data collected during the discovery phase to provide insights into performance, cost estimation, and compatibility
+In this lab, you will use Azure Migrate: Server Assessment to assess the already discovered on-prem servers by creating a migration assessment in your Azure Migrate project and configuring dependencies for migration. Azure Migrate assessment is a feature within the Azure Migrate service that helps evaluate the readiness and suitability of on-premises workloads for migration to Azure. It analyzes data collected during the discovery phase to provide insights into performance, cost estimation, and compatibility
 
 ## Lab Objectives
 
@@ -15,7 +15,7 @@ In this lab, you will perform the following tasks:
 
 In this task, you will use Azure Migrate to create a migration assessment for the SmartHotel application, using the data gathered during the discovery phase.
 
-1. Select **Assess (1)** under **Azure Migrate: Discovery and assessment** and click on **Azure VM (2)** to start a new migration assessment.
+1. On **Azure Migrate | Servers, databases and web apps** page, select **Assess (1)** under **Azure Migrate: Discovery and assessment** and click on **Azure VM (2)** to start a new migration assessment.
 
     ![Screenshot of the Azure Migrate portal blade, with the '+Assess' button highlighted.](Images/assess-servers.png "Start assessment")
 
@@ -29,18 +29,18 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
 4. Select **Next** to move to the **Select servers to assess** tab and enter the following information:
      
-     1. Assessment name: Enter **SmartHotelAssessment (1)** 
-     1. Select or create a group: Choose **Create New (2)**  
-     1. Enter the Group name: **SmartHotel VMs (3)**
-     1. Add machines to the Group:  Select **SmarthotelAppl(Hyper-V) (4)** from dropdown.
-     1. Select the **smarthotelweb1**, **smarthotelweb2**, **UbuntuWAF**, and **redhat** VMs **(5)** and
-     1. Click on **Next: Review+Create assessment (6)**.
+    - Assessment name: Enter **SmartHotelAssessment (1)** 
+    - Select or create a group: Choose **Create New (2)**  
+    - Enter the Group name: **SmartHotel VMs (3)**
+    - Add machines to the Group:  Select **SmarthotelAppl(Hyper-V) (4)** from dropdown.
+    - Select the **smarthotelweb1**, **smarthotelweb2**, **UbuntuWAF**, and **redhat** VMs **(5)** and
+    - Click on **Next: Review+Create assessment (6)**.
 
-    ![Screenshot of the Azure Migrate 'Assess servers' page. A new server group containing servers smarthotelweb1, smarthotelweb2, and UbuntuWAF.](Images/updt-hol1-e2-t1-s4.png "Assessment VM group")
+        ![Screenshot of the Azure Migrate 'Assess servers' page. A new server group containing servers smarthotelweb1, smarthotelweb2, and UbuntuWAF.](Images/updt-hol1-e2-t1-s4.png "Assessment VM group")
 
-    > **Note:** There is no need to include the **smarthotelSQL1**, **AzureMigrateAppliance** and other VMs in the assessment, since they will not be migrated to Azure.
+        > **Note:** There is no need to include the **smarthotelSQL1**, **AzureMigrateAppliance** and other VMs in the assessment, since they will not be migrated to Azure.
     
-    > **Note:** Please note that even though we are adding a **redhat** VM to the assessment here, we will not be setting up our environment in the RedHat VM in this exercise. Users will review the assessment and perform all the steps for environment setup in HOL2.
+        > **Note:** Please note that even though we are adding a **redhat** VM to the assessment here, we will not be setting up our environment in the RedHat VM in this exercise. Users will review the assessment and perform all the steps for environment setup in HOL2.
     
     
 5. Click on **Create assessment** to create the assessment. 
@@ -49,17 +49,19 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
 6. In Azure Migrate, on the **Servers, databases, and web apps** blade, select **Refresh** periodically until the number of assessments shown is **1** (This may take a few minutes). Once the assessments count is updated, click on **1** that is next to **Total** under **Assessments**.  
 
-    ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/newgrp1.png "Azure Migrate - Assessments (count)")
+    ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/L2T1S6-2009.png "Azure Migrate - Assessments (count)")
     
-7. Select **Assessments (1)** under **Azure Migrate: Discovery and assessment** to see a list of assessments. Then select the **actual assessment (2)**.
+7. Select **Assessments (1)** under **Azure Migrate: Discovery and assessment** to see **SmartHotelAssessment (2)** in the list of assessments.
 
-    ![Screenshot showing a list of Azure Migrate assessments. There is only one assessment in the list. It has been highlighted.](Images/upd-assessment-list-v2.png "Azure Migrate - Assessments (list)")
+    ![Screenshot showing a list of Azure Migrate assessments. There is only one assessment in the list. It has been highlighted.](Images/L2T1S7-2009.png "Azure Migrate - Assessments (list)")
 
 ### Task 2: Configure dependency visualization
 
+In this task, you will configure the Azure Migrate dependency visualization feature. This requires you to first create a Log Analytics workspace, and then to deploy agents on the to-be-migrated VMs.
+
 When migrating a workload to Azure, it is important to understand all workload dependencies. A broken dependency could mean that the application does not run properly in Azure, perhaps in hard-to-detect ways. Some dependencies, such as those between application tiers, are obvious. Other dependencies, such as DNS lookups, Kerberos ticket validation or certificate revocation checks, are not.
 
-In this task, you will configure the Azure Migrate dependency visualization feature. This requires you to first create a Log Analytics workspace, and then to deploy agents on the to-be-migrated VMs.
+Azure Migrate dependency visualization helps you identify and map these dependencies by using agents installed on the machines to be migrated. The agents collect data about network connections and process activity, and send this data to a Log Analytics workspace. The data is then processed and presented in a graphical format in the Azure Migrate portal.
 
 1. Return to the **Azure Migrate** blade in the Azure Portal, select **Servers, databases and web apps (1)**. Under **Discovery and assessment** select **Groups (2)**.
 
@@ -75,26 +77,26 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 4. On the **Dependencies** blade, select **Configure Log Analytics workspace**.
 
-    ![Screenshot of the Azure Migrate 'Dependencies' blade, with the 'Configure OMS Workspace' button highlighted.](Images/configureLAW.png "Configure OMS Workspace link")
+    ![Screenshot of the Azure Migrate 'Dependencies' blade, with the 'Configure OMS Workspace' button highlighted.](Images/L2T2S4-2009.png "Configure OMS Workspace link")
 
 5. On the **Configure Log Analytics workspace** blade, provide the below information and select **Configure (4)**.
 
-   - Log Analytics workspace: Click on **Create new (1)** and enter **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (2)**
-   - Log Analytics workspace location: Select **East US (3)** from the dropdown.
+    - Log Analytics workspace: Click on **Create new (1)** and enter **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (2)**
+    - Log Analytics workspace location: Select **East US (3)** from the dropdown.
 
-    ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](Images/upd-createLAW.png "OMS Workspace settings")
+        ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](Images/L2T2S5-2009.png "OMS Workspace settings")
 
 6. Wait for the workspace to be deployed. Once it is deployed, navigate to **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" />** by clicking on it.
 
-    ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](Images/omsworkspace.png "OMS Workspace settings")
+    ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](Images/L2T2S6-2009.png "OMS Workspace settings")
 
-7. Select **Agents (1)** under **Settings** from the left-hand side menu. Make a note of the **Workspace ID (2)** and **Primary Key (3)** (for example, by using Notepad).
+7. On the **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" />** page, select **Agents (1)** under **Settings** from the left navigation menu. Under Log analytics agent instructions, copy the **Workspace ID (2)** and **Primary Key (3)** and paste them into a text file for later use.
 
-    ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/upd-workspace-id-key1.png "OMS Workspace ID and primary key")
+    ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/L2T2S7-2009.png "OMS Workspace ID and primary key")
 
-8. Return to the Azure Migrate **Dependencies** blade. Copy each of the 4 agent download URLs and paste them alongside the Workspace ID and key you noted in the previous step. 
+8. Return to the Azure Migrate **Dependencies** blade. Right click on each of the 4 agent download URLs, select copy and paste them alongside the Workspace ID and key you noted in the previous step. 
    
-    ![Screenshot of the Azure Migrate 'Dependencies' blade with the 4 agent download links highlighted.](Images/upd-agent-links.png "Agent download links")
+    ![Screenshot of the Azure Migrate 'Dependencies' blade with the 4 agent download links highlighted.](Images/L2T2S8-2009.png "Agent download links")
 
 9. From **Hyper-V Manager** console, select **smarthotelweb1 (1)** and select **Connect (2)**.
 
@@ -102,7 +104,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 10. Select **Connect** again when prompted and log in to the **Administrator** account using the password **<inject key="SmartHotel Admin Password" />**.
 
-11. Go to **Start** button in the **smarthotelweb1** VM and select **Internet Explorer** to open it. Paste the link to the 64-bit Microsoft Monitoring Agent for Windows, which you noted earlier. When prompted, **Run** the installer.
+11. Go to **Start** button in the **smarthotelweb1** VM. Search and select **Internet Explorer** to open it. Paste the link to the 64-bit Microsoft Monitoring Agent for Windows, which you noted earlier. When prompted, **Run** the installer.
 
      > **Note:** You may need to disable **Internet Explorer Enhanced Security Configuration** on **Server Manager** under **Local Server** to complete the download. 
 
@@ -110,23 +112,23 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 12. On the **Welcome to the Microsoft Monitoring Agent Setup Wizard** blade, select **Next**. 
 
-    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/upd-mma1.png "MMA installation")
+    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/L2T2S12-2009.png "MMA installation")
 
 13. On the **Microsoft Software License Terms** blade, select **I Agree**.
 
-    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/upd-mma2.png "MMA installation")
+    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/L2T2S13-2009.png "MMA installation")
 
 14. On the **Destination Folder** blade, leave everything as default and select **Next**. 
 
-    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/mma3.png "MMA installation") 
+    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/L2T2S14-2009.png "MMA installation") 
 
 15. On the **Agent Setup Options** blade, select **Connect the agent to Azure Log Analytics (OMS) (1)** and select **Next (2)**.
 
-    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/upd-mma4.png "MMA installation") 
+    ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/L2T2S15-2009.png "MMA installation") 
 
-16. On the **Azure Log Analytics** blade, enter the **Workspace ID** and **Workspace Key** that you copied earlier, and select **Azure Commercial (1)** from the Azure Cloud drop-down then select **Next (2)**.
+16. On the **Azure Log Analytics** blade, enter the **Workspace ID and Workspace Key (1)** that you copied earlier, and select **Azure Commercial** from the Azure Cloud drop-down then select **Next (2)**.
 
-    ![Screenshot of the Microsoft Monitoring Agent install wizard, showing the Log Analytics (OMS) workspace ID and key.](Images/upd-mma-wizard.png "MMA agent installer - workspace configuration")
+    ![Screenshot of the Microsoft Monitoring Agent install wizard, showing the Log Analytics (OMS) workspace ID and key.](Images/L2T2S16-2009.png "MMA agent installer - workspace configuration")
 
 17. On the **Microsoft Update** blade, leave everything as default and select **Next**. 
 
@@ -156,7 +158,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 23. Close the virtual machine connection window for the **smarthotelweb1 VM**. Connect to the **smarthotelweb2 VM** and repeat the installation process (steps 10-22) for both agents (the administrator password is the same as for smarthotelweb1). Close the virtual machine connection window for the **smarthotelweb2 VM** once the installation of agents is done.
 
-24. Open a command prompt using the desktop shortcut.  
+24. On you HostVM, open a command prompt using the desktop shortcut.  
 
     > **Note:** The SmartHotelHost runs Windows Server 2019 with the Windows Subsystem for Linux enabled. This allows the command prompt to be used as an SSH client. More info of supported Linux on Azure can be found here: https://Azure.com/Linux. 
 
@@ -168,7 +170,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 26. Enter 'yes' when prompted whether to connect. Use the password **<inject key="SmartHotel Admin Password" />**.
 
-    ![Screenshot showing the command prompt with an SSH session to UbuntuWAF.](Images/ssh.png "SSH session with UbuntuWAF")
+    ![Screenshot showing the command prompt with an SSH session to UbuntuWAF.](Images/L2T2S23-2009.png "SSH session with UbuntuWAF")
 
 27. Enter the following command, followed by the password **<inject key="SmartHotel Admin Password" />** when prompted:
   
@@ -208,7 +210,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
     sh InstallDependencyAgent-Linux64.bin -s
     ```
 
-    ![Screenshot showing that the Dependency Agent install on Linux was successful.](Images/da-linux-done.png "Dependency Agent installation was successful")
+    ![Screenshot showing that the Dependency Agent install on Linux was successful.](Images/L2T2S31-2009.png "Dependency Agent installation was successful")
     
 
 32. Return to the Azure Portal and refresh the Azure Migrate **SmartHotel VMs** VM group blade. The 3 VMs on which the dependency agent was installed should now show their status as **Installed**. (If not, refresh the page **using the browser refresh button**, not the refresh button in the blade.  It may take up to **5 minutes** after installation for the status to be updated.)
@@ -227,13 +229,8 @@ In this task, you will configure the Azure Migrate dependency visualization feat
     
 ## Summary 
 
-In this hands-on lab, you created and configured an Azure Migrate migration assessment and configured the Azure Migrate dependency visualization feature by creating a Log Analytics workspace and deploying the Azure Monitoring Agent and Dependency Agent on both Windows and Linux on-premises machines.
+In this lab, you created a migration assessment for the SmartHotel application using Azure Migrate and configured dependency visualization by creating a Log Analytics workspace and installing agents on the VMs to be migrated.
 
-## Review
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
 
-In this lab, you have:
-
-- Created a migration assessment
-- Configured dependency visualization
-
-### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
+![](./Images/next-page-2009.png)

@@ -1,6 +1,6 @@
 # Discover And Assess On-premises Windows & SQL Servers
 
-### Overall Estimated Duration: 4 Hours
+### Estimated Duration: 4 Hours
 
 ## Overview
 
@@ -8,7 +8,7 @@ Azure Migrate is Microsoft's centralized platform designed to assist organizatio
 
 Azure Data Studio helps you upgrade to a modern data platform by detecting compatibility issues that can impact database functionality in your new version of SQL Server or Azure SQL Database. Azure Data Studio recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
 
-In this Hands-On Lab, you will use Azure Migrate: Server Assessment to evaluate the on-premises environment. This process includes selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using Azure Migrate dependency visualization. Additionally, you will explore advanced security features available in Azure SQL Managed Instance (SQL MI), such as Azure Defender for SQL, which provides capabilities for identifying and mitigating potential database vulnerabilities and detecting anomalous activities that may indicate threats to your database. Furthermore, you will leverage Data Discovery and Classification to identify and classify sensitive data within the database, enhancing the security and compliance of your environment.
+In this Hands-On Lab, you will use Azure Migrate: Server Assessment to evaluate the on-premises environment. This process includes selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using Azure Migrate dependency visualization. 
  
 ## Objective
 
@@ -29,7 +29,7 @@ Participants should have:
 
 ## Architecture
 
-The lab architecture involves integrating on-premises infrastructure with Azure to enable discovery and assessment of Windows Servers and SQL Server databases. The Azure Migrate Appliance, deployed on-premises, acts as the key component for discovering and collecting metadata about servers and databases. This data is securely transmitted to an Azure Migrate project, which facilitates assessments to evaluate migration readiness. The architecture also includes Azure Data Studio for database assessments, leveraging its SQL Server Migration extension to analyze database compatibility with Azure SQL solutions. Azure resources, such as resource groups and Azure SQL databases, are set up to act as the target environment, ensuring a seamless workflow from discovery to assessment while maintaining data integrity and security.
+The lab architecture involves integrating on-premises infrastructure with Azure to enable the discovery and assessment of Windows Servers and SQL Server databases. The Azure Migrate Appliance, deployed on-premises, acts as the key component for discovering and collecting metadata about servers and databases. This data is securely transmitted to an Azure Migrate project, which facilitates assessments to evaluate migration readiness. The architecture also includes Azure Data Studio for database assessments, leveraging its SQL Server Migration extension to analyze database compatibility with Azure SQL solutions. Azure resources, such as resource groups and Azure SQL databases, are set up to act as the target environment, ensuring a seamless workflow from discovery to assessment while maintaining data integrity and security.
 
 ## Architecture Diagram
 
@@ -51,7 +51,7 @@ The lab architecture involves integrating on-premises infrastructure with Azure 
 
 ## Getting started with the lab
 
-Welcome to your Discover And Assess On-premises Windows & SQL Servers Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+ We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  
@@ -67,19 +67,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](./Images/environment-tab(1).png)
+![](./Images/env1-2009.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](./Images/split-window(1).png)
+![](./Images/split-2009.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![](./Images/resources-tab(1).png)
+![](./Images/resources-2009.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
@@ -107,7 +107,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
-   ![](./Images/GS9.png)
+   ![](./Images/stay-signedin-2009.png)
 
 5. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
@@ -123,6 +123,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![](./Images/GS4.png)
+![](./Images/next-page-2009.png)
 
 ### Happy Learning!!
