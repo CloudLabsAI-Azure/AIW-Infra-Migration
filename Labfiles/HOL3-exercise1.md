@@ -117,13 +117,6 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
     >**Note:** The name of the new server added could be different. You should refresh to see the new server.
     
     ![Screenshot of the server added.](Images/15-7-25-l9-10.png)
-     
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
-   
-    <validation step="c4c9516a-0970-4019-b42f-91a8c1328703" />
     
 ### Summary
 
