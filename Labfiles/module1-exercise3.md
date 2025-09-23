@@ -24,9 +24,9 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
    ![](./15-7-25-l3-1.png)
  
-1. On the **Storage accounts** page, click **Create** **(1)** to start creating a new storage account.
+1. On the **Storage center | Storage accounts (Blobs)** page, click **Create** **(1)** to start creating a new storage account.
 
-   ![](15-7-25-l3-2.png)
+   ![](infra-new-1.png)
 
 1. In the **Create a storage account** page , on the **Basics** tab, enter the following values:
 

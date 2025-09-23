@@ -50,7 +50,7 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
 1. On the **Review + create** tab, click **Create** to start installing the extension into your Redhat VM.
 
-    ![](Images/15-7-25-l8-8.png)
+    ![](Images/infra-new-2.png)
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -71,9 +71,9 @@ In this task, you will enable Automanage on existing machines.
    
    ![](Images/15-7-25-l8-10.png)
 
-1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure Best Practices - Production (1)** and click **Next (2)**.
+1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure Best Practices - Production (1)** and click **Next : Machines (2)**.
    
-   ![](Images/infra-l9-2.png)
+   ![](Images/infra-l9-2-new.png)
    
    > **Note:** Click View best practice profiles to see the differences between the environments.
     

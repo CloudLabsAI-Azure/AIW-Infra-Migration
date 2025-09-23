@@ -50,8 +50,7 @@ In this task, you will initiate a test failover for the replicated VM in Azure. 
 
 1. On the **AzureArcVM-test | Connect** page, expand **More ways to connect (1)**, under **Native RDP** click **Connect via RDP (2)**, and on the **Connect using RDP file** page click **Download RDP file** to download and open the file for connection.
 
-
-    ![Screenshot of the Test vm status.](Images/infra-l11-6.png) 
+    ![](Images/infra-l11-6.png) 
 
     ![Screenshot of the Test vm status.](Images/infra-l11-7.png) 
 
