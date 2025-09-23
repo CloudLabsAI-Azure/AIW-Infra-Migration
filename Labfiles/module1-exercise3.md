@@ -24,9 +24,9 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
    ![](./15-7-25-l3-1.png)
  
-1. On the **Storage center | Storage accounts (Blobs)** page, click **Create** **(1)** to start creating a new storage account.
+1. On the **Storage center | Storage accounts (Blobs)** page, click **Create** to start creating a new storage account.
 
-   ![](infra-new-1.png)
+    ![](Images/lab3-new.png)
 
 1. In the **Create a storage account** page , on the **Basics** tab, enter the following values:
 
@@ -145,7 +145,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="db65cf08-a8e5-4466-ae1f-0cebe033250c" />
+     <validation step="2eb6b36f-a031-40f0-8bad-a1748a3c532a" />
 
 #### Task summary 
 
@@ -233,7 +233,7 @@ In this task, you will configure and enable the replication of your on-premises 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="97eb72f2-501f-4175-a43b-6d5e408263c9" />
+     <validation step="b38db9a2-1678-47a6-a053-c863b83f8ada" />
 
 #### Task summary 
 
@@ -320,7 +320,7 @@ In this task, you will perform a migration of the UbuntuWAF, smarthotelweb1, and
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="11060600-4d3d-4338-9c6a-0e2853192dee" />
+     <validation step="db5d197a-151d-4987-8011-9568dc93e642" />
 
 ### Summary 
 

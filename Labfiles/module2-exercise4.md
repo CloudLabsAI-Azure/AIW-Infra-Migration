@@ -57,7 +57,7 @@ In this task, you will be enabling the AAD authentication using a VM extension a
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="31b52d30-b336-49c3-a5bc-4ef69b15dd76" />
+     <validation step="bb993c1c-a2c9-44d8-be3a-d3faa6c356fb" />
 
 ### Task 2: Azure Automanage
 
