@@ -79,7 +79,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="1dff74eb-dff7-4fd6-a103-04ff946cae88" />
+     <validation step="ad4bf69e-6413-4a9c-a1fc-7f32d558b111" />
 
 ### Task 2: Azure Automanage
 
