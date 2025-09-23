@@ -32,11 +32,11 @@ To understand if Azure makes financial sense, we will start by creating a direct
     
 1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
-    ![Screenshot of the All services overview blade.](Images/15-7-25-1.png "All services Overview blade")
+    ![Screenshot of the All services overview blade.](Images/15-7-25-1l.png "All services Overview blade")
 
-1. In the search bar at the top of the Azure portal, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the Services section.
+1. In the search bar, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the suggestions to open.
  
-    ![Screenshot of the Azure migrate overview blade.](Images/15-7-25-l1-1.png "Azmigrate Overview blade")
+    ![Screenshot of the Azure migrate overview blade.](Images/infra-l1-new.png "Azmigrate Overview blade")
 
 1. On the **Azure Migrate** | Servers, databases and web apps page, click **Migration goals (1)** from the left panel and select **Servers, databases and web apps (2)** 
  
@@ -46,7 +46,7 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
     ![](Images/infra-l15-2.png)
     
-    >**Note**: If you are not able to see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels, please follow the instructions below to select the migration project.
+    >**Note:** If you are not able to see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels, please follow the instructions below to select the migration project.
 
      - Click on **Project** and select the existing project from the list. Create a new project if you do not have any projects created previously.
 
@@ -54,49 +54,50 @@ To understand if Azure makes financial sense, we will start by creating a direct
         
 1. Under **Azure Migrate: Discovery and assessment**, select **Build business case** to open the **Build business case** blade. 
 
-    >**Note**: Make sure you discovered your on-premises environment with the Azure Migrate agentless appliance, which collects configuration and resource utilization data for your servers and workloads.
+    >**Note:** Make sure you discovered your on-premises environment with the Azure Migrate agentless appliance, which collects configuration and resource utilization data for your servers and workloads.
 
       ![](Images/15-7-read3a.png)
     
 1. On the **Build business case** blade, enter the following details:
    
-   - **Business case name**: Enter **Contoso (1)**
-   - **Target location**: Select any available region **(2)**
-   - **Migration strategy**: Select the **Azure recommended approach to minimize cost (3)**
-   - **Savings Option** : Select **Reserved Instance + Azure Savings Plan (4)**
-   - **Discount(%) on Pay as you go**: Enter **0 (5)**
-   - **Currency**: Select **US Dollar ($)**
-   - Click on **Build business case (6)**
+   - **Business case name:** Enter **Contoso (1)**
+   - **Target location:** Select any available region **(2)**
+   - **Migration prefrence:** Select the **Minimize migration time (3)**
+   - **Preferred time:** Azure VM **(4)**
+   - **Savings Option:** Select **Reserved Instance + Azure Savings Plan (5)**
+   - **Discount(%) on Pay as you go:** Enter **0 (6)**
+   - **Currency:** Select **US Dollar ($) (7)**
+   - Click on **Build business case (8)**
      
-     ![](Images/read.png)
+      ![](Images/infra-new-3.png)
    
 8. Once the build has succeeded, you can start reviewing the business case that was created from the above inputs and industry benchmarks.
 
-     ![](Images/H3E6S8.png)
+     ![](Images/infra-new-4.png)
    
 9. On the **TCO Comparison** blade, observe the cost. It represents an estimated on-premises cost versus Azure TCO and the potential savings possible by getting rid of components that you'll no longer need. 
 
-     ![](Images/H3E6S9.png)
+     ![](Images/infra-new-5.png)
    
 10. The **YoY estimated current vs future state cost** presents a year-over-year cost breakdown of the estimated current versus future state.
 
-      ![](Images/H3E6S10.png)
+      ![](Images/infra-new-6.png)
     
 11. On the same business case overview page, you'll receive unique incentives such as Azure hybrid benefits and extended security update savings to help drive technical and workplace innovations.
 
-     ![](Images/H3E6S11.png)
+     ![](Images/infra-new-7.png)
     
 12. Based on the rich data insights collected during the discovery process, on the **Recommended migration strategy blade**, you can observe how to effectively migrate to Azure, which underutilized servers to the right size, and which unused servers to potentially decommission.
 
-     ![](Images/H3E6S12.png)
+     ![](Images/infra-new-8.png)
    
-13. Under **Business case reports**, click on **Azure Iaas**. You can dive deeper into detailed Azure Infrastructure as a Service and Platform as a Service reports. IaaS Reports will provide you with recommended right-sized targets and the most cost-effective offers based on your usage.
+13. Under **Business case reports (1)**, click on **Azure Iaas (2)**. You can dive deeper into detailed Azure Infrastructure as a Service and Platform as a Service reports. IaaS Reports will provide you with recommended right-sized targets and the most cost-effective offers based on your usage.
 
-     ![](Images/H3E6S13.png)
+     ![](Images/infra-new-9.png)
 
 14. Click on **On-premises** tab. You can also identify the impact of underutilized servers and identify quick wins through software end-of-support and zombie servers.
 
-      ![](Images/H3E6S14.png)
+      ![](Images/infra-new-10.png)
 
 15. Click on **Azure PaaS** from the left navigation pane under **Business case reports**. You'll find recommendations in the PaaS reports identifying quick wins and the ideal right-sized targets for your database and application workloads.
 

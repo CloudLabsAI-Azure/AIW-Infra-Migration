@@ -6,12 +6,9 @@ In this HOL, you will use Azure Migrate: Server Assessment to assess the on-prem
 
 ## Lab objectives
 
-In this HOL, you will complete the following exercises:
+In this HOL, you will complete the following task:
 
-- **Exercise 1:** Migrating Windows & SQL Server Workloads
-- **Exercise 2:** Set up your environment on Azure to Migrate Servers
-- **Exercise 3:** Migrating your applications and data by utilizing Microsoft services and tools, such as Azure Migrate: Server Migration
-- **Exercise 4:** Optimizing newly Migrated Workloads, and emphasizing commonalities across all Stacks
+- Task 1: Discovery, Assess, and Plan: Evaluate your current environment
 
 ### Task 1: Discovery, Assess, and Plan: Evaluate your current environment
 
@@ -31,7 +28,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
  
     ![Screenshot of the All services overview blade.](Images/15-7-25-1l.png "All services Overview blade")
 
-1. In the search bar at the top of the Azure portal, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the Services section.
+1. In the search bar, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the suggestions to open.
  
     ![Screenshot of the Azure migrate overview blade.](Images/infra-l1-new.png "Azmigrate Overview blade")
 
