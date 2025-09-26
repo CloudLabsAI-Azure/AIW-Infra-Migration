@@ -104,7 +104,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
     
     if ((Get-VM -Name $vm).State -ne 'Running') { Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 2048MB -MinimumBytes 1024MB -MaximumBytes 8192MB; Start-VM -Name $vm }
     
-    Get-VM -Name $vm | Select Name, State, Status, MemoryAss
+    Get-VM -Name $vm | Select Name, State, Status, MemoryAssigned | Format-Table -Auto
     ```
 1. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Connect (2)** from the right-hand Actions pane.
 
