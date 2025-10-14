@@ -38,7 +38,7 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
    - Region: Select **<inject key="Region" enableCopy="false" /> (4)** from the dropdown.
 
-   - Primary Service: **Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**
+   - Preferred storage type: **Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**
 
    - Performance: **Standard (6)**
   
