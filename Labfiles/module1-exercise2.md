@@ -199,7 +199,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     > This gives the terminal session elevated privileges.
 
-1. Enter the following command, substituting **\<Workspace ID\> and \<Primary Key\>** with the values copied previously. Answer **Yes** when prompted to **Restart services during package upgrades without asking**.  
+1. Enter the following command, substituting **\<Workspace ID\> and \<Primary Key\>** with the values copied previously. Answer **Yes** when prompted to **Restart services during package upgrades without asking**. You may need to use the < arrow keys on your keyboard to choose **Yes**.
 
     ```
     wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <Workspace ID> -s <Primary Key>
