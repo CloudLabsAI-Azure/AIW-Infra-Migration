@@ -36,7 +36,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
  
     ![](./Images/AIM-image8.png)
 
-1. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** page, select the down arrow next to **Start discovery (1)**, then choose **Using appliance (2)**, and select **From Azure (3)**.
+1. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** page, select the down arrow next to **Start discovery (1)**, then choose **Using appliance (2)**, and select **For Azure (3)**.
 
    ![](./Images/AIM-image9.png)
    
@@ -158,17 +158,19 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/15-7-25-l1-19.png "Azure Migrate Microsoft login")
 
- 1. Log in using the provided Azure credentials. On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue** to complete the login. 
+ 1. Log in using the provided Azure credentials. 
     
      - Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
         
-        ![](Images/15-7-25-l1-20.png)
+        ![](./Images/AIM-image41.png)
        
      - Azure Password: <inject key="AzureAdUserPassword"></inject>
    
-        ![](Images/15-7-25-l1-21.png)
+        ![](./Images/AIM-image42.png)
+   
+     - On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue** to complete the login. 
 
-        ![](Images/15-7-25-l1-22.png)
+        ![](./Images/AIM-image43.png)
        
 1. Once signed in, return to the Azure Migrate Appliance tab the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
@@ -230,7 +232,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      ![](Images/AIM-image40.png)
 
-1. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** pageUnder Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
+1. On the **Azure Migrate** page, under Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
 
    ![](Images/15-7-25-l1-31.png) 
 
