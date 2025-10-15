@@ -139,7 +139,7 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
 
 > **Note**: In a real-world scenario, you would perform a test migration before the final migration. To save time, you will skip the test migration in this lab. The test migration process is very similar to the final migration.
 
-1. On the **Migration and modernization** **overview (1)** blade, under the **Migrate (2)** section, click **Migrate (3)** to initiate migration for additional servers.
+1. On the Azure Migrate: Server Migration **overview (1)** blade, under the **Migrate (2)** section, click **Migrate (3)** to initiate migration for additional servers.
 
     ![](Images/15-7-25-l7-4.png)
    
