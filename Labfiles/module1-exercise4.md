@@ -66,10 +66,14 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
     ![](Images/infra-l4-6.png)
 
-1. On the **Size** section, select **Standard_D2s_v3 (1)** as the VM size and under **Licensing**, choose **Windows server (2)** for the License type. Once done, click **Review + create (3)**.
+1. On the **Size** section, select **Standard_D2s_v3 (1)** as the VM size and under **Licensing**, choose **Windows server (2)** for the License type. 
 
-     ![](Images/15-7-25-l4-l9.png)
+    ![](Images/AIM-image44.png)
 
+1. Click on **Networking** tab, select **None (1)** for **Load balancing options**. Then Click on **Review + create (2)**
+
+    ![](Images/AIM-image45.png)
+   
 1. Once validation passes, review the configuration and click **Create** to deploy the Virtual Machine Scale Set.
 
     ![](Images/15-7-25-l4-l10.png)
