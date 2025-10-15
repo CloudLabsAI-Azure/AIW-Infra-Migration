@@ -32,7 +32,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
  
     ![Screenshot of the Azure migrate overview blade.](Images/AIM-image7.png "Azmigrate Overview blade")
 
-1. On the **Azure Migrate** page, from the left navigation pane, select **All projects (1)**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" /> (2)**
+1. On the **Azure Migrate** page, from the left navigation pane, select **All projects (1)**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" /> (2)**.
  
     ![](./Images/AIM-image8.png)
 
@@ -228,7 +228,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
   
     ![](Images/AIM-image13.png)
 
-1. Return to the **LabvmVM**, then navigate to the **Azure Migrate** page in the Azure portal. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** page scroll down. Then click on **Click here** to view details in the old experience.
+1. Return to the **LabvmVM**, then navigate to the **Azure Migrate** page in the Azure portal. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** and scroll down. Then click on **Click here** to view details in the old experience.
 
      ![](Images/AIM-image40.png)
 
