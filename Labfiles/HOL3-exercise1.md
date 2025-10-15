@@ -29,11 +29,11 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
   
 1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources** from left pane, click on **+Add/Create (2)**, then **Add a machine (3)**.
     
-    ![Screenshot of the add server.](Images/15-7-25-l9-2.png "add server")
+    ![Screenshot of the add server.](Images/AIM-image17 "add server")
     
 1. On the **Add servers with Azure Arc** page, then click **Generate script** under Add a single server.
 
-    ![Screenshot of the Generate script.](Images/15-7-25-l9-3.png "Generate script")
+    ![Screenshot of the Generate script.](Images/AIM-image18.png "Generate script")
     
 1. On the **Add servers with Azure Arc** page, In the **Basics** section, add the following details:
      
@@ -47,7 +47,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
    
    - Leave other values as default and click on **Next (4).**
 
-        ![Screenshot of the resource details tab.](Images/15-7-25-l9-4.png "resource details tab")
+        ![Screenshot of the resource details tab.](Images/AIM-image19.png "resource details tab")
 
 1. In the **Tags** section, leave the values as default and click on **Next**.
 
@@ -100,11 +100,11 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 
     - Enter your Username/Email: **<inject key="AzureAdUserEmail"></inject>**  in the Sign in field. Click Next to continue.
 
-       ![](./Images/614-7-25-g6.png)
+       ![](./Images/AIM-image1.png)
     
     - Enter Password: **<inject key="AzureAdUserPassword"></inject>** and click Sign in
 
-       ![](./Images/614-7-25-g7.png)
+       ![](./Images/AIM-image2.png)
 
    > **Note:** Move back to the PowerShell pane, and now you have connected your AzureArcVM to Azure successfully.
    
@@ -116,7 +116,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 
     >**Note:** The name of the new server added could be different. You should refresh to see the new server.
     
-    ![Screenshot of the server added.](Images/15-7-25-l9-10.png)
+    ![Screenshot of the server added.](Images/AIM-image20.png)
     
 ### Summary
 
