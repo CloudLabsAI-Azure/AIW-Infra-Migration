@@ -226,9 +226,13 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
   
     ![](Images/AIM-image13.png)
 
-1.  Return to the **LabvmVM**, then navigate to the **Azure Migrate** page in the Azure portal. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** page, under **All inventory** you see **7 Workloads**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
+1. Return to the **LabvmVM**, then navigate to the **Azure Migrate** page in the Azure portal. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** page scroll down. Then click on **Click here** to view details in the old experience.
 
-    ![](Images/AIM-image12.png) 
+     ![](Images/AIM-image40.png)
+
+1. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** pageUnder Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
+
+   ![](Images/15-7-25-l1-31.png) 
 
     > **Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
 
