@@ -2,9 +2,9 @@
 
 ### Estimated time: 40 Minutes
 
-In this exercise, you'll assess the migration readiness of the SmartHotel application using Azure Migrate. First, you'll create an assessment for selected VMs, setting up and grouping them to generate a report that shows whether they're ready for migration to Azure.
+In this exercise, you will assess the migration readiness of the SmartHotel application using Azure Migrate. First, you will create an assessment for selected VMs, setting up and grouping them to generate a report that shows whether they're ready for migration to Azure.
 
-Next, you'll configure dependency visualization by installing monitoring agents on the VMs. This will help you map out and understand the dependencies between different application parts, ensuring everything works properly before migrating to Azure.
+Next, you will configure dependency visualization by installing monitoring agents on the VMs. This will help you map out and understand the dependencies between different application parts, ensuring everything works properly before migrating to Azure.
 
 ## Lab objectives
 
@@ -21,7 +21,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
    ![Screenshot of the Azure Migrate portal blade, with the '+Assess' button highlighted.](Images/15-7-25-l2-1.png "Start assessment")
 
-1.  On the **Basics** tab, ensure the **Assessment type** is set to **Azure VM** **(1)** and the **Discovery source** is **Servers discovered from Azure Migrate appliance** **(2)**. under **Assessment settings**, click on **Edit** **(3)**.
+1.  On the **Basics** tab, ensure the **Assessment type** is set to **Azure VM** **(1)** and the **Discovery source** as **Servers discovered from Azure Migrate appliance** **(2)**. Then under **Assessment settings**, click on **Edit** **(3)**.
 
     ![Screenshot of the Azure Migrate 'Assess servers' blade, showing the assessment name.](Images/15-7-25-l2-2.png "Assess servers - assessment name")
 
@@ -52,7 +52,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
     ![](Images/15-7-25-l2-6.png)
 
-1. In Azure Migrate, on the **Servers, databases, and web apps** page, Expand **Migration goals** from the left navigation menu **(1)**. Select **Servers, databases and web apps** **(2)**. Click on **Refresh** periodically **(3)** until the number of assessments under **Assessments > Total** updates to **1** (This may take a few minutes). Once the count is updated, click on the number **1** next to **Total** under **Appliances** **(4)**. 
+1. In Azure Migrate, on the **Servers, databases, and web apps** page, Expand **Migration goals** **(1)** from the left navigation menu. Select **Servers, databases and web apps** **(2)**. Click on **Refresh** periodically **(3)** until the number of assessments under **Assessments > Total** updates to **1** (This may take a few minutes). Once the count is updated, click on the number **1** next to **Total** under **Appliances** **(4)**. 
 
     ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/15-7-25-l2-7.png "Azure Migrate - Assessments (count)")
     
@@ -77,7 +77,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
    ![](Images/15-7-25-l2-9.png)
 
-1. On the **Azure Migrate: Discovery and assessment** page, expand the **Manage** section **(1)** and select **Groups** **(2)**. Click on the **SmartHotel VMs** group to view its details **(3)**. 
+1. On the **Azure Migrate: Discovery and assessment** page, expand the **Manage (1)** section and select **Groups** **(2)**. Click on the **SmartHotel VMs** group to view its details **(3)**. 
 
     ![](Images/15-7-25-l2-10.png)
 
