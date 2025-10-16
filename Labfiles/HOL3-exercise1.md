@@ -29,7 +29,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
   
 1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources** from left pane, click on **+Add/Create (2)**, then **Add a machine (3)**.
     
-    ![Screenshot of the add server.](Images/AIM-image17 "add server")
+    ![Screenshot of the add server.](Images/AIM-image17.png "add server")
     
 1. On the **Add servers with Azure Arc** page, then click **Generate script** under Add a single server.
 
