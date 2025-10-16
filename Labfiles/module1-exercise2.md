@@ -243,7 +243,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![Screenshot showing that the Dependency Agent install on Linux was successful.](Images/da-linux-done.png "Dependency Agent installation was successful")
 
-1. Return to the **SmartHotel VMs** group in the **Azure Migrate** portal. Refresh the page using the **browser refresh button** (not the one in the portal UI). Verify that the **Dependency Agent** status for **smarthotelweb1**, **smarthotelweb2**, and **UbuntuWAF** shows as **Installed**. It may take up to **5 minutes** for the status to update after installation.
+1. Return to the **SmartHotel VMs** group in the **Azure Migrate** portal. Refresh the page using the **browser refresh button** (not the one in the portal UI). Verify that the **Dependency Agent** status for **smarthotelweb1**, **smarthotelweb2**, and **UbuntuWAF** shows as **Installed**. It may take up to **10 minutes** for the status to update after installation.
 
     ![Screenshot showing the dependency agent installed on each VM in the Azure Migrate VM group.](Images/15-7-25-l2-28.png)
    
