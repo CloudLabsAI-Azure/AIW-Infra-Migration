@@ -91,7 +91,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![](Images/cor_1_4.png)
 
-1. On the **Azure Migrate: Server Migration** page, select **Replications (1)** under the **Migration** section on the left. Click **Refresh (2)** occasionally and wait until the **redhat** VM shows a **Protected (3)** status. This indicates the initial replication is complete. It may take 5–10 minutes.
+1. On the **Azure Migrate: Server Migration** page, select **Replications (1)** under the **Migration** section on the left. Click **Refresh (2)** occasionally and wait until the **redhat** VM shows a **Protected (3)** status. This indicates the initial replication is complete. It may take 15 - 20 minutes.
 
      ![](Images/cor_1_5.png)
 
@@ -139,7 +139,7 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
 
 > **Note**: In a real-world scenario, you would perform a test migration before the final migration. To save time, you will skip the test migration in this lab. The test migration process is very similar to the final migration.
 
-1. On the **Migration and modernization** **overview (1)** blade, under the **Migrate (2)** section, click **Migrate (3)** to initiate migration for additional servers.
+1. On the Azure Migrate: Server Migration **overview (1)** blade, under the **Migrate (2)** section, click **Migrate (3)** to initiate migration for additional servers.
 
     ![](Images/15-7-25-l7-4.png)
    
@@ -165,7 +165,7 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
 
     ![](Images/e2lab3.png)
 
-1. Under the **Migration** section, select **Jobs** **(1)**. **Wait** until the **Planned failover** jobs show a **Status** of **Successful (2)**. You should not need to refresh your browser. This could take up to **15 minutes**.
+1. Under the **Migration** section, select **Jobs** **(1)**. **Wait** until the **Planned failover** jobs show a **Status** of **Successful (2)**. You should not need to refresh your browser. This could take up to **20 - 25 minutes**.
 
     ![](Images/15-7-25-l7-l24.png)
    

@@ -38,7 +38,7 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
    - Region: Select **<inject key="Region" enableCopy="false" /> (4)** from the dropdown.
 
-   - Primary Service: **Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**
+   - Preferred storage type: **Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**
 
    - Performance: **Standard (6)**
   
@@ -222,7 +222,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![Screenshot of the 'Azure Migrate: Server Migration' overview blade showing the replication state as 'Healthy' for 3 servers.](Images/infra-l3-3.png "Replication summary")
 
-1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (3)** occasionally and wait until all three machines have a **Protected (4)** status, which shows the initial replication is complete. This will take **5-10** minutes.
+1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (3)** occasionally and wait until all three machines have a **Protected (4)** status, which shows the initial replication is complete. This will take **15 - 20** minutes.
 
      ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/infra-l3-4.png "Replication status")
 

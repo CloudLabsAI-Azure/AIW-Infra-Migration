@@ -29,6 +29,10 @@ In this task, you will review the environment discovered in Azure Migrate. After
    
     ![Screenshot of the Azure migrate overview blade.](Images/15-7-25-l5-1.png "Azmigrate Overview blade")
 
+1. On the **Azure Migrate** page in the **Azure portal**. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />**. Then click on **Click here** to view details in the old experience.
+
+   ![](Images/AIM-image40.png)
+
 1. On the **Azure Migrate | Servers, databases and web apps** page, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Azure Migrate: Discovery and assessment**, you'll see **Discovered servers: 7 (3)**. 
  
     ![](Images/cor_1_1.png)

@@ -16,7 +16,7 @@ In this exercise, you will complete the following tasks:
 
 - Task 1: Enable Microsoft Defender for Cloud
 - Task 2: Enable Microsoft Sentinel
-- Task 3:  Enable Azure Monitor
+- Task 3: Enable Azure Monitor
 
 ### Task 1: Enable Microsoft Defender for Cloud
 
@@ -28,21 +28,25 @@ In this task, you will enable Microsoft Defender for Cloud to enhance the securi
     
     > **Note:** If you are prompted with a new upgrade pop-up, click on Skip.
     
-1. On the **Microsoft Defender for Cloud** page, click **Management (1)** > **Environment settings (2)**, expand the subscription with the **down arrow (3)**, then select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (4)**.
+1. On the **Microsoft Defender for Cloud** page, click **Management (1)** > **Environment settings (2)**, expand the Tenant Root Group and subscription with the **down arrow (3) (4)**, then select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (5)**.
 
-    ![](Images/15-7-25-l12-2.png)
+    ![](Images/AIM-image35.png)
      
 1. On the **Defender plans** page, select **Defender plans** from the left-hand panel **(1)**, toggle the **Servers** plan to **On (2)**, and click **Save (3)** to apply the changes.
 
-    ![](Images/infra-l14-2.png)
+    ![](Images/AIM-image36.png)
     
-1. The **Microsoft Defender for Cloud Overview page** offers a consolidated perspective for security experts. This section combines various independent cloud security components, such as **Secure Score, Regulatory Compliance, and Workloads Protection**, and provides detailed insights on the security posture on a distinct dashboard.
+1. Back on **Microsoft Defender for Cloud** Overview page. When Enhance your security posture by enabling Defender CSPM pop up click on **No thanks**
 
-    ![Screenshot of the overview page](Images/infra-l14-2.1.png "overview page")
+1. On on **Microsoft Defender for Cloud**, expand **General (1)** thrn select **Overview (2)**  when  offers a consolidated perspective for security experts. This section combines various independent cloud security components, such as **Secure Score, Regulatory Compliance, and Workloads Protection**, and provides detailed insights on the security posture on a distinct dashboard.    
+
+   ![Screenshot of the overview page](Images/AIM-image37.png "overview page")
 
 1. In the Microsoft Defender for Cloud portal, click **General (1)**, then select **Recommendations (2)** to view risk-based recommendations and resource health insights..
+
+    >**Note**: You may need to select the Collapse button to view the recommendations.
     
-     ![](Images/infra-l14-4.png)
+     ![](Images/AIM-image38.png)
    
 1. On the **Security alerts page** under General, you can see the alerts that describe details of the affected resources, suggested remediation steps, and in some cases, an option to trigger a logic app in response. (The Remediation steps contain the remediation logic where you can remediate the selected resource/s. To simplify remediation, improve your environment's security, and increase your secure score, many recommendations include a Fix option. Fix helps you quickly remediate a recommendation on multiple resources.)
 
@@ -74,7 +78,7 @@ In this task, you will create and enable Microsoft Sentinel and review the Conte
 
     ![Screenshot of the Data Connectors.](Images/infra-l14-8-3.png "Data Connectors")
 
-1. From the left pane, select **Analytics** present under **Configuration**. You can create custom analytics rules to help discover threats and anomalous behaviours in your environment. (Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and remediation processes.) 
+1. From the left pane, select **Analytics** present under **Configuration**. You can create custom analytics rules to help discover threats and anomalous behaviours in your environment. (Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and remediation processes.). Note: If you are not able to see it in Analytics, please refresh or close and reopen the page.
 
     ![Screenshot of the Analytics.](Images/infra-l14-09.png "Analytics")
 
@@ -95,7 +99,7 @@ In this task, you will enable Azure Monitor to track and manage the performance 
     
 1. On the **Monitor** page, from the left pane, select **Log Analytics Workspaces (2)** present under **Insights (1)** (You will see your subscription and all the workspaces in it, listed here) and click on **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (3)** workspace under azuremigraterg.
 
-    ![Screenshot of the search Azure workspace Monitor.](Images/infra-l14-9.png "Azure Monitor")
+    ![Screenshot of the search Azure workspace Monitor.](Images/AIM-image39.png "Azure Monitor")
 
 1. On the **Log Analytics Workspaces** page, under the **Monitoring (1)** section, click on **Insights (2)**, and in the **Overview (3)** tab, you will find the following:
 

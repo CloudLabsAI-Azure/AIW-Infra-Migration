@@ -18,24 +18,28 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
     
     - Enter your **Username/Email:** <inject key="AzureAdUserEmail"></inject> in the **Sign in** field. Click **Next** to continue.
       
-      ![](./Images/614-7-25-g6.png)
+      ![](./Images/AIM-image1.png)
       
     - **Enter Password:** <inject key="AzureAdUserPassword"></inject> and click **Sign in**
 
-      ![](./Images/614-7-25-g7.png)
+      ![](./Images/AIM-image2.png)
 
-1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
+1. In the **Azure portal**, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
-    ![Screenshot of the All services overview blade.](Images/15-7-25-1l.png "All services Overview blade")
+    ![Screenshot of the All services overview blade.](Images/AIM-image6.png "All services Overview blade")
 
 1. In the search bar, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the suggestions to open.
  
-    ![Screenshot of the Azure migrate overview blade.](Images/infra-l1-new.png "Azmigrate Overview blade")
+    ![Screenshot of the Azure migrate overview blade.](Images/AIM-image7.png "Azmigrate Overview blade")
 
-1. On the **Azure Migrate | Servers, databases and web apps** page, select **Servers, databases and web apps (1)** under **Migration goals** from the left panel, and then under **Azure Migrate: Discovery and assessment**, select **Discover (2)** -> **Using appliance (3)** to open the Discover blade.
+1. On the **Azure Migrate** page, from the left navigation pane, select **All projects (1)**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" /> (2)**.
  
-    ![](Images/15-7-25-l1-2.png)
- 
+    ![](./Images/AIM-image8.png)
+
+1. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** page, select the down arrow next to **Start discovery (1)**, then choose **Using appliance (2)**, and select **For Azure (3)**.
+
+   ![](./Images/AIM-image9.png)
+   
 1. On the **Discover** page, under **Are your servers virtualized?**, click the drop-down **(1)** and select **Yes, with Hyper-V (2)** from the list.
 
     ![](Images/15-7-25-l1-3.png)
@@ -45,9 +49,9 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
      ```
      SmartHotelAppl
      ```
-    ![Screenshot of the Azure Migrate 'Discover machines' blade showing the 'Generate Azure Migrate project key' section.](Images/15-7-25-l1-4.png "Generate Azure Migrate project key")
+    ![Screenshot of the Azure Migrate 'Discover machines' blade showing the 'Generate Azure Migrate project key' section.](Images/AIM-image10.png "Generate Azure Migrate project key")
 
-1. Once the project key is generated, click the **copy** icon to the right of the **Project key** field and save it in a Notepad for future reference.
+1. Once the project key is generated, click the **copy** icon to the right of the **Project key** field and save it in a **Notepad** for future reference.
 
     ![Screenshot of the Azure Migrate 'Discover machines' blade showing the Azure Migrate project key.](Images/infra-l1-1.png)
 
@@ -134,7 +138,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
 1. On the **Appliance Configuration Manager Cloud: Public** page, under **1. Set up prerequisites**, expand **Check latest updates and register appliance**. Paste the **Azure Migrate project key (1)** that you copied earlier, then click **Verify (2)** to validate the key.
 
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/15-7-25-l1-15.png "Register with Azure Migrate")
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/AIM-image11.png "Register with Azure Migrate")
 
 1. **Wait** while the wizard installs the latest Azure Migrate updates. If prompted, log in using the credentials, enter username as **Administrator** and password **<inject key="SmartHotel Admin Password" />**. Once the update completes, if a **New update installed** pop-up appears, click **Refresh** to restart the appliance management app.
 
@@ -154,17 +158,19 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/15-7-25-l1-19.png "Azure Migrate Microsoft login")
 
- 1. Log in using the provided Azure credentials. On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue** to complete the login. 
+ 1. Log in using the provided Azure credentials. 
     
      - Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
         
-        ![](Images/15-7-25-l1-20.png)
+        ![](./Images/AIM-image41.png)
        
      - Azure Password: <inject key="AzureAdUserPassword"></inject>
    
-        ![](Images/15-7-25-l1-21.png)
+        ![](./Images/AIM-image42.png)
+   
+     - On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue** to complete the login. 
 
-        ![](Images/15-7-25-l1-22.png)
+        ![](./Images/AIM-image43.png)
        
 1. Once signed in, return to the Azure Migrate Appliance tab the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
@@ -214,17 +220,21 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
    >**Note:** The discovery process may take up to 10 minutes to complete
    
-   ![](Images/15-7-25-l1-29.png)
+   ![](Images/AIM-image14.png)
     
-   ![](Images/15-7-25-l1-30.png)
+   ![](Images/AIM-image15.png)
 
 1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table. (Wait for the Azure Migrate status to display . Discovery has been successfully initiated. This may take several minutes. Once initiated, you can view the discovery status for each host or cluster in the table.)
   
-    ![](Images/infra-l1-2.png)
+    ![](Images/AIM-image13.png)
 
-1.  Return to the **LabvmVM**, then navigate to the **Azure Migrate** page in the Azure portal. Under **Migration goals**, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the **Azure Migrate: Discovery and assessment** panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
+1. Return to the **LabVM**, then navigate to the **Azure Migrate** page in the Azure portal. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** and scroll down. Then click on **Click here** to view details in the old experience.
 
-    ![](Images/15-7-25-l1-31.png) 
+     ![](Images/AIM-image40.png)
+
+1. On the **Azure Migrate** page, under Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
+
+   ![](Images/15-7-25-l1-31.png) 
 
     > **Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
 
