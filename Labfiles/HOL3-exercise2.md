@@ -54,7 +54,7 @@ In this task, you will configure Azure Site Recovery (ASR) to replicate an on-pr
    
    - Leave other values as default and click on **Next (6)**
    
-       ![](Images/AIM-image26.png)
+       ![](Images/AIM-image(26).png)
     
 1. In the **Virtual machine selection** tab, check the box next to **AzureArcVM (1)** and click on **Next (2)** to proceed.
 
