@@ -126,6 +126,8 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![Screenshot showing the Internet Explorer prompt to run the installer for the Microsoft Monitoring Agent.](Images/15-7-25-l2-19.png)
 
+     >**Note**: Please install the Agents as mentioned in the lab guide on both **SmartHotelWeb1** and **SmartHotelWeb2** VMs. Read the instructions carefully to avoid mistakes.
+
 1. On the **Welcome to the Microsoft Monitoring Agent Setup Wizard** screen, select **Next**. 
 
     ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/hol1-ex-2-s12.png "MMA installation")
@@ -173,9 +175,9 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     > **Note**: You do not need to configure the workspace ID and key when installing the Dependency Agent, since it uses the same settings as the Microsoft Monitoring Agent, which must be installed beforehand.
 
-1. Close the virtual machine connection window for the **smarthotelweb1 VM**. Connect to the **smarthotelweb2 VM** and repeat the installation process (steps 10-22) for both agents (the administrator password is the same as for smarthotelweb1). Close the virtual machine connection window for the **smarthotelweb2 VM** once the installation of agents is done.
+1. Minimize the Virtual Machine connection window for the **SmartHotelWeb1** VM. Connect to the **smarthotelweb2 VM** and repeat the installation process (steps 10-22) for both agents (the administrator password is the same as for smarthotelweb1). Minimize the virtual machine connection window for the **smarthotelweb2 VM** once the installation of agents is done.
 
-1. On the **smarthotelweb1** VM desktop, type **cmd (1)** in the search bar and select **Command Prompt (2)** from the results to open a terminal window.
+1. Open the **smarthotelweb1** connection windowVM on the desktop, type **cmd (1)** in the search bar and select **Command Prompt (2)** from the results to open a terminal window.
 
      ![](Images/infra-l1-10.png)
     
