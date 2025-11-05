@@ -43,24 +43,26 @@ In this task, you will create a new Azure Storage Account that will be used by M
    - Storage account name: **migrationstorage<inject key="DeploymentID" enableCopy="false" /> (3)**
 
    - Location: Select **<inject key="Region" enableCopy="false" /> (4)** from the dropdown.
+
+   - Preferred storage type: Select **Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**
     
-   - Performance: **Standard (5)**
+   - Performance: **Standard (6)**
   
-   - Redundancy: **Locally-redundant storage (LRS) (6)**
+   - Redundancy: **Locally-redundant storage (LRS) (7)**
 
-     ![Screenshot of the Azure portal showing the create storage account blade.](Images/HOL1-EX3-T1-S2.png "Storage account settings")
+     ![Screenshot of the Azure portal showing the create storage account blade.](Images/E1T1S2.png "Storage account settings")
 
-3. Select **Review**, then select **Create**.
+3. Select **Review + create (8)**, then select **Create**.
 
 4. Once the storage account is deployed, click on **Go to resource** to open it.
 
 5. Select **Data protection** under **Data management** from the left-hand side menu of storage account.
 
-     ![Screenshot of the Azure portal showing the create storage account blade.](Images/1.3.png)
+     ![Screenshot of the Azure portal showing the create storage account blade.](Images/E1T1S5.png)
 
-6. Now, uncheck the box next to **Enable soft delete for blobs** and **Enable soft delete for containers** to disable the soft delete on blobs and containers as the soft delete enabled storage account is **not supported** for enabling replication on Virtual Machines. Click on **Save**.
+6. Now, uncheck the box next to **Enable soft delete for blobs (1)** and **Enable soft delete for containers (2)** to disable the soft delete on blobs and containers as the soft delete enabled storage account is **not supported** for enabling replication on Virtual Machines. Click on **Save**.
 
-     ![Screenshot of the Azure portal showing the create storage account blade.](Images/1.4.png)
+     ![Screenshot of the Azure portal showing the create storage account blade.](Images/E1T1S6.png)
 
 #### Task summary 
 

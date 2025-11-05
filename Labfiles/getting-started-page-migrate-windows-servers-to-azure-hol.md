@@ -59,7 +59,7 @@ Welcome to Migrate Windows Server to Azure workshop! We've prepared a seamless e
  
 Once you're ready to dive in, your virtual machine and **Lab Guide** will be right at your fingertips within your web browser.
 
-   ![](./Images/labguide2u.png)
+   ![](./Images/GS1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -69,19 +69,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![](./Images/environment.png)
+   ![](./Images/GS2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](./Images/GS8.png)
+   ![](./Images/GS3.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-  ![](./Images/resources-vm-manage.png)
+  ![](./Images/GS4.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
@@ -93,43 +93,32 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![](./Images/GS1.png)
+    ![](./Images/azure.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](./Images/GS2.png)
+      ![](./Images/login.png)
  
-3. Now enter the following password and click on Sign in.
+3. Now enter the following temporary access password and click on Sign in.
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](./Images/GS3.png)
-
-4. If you see the pop-up Action Required, click **Ask Later**.
-
-   ![](./Images/asklater.png)
-
-   > **NOTE:** Do not enable MFA, select **Ask Later**.
+      ![](./Images/GS8.png)
 
 5. If you see the pop-up **Stay Signed in?**, click **No**.
 
    ![](./Images/GS9.png)
 
-6. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
-7. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
-
-   ![](./Images/Azure-cancel-tour.png)
 
 8. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-     ![](Images/select-rg.png "Resource groups")
+     ![](Images/GS10.png "Resource groups")
    
 9. Confirm you have all resource groups present as shown below.
 
-     ![](Images/upimage10.png "Resource groups")
+     ![](Images/GS11.png "Resource groups")
    
  
 ## Support Contact
@@ -142,6 +131,6 @@ Learner Support Contacts:
 
 Now, click on the **Next** from the lower right corner to move to the next page.
 
-   ![](./Images/GS4.png)
+   ![](./Images/next.png)
 
 ### Happy Learning!!
