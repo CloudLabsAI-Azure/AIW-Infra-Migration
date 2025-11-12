@@ -133,6 +133,8 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
 14. Navigate to **Azure Migrate: Server Migration** blade, under the **Discovered servers** panel should now show 7 discovered servers.
 
+    > **Note:** It may take some time for the number of discovered servers to appear. You can proceed with the next task if the number is not yet visible.
+
      ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/task2-15.png "Discovered servers")
 
 ### Task 3: Enable Replication from Hyper-V to Azure Migrate
