@@ -55,15 +55,15 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
 1. In the search bar, search for **Azure Migrate** and select it from the suggestions to open the Azure Migrate Overview blade, as shown below. 
  
-    ![Screenshot of the Azure migrate overview blade.](Images/hol1-ex-1-s3upd.png "Azmigrate Overview blade")
+    ![Screenshot of the Azure migrate overview blade.](Images/E1T2S1.png "Azmigrate Overview blade")
 
 1. Select **All Projects (1)** from the left panel and select the project listed which is **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** **(2)**.
    
-     ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](Images/task2-1.png "Azure Migrate: Server Migration - Discover")
+     ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](Images/E1T2S2.png "Azure Migrate: Server Migration - Discover")
 
 1. In the project, select **Migrations (1)** under Execute from the left panel and then select **Replication summary (2)** under Track migrations.
 
-    ![](Images/task2-2.png)
+    ![](Images/E1T5S5.png)
 
 1. Go to **Overview (1)** and select **Discover (2)** under Discovered servers.
 
@@ -79,63 +79,63 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
    - Check the **confirmation (4)** checkbox and select **Create resources (5)** to begin the deployment of the Azure Site Recovery resource used by Migration and modernization for Hyper-V migrations.
 
-     ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](Images/task2-4.png "Discover machines - source hypervisor and target region")
+     ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](Images/E1T2S4.png "Discover machines - source hypervisor and target region")
 
    - Once deployment is complete, the **Discover machines** panel should be updated with additional instructions.
   
 1. Click on the **Download** link for the Hyper-V replication provider software installer to download the Azure Site Recovery provider installer.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](Images/task2-5.png "Replication provider download link")
+     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](Images/E1T2S6.png "Replication provider download link")
 
 1. Return to the **Discover** page in your browser select the blue **Download** button and download the registration key file.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/task2-6.png "Download registration key file")
+     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/E1T2S7.png "Download registration key file")
 
 1. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off (1)** and select **Next (2)**. 
 
-    ![](Images/task2-7.png)
+    ![](Images/E1T2S8.png)
 
 1. Accept the default installation location and select **Install**.
 
     > **Note:** If you are prompted with a pop-up like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
   
-     ![Screenshot of the ASR provider installer.](Images/task2-8.png "Azure Site Recovery Provider Setup")
+     ![Screenshot of the ASR provider installer.](Images/E1T2S9.png "Azure Site Recovery Provider Setup")
 
 1. When the installation has completed select **Register**. 
 
-    ![](Images/task2-9.png)
+    ![](Images/E1T2S10.png)
 
 1. Click on **Browse** and navigate to the location of the key file you downloaded. When the key is loaded, select **Next (2)**.
 
-     ![Screenshot of the ASR provider registration settings.](Images/task2-10.png "Key file registration")
+     ![Screenshot of the ASR provider registration settings.](Images/E1T2S10-1.png "Key file registration")
 
 8. Select **Connect directly to Azure Site Recovery without a proxy server (1)** and select **Next (2)**. The registration of the Hyper-V host with Azure Site Recovery will begin.
 
-     ![Screenshot of the ASR provider registration settings.](Images/task2-11.png)
+     ![Screenshot of the ASR provider registration settings.](Images/E1T2S11.png)
 
 9. Wait for registration to complete (this may take several minutes). Then select **Finish**.
 
-     ![Screenshot of the ASR provider showing successful registration.](Images/task2-12.png "Registration complete")
+     ![Screenshot of the ASR provider showing successful registration.](Images/E1T2S12.png "Registration complete")
 
 10. Return to the Azure Migrate browser window. **Refresh** your browser, then re-open the **Discover machines** panel by selecting **Discover**. Select **Azure VM (1)** for **Where do you want to migrate to?** and then select **Yes, with Hyper-V (2)** for **Are your machines virtualized?**
 
 11. Select **Finalize registration** **(3)**, which should now be enabled.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/task2-13.png "Finalize registration")
+     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/E1T2S13.png "Finalize registration")
 
 12. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take several minutes.
 
      ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/upd-discover-6.png "Finalizing registration...")
 
-13. Once the **Registration finalized (1)** is complete, close the **Discover** panel using **X (2)** button.
+13. Once the **Registration finalized (1)** is complete, **Close (2)** the **Discover** panel.
 
-     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](Images/task2-14.png "Registration finalized")
+     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](Images/E1T2S15.png "Registration finalized")
 
 14. Navigate to **Azure Migrate: Server Migration** blade, under the **Discovered servers** panel should now show 7 discovered servers.
 
     > **Note:** It may take some time for the number of discovered servers to appear. You can proceed with the next task if the number is not yet visible.
 
-     ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/task2-15.png "Discovered servers")
+     ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/E1T2S17.png "Discovered servers")
 
 ### Task 3: Enable Replication from Hyper-V to Azure Migrate
 
@@ -143,11 +143,11 @@ In this task, you will configure and enable the replication of your on-premises 
 
 1. Return to **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** | Migrations, select **Migrations (1)** under Execute on the left. Select **Replicate summary (2)** blue button.
 
-    ![](./Images/task3-1.png)
+    ![](./Images/E1T2S16.png)
 
 1. In the Azure Migrate: Server Migration blade, select **Replicate**. This opens the **Replicate** wizard.
 
-    ![Screenshot highlighting the 'Replicate' button in the 'Azure Migrate: Server Migration' panel of the Azure Migrate - Servers blade.](Images/task3-2.png "Replicate link")
+    ![Screenshot highlighting the 'Replicate' button in the 'Azure Migrate: Server Migration' panel of the Azure Migrate - Servers blade.](Images/E1T3S1.png "Replicate link")
    
 2. Under the **Specific Intent** page, provide the below details:
 
@@ -157,13 +157,13 @@ In this task, you will configure and enable the replication of your on-premises 
     
     -  Are your machines virtualized? : Select **Yes, with Hyper-V (3)** from the drop-down. Click on **Continue (4)**
 
-       ![](Images/task3-3.png)
+       ![](Images/E1T3S2.png)
 
 3. In the **Virtual machines** tab, under **Import migration settings from an assessment?**, select **No, I'll specify the migration settings manually (1)** and under the **Virtual machines** tab should show the virtual machines included in the assessment. Select the **redhat (2)** virtual machine from the list, then click on **Next (3)**.
 
-    ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The Azure Migrate assessment created earlier is selected.](Images/task3-4.png "Replicate - Virtual machines")
+    ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The Azure Migrate assessment created earlier is selected.](Images/T3S4.png "Replicate - Virtual machines")
 
-    >**Note:** If you see *Mars agent version compatibility unknown* warning, igonore and proceed further.
+    >**Note:** If you see *Mars agent version compatibility unknown* warning, ignore and proceed further.
 
 5. On the **Target settings** tab, select the below information,
 
@@ -177,11 +177,11 @@ In this task, you will configure and enable the replication of your on-premises 
 
    - Select **Next (5)**.
  
-     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/task3-5.png)
+     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/T3S5.png)
 
      >**Note:** For simplicity, in this lab you will not configure the migrated VM for high availability, since each application tier is implemented using a single VM.
 
-     >**Note:** Please wait for 10-15 minutes if you donot see the cache storage account option and reperform from Step 2.
+     >**Note:** Please wait for 10-15 minutes if you do not see the cache storage account option and re-perform from Step 2.
 
 7. On the **Compute** tab, select the below configuration,
 
@@ -195,19 +195,19 @@ In this task, you will configure and enable the replication of your on-premises 
 
    - Select **Next (5)**. 
 
-     ![Screenshot of the 'Compute' tab of the 'Replicate' wizard in Azure Migrate Server Migration. Each VM is configured to use a Standard_F2s_v2 SKU, and has the OS Type specified.](Images/task3-6.png "Replicate - Compute")
+     ![Screenshot of the 'Compute' tab of the 'Replicate' wizard in Azure Migrate Server Migration. Each VM is configured to use a Standard_F2s_v2 SKU, and has the OS Type specified.](Images/T3S6.png "Replicate - Compute")
     
 9. In the **Disks** tab, review the settings but do not make any changes. Select **Next: Tags**, then select **Next: Review + Start replication**, select **Replicate** to start the server replication.
 
-    ![](Images/task3-7.png)
+    ![](Images/T3S7.png)
 
 10. In the **Azure Migrate: Server Migration** blade, under **Replicate**, confirm that the 1 machine is replicating.
 
-    ![Screenshot of the 'Azure Migrate: Server Migration' overview blade showing the replication state as 'Healthy' for 3 servers.](Images/task3-8.png "Replication summary")
+    ![Screenshot of the 'Azure Migrate: Server Migration' overview blade showing the replication state as 'Healthy' for 3 servers.](Images/T3S8.png "Replication summary")
 
 12. Select **Replication (1)** under **Migration** on the left. Select **Refresh (2)** occasionally and wait until the RedHat machine has a **Protected (3)** status, which shows the initial replication is complete. This will take around 10-15 minutes.
 
-    ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/task3-9.png "Replication status")
+    ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/T2S9.png "Replication status")
 
 ### Task 4: Configure Networking
 
@@ -217,13 +217,9 @@ In this task, you will modify the settings for each replicated VM to use a stati
 
     ![Screenshot from the 'Azure Migrate: Server Migration - Replicating machines' blade with the smarthotelweb1 machine highlighted.](Images/task4-1.png "Replicating machines")
 
-2. Select **Compute and Network** under **General** on the left.
+2. Select **Compute and Network** under **General** on the left. Confirm that the VM is configured to use the **F2s_v2** VM size.
 
-    ![Screenshot of the smarthotelweb1 blade with the 'Compute and Network' and 'Edit' links highlighted.](Images/task4-2.png "Edit Compute and Network settings")
-
-3. Confirm that the VM is configured to use the **F2s_v2** VM size.
-
-    ![](Images/task4-3.png)
+    ![Screenshot of the smarthotelweb1 blade with the 'Compute and Network' and 'Edit' links highlighted.](Images/T4S2.png "Edit Compute and Network settings")
 
 > **Note**: Azure Migrate makes a "best guess" at the VM settings, but you have full control over the settings of migrated items. In this case, setting a static private IP address ensures the virtual machine in Azure retains the same IPs they had on-premises, which avoids having to reconfigure the VM during migration (for example, by editing web.config files).
 
@@ -235,11 +231,11 @@ In this task, you will perform a migration of the Redhat virtual machine to Azur
 
 1. Return to the **Azure Migrate: Server Migration** overview blade. Select **Overview (1)** from the left and select **Migrate (2)**.
 
-    ![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/task5-1.png "Replication summary")
+    ![Screenshot of the 'Azure Migrate: Server Migration' overview blade, with the 'Migrate' button highlighted.](Images/T5S1.png "Replication summary")
 
 1. Select **Azure VM (1)** under **Where do you want to migrate to?** and select **Continue (2)**.
 
-    ![Screenshot of the 'Migrate' blade, with 3 machines selected and the 'Migrate' button highlighted.](Images/task5-2.png "Migrate - VM selection")
+    ![Screenshot of the 'Migrate' blade, with 3 machines selected and the 'Migrate' button highlighted.](Images/T5S3.png "Migrate - VM selection")
 
 2. On the **Migrate** blade, select **redhat (1)** virtual machine and select **yes, shutdown virtual machines(Ensures no data loss)** **(2)** and then select **Migrate (3)** to start the migration process.
 
@@ -249,19 +245,19 @@ In this task, you will perform a migration of the Redhat virtual machine to Azur
 
 3. The migration process will start and can be checked from notifications.
 
-    ![Screenshot showing 3 VM migration notifications.](Images/upd-Migration3.png "Migration started notifications")
+    ![Screenshot showing 3 VM migration notifications.](Images/T5S4.png "Migration started notifications")
 
 4. To monitor progress, select **Jobs (1)** under **Migration** on the left and review the status of the redhat **Planned failover (2)** job.
 
-    ![Screenshot showing the **Jobs* link and a jobs list with 3 in-progress 'Planned failover' jobs.](Images/task5-4.png "Migration jobs")
+    ![Screenshot showing the **Jobs* link and a jobs list with 3 in-progress 'Planned failover' jobs.](Images/T5S5.png "Migration jobs")
 
 5. **Wait** until the **Planned failover** jobs show a **Status** of **Successful**. You should not need to refresh your browser. This could take up to 15 minutes.
 
-    ![Screenshot showing the **Jobs* link and a jobs list with all 'Planned failover' jobs successful.](Images/task5-5.png "Migration status")
+    ![Screenshot showing the **Jobs* link and a jobs list with all 'Planned failover' jobs successful.](Images/T5S6.png "Migration status")
 
 6. Navigate to the **SmartHotelRG** resource group and check that the VM, network interface, and disk resource have been created for the virtual machine being migrated.
 
-    ![Screenshot showing resources created by the test failover (VMs, disks, and network interfaces).](Images/task5-6.png "Migrated resources")
+    ![Screenshot showing resources created by the test failover (VMs, disks, and network interfaces).](Images/T5S7.png "Migrated resources")
 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
