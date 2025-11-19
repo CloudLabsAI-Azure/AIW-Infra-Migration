@@ -88,11 +88,11 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
       ![](./Images/sign-in-1.png)
  
-3. Next, provide your password and click on sign in:
+3. Next, provide a temporary access password **(1)** and click on **Sign in (2)**.
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](./Images/tap-password.png)
+      ![](./Images/L1T2S3.png)
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
