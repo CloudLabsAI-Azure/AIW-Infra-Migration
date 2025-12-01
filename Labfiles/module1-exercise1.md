@@ -171,11 +171,13 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
      - On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue** to complete the login. 
 
         ![](./Images/AIM-image43.png)
-       
+    
 1. Once signed in, return to the Azure Migrate Appliance tab the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/15-7-25-l1-23.png "Appliance registered")
 
+    > **Note**: The sign-in process can take between 5 and 10 minutes.
+    
 1. Once registration is complete, navigate to the **Manage credentials and discovery sources** panel. Under **Step 1: Provide Hyper-V host credentials for discovery of Hyper-V VMs**, click **Add credentials** to proceed.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](Images/15-7-25-l1-24.png)

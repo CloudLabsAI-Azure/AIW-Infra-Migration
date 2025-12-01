@@ -102,9 +102,13 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
      > **Note**: If you don't see the workspace here. You can attempt to close and reopen the Workspace, or you can try refreshing the browser page. This may have been caused by a temporary error in the portal.
 
+    >**Note**: If the Workspace ID and Key are visible under Dependencies, please copy both values and save them in a Notepad document.
+
 1. From the **Log Analytics workspace** screen: Select **Agents (2)** under **Settings (1)** from the left-hand side menu and Expand the **Log analytics agent instructions (3)** and make a note of the **Workspace ID (4)** and **Primary Key (5)**. You can copy them using the copy icon and paste them into Notepad for later use.
 
     ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/infra-l1-4.png "OMS Workspace ID and primary key")
+
+    >**Note**: You may not have the option to view the Workspace ID and Primary Key directly. If they are not visible, go to the Dependencies page referenced in Step 6 to access them.
 
 1. On the **Dependencies** screen, under **Step 1**, right-click to copy the download links for **Windows 64-bit** and **Linux** versions of the **Microsoft Monitoring Agent (1)**, then under **Step 2**, copy the links for the **Windows 64-bit** and **Linux** versions of the **Dependency Agent (2)**, and save them along with the previously noted **Workspace ID** and **Primary Key** .
    
@@ -188,10 +192,13 @@ In this task, you will configure the Azure Migrate dependency visualization feat
     ```bash
     ssh demouser@192.168.0.8
     ```
-
+    > **Note**: If Ctrl + V does not work in Command Prompt, right-click inside the window or press Shift + Insert to paste the command.
+    
 1. Enter 'yes' when prompted whether to connect. Enter the password **<inject key="SmartHotel Admin Password" />**.
 
     ![Screenshot showing the command prompt with an SSH session to UbuntuWAF.](Images/ssh.png "SSH session with UbuntuWAF")
+
+    >**Note**: The Command Prompt does not display password characters while typing. This is normal. Simply paste your password into the window and press Enter.
 
 1. Enter the following command, followed by the password **<inject key="SmartHotel Admin Password" />** when prompted:
   
