@@ -33,9 +33,13 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![](Images/15-7-25-l6-l4.png)
 
+    > **Note**: If you can see the Workspace ID and Key in Dependencies, copy both and paste them into a Notepad file.
+
 1. On the **AzureMigrate | Agents** page, expand **Settings (1)** from the left-hand menu and select **Agents (2)**. Make a note of the **Workspace ID (3)** and **Primary key (4)** you’ll need them during agent setup (you can save them in Notepad for quick access).
 
     ![](Images/15-7-25-l6-3.png)
+
+    Note: You may not have the option to view the Workspace ID and Primary Key directly. If they are not visible, go to the Dependencies page referenced in previous step to access them.
 
 1. You will now deploy the Linux versions of the Microsoft Monitoring Agent and Dependency Agent on the **redhat** VM. To do so, you will first connect to the Red Hat VM remotely using an SSH session.
 
