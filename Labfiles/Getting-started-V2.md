@@ -28,7 +28,7 @@ The architecture flow begins with accessing Hyper-V Manager to start and connect
 
 ## Architecture Diagram
 
-   ![](./Images/archmigrate.PNG)
+   ![](./Images/archup.png)
 
 ## Explanation of Components
 
@@ -56,7 +56,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![](./Images/G2.png)
+   ![](./Images/envmig.png)
  
 ## Utilizing the Split Window Feature
  
@@ -66,15 +66,15 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start**, **Stop**, or **Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-  ![](./Images/G4.png)
+  ![](./Images/upvmstop.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-   ![](./Images/G5.png)
+   ![](./Images/upzoommig.png)
  
 ## Let's Get Started with Azure Portal
  
@@ -86,13 +86,13 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](./Images/sign-in-1.png)
+      ![](./Images/userdet.png)
  
 3. Next, provide a temporary access password **(1)** and click on **Sign in (2)**.
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](./Images/L1T2S3.png)
+      ![](./Images/passtemp.png)
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
@@ -104,11 +104,11 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 
 7. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-     ![](Images/select-rg.png "Resource groups")
+     ![](Images/rgs.png "Resource groups")
    
 8. Confirm you have all resource groups present as shown below.
 
-     ![](Images/upimage10.png "Resource groups")
+     ![](Images/updtimage10.png "Resource groups")
  
 ## Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
