@@ -181,6 +181,8 @@ In this task, you will configure and enable the replication of your on-premises 
    
       ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/E1T3S4-1.png)
 
+      > **Note:** If the **Cache storage account** option is not visible, please wait for 5 minutes, refresh the browser, and then check again.
+
       > **Note:** For simplicity, in this lab, you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
 6. On the **Compute** tab, select the below configuration, and select **Next (4)**. 
