@@ -2,9 +2,11 @@
 
 ### Estimated time: 60 Minutes
 
+## Overview
+
 In this exercise, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -46,7 +48,7 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
    - Click **Review + create** to continue **(8)**
 
-     ![Screenshot of the Azure portal showing the create storage account blade.](15-7-25-l3-3.png "Storage account settings")
+     ![Screenshot of the Azure portal showing the create storage account blade.](Images/create-storage-3012.png "Storage account settings")
 
 1. On the **Review + create** tab, verify the entered details. Click **Create** to deploy the storage account.
 
@@ -120,6 +122,8 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
      ![Screenshot of the ASR provider showing successful registration.](15-7-25-l3-17.png "Registration complete")
 
+    >**Note:** The registration may take about 2-3 minutes to complete.
+
 1. Return to the **Azure Migrate** browser window. Refresh the page, then under **Migration and modernization**, select **Discover** to reopen the panel.
     
       - Set **Where do you want to migrate to?** to **Azure VM (1)**
@@ -128,7 +132,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
         ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/infra-l3-1.png "Finalize registration")
 
-1. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 5-10 minutes.
+1. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 10-15 minutes.
 
      ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/upd-discover-6.png "Finalizing registration...")
 
@@ -199,6 +203,8 @@ In this task, you will configure and enable the replication of your on-premises 
         - In the **Advanced Settings (3)** section , enable **Allow cross-tenant replication (4)** and click **OK (5)**
           
           ![](Images/ms-1.png)
+
+    >**Note:** If the **Cache storage account** option is not visible, please wait for 5 minutes, refresh the browser, and then check again.
 
 1. On the **Compute** tab, configure the following settings for each virtual machine:
 
