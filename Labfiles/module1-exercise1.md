@@ -2,11 +2,13 @@
 
 ### Estimated time: 60 Minutes
 
+## Overview
+
 In this HOL, you will use Azure Migrate: Server Assessment to assess the on-premises environment. This will include selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using the Azure Migrate dependency visualization.
 
-## Lab objectives
+## Objectives
 
-In this HOL, you will complete the following task:
+In this Exercise, you will complete the following task:
 
 - Task 1: Discovery, Assess, and Plan: Evaluate your current environment
 
@@ -87,29 +89,29 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      4. After the last line, confirm the VM **State** shows **Running.**
 
-      ```powershell
-    $vm = "AzureMigrateAppliance"
+        ```powershell
+        $vm = "AzureMigrateAppliance"
     
-    Import-Module Hyper-V -ErrorAction SilentlyContinue
-    
-    if (-not (Get-Command Get-VM -ErrorAction SilentlyContinue)) { DISM /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V-Management-PowerShell /All }
-    
-    Import-Module Hyper-V
-    
-    Remove-VMSavedState -VMName $vm -ErrorAction SilentlyContinue
-    
-    Stop-VM -Name $vm -TurnOff -ErrorAction SilentlyContinue
-    
-    Set-VMProcessor -VMName $vm -CompatibilityForMigrationEnabled $true
-    
-    Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 4096MB -MinimumBytes 2048MB -MaximumBytes 8192MB
-    
-    Start-VM -Name $vm -ErrorAction SilentlyContinue
-    
-    if ((Get-VM -Name $vm).State -ne 'Running') { Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 2048MB -MinimumBytes 1024MB -MaximumBytes 8192MB; Start-VM -Name $vm }
-    
-    Get-VM -Name $vm | Select Name, State, Status, MemoryAssigned | Format-Table -Auto
-    ```
+        Import-Module Hyper-V -ErrorAction SilentlyContinue
+        
+        if (-not (Get-Command Get-VM -ErrorAction SilentlyContinue)) { DISM /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V-Management-PowerShell /All }
+        
+        Import-Module Hyper-V
+        
+        Remove-VMSavedState -VMName $vm -ErrorAction SilentlyContinue
+        
+        Stop-VM -Name $vm -TurnOff -ErrorAction SilentlyContinue
+        
+        Set-VMProcessor -VMName $vm -CompatibilityForMigrationEnabled $true
+        
+        Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 4096MB -MinimumBytes 2048MB -MaximumBytes 8192MB
+        
+        Start-VM -Name $vm -ErrorAction SilentlyContinue
+        
+        if ((Get-VM -Name $vm).State -ne 'Running') { Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 2048MB -MinimumBytes 1024MB -MaximumBytes 8192MB; Start-VM -Name $vm }
+        
+        Get-VM -Name $vm | Select Name, State, Status, MemoryAssigned | Format-Table -Auto
+        ```
 1. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Connect (2)** from the right-hand Actions pane.
 
     ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/15-7-25-l1-9.png "Connect to AzureMigrateAppliance")    
@@ -150,7 +152,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
    
     >**Note:** Now, follow the instructions below to complete the login process.
     
- 1. After clicking Login, in the **Continue with Azure Login** dialog, click **Copy code & Login** to copy the device code.
+ 1. After clicking Login, in the **Continue with Azure Login** dialog, copy the code and click **Copy code & Login** to copy the device code.
     
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/15-7-25-l1-18.png "Azure Migrate login code")
   
@@ -164,7 +166,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
         
         ![](./Images/AIM-image41.png)
        
-     - Azure Password: <inject key="AzureAdUserPassword"></inject>
+     - Azure Temporary Access Pass: <inject key="AzureAdUserPassword"></inject>
    
         ![](./Images/AIM-image42.png)
    
@@ -174,7 +176,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
     
 1. Once signed in, return to the Azure Migrate Appliance tab the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
-   ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/15-7-25-l1-23.png "Appliance registered")
+   ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/L1E1T1S25-3012.png "Appliance registered")
 
     > **Note**: The sign-in process can take between 5 and 10 minutes.
     

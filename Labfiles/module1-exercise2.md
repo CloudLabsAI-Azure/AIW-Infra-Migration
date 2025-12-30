@@ -2,11 +2,12 @@
 
 ### Estimated time: 40 Minutes
 
+## Overview
 In this exercise, you will assess the migration readiness of the SmartHotel application using Azure Migrate. First, you will create an assessment for selected VMs, setting up and grouping them to generate a report that shows whether they're ready for migration to Azure.
 
 Next, you will configure dependency visualization by installing monitoring agents on the VMs. This will help you map out and understand the dependencies between different application parts, ensuring everything works properly before migrating to Azure.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -124,7 +125,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![](Images/infra-l1-5.png)
 
-1. On the **smarthotelweb1** VM. Open **Internet Explorer** from the **Start** menu. Paste the link to the **64-bit Microsoft Monitoring Agent for Windows** that you saved earlier. Once the download completes, click **Run** when prompted to start the installer.
+1. On the **smarthotelweb1** VM. Open **Internet Explorer** from the **Start** menu. Paste the link to the **64-bit Microsoft Monitoring Agent for Windows** that you saved earlier. Once the download completes, click one **Save** and then **Run** when prompted to start the installer.
 
      > **Note**: You may need to disable **Internet Explorer Enhanced Security Configuration** on **Server Manager** under **Local Server** to complete the download. 
 

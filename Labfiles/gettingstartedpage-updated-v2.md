@@ -28,7 +28,7 @@ In this hands-on lab, you will migrate and modernize workloads to Azure. You wil
 
 - **Unified Management and Automation:** Use Azure's centralized platform to manage all migrated workloads, automate processes, and apply consistent governance, security, and compliance across your infrastructure.
 
-## Hands-on Labs Scenario
+## Overview
 
 The following labs provide you with a quick and easy way to get started with Azure Migrate through on-premises environments that do not require any complex setup or installations. 
 
@@ -36,7 +36,7 @@ For the purposes of these Hands-on Labs (HOLs), let’s consider that SmartHotel
 
 Their IT systems run Windows, Linux, SQL Servers, and MySQL across on-premises data centers, distribution centers, and multiple public clouds. This poses operational challenges for SmartHotel. They’d like a consistent way to govern and operate across these disparate environments, ensure security across the entire organization, and enable innovation and developer agility, all while meeting regulatory and compliance requirements and being able to leverage the latest innovations of database technologies.
 
-## Objective
+## Objectives
 
 - **Evaluate and Plan Migration:** Assess your current environment using Azure Migrate, create migration assessments, and configure dependency visualization to ensure a smooth transition.
 
