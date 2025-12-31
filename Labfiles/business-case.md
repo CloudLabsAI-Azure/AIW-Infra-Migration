@@ -12,8 +12,6 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
 **Business case analysis** is a comprehensive, easy-to-use tool that enables customers and partners to create directional business proposals to understand how Azure can bring the most value to their business.
 
-> **Note:** You don't need to perform this task as it is a read-only exercise.
-
 **Features:**
 
 - Need **minimal inputs** to get started.
