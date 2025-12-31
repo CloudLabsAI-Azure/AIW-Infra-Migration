@@ -1,11 +1,12 @@
 
 # HOL2: Exercise 2: Set up your environment on Azure to Migrate Servers
 
-### Estimated time: 40 Minutes
+### Estimated duration: 40 Minutes
 
+## Overview
 In this exercise, you will learn how to migrate machines as physical servers to Azure, using the Azure Migrate: Server Migration tool. Migrating machines by treating them as physical servers is useful in several scenarios, such as migrating on-premises physical servers, migrating Hyper-V VMs, and much more.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following task:
 
@@ -17,7 +18,7 @@ When migrating a workload to Azure, it is important to understand all workload d
 
 In this task, you will configure the Azure Migrate dependency visualization feature. This requires you to first create a Log Analytics workspace and then deploy agents on the to-be-migrated VMs.
 
-1. Return to the **Azure Migrate | Servers, databases and web apps** page in the Azure Portal, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Azure Migrate: Discovery and assessment** select **Groups (3)**.
+1. Return to the **Azure portal**, and navigate to **Azure Migrate | Servers, databases and web apps** page in the Azure Portal, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Azure Migrate: Discovery and assessment** select **Groups (3)**.
 
     ![](Images/15-7-25-l6-1.png)   
 
@@ -29,21 +30,13 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![Screenshot showing the SmartHotel VMs group. Each VM has dependency status 'Requires agent installation'.](Images/upd-hol2-e2-s3.png "SmartHotel VMs server group")
 
-1. On the **Dependencies** page of the **SmartHotel VMs** group, locate the **Configured Log Analytics workspace** section. Click on **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" />** to navigate to the connected Log Analytics workspace.
+1. On the **Dependencies** page of the **SmartHotel VMs** group, scroll down and copy the **Workspace ID (1)** and **Primary Key (2)** by clicking on the copy icon next to each field.
 
-    ![](Images/15-7-25-l6-l4.png)
-
-    > **Note**: If you can see the Workspace ID and Key in Dependencies, copy both and paste them into a Notepad file.
-
-1. On the **AzureMigrate | Agents** page, expand **Settings (1)** from the left-hand menu and select **Agents (2)**. Make a note of the **Workspace ID (3)** and **Primary key (4)** you’ll need them during agent setup (you can save them in Notepad for quick access).
-
-    ![](Images/15-7-25-l6-3.png)
-
-    Note: You may not have the option to view the Workspace ID and Primary Key directly. If they are not visible, go to the Dependencies page referenced in previous step to access them.
+    ![](Images/L1E2T2S6-3012.png)
 
 1. You will now deploy the Linux versions of the Microsoft Monitoring Agent and Dependency Agent on the **redhat** VM. To do so, you will first connect to the Red Hat VM remotely using an SSH session.
 
-1. On the VM desktop, double-click the Command Prompt shortcut to open a terminal window
+1. On the LabVM desktop, double-click the Command Prompt shortcut to open a terminal window
     
       ![](Images/15-7-25-l2-27.png)
   
@@ -112,7 +105,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![Screenshot showing the dependencies view in Azure Migrate.](Images/upd-dependencies1.png "Dependency map")
  
-### Summary 
+## Summary 
 
 In this exercise, you configured the Azure Migrate dependency visualization feature by creating a Log Analytics workspace and deploying the Azure Monitoring Agent and Dependency Agent on a Linux on-premises machine.
 

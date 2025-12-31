@@ -1,12 +1,12 @@
 
 # HOL3: Exercise 4: Failover the Infrastructure to Azure Cloud
 
+### Estimated duration: 30 minutes
 
-### Estimated time: 35 minutes
-
+## Overview
 In this exercise, you will deploy the Failover from on-premises to Azure. After setting up replication to Azure for on-premises machines, when your on-premises site goes down, you fail those machines over to Azure. After a failover, Azure VMs are created from replicated data.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following task:
 
@@ -89,7 +89,7 @@ In this task, you will perform a failover of the replicated VM from on-premises 
   
     <validation step="f6fbc2a8-77d5-4919-8b1c-2525de032bf4" />
 
-### Summary
+## Summary
 
 In this exercise, you explored how to fail over on-premises physical servers that are replicating to Azure with Azure Site Recovery. After you've failed over, you fail back from Azure to your on-premises site when it's available.
 

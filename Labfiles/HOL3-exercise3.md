@@ -1,12 +1,12 @@
 
 # HOL3: Exercise 3: Setup Test Failover
 
+### Estimated duration: 20 Minutes
 
-### Estimated time: 25 Minutes
-
+## Overview
 In this exercise, you will deploy a Test Failover to the replicated Virtual Machine, which allows you to test the sanity of the virtualized workload without interrupting your production workload or ongoing replication.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following task:
 
@@ -54,7 +54,7 @@ In this task, you will initiate a test failover for the replicated VM in Azure. 
 
     ![Screenshot of the Test vm status.](Images/infra-l11-7.png) 
 
-### Summary 
+## Summary 
 
 In this exercise, you learnt how to validate the replication and disaster recovery strategy by testing a failover, that too without any data loss or downtime.
 

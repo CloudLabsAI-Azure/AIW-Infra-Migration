@@ -1,11 +1,12 @@
 
 # HOL2: Exercise 3: Migrating your applications and data using Microsoft services and tools, such as Azure Migrate, the Azure Hybrid Benefit, and additional programs
 
-### Estimated time: 50 Minutes
+### Estimated duration: 50 Minutes
 
+## Overview
 In this exercise, you will review the registered Hyper-V host, LabVM, using Azure Site Recovery as the migration engine. The Azure Site Recovery Provider was deployed in a previous hands-on lab. Next, configure and enable replication of on-premises virtual machines from Hyper-V to the Azure Migrate Server Migration service. Modify settings for replicated virtual machines to align with on-premises IP addresses. Finally, execute the migration of the Red Hat virtual machine to Azure for a seamless transition to the cloud environment.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -25,10 +26,6 @@ In this task, you will review the already registered Hyper-V host (LabVM) with t
 1. On the **Discovered servers** page, locate the **redhat** VM in the list. We will be replicating this **redhat** VM in the next task using **Azure Migrate**.
 
     ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/15-7-25-l7-l2.png "Discovered servers")
-
-#### Task summary 
-
-In this task, you get an overview of your registered Hyper-V host with the Azure Migrate Server Migration service.
 
 ### Task 2: Enable Replication from Hyper-V to Azure Migrate
 
@@ -95,10 +92,6 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![](Images/cor_1_5.png)
 
-#### Task summary 
-
-In this task, you enabled replication from the Hyper-V host to Azure Migrate and configured the replicated VM size in Azure.
-
 ## Task 3: Configure Networking
 
 In this task, you will modify the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine.
@@ -126,10 +119,6 @@ In this task, you will modify the settings for each replicated VM to use a stati
 1. Back in the **Compute and Network** pane, click **Save** to apply the network interface changes.
 
     ![](Images/m2e3.png)
-
-#### Task summary 
-
-In this task, you modified the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine
 
 > **Note**: Azure Migrate makes a "best guess" at the VM settings, but you have full control over the settings of migrated items. In this case, setting a static private IP address ensures the virtual machine in Azure retains the same IPs they had on-premises, which avoids having to reconfigure the VM during migration (for example, by editing web.config files).
 
@@ -173,7 +162,7 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
 
     ![](Images/infra-l8-5.png)
 
-### Summary 
+## Summary 
 
 In this exercise, you reviewed the registered Hyper-V host, LabVM, with the Migration and Modernization Service, using Azure Site Recovery for migration. The Azure Site Recovery Provider was previously deployed on the Hyper-V host. You configured and enabled replication of the on-premises virtual machine to the Azure Migrate Server Migration service, adjusting settings for each replicated VM to use static private IP addresses matching their on-premises counterparts. Finally, you migrated the Red Hat virtual machine to Azure, ensuring a seamless transition to the cloud.
 

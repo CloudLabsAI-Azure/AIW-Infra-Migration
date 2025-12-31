@@ -1,11 +1,12 @@
 
 # HOL2: Exercise 4: Optimizing newly Migrated Workloads and Emphasizing commonalities across all Stacks
 
-### Estimated time: 40 Minutes
+### Estimated duration: 40 Minutes
 
+## Overview
 In this exercise, you will enable the Managed Identity feature and configure Azure Active Directory (AAD) based authentication for SSH login by deploying a VM extension on virtual machines. Additionally, you'll activate Automanage on existing machines to streamline configuration and monitoring. This process simplifies identity management and automates the operational tasks necessary for managing VMs efficiently in Azure, ensuring enhanced security and compliance across your cloud environment.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -52,12 +53,14 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
     ![](Images/infra-new-2.png)
 
+<!--
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
      <validation step="bb993c1c-a2c9-44d8-be3a-d3faa6c356fb" />
+-->
 
 ### Task 2: Azure Automanage
 
@@ -93,7 +96,7 @@ In this task, you will enable Automanage on existing machines.
 
     ![](Images/15-7-25-l8-13.png)
 
-### Summary
+## Summary
 
 In this exercise, you enabled Azure Active Directory (AAD) authentication and Managed Identity on virtual machines by deploying a VM extension. Additionally, you activated Automanage on existing machines to streamline configuration and monitoring. This process simplified identity management and automated the operational tasks necessary for managing VMs efficiently in Azure, ensuring enhanced security and compliance across the cloud environment.
 

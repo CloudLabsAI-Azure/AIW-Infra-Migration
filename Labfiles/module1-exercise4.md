@@ -1,11 +1,13 @@
 
 # HOL1: Exercise 4: Optimizing newly Migrated Workloads and Emphasizing commonalities across all Stacks
 
-### Estimated time: 25 Minutes
+### Estimated duration: 20 Minutes
+
+## Overview
 
 In this exercise, you will focus on enhancing business resilience through the use of Azure Virtual Machine Scale Sets (VMSS). It involves creating and deploying a specialized virtual machine image, which is captured and stored in a gallery named "imagemigration." Additionally, a VM scale set called "migrationscaleset" is established to showcase Azure's scalability and business continuity capabilities. As part of this process, you will also enable Automanage on existing machines to streamline management and optimize performance.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -46,13 +48,17 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
      ![](Images/infra-l4-3.png)
 
-1. In the **Operating system state** section, select **Specialized (1)** and enter the **Version Number**. If this is the first version of the image, type **1.0.0 (2)**. Select **Review + create (3)**.
+1. In the **Operating system state** section, select **Specialized (1)** and enter the **Version Number**. If this is the first version of the image, type **1.0.0 (2)**. **Uncheck (3)** the box for Lock deleting replicated locationn and select **Review + create (4)**.
 
-   ![](Images/15-7-25-l4-2.png)
+   ![](Images/L1E4T1S6-3012.png)
+
+    >**Note:** For this lab purpose we are unchecking the Lock deleting replicated location option. In a production environment, it is recommended to keep this option checked to prevent accidental deletion of replicated images.
 
 1. On the **Review + create** tab, verify that the validation has passed and all the details are correct. Then, select **Create** to begin creating the image.
 
     ![](Images/infra-l4-4.png)
+
+    >**Note:** The image creation process may take upto 10 minutes to complete.
 
 1. Once the VM image version deployment is complete, click on **Go to resource**.
 
@@ -78,6 +84,8 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
     ![](Images/15-7-25-l4-l10.png)
 
+    >**Note:** Wait for the deployment to complete then validate the task.
+
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -87,7 +95,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 ### Task 2: Azure Automanage
 
-In this task, you will enable Automanage on existing machines.
+In this task, you will enable Automanage on existing machines to streamline management and optimize performance.
 
 1. In the **Azure portal**, type **Automanage (1)** in the search bar and select **Automanage (2)** from the Services results.
 
@@ -119,7 +127,7 @@ In this task, you will enable Automanage on existing machines.
 
    ![](Images/15-7-25-l4-l15.png)
 
-### Summary 
+## Summary 
 
 In this exercise, you focused on enhancing business resilience through the use of Azure Virtual Machine Scale Sets (VMSS). It involved creating and deploying a specialized virtual machine image, which was captured and stored in a gallery named "imagemigration." Additionally, a VM scale set called "migrationscaleset" was established to showcase Azure's scalability and business continuity capabilities. As part of this process, Automanage was enabled on existing machines to streamline management and optimize performance.
 

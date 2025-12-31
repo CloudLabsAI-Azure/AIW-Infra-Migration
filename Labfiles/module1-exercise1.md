@@ -1,6 +1,6 @@
 # HOL1: Exercise 1: Migrating Windows & SQL Server workloads
 
-### Estimated time: 60 Minutes
+### Estimated duration: 60 Minutes
 
 ## Overview
 
@@ -14,7 +14,7 @@ In this Exercise, you will complete the following task:
 
 ### Task 1: Discovery, Assess, and Plan: Evaluate your current environment
 
-In this task, you will deploy the Azure Migrate appliance in the on-premises Hyper-V environment. This appliance communicates with the Hyper-V server to gather configuration and performance data about your on-premises VMs and returns that data to your Azure Migrate project.
+In this task, you will explore an Azure Migrate project and the default built-in tools for server assessment and server migration. You will also configure the Azure Migrate appliance in the on-premises Hyper-V environment and start the migration assessment discovery process using Azure Migrate.
 
 1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with the below Azure credentials.
     
@@ -52,6 +52,8 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
      SmartHotelAppl
      ```
     ![Screenshot of the Azure Migrate 'Discover machines' blade showing the 'Generate Azure Migrate project key' section.](Images/AIM-image10.png "Generate Azure Migrate project key")
+
+    >**Note:** The key generation may take a couple of minutes. 
 
 1. Once the project key is generated, click the **copy** icon to the right of the **Project key** field and save it in a **Notepad** for future reference.
 
@@ -142,7 +144,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/AIM-image11.png "Register with Azure Migrate")
 
-1. **Wait** while the wizard installs the latest Azure Migrate updates. If prompted, log in using the credentials, enter username as **Administrator** and password **<inject key="SmartHotel Admin Password" />**. Once the update completes, if a **New update installed** pop-up appears, click **Refresh** to restart the appliance management app.
+1. **Wait** while the wizard installs the latest Azure Migrate updates. If prompted, log in using the credentials, enter username as **Administrator** and password **<inject key="SmartHotel Admin Password" />**. Once the update completes, if a **New update installed** pop-up appears, click **Refresh** to restart the appliance management app and clik on **Verify** again.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the prompt to restart the management app after installing updates.](Images/15-7-25-l1-16.png "New update installed - Refresh")
 
@@ -150,17 +152,16 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/15-7-25-l1-17.png)
    
-    >**Note:** Now, follow the instructions below to complete the login process.
     
- 1. After clicking Login, in the **Continue with Azure Login** dialog, copy the code and click **Copy code & Login** to copy the device code.
+1. After clicking Login, in the **Continue with Azure Login** dialog, copy the code and click **Copy code & Login** to copy the device code.
     
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/15-7-25-l1-18.png "Azure Migrate login code")
   
- 1. This will open an Azure login prompt in a new browser tab. If it doesn’t appear, ensure that your browser’s pop-up blocker is disabled. Paste the device **code (1)** and click **Next (2)**. You will then be prompted to sign in with your Azure portal credentials to complete the login.
+1. This will open an Azure login prompt in a new browser tab. If it doesn’t appear, ensure that your browser’s pop-up blocker is disabled. Paste the device **code (1)** and click **Next (2)**. You will then be prompted to sign in with your Azure portal credentials to complete the login.
 
      ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/15-7-25-l1-19.png "Azure Migrate Microsoft login")
 
- 1. Log in using the provided Azure credentials. 
+1. Log in using the provided Azure credentials. 
     
      - Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
         
@@ -228,7 +229,9 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
     
    ![](Images/AIM-image15.png)
 
-1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table. (Wait for the Azure Migrate status to display . Discovery has been successfully initiated. This may take several minutes. Once initiated, you can view the discovery status for each host or cluster in the table.)
+1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. 
+
+    >**Note:** The discovery process sometimes may take 15-20 minutes or more. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table.
   
     ![](Images/AIM-image13.png)
 
@@ -236,13 +239,15 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      ![](Images/AIM-image40.png)
 
+    >**Note:** Some Azure Migrate capabilities used in this lab are currently not fully supported in the new portal experience.To ensure a consistent experience and complete all lab objectives, we are performing this lab using the classic Azure Migrate experience.
+
 1. On the **Azure Migrate** page, under Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
 
    ![](Images/15-7-25-l1-31.png) 
 
     > **Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
 
-### Summary 
+## Summary 
 
 In this exercise, you explored an Azure Migrate project and the default built-in tools for server assessment and server migration. You have also configured the Azure Migrate appliance in the on-premises Hyper-V environment and started the migration assessment discovery process using Azure Migrate.
 

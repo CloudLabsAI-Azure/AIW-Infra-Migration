@@ -1,14 +1,14 @@
 
 # HOL3: Onboard On-premises servers to Azure Arc-Enabled Server
 
-
 ### Estimated Duration: 30 Minutes
 
+## Overview
 In this HOL, you will use the Azure Migrate: Discovery and assessment tool that describes how to onboard on-premises Hyper-V VMs to Azure Arc for Azure Management.
 
 Azure Arc allows you to manage your hybrid IT estate with a single pane of glass by extending the Azure management experience to your on-premises servers, which are not ideal candidates for migration.
 
-## Lab Objectives
+## Objectives
 
 In this HOL, you will complete the following exercises:
 
@@ -98,7 +98,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 
        ![](./Images/AIM-image1.png)
     
-    - Enter Password: **<inject key="AzureAdUserPassword"></inject>** and click Sign in
+    - Enter Temporary Access Pass: **<inject key="AzureAdUserPassword"></inject>** and click Sign in
 
        ![](./Images/AIM-image2.png)
 
@@ -114,7 +114,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
     
     ![Screenshot of the server added.](Images/AIM-image20.png)
     
-### Summary
+## Summary
 
 In this exercise, you explored how to deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure. You learnt about creating Azure Arc-enabled servers so that they can manage the Windows machine.
 
