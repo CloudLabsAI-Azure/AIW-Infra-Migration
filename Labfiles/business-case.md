@@ -1,4 +1,8 @@
-## HOL3: Exercise 6: Business case analysis capability (Read-only)
+## HOL3: Exercise 6: Business case analysis capability
+
+### Estimated duration: 15 Minutes
+
+## Overview
 
 In this exercise, you'll learn how to create a business case for Azure, using a free Azure Migrate feature during assessments that will help simplify your move to Azure.
 
@@ -20,16 +24,7 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
 - Enables creating **what-if** scenarios with customizable settings and assumptions.
 
-1. Log in to the Azure portal with the below Azure credentials if you are not logged in already.
 
-    - Enter your Username/Email: <inject key="AzureAdUserEmail"></inject> in the Sign in field. Click Next to continue.
-      
-      ![](./Images/614-7-25-g6.png)
-      
-    - Enter Password: <inject key="AzureAdUserPassword"></inject> and click Sign in
-
-      ![](./Images/614-7-25-g7.png)
-    
 1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
     ![Screenshot of the All services overview blade.](Images/15-7-25-1l.png "All services Overview blade")
@@ -105,7 +100,7 @@ To understand if Azure makes financial sense, we will start by creating a direct
      
 17. Learn more about the business case here: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/cloud-migration-business-case.
 
-### Summary
+## Summary
 
 In this exercise, you explored the Azure Migrate Business Case feature to evaluate the financial benefits of moving to Azure. You reviewed TCO and ROI comparisons, migration strategy recommendations, and cost-saving insights through IaaS and PaaS reports.
 

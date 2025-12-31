@@ -1,10 +1,10 @@
 # Infrastructure Migration 
 
-## Overall Estimated Duration: 8 Hours
+### Overall Estimated Duration: 8 Hours
 
-## Overview
+In this hands-on lab, you will migrate and modernize workloads to Azure. You will start by evaluating and migrating Windows and SQL Server workloads using Azure Migrate and Azure Site Recovery. Next, you will replicate and migrate a Red Hat VM and OSS DB workloads, enable Entra ID-based authentication, and connect to Azure Automanage. 
 
-In this hands-on lab, you will migrate and modernize workloads to Azure. You will start by evaluating and migrating Windows and SQL Server workloads using Azure Migrate and Azure Site Recovery. Next, you will replicate and migrate a Red Hat VM and OSS DB workloads, enable Entra ID-based authentication, and connect to Azure Automanage. Finally, you will manage a Windows machine with Azure Arc, using Azure Site Recovery for disaster recovery, including test failovers and failovers to Azure VMs.
+Finally, you will manage a Windows machine with Azure Arc, using Azure Site Recovery for disaster recovery, including test failovers and failovers to Azure VMs.
 
 ### Key Features of Infrastructure Migration to Azure
 
@@ -30,7 +30,7 @@ In this hands-on lab, you will migrate and modernize workloads to Azure. You wil
 
 ## Overview
 
-The following labs provide you with a quick and easy way to get started with Azure Migrate through on-premises environments that do not require any complex setup or installations. 
+The following lab provide you with a quick and easy way to get started with Azure Migrate through on-premises environments that do not require any complex setup or installations. 
 
 For the purposes of these Hands-on Labs (HOLs), let’s consider that SmartHotel is a large hotel company. 
 
@@ -88,7 +88,7 @@ The architecture diagram outlines a series of labs focused on migrating workload
 
 ## Getting Started with the Lab
 
-Welcome to Infrastructure Migration. Ensure you have access to all required tools, accounts, and carefully read each task and follow the steps in sequence. Refer to the screenshots and tips provided for guidance throughout the lab.
+We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience!
 
 ## Accessing Your Lab Environment
  
@@ -138,7 +138,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
       ![](Images/AIM-image2.png)
  
@@ -153,6 +153,8 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 6. From the **Azure Portal** Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
 
    ![](Images/Infra-g1.png)
+
+   >**Note:** If you see pop-up notification to **Restore pages**, please close it.
    
 7. On the **Resource groups** page in the Azure portal, confirm you have all resource groups present as shown below.
 

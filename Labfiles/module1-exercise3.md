@@ -1,6 +1,6 @@
 # HOL1: Exercise 3: Migrating your applications and data by utilizing Microsoft services and tools, such as Azure Migrate: Server Migration
 
-### Estimated time: 60 Minutes
+### Estimated duration: 60 Minutes
 
 ## Overview
 
@@ -62,17 +62,11 @@ In this task, you will create a new Azure Storage Account that will be used by M
    
    ![](15-7-25-l3-6.png)
 
-#### Task summary 
-
-In this task, you created a new Azure Storage Account that will be used for Migration and modernization.
-
 ## Task 2: Register the Hyper-V Host with Migration and modernization
 
-In this task, you will register your Hyper-V host(LabVM) with the Migration and Modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
+In this task, you will register the Hyper-V host (LabVM) with the Azure Migrate: Server Migration service using Azure Site Recovery for migration.
 
 1. On the  **Azure Migrate | Servers, databases and web apps** page, expand **Migration goals (1)** from the left menu, then select **Servers, databases and web apps (2)**. Under **Migration tools**, click **Discover (3)**.
-
-   >**Note:** You may need to add the migration tool yourself by following the link below the **Migration Tools** section, selecting **Migration and modernization**, then selecting **Add tool(s)**.
    
      ![](./15-7-25-l3-7.png)
 
@@ -150,10 +144,6 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
      <validation step="2eb6b36f-a031-40f0-8bad-a1748a3c532a" />
-
-#### Task summary 
-
-In this task, you registered your Hyper-V host with the Azure Migrate Server Migration service.
 
 ### Task 3: Enable Replication from Hyper-V to Azure Migrate
 
@@ -241,10 +231,6 @@ In this task, you will configure and enable the replication of your on-premises 
 
      <validation step="b38db9a2-1678-47a6-a053-c863b83f8ada" />
 
-#### Task summary 
-
-In this task, you enabled replication from the Hyper-V host to Azure Migrate and configured the replicated VM size in Azure.
-
 ### Task 4: Configure Networking
 
 In this task, you will modify the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine.
@@ -278,10 +264,6 @@ In this task, you will modify the settings for each replicated VM to use a stati
    - For **smarthotelweb2** use private IP address **192.168.0.5**
   
    - For **UbuntuWAF** use private IP address **192.168.0.8**
-
-#### Task summary 
-
-In this task, you modified the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine
 
 > **Note**: Azure Migrate makes a "best guess" at the VM settings, but you have full control over the settings of migrated items. In this case, setting a static private IP address ensures the virtual machines in Azure retain the same IPs they had on-premises, which avoids having to reconfigure the VMs during migration (for example, by editing web.config files).
 
@@ -328,9 +310,9 @@ In this task, you will perform a migration of the UbuntuWAF, smarthotelweb1, and
 
      <validation step="db5d197a-151d-4987-8011-9568dc93e642" />
 
-### Summary 
+## Summary 
 
-In this exercise, you created an Azure Storage Account for VM data migration. The Hyper-V host (LabVM) was registered with the Migration and Modernization service, using Azure Site Recovery for migration. You deployed the Azure Site Recovery Provider on the Hyper-V host and configured replication for on-premises VMs to the Azure Migrate Server Migration service. Static private IPs were set for the replicated VMs to match their on-premises configurations. Finally, the UbuntuWAF, smarthotelweb1, and smarthotelweb2 VMs were successfully migrated to Azure.
+In this exercise, you created a new Azure Storage Account that was used for Migration and modernization. You registered your Hyper-V host with the Azure Migrate Server Migration service. You enabled replication of your on-premises virtual machines from Hyper-V to the Azure Migrate Server Migration service. You configured networking for the replicated VMs to use static private IP addresses. Finally, you performed the migration of the virtual machines to Azure.
 
 Click on **Next** from the lower right corner to move on to the next page.
 

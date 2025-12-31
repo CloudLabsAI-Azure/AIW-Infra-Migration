@@ -1,8 +1,9 @@
 
 # HOL3: Exercise 5: Enable Microsoft Defender for Cloud, Microsoft Sentinel, Azure Monitor, and setup Log Analytics
 
-### Estimated time: 30 Minutes
+### Estimated duration: 30 Minutes
 
+## Overview
 In this exercise, you will learn how to enable enhanced security features by enabling the Defender for Cloud plans through the Azure portal. The Defender plans show you the monitoring coverage for each Defender plan. You will be enabling the same for Microsoft Sentinel and Azure Monitor. Also, you will set up a Log Analytics workspace to collect logs and data of these resources, and their information will be stored in a workspace.
 
 > **Note:** 
@@ -10,7 +11,7 @@ In this exercise, you will learn how to enable enhanced security features by ena
 > - At this point in the workshop, only a limited number of data visualizations may be populated. (So the result in the screenshots below may vary)
 > - The screenshots and information below have been provided so that you can conceptualise the type of graphs and output that can be gleaned from a fully populated environment.
 
-## Lab objectives
+## Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -78,10 +79,6 @@ In this task, you will create and enable Microsoft Sentinel and review the Conte
 
     ![Screenshot of the Data Connectors.](Images/infra-l14-8-3.png "Data Connectors")
 
-1. From the left pane, select **Analytics** present under **Configuration**. You can create custom analytics rules to help discover threats and anomalous behaviours in your environment. (Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and remediation processes.). Note: If you are not able to see it in Analytics, please refresh or close and reopen the page.
-
-    ![Screenshot of the Analytics.](Images/infra-l14-09.png "Analytics")
-
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -139,7 +136,7 @@ In this task, you will enable Azure Monitor to track and manage the performance 
 
      <validation step="65d9e586-9a9d-466a-8258-8039f8a298de" />
     
-### Summary
+## Summary
 
 In this exercise, you explored what Microsoft Defender is and how to enable it for Cloud and Microsoft Sentinel. You also learnt about Monitoring, which helps you maximize the availability and performance of your applications and services. Then you explored how Azure Monitor Logs stores the data that it collects in the Log Analytics workspaces.
 
