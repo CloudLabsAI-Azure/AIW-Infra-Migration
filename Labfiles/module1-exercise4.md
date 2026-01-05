@@ -47,27 +47,27 @@ In this task, you will capture a specialized image from an existing virtual mach
 
 1. Set the **Version number** to **1.0.0 (1)**, then click **Review + create (2)** to proceed.
 
-       ![](Images/img-ver-lab03.png)
+   ![](Images/img-ver-lab03.png)
 
 1. After validation passes, select **Create** to create the image and wait for the image creation.
 
-       ![](Images/lab02-cret-res.png)
+   ![](Images/lab02-cret-res.png)
 
-1.  Once the image is created, click on **Go to resource**. 
+1. Once the image is created, click on **Go to resource**. 
 
-       ![](Images/lab03-clk-gtr-01.png)
+   ![](Images/lab03-clk-gtr-01.png)
 
 1. On the VM image version page, click **Create VMSS** on the top menu to start creating a Virtual Machine Scale Set using this image.
 
-    ![](Images/image-overview-0407new.png)
+   ![](Images/image-overview-0407new.png)
 
 1. On the **Create a Virtual Machine Scale Set (VMSS)** page, under **Basics** tab, select the **SmartHotelHostRG (1)** resource group, enter **migrationscaleset<inject key="DeploymentID" enableCopy="false" /> (2)** as the **Virtual machine scale set name**.
 
-    ![](Images/createvmss1-0407new.png)
+   ![](Images/createvmss1-0407new.png)
 
 1. Select the **VM size** as **Standard D2s v3 (1)**, choose **Windows server (2)** as the **License type**, and then click **Review + create (3)** to proceed.
 
-     ![](Images/createvmss2-0407new.png)
+   ![](Images/createvmss2-0407new.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
@@ -104,8 +104,6 @@ Azure Automanage automatically applies best practice configurations like backup,
 1. Click **Create**.
 
    ![](Images/Task2-Step6new.png)
-
-   In this task, you have successfully enabled Automanage on a virtual machine. 
 
 ## Summary
 
