@@ -21,7 +21,6 @@ In this task, you will capture a specialized image from an existing virtual mach
 
    ![](Images/rg-of-lab03new.png)
 
-
 1. On the VM page, click **Capture (1)** from the top menu and select **Image (2)** from the dropdown.
    
    ![](Images/upd-capture-1new.png)
@@ -46,27 +45,27 @@ In this task, you will capture a specialized image from an existing virtual mach
 
        ![](Images/create-image-9-0407new.png)
 
-10. Set the **Version number** to **1.0.0 (1)**, then click **Review + create (2)** to proceed.
+1. Set the **Version number** to **1.0.0 (1)**, then click **Review + create (2)** to proceed.
 
        ![](Images/img-ver-lab03.png)
 
-12. After validation passes, select **Create** to create the image and wait for the image creation.
+1. After validation passes, select **Create** to create the image and wait for the image creation.
 
        ![](Images/lab02-cret-res.png)
 
-13.  Once the image is created, click on **Go to resource**. 
+1.  Once the image is created, click on **Go to resource**. 
 
        ![](Images/lab03-clk-gtr-01.png)
 
-13. On the VM image version page, click **Create VMSS** on the top menu to start creating a Virtual Machine Scale Set using this image.
+1. On the VM image version page, click **Create VMSS** on the top menu to start creating a Virtual Machine Scale Set using this image.
 
     ![](Images/image-overview-0407new.png)
 
-14. On the **Create a Virtual Machine Scale Set (VMSS)** page, under **Basics** tab, select the **SmartHotelHostRG (1)** resource group, enter **migrationscaleset<inject key="DeploymentID" enableCopy="false" /> (2)** as the **Virtual machine scale set name**.
+1. On the **Create a Virtual Machine Scale Set (VMSS)** page, under **Basics** tab, select the **SmartHotelHostRG (1)** resource group, enter **migrationscaleset<inject key="DeploymentID" enableCopy="false" /> (2)** as the **Virtual machine scale set name**.
 
     ![](Images/createvmss1-0407new.png)
 
-16. Select the **VM size** as **Standard D2s v3 (1)**, choose **Windows server (2)** as the **License type**, and then click **Review + create (3)** to proceed.
+1. Select the **VM size** as **Standard D2s v3 (1)**, choose **Windows server (2)** as the **License type**, and then click **Review + create (3)** to proceed.
 
      ![](Images/createvmss2-0407new.png)
 
@@ -86,11 +85,11 @@ Azure Automanage automatically applies best practice configurations like backup,
 
    ![](Images/Task2-Step3a.png)
 
-3. From the left side panel, expand **Machine best practices (1)**, select **Automanage machines (2)**, and click **Enable on existing machine (3)** to onboard a VM to Automanage.
+1. From the left side panel, expand **Machine best practices (1)**, select **Automanage machines (2)**, and click **Enable on existing machine (3)** to onboard a VM to Automanage.
    
    ![](Images/T2S3-0407new.png)
 
-4. On the **Enable Automanage** blade, select **Azure best practices: Production (1)**, then click **Next: Machines > (2)** to continue.
+1. On the **Enable Automanage** blade, select **Azure best practices: Production (1)**, then click **Next: Machines > (2)** to continue.
    
    ![](Images/upd-existing-vm-quick-createnew.png)
    
@@ -98,11 +97,11 @@ Azure Automanage automatically applies best practice configurations like backup,
     
    ![](Images/upd-browse-production-profilenew.png)
 
-5. On the **Machines** blade, click **Check eligibility on machines (1)**, select the VM named **smarthotelweb1 (2)**, and then click **Review + Create (3)**.
+1. On the **Machines** blade, click **Check eligibility on machines (1)**, select the VM named **smarthotelweb1 (2)**, and then click **Review + Create (3)**.
    
    ![](Images/updt-existing-vm-select-machinenew.png)
 
-6. Click **Create**.
+1. Click **Create**.
 
    ![](Images/Task2-Step6new.png)
 
