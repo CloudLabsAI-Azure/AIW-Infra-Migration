@@ -22,19 +22,19 @@ In this task, you will capture a specialized image from an existing virtual mach
    ![](Images/rg-of-lab03new.png)
 
 
-5. On the VM page, click **Capture (1)** from the top menu and select **Image (2)** from the dropdown.
+1. On the VM page, click **Capture (1)** from the top menu and select **Image (2)** from the dropdown.
    
    ![](Images/upd-capture-1new.png)
 
-6. Under **Project details**, ensure the Resource group is set to **SmartHotelHostRG (1)**, then under **Instance details**, select **Yes, share it to a gallery as a VM image version (2)**.
+1. Under **Project details**, ensure the Resource group is set to **SmartHotelHostRG (1)**, then under **Instance details**, select **Yes, share it to a gallery as a VM image version (2)**.
 
    ![](Images/create-image-6-0407new1.png)
 
-7. In **Gallery details**, create a new gallery by selecting **Create new (1)** and enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)** and click **Ok (3)**.
+1. In **Gallery details**, create a new gallery by selecting **Create new (1)** and enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)** and click **Ok (3)**.
 
    ![](Images/create-image-7-0407new.png)
 
-9. In the **Operating System state**, select **Specialized (1)**, then click **Create new (2)** under image definition to create a new VM image definition and click **Ok (7)**.
+1. In the **Operating System state**, select **Specialized (1)**, then click **Create new (2)** under image definition to create a new VM image definition and click **Ok (7)**.
 
    - Image VM definition name: **imagedefinition<inject key="DeploymentID" enableCopy="false" /> (2)**
 
@@ -76,13 +76,13 @@ In this task, you will capture a specialized image from an existing virtual mach
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 <validation step="3435fc35-adbc-4789-885e-d2231cc767d4" />
 
-In this task, you have created an Image from the smarhotelweb1 virtual machine, and using that image, you successfully created a Virtual machine scale set (VMSS).
+In this task, you have created an Image from the smarhotelweb1 virtual machine, and using that image, you successfully created a Virtual Machine Scale Set (VMSS).
 
 ## Task 2: Enabling Azure Automanage on Virtual Machines
 
 Azure Automanage automatically applies best practice configurations like backup, monitoring, and security to your VMs, simplifying management and ensuring compliance. In this task, you will enable Automanage on existing machines.
 
-2. In the **Azure portal**, search for **Automanage (1)** in the top search bar and select the **Automanage (2)** service from the results.
+1. In the **Azure portal**, search for **Automanage (1)** in the top search bar and select the **Automanage (2)** service from the results.
 
    ![](Images/Task2-Step3a.png)
 
@@ -113,4 +113,3 @@ Azure Automanage automatically applies best practice configurations like backup,
 In this lab, you learned how to create an image from an existing virtual machine, use that image to deploy a Virtual Machine Scale Set (VMSS), and enable Automanage on a virtual machine for simplified management.
 
 ## You have successfully completed the Hands-on Lab.
-
