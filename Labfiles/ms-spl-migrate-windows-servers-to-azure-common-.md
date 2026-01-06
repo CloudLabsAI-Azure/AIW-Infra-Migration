@@ -85,7 +85,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
      ![](Images/allprojects.png)
 
-4. Under project name click on **SmartHotelMigration**.
+4. Under project name click on **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />**.
 
     ![](Images/project.png)
 
