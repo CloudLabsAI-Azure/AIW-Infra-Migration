@@ -251,7 +251,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](Images/replicationsummarynew.png "Overview link")
     
-1. Select the **Overview (1)** from the left-pane and confirm that the number next to **Azure VM** under the **Replicate** section shows **3**, indicating the machines are replicating.
+1. Select the **Overview (1)** from the left-pane and confirm that the number next to **Azure VM (2)** under the **Replicate** section shows **3**, indicating the machines are replicating.
 
      ![](Images/replicatevmnew.png)
 
