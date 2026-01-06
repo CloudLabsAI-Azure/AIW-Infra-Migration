@@ -26,7 +26,6 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
     ![](Images/30052025(9)new.png)
 
-
 2. On the **Storage accounts** page, click **Create** to start creating a new storage account.
 
     ![](Images/create-sanew1.png)
@@ -153,7 +152,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
       - Set **Are your machines virtualized?** to **Yes, with Hyper-V (2)**
       - Select **Finalize registration (3)**
 
-     ![](Images/image(9)1.png)
+          ![](Images/image(9)1.png)
 
 16. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 5-10 minutes.
 
@@ -177,11 +176,11 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
 In this task, you will configure and enable the replication of your on-premises virtual machines from Hyper-V to the Azure Migrate Server Migration service.
 
-1. On the  **Azure Migrate** select **All projects** from the left pane.
+1. On the **Azure Migrate** page, select **All projects** from the left pane.
 
      ![](Images/allprojects.png)
 
-2. Under project name click on **SmartHotelMigration**.
+2. Under project name, click on **SmartHotelMigration**.
 
     ![](Images/project.png)
 
@@ -205,7 +204,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
        ![](Images/image(14).png)
 
-       >**Note:** If you get any error kindly refresh the screen periodically or Please try signing in to the Azure portal using incognito mode.
+       >**Note:** If you get any error, kindly refresh the screen periodically, or please try signing in to the Azure portal using incognito mode.
 
 3. On the **Virtual machines** tab, set **Import migration settings from an assessment** to **No, I'll specify the migration settings manually (1)**. Then, select the virtual machines **smarthotelweb1 (2)**, **UbuntuWAF (3)** and **smarthotelweb2 (4)**, and click **Next (5)** to proceed.
 
@@ -299,7 +298,7 @@ In this task, you will modify the settings for each replicated VM to use a stati
 
 ## Task 5: Server migration
 
-In this task, you will perform a migration of the smarthotelweb1, and smarthotelweb2 machines to Azure.
+In this task, you will perform a migration of the smarthotelweb1 and smarthotelweb2 machines to Azure.
 
 > **Note:** In a real-world scenario, you would perform a test migration before the final migration. To save time, you will skip the test migration in this lab. The test migration process is very similar to the final migration.
 
