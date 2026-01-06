@@ -95,7 +95,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 6. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
-7. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
+7. Now you will see the Azure Portal Dashboard. Click on **Resource groups** from the Navigate panel to see the resource groups.
 
    ![](Images/select-rgnew.png "Resource groups")
    
@@ -108,7 +108,7 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 
 Learner Support Contacts:
 
-- Email Support: labs-support@spektrasystems.com
+- Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on the **Next** button in the lower right corner to move to the next page.
