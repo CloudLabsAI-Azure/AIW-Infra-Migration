@@ -26,7 +26,6 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
     ![](Images/30052025(9)new.png)
 
-
 2. On the **Storage accounts** page, click **Create** to start creating a new storage account.
 
     ![](Images/create-sanew1.png)
@@ -81,7 +80,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
  
     ![](Images/MIGRATE.png "Azmigrate Overview blade")
 
-3. On the  **Azure Migrate** select **All projects** from the left pane.
+3. On the  **Azure Migrate** page, select **All projects** from the left pane.
 
      ![](Images/allprojects.png)
 
@@ -149,11 +148,13 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
 15. Return to the **Azure Migrate** browser window. Refresh the page, then under **Migration and modernization**, select **Discover** to reopen the panel.
     
-      - Set **Where do you want to migrate to?** to **Azure VM (1)**
-      - Set **Are your machines virtualized?** to **Yes, with Hyper-V (2)**
-      - Select **Finalize registration (3)**
+    - Set **Where do you want to migrate to?** to **Azure VM (1)**
+      
+    - Set **Are your machines virtualized?** to **Yes, with Hyper-V (2)**
+      
+    - Select **Finalize registration (3)**
 
-     ![](Images/image(9)1.png)
+      ![](Images/image(9)1.png)
 
 16. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 5-10 minutes.
 
