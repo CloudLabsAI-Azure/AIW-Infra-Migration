@@ -195,7 +195,7 @@ In this task, you will configure and enable the replication of your on-premises 
      - Virtual machines: Select the **smarthotelweb1**, and **smarthotelweb2** virtual machines **(3)**.
 
 
-          ![](Images/E1T3S3.png)
+      ![](Images/E1T3S3.png)
 
 5. On the **Target settings** tab, select the below information:
 
