@@ -99,26 +99,26 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](./Images/login.png)
+      ![](./Images/GSlogin.png)
  
 3. Now enter the following temporary access password and click on Sign in.
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](./Images/GS8.png)
+      ![](./Images/GSpwd.png)
 
 5. If you see the pop-up **Stay Signed in?**, click **No**.
 
-   ![](./Images/GS9.png)
+   ![](./Images/GSno.png)
 
 
 8. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-     ![](Images/GS10.png "Resource groups")
+     ![](Images/RG.png "Resource groups")
    
 9. Confirm you have all resource groups present as shown below.
 
-     ![](Images/GS11.png "Resource groups")
+     ![](Images/RG1.png "Resource groups")
    
  
 ## Support Contact
