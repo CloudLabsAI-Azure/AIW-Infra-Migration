@@ -84,15 +84,6 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
     ![](Images/15-7-25-l4-l10.png)
 
-    >**Note:** Wait for the deployment to complete then validate the task.
-
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
-
-     <validation step="ad4bf69e-6413-4a9c-a1fc-7f32d558b111" />
-
 ### Task 2: Azure Automanage
 
 In this task, you will enable Automanage on existing machines to streamline management and optimize performance.
