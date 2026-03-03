@@ -52,6 +52,12 @@ In this task, you will create a migration assessment for the SmartHotel applicat
 
     ![](Images/15-7-25-l2-6.png)
 
+1. Navigate to the **Azure Migrate** page in the Azure portal. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** and scroll down. Then click on **Click here** to view details in the old experience.
+
+     ![](Images/AIM-image40.png)
+
+    >**Note: Some Azure Migrate capabilities used in this lab are currently not fully supported in the new portal experience.To ensure a consistent experience and complete all lab objectives, we are performing this lab using the classic Azure Migrate experience**.
+
 1. In Azure Migrate, on the **Servers, databases, and web apps** page, Expand **Migration goals** **(1)** from the left navigation menu. Select **Servers, databases and web apps** **(2)**. Click on **Refresh** periodically **(3)** until the number of assessments under **Assessments > Total** updates to **1** (This may take a few minutes). Then click on the nuber **1 (4)**.  
 
     ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/L1E2T1S6-3012.png "Azure Migrate - Assessments (count)")
