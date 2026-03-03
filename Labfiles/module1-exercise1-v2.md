@@ -246,8 +246,6 @@ In this task, you will explore an Azure Migrate project and the default built-in
 
      ![](Images/AIM-image40.png)
 
-
-
 1. On the **Azure Migrate** page, under Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
 
    ![](Images/15-7-25-l1-31.png) 
