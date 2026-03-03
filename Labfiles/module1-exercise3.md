@@ -66,7 +66,11 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
 In this task, you will register the Hyper-V host (LabVM) with the Azure Migrate: Server Migration service using Azure Site Recovery for migration.
 
-1. On the  **Azure Migrate | Servers, databases and web apps** page, expand **Migration goals (1)** from the left menu, then select **Servers, databases and web apps (2)**. Under **Migration tools**, click **Discover (3)**.
+1. Navigate to the **Azure Migrate** page in the Azure portal. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** and scroll down. Then click on **Click here** to view details in the old experience.
+
+     ![](Images/AIM-image40.png)
+
+1. On the  **Azure Migrate | Servers, databases and web apps** page, expand **Migration goals (1)** from the left menu, then select **Servers, databases and web apps (2)**. Scroll down, under **Migration tools**, click **Discover (3)**.
    
      ![](./15-7-25-l3-7.png)
 
@@ -179,6 +183,8 @@ In this task, you will configure and enable the replication of your on-premises 
    - **Subnet**: Select **SmartHotel (5)**. 
    - **Availability option:** Select **No infrastructure redundancy required (6)**
    - Leave other values as default and select **Next (7)**.
+
+        >**Note:** If the **Cache storage account** option is not visible, please wait for 5 minutes, refresh the browser, and then check again.
    
      ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/infra-l3-2.png)
 
@@ -193,8 +199,6 @@ In this task, you will configure and enable the replication of your on-premises 
         - In the **Advanced Settings (3)** section , enable **Allow cross-tenant replication (4)** and click **OK (5)**
           
           ![](Images/ms-1.png)
-
-    >**Note:** If the **Cache storage account** option is not visible, please wait for 5 minutes, refresh the browser, and then check again.
 
 1. On the **Compute** tab, configure the following settings for each virtual machine:
 
