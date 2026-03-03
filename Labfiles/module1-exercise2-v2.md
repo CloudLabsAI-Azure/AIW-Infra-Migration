@@ -177,7 +177,6 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
       ![](Images/L1E2T2S19.2-3012.png)
 
-
 1. On the **License Agreement** screen, select **I Agree** to accept the agreement and continue. 
 
     ![Screenshot for installing Dependency Agent.](Images/infra-l1-8.png "Dependency Agent installation") 
