@@ -1,4 +1,4 @@
-# Migrate Windows Server to Azure
+# Migrate Windows Servers to Azure
 
 ### Overall Estimated Duration: 4 Hours
 
@@ -52,7 +52,7 @@ The architecture for this lab involves the following key components:
 
 ## Getting Started with the Lab
 
-Welcome to Migrate Windows Server to Azure workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to Migrate Windows Servers to Azure workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
 
 ## Accessing Your Lab Environment
