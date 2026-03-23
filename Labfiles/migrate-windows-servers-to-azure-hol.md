@@ -1,7 +1,5 @@
 # Lab: Migrate Windows Servers from Hyper-V to Azure
 
-### Estimated Duration: 240 minutes
-
 ## Overview
 
 In this lab, you will learn how to migrate on-premises virtual machines to Azure using Azure Migrate: Server Migration. The tasks include creating a storage account for migration data, registering the Hyper-V host with Azure Migrate, enabling replication from Hyper-V to Azure Migrate, configuring networking with static IPs for replicated VMs, and performing the migration of virtual machines to Azure. By completing these tasks, you will gain practical experience in setting up and executing a migration strategy, ensuring a seamless transition from on-premises environments to the Azure cloud.
@@ -20,9 +18,9 @@ In this exercise, you will complete the following tasks:
 
 - Task 5: Server migration
 
-## Exercise 1: Migrating your apps and your data, leveraging Microsoft services and tools including Azure Migrate: Server Migration
+## Exercise 1: Migrating your apps and your data, leveraging Microsoft services and tools, including Azure Migrate: Server Migration
 
-In this Guided Lab, you will learn about Azure migration and how all pre-migration steps such as discovery, assessments, and right-sizing of on-premises resources are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
+In this Guided Lab, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
 
 ### Task 1: Create a Storage Account
 
