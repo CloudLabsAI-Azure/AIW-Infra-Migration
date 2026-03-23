@@ -18,7 +18,7 @@ This exercise focuses on enhancing your skills in migrating applications and dat
 
 - **Networking configuration:** Modify replicated VM settings to ensure proper networking, including static private IP assignments for seamless integration.
 
-- **Server Migration :** Select Azure VM as the destination, choose to shut down VMs before migration for minimal data loss, and monitor progress through the Jobs section. Verify the creation of VM, network interface, and disk resources in the target resource group after migration.
+- **Server Migration:** Select Azure VM as the destination, choose to shut down VMs before migration for minimal data loss, and monitor progress through the Jobs section. Verify the creation of VM, network interface, and disk resources in the target resource group after migration.
 
 ## Prerequisites
 
@@ -53,7 +53,6 @@ The architecture for this lab involves the following key components:
 ## Getting Started with the Lab
 
 Welcome to Migrate Windows Servers to Azure workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
-
 
 ## Accessing Your Lab Environment
  
@@ -103,7 +102,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 3. Now enter the following temporary access password and click on Sign in.
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
       ![](./Images/GSpwd.png)
 
@@ -111,16 +110,14 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./Images/GSno.png)
 
-
-8. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
+8. Now you will see the Azure Portal Dashboard. Click on **Resource groups** from the Navigate panel to see the resource groups.
 
      ![](Images/RG.png "Resource groups")
    
 9. Confirm you have all resource groups present as shown below.
 
      ![](Images/RG1.png "Resource groups")
-   
- 
+    
 ## Support Contact
  
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
