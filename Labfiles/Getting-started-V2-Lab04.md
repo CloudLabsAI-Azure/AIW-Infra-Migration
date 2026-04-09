@@ -75,27 +75,17 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](./Images/GS2new.png)
+      ![](./Images/sign1.png)
  
-3. Next, provide **Temporary Access Password (1)** and click on **Sign in (2)**.
+3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](./Images/GS3.png)
+      ![](./Images/tpwrd.png)
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
       ![](./Images/GS9new.png)
-
-6. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
-
-7. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
-
-   ![](Images/select-rgnew.png "Resource groups")
-   
-8. Confirm you have all resource groups present as shown below.
-
-   ![](Images/upimage10new.png "Resource groups")
  
 ## Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
