@@ -95,6 +95,16 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
  6. On the **Discovery for migration** option click on **Discover more**.
 
     ![](Images/discover.png)
+
+    > **Note:** If you do not see the **Discover** option under **Migrations**, perform the below steps.
+
+    1. On the **Migrations** page, click on **click here** in the notification banner to switch to the classic experience.
+
+        ![](Images/IM1.png)
+
+    2. On the **Azure Migrate: Server Migration** page, click on **Discover** from the top menu to begin the server discovery process.
+
+        ![](Images/IM2.png)
    
 7. On the **Discover** pane, provide the following configuration:
 
@@ -191,6 +201,20 @@ In this task, you will configure and enable the replication of your on-premises 
 1. On the **Replication** tab click on **Replicate**.
 
      ![Screenshot highlighting the 'Replicate' button in the 'Azure Migrate: Server Migration' panel of the Azure Migrate - Servers blade.](Images/replicatenew.png "Replicate link")
+
+    > **Note:** If you do not see the **Discover** option under **Migrations**, perform the below steps.
+
+    1. On the **Migrations** page, click on **click here** in the notification banner to switch to the classic experience.
+
+        ![](Images/IM1.png)
+
+    1. On the **Azure Migrate: Server Migration** page, click on **Discover** from the top menu to begin the server discovery process.
+
+        ![](Images/IM2.png)
+
+    1. On the **Azure Migrate: Server Migration** page, click on **Replicate (1)** from the top menu to start replicating machines.
+
+        ![](Images/IM4.png)
    
 2. Under the **Specific intent** page, provide the following details:
 

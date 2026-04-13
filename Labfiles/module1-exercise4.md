@@ -69,6 +69,12 @@ In this task, you will capture a specialized image from an existing virtual mach
 
    ![](Images/createvmss2-0407new.png)
 
+   > **Note:** If the validation fails on the **Networking** page, perform the below step.
+
+   > Select **None (1)** under **Load balancing options** and click on **Review + create (2)** to proceed.Re-run the validation after applying these changes.
+
+   ![](Images/IM3.png)
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
