@@ -7,6 +7,12 @@ In this exercise, you will review the already discovered server on your Azure Mi
 
 ### Estimated duration: 15 Minutes
 
+## Scenario
+
+You are a Cloud Engineer at Contoso responsible for modernizing the company’s Linux and open-source database workloads for Microsoft Azure. In this exercise, you will assess, configure, and migrate Linux-based virtual machines and OSS database workloads while validating workload dependencies and migration readiness. 
+
+You will also optimize the target environment to ensure a secure, scalable, and efficient migration of the SmartHotel application infrastructure to Azure.
+
 ## Overview
 
 In this HOL, you will use Azure Migrate: Server Assessment to assess the on-premises environment. This will include selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using the Azure Migrate dependency visualization.
@@ -31,7 +37,7 @@ In this task, you will review the environment discovered in Azure Migrate. After
    
     ![Screenshot of the Azure migrate overview blade.](Images/15-7-25-l5-1.png "Azmigrate Overview blade")
 
-1. On the **Azure Migrate** page in the **Azure portal**. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />**. Then click on **Click here** to view details in the old experience.
+1.  On the **Azure Migrate** page in the **Azure portal**. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />**. Then click on **Click here** to view details in the old experience.
 
    ![](Images/AIM-image40.png)
 

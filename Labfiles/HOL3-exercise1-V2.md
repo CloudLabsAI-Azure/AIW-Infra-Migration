@@ -8,7 +8,14 @@ In this Exercise, you will deploy and configure the Azure Connected Machine agen
 
 ### Estimated Duration: 30 Minutes
 
+## Scenario
+
+You are a Cloud Engineer at Contoso responsible for extending Azure management capabilities to on-premises servers within the SmartHotel environment. In this exercise, you will onboard Windows-based servers to Azure Arc-enabled servers, allowing centralized management, monitoring, and governance through the Azure portal. 
+
+This integration will help Contoso manage hybrid infrastructure consistently while improving operational visibility, security, and compliance across on-premises and cloud environments.
+
 ## Overview
+
 In this HOL, you will use the Azure Migrate: Discovery and assessment tool that describes how to onboard on-premises Hyper-V VMs to Azure Arc for Azure Management.
 
 Azure Arc allows you to manage your hybrid IT estate with a single pane of glass by extending the Azure management experience to your on-premises servers, which are not ideal candidates for migration.

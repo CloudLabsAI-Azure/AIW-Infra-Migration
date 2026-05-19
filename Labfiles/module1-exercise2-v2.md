@@ -2,6 +2,14 @@
 
 ### Estimated duration: 30 Minutes
 
+## Scenario
+
+You are a Cloud Engineer at Contoso responsible for preparing the company’s on-premises servers for migration to Microsoft Azure. As part of the migration planning process, you will configure monitoring and dependency tracking to gain visibility into workload communication and application interactions. 
+
+This will help ensure a smooth, efficient, and well-planned migration of the SmartHotel application infrastructure to Azure.
+
+
+
 ## Overview
 
 In this exercise, you will assess the migration readiness of the SmartHotel application using Azure Migrate. First, you will create an assessment for selected VMs, setting up and grouping them to generate a report that shows whether they're ready for migration to Azure.

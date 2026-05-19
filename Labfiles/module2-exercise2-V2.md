@@ -2,6 +2,12 @@
 
 ### Estimated duration: 40 Minutes
 
+## Scenario
+
+You are a Cloud Engineer at Contoso responsible for preparing Linux-based servers and workloads for migration to Microsoft Azure. In this exercise, you will configure dependency visualization, deploy monitoring and dependency agents on Linux virtual machines, and analyze workload communication patterns within the SmartHotel environment. 
+
+This process will help ensure migration readiness, improve visibility into application dependencies, and support a smooth and optimized migration to Azure.
+
 ## Overview
 In this exercise, you will learn how to migrate machines as physical servers to Azure, using the Azure Migrate: Server Migration tool. Migrating machines by treating them as physical servers is useful in several scenarios, such as migrating on-premises physical servers, migrating Hyper-V VMs, and much more.
 

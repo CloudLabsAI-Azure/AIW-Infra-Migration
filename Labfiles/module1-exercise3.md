@@ -2,6 +2,12 @@
 
 ### Estimated duration: 60 Minutes
 
+## Scenario
+
+You are a Cloud Engineer at Contoso responsible for migrating the company’s on-premises application servers and workloads to Microsoft Azure. In this exercise, you will configure the Azure environment for migration, enable replication for virtual machines, and migrate Windows and Linux-based application servers using Azure Migrate: Server Migration. 
+
+You will also validate networking and workload configurations to ensure a secure, reliable, and seamless transition of the SmartHotel application infrastructure to Azure.
+
 ## Overview
 
 In this exercise, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
@@ -212,6 +218,7 @@ In this task, you will configure and enable the replication of your on-premises 
 1. In the **Disks** tab, review the settings but do not make any changes. Select **Next** ,then select **Next** in the **Tags** tab, and verify the configuration details, then select **Replicate** to start the server replication.
 
     ![](15-7-25-l3-26.png)
+    
     ![](15-7-25-l3-27.png)
 
 1. On the **Migration tools**, under **Migration and modernization**, select the **Overview** button.
