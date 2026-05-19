@@ -4,7 +4,14 @@
 
 ### Estimated duration: 50 Minutes
 
+## Scenario
+
+You are a Cloud Engineer at Contoso responsible for migrating and modernizing Linux-based application workloads to Microsoft Azure. In this exercise, you will configure replication, networking, and migration settings for Linux virtual machines using Azure Migrate and Azure Hybrid Benefit capabilities. 
+
+You will then perform the migration of critical SmartHotel application workloads to Azure while ensuring optimized resource configuration, minimal downtime, and a seamless transition to the cloud environment.
+
 ## Overview
+
 In this exercise, you will review the registered Hyper-V host, LabVM, using Azure Site Recovery as the migration engine. The Azure Site Recovery Provider was deployed in a previous hands-on lab. Next, configure and enable replication of on-premises virtual machines from Hyper-V to the Azure Migrate Server Migration service. Modify settings for replicated virtual machines to align with on-premises IP addresses. Finally, execute the migration of the Red Hat virtual machine to Azure for a seamless transition to the cloud environment.
 
 ## Objectives

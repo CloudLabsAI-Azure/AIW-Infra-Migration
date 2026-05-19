@@ -4,6 +4,12 @@
 
 ### Estimated duration: 30 Minutes
 
+## Scenario
+
+You are a Cloud Engineer at Contoso responsible for improving the operational visibility and security posture of the SmartHotel hybrid infrastructure hosted across on-premises and Azure environments. In this exercise, you will integrate Azure security and monitoring services to gain centralized insights into resource health, security recommendations, and potential threats. 
+
+You will also configure centralized log collection and analytics capabilities to support proactive monitoring, incident investigation, and compliance management across the environment.
+
 ## Overview
 In this exercise, you will learn how to enable enhanced security features by enabling the Defender for Cloud plans through the Azure portal. The Defender plans show you the monitoring coverage for each Defender plan. You will be enabling the same for Microsoft Sentinel and Azure Monitor. Also, you will set up a Log Analytics workspace to collect logs and data of these resources, and their information will be stored in a workspace.
 
@@ -38,9 +44,9 @@ In this task, you will enable Microsoft Defender for Cloud to enhance the securi
 
     ![](Images/AIM-image36.png)
     
-1. Back on **Microsoft Defender for Cloud** Overview page. When Enhance your security posture by enabling Defender CSPM pop up click on **No thanks**
+1. Back on **Microsoft Defender for Cloud** Overview page. When Enhance your security posture by enabling Defender CSPM pop up click on **No thanks**.
 
-1. On on **Microsoft Defender for Cloud**, expand **General (1)** thrn select **Overview (2)**  when  offers a consolidated perspective for security experts. This section combines various independent cloud security components, such as **Secure Score, Regulatory Compliance, and Workloads Protection**, and provides detailed insights on the security posture on a distinct dashboard.    
+1. On **Microsoft Defender for Cloud**, expand **General (1)** then select **Overview (2)**  when  offers a consolidated perspective for security experts. This section combines various independent cloud security components, such as **Secure Score, Regulatory Compliance, and Workloads Protection**, and provides detailed insights on the security posture on a distinct dashboard.    
 
    ![Screenshot of the overview page](Images/AIM-image37.png "overview page")
 
@@ -96,6 +102,10 @@ In this task, you will enable Azure Monitor to track and manage the performance 
      ![](Images/15-7-25-l12-6.png)
     
 1. On the **Monitor** page, from the left pane, select **Log Analytics Workspaces (2)** present under **Insights (1)** (You will see your subscription and all the workspaces in it, listed here) and click on **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (3)** workspace under azuremigraterg.
+
+    >**Note**: If the Log Analytics Workspace is not displayed, go to **Resource Group** and select **All**.
+
+    ![](Images/2026-05-18_21-10-54.png)    
 
     ![Screenshot of the search Azure workspace Monitor.](Images/AIM-image39.png "Azure Monitor")
 

@@ -7,6 +7,12 @@ In this Exercise, you will explore an Azure Migrate project and the default buil
 
 ### Estimated duration: 60 Minutes
 
+## Scenario
+
+You are a Cloud Engineer at Contoso responsible for modernizing the company’s on-premises infrastructure by migrating Windows Server and SQL Server workloads to Microsoft Azure.
+
+ Before the migration begins, you must configure Azure Migrate, assess the existing Hyper-V environment, and prepare dependency mapping and replication settings for critical virtual machines. You will then migrate the workloads to Azure while configuring networking, monitoring, and optimization settings to ensure a secure, reliable, and business-ready cloud environment.
+
 ## Overview
 
 In this HOL, you will use Azure Migrate: Server Assessment to assess the on-premises environment. This will include selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using the Azure Migrate dependency visualization.
@@ -186,6 +192,8 @@ In this task, you will explore an Azure Migrate project and the default built-in
 
     > **Note**: The sign-in process can take between 5 and 10 minutes.
     
+    > **Note**: If the registration fails, refresh or duplicate the browser tab and wait until the appliance registration is completed successfully.
+
 1. Once registration is complete, navigate to the **Manage credentials and discovery sources** panel. Under **Step 1: Provide Hyper-V host credentials for discovery of Hyper-V VMs**, click **Add credentials** to proceed.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](Images/15-7-25-l1-24.png)
@@ -242,11 +250,11 @@ In this task, you will explore an Azure Migrate project and the default built-in
 
 1. Return to the **LabVM**, then navigate to the **Azure Migrate** page in the Azure portal. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** and scroll down. Then click on **Click here** to view details in the old experience.
 
-    >**Note: Some Azure Migrate capabilities used in this lab are currently not fully supported in the new portal experience.To ensure a consistent experience and complete all lab objectives, we are performing this lab using the classic Azure Migrate experience**.
+    >**Note: Some Azure Migrate capabilities used in this lab are currently not fully supported in the new portal experience. To ensure a consistent experience and complete all lab objectives, we are performing this lab using the classic Azure Migrate experience**.
 
      ![](Images/AIM-image40.png)
 
-1. On the **Azure Migrate** page, under Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
+1. On the **Azure Migrate** page, under Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
 
    ![](Images/15-7-25-l1-31.png) 
 

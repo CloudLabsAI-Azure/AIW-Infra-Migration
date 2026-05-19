@@ -3,9 +3,12 @@
 
 ### Overall Estimated Duration: 150 Minutes
 
-In this hands-on lab, you will migrate and modernize workloads to Azure. You will start by evaluating and migrating Windows and SQL Server workloads using Azure Migrate and Azure Site Recovery. Next, you will replicate and migrate a Red Hat VM and OSS DB workloads as well
+## Lab Scenario
 
-Finally, you will manage a Windows machine with Azure Arc,strengthened monitoring and security by enabling Microsoft Defender for Cloud, Microsoft Sentinel, Azure Monitor, and a Log Analytics workspace for centralized visibility.
+Contoso is planning to modernize its IT infrastructure by migrating critical workloads to Microsoft Azure. In this hands-on lab, you will assess and migrate Windows, SQL Server, Red Hat Linux, and OSS database workloads using Azure Migrate and Azure Site Recovery. 
+
+You will also configure Azure Arc to manage hybrid resources and strengthen monitoring and security using Microsoft Defender for Cloud, Microsoft Sentinel, Azure Monitor, and Log Analytics for centralized visibility and operational management across the environment.
+
 
 ### Key Features of Infrastructure Migration to Azure
 
@@ -25,7 +28,7 @@ Finally, you will manage a Windows machine with Azure Arc,strengthened monitorin
 
 - **Unified Management and Automation:** Use Azure's centralized platform to manage all migrated workloads, automate processes, and apply consistent governance, security, and compliance across your infrastructure.
 
-## Overview
+## Lab Overview
 
 The following lab provide you with a quick and easy way to get started with Azure Migrate through on-premises environments that do not require any complex setup or installations. 
 
