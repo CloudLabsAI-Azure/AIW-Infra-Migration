@@ -23,7 +23,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
     ![Screenshot of the Azure Migrate 'Assess servers' blade, showing the assessment name.](Images/new/q1.png)
 
-1. The **Assessment settings** blade allows you to tailor many of the settings used when making a migration assessment report. Take a few moments to explore the wide range of assessment properties. Hover over the information icons to see more details on each setting. Choose any settings you like, then select **Save**.
+1. The **Infrastructure settings** blade allows you to tailor many of the settings used when making a migration assessment report. Take a few moments to explore the wide range of Infrastructure properties. Hover over the information icons to see more details on each setting. Choose any settings you like, then select **Save**.
 
     > **Note:** You must make at least one change for the Save button to be enabled. If you don’t want to make any changes, simply close the blade.
 
@@ -100,6 +100,8 @@ Azure Migrate dependency visualization helps you identify and map these dependen
 
     > **Note:** If you don't see the workspace ID and key here. You can attempt to close and reopen the Workspace, or you can try refreshing the browser page. This may have been caused by a temporary error in the portal.
 
+    > **Note:** If you do not see the Deployment ID and Key even after refreshing multiple times, try configuring the Log Analytics workspace using the Use existing option. In some cases, the workspace may not get configured properly with the newly created Log Analytics workspace. You will see the Log Analytics workspace created earlier; select it and then click on Configure.
+
 1. On the **Dependencies** screen, under **Step 1**, right-click to copy the download links for **Windows 64-bit** and **Linux** versions of the **Microsoft Monitoring Agent (1)**, then under **Step 2**, copy the links for the **Windows 64-bit** and **Linux** versions of the **Dependency Agent (2)**, and save them along with the previously noted **Workspace ID** and **Primary Key**.
 
     ![](Images/new/q6.png)
@@ -114,11 +116,11 @@ Azure Migrate dependency visualization helps you identify and map these dependen
 
     ![](Images/new/q9.png)
 
-1. On the **smarthotelweb1** VM. Open **Internet Explorer** from the Start menu. Paste the link to the **64-bit Microsoft Monitoring Agent for Windows** that you saved earlier. Once the download completes, click one **Save (1)** and then **Run (2)** when prompted to start the installer.
+1. On the **smarthotelweb1** VM. Open **Microsoft EDGE Browser** from the Start menu. Paste the link to the **64-bit Microsoft Monitoring Agent for Windows** that you saved earlier. Once the download completes, click one **Open file**.
 
     ![](Images/new/w1.png)
 
-    ![](Images/new/w2.png)
+    ![](Images/new/d1.png)
 
      > **Note:** If a Security alert window opens, select the **checkbox (1)** and click on **OK (2)** to proceed.
 
@@ -158,17 +160,12 @@ Azure Migrate dependency visualization helps you identify and map these dependen
 
     ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](Images/upd-mma6.png "MMA installation")
 
-1. Paste the link to the **Windows Dependency Agent installer**. When prompted, click **Save** to download the file. Once the download is complete, click **Run** to launch the installer.
+1. Paste the link to the **Windows Dependency Agent installer**. When prompted, click **Keep** to download the file. Once the download is complete, click **Open File** to launch the installer.
 
-    ![](Images/new/w4.png)
+    ![](Images/new/a1.png)
 
-    ![](Images/new/w5.png)
+    ![](Images/new/d2.png)
 
-    > **Note:** If a Internet explorer securtity window opens, click on **Add (1)**, then **Add (2)** again to add the site, and then click on **Close (3)**. Then repeat the **Step 19**.
-
-    ![](Images/new/w6.png)
-
-    ![](Images/new/w7.png)
 
 1. On the **License Agreement** blade, select **I Agree** to accept the agreement and continue. 
 
