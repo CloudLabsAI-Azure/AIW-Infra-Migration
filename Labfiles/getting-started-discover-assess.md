@@ -21,7 +21,7 @@ In this Hands-On Lab, you will use Azure Migrate: Server Assessment to evaluate 
 ## Pre-requisites
 
 Participants should have:
-
+- An active Microsoft Azure subscription to deploy and manage Azure resources.
 - Familiarity with Azure services, including Azure Migrate, Azure Data Studio, and Azure SQL solutions.
 - Experience with network configuration and enabling outbound connectivity for tools like Azure Migrate Appliance.
 - Basic knowledge of database management, SQL Server architecture, and backup processes.
@@ -83,7 +83,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
 ![Manage Your Virtual Machine](./Images/new/zoom.png)
    
@@ -99,7 +99,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
      ![](./Images/new/email.png)
  
-3. Next, provide your temporary password and click on **Sign in (2)**:
+3. Next, provide your temporary access pass and click on **Sign in (2)**:
 
    - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
  
