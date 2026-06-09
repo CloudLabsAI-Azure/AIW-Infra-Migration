@@ -111,4 +111,4 @@ In this exercise, you configured the Azure Migrate dependency visualization feat
 
 Click on **Next** from the lower right corner to move on to the next page.
 
-![](Images/infra-s7.png)
+![](Images/infra-s13.png)
