@@ -168,4 +168,4 @@ In this exercise, you reviewed the registered Hyper-V host, LabVM, with the Migr
 
 Click on **Next** from the lower right corner to move on to the next page.
 
-![](Images/infra-s7.png)
+![](Images/infra-s14.png)

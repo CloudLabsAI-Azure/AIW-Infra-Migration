@@ -119,4 +119,4 @@ In this exercise, you explored how to deploy and configure the Azure Connected M
 
 Click on **Next >>** from the lower right corner to move on to the next page.
  
-  ![](Images/infra-s7.png)
+  ![](Images/infra-s16.png)
