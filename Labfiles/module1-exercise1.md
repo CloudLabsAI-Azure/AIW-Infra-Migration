@@ -144,7 +144,7 @@ In this task, you will explore an Azure Migrate project and the default built-in
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the first step 'Set up prerequisites' in progress. The internet connectivity and time sync steps have been completed.](Images/15-7-25-l1-14.png)
 
-1. On the **Appliance Configuration Manager Cloud: Public** page, under **1. Set up prerequisites**, expand **Check latest updates and register appliance**. Paste the **Azure Migrate project key (1)** that you copied earlier, then click **Verify (2)** to validate the key.
+1. On the **Appliance Configuration Manager Cloud: Public** page, under **1. Set up prerequisites**, expand **Check latest updates and register appliance**. Paste the **Azure Migrate project key (1)** that you copied earlier, then click **Verify (2)** to validate the key.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/AIM-image11.png "Register with Azure Migrate")
 
