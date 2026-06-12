@@ -52,7 +52,7 @@ In this task, you will create a migration assessment for the SmartHotel applicat
 
     ![](Images/15-7-25-l2-6.png)
 
-1. In Azure Migrate, on the **Servers, databases, and web apps** page, Expand **Migration goals** **(1)** from the left navigation menu. Select **Servers, databases and web apps** **(2)**. Click on **Refresh** periodically **(3)** until the number of assessments under **Assessments > Total** updates to **1** (This may take a few minutes). Then click on the nuber **1 (4)**.  
+1. In Azure Migrate, on the **Servers, databases, and web apps** page, Expand **Migration goals** **(1)** from the left navigation menu. Select **Servers, databases and web apps** **(2)**. Click on **Refresh** periodically **(3)** until the number of assessments under **Assessments > Total** updates to **1** (This may take a few minutes). Then click on the number **1 (4)**.  
 
     ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/L1E2T1S6-3012.png "Azure Migrate - Assessments (count)")
 
