@@ -83,7 +83,7 @@ In this task, you will explore an Azure Migrate project and the default built-in
 
     ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/infra-l1-11.png "Start AzureMigrateAppliance")
     
-     > **Note:** If you encounter an error while starting the **AzureMigrateAppliance** VM, try **turning off** the **AzureArcVM**, then start the **AzureMigrateAppliance** VM again.
+     > **Note:** If you encounter an error while starting the **AzureMigrateAppliance** VM, try **turning off** the **AzureArcVM**, then start the **AzureMigrateAppliance** VM again.
 
      > **Note:** Follow these steps and run the commands one-by-one from the code block.
 
@@ -225,12 +225,42 @@ In this task, you will explore an Azure Migrate project and the default built-in
     > - You can't remove a specific host from a cluster. You can only remove the entire cluster.
     > - You can add a cluster, even if there are issues with specific hosts in the cluster.
 
-1. In **Step 3: Provide server credentials to perform guest discovery of installed software, dependencies and workloads**, **Disable** the slider, and then select **Start discovery**  to begin VM discovery from the validated Hyper-V hosts or clusters.
+1. In **Step 3: Provide server credentials to perform guest discovery of installed software, dependencies, and workloads**, add credentials for both the Windows and Linux virtual machines. Scroll down and click **Add credentials (1)**.
 
-   >**Note:** The discovery process may take up to 10 minutes to complete
-   
-   ![](Images/AIM-image14.png)
+    ![](Images/H1E1T1S31.png)
+
+1. In the **Add credentials** pane, enter the following details:
     
+    - **Credentials type**: **Windows (Non-domain) (1)**
+    - **Friendly name**: `WindowsVMs` **(2)**
+    - **Username**: `.\Administrator` **(3)**
+    - **Password**: `demo!pass123` **(4)**
+    - Click **Save (5)**.
+
+        ![](Images/H1E1T1S34.png)
+
+1. Click **Add credentials** again to add the Linux virtual machine credentials.
+
+    - **Credentials type**: **Linux (Non-domain) (1)**
+    - **Friendly name**: `LinuxVM` **(2)**
+    - **Username**: `demouser` **(3)**
+    - **Password**: `demo!pass123` **(4)**
+    - Click **Save (5)**.
+
+        ![](Images/H1E1T1S35.png)
+
+1. Click **Add credentials** again to add the Red Hat virtual machine credentials.
+
+    - **Credentials type**: **Linux (Non-domain) (1)**
+    - **Friendly name**: `RedHatVM` **(2)**
+    - **Username**: `administrator` **(3)**
+    - **Password**: `demo!pass123` **(4)**
+    - Click **Save (5)**.
+
+        ![](Images/H1E1T1S36.png)
+
+1. Verify that both the credentials are listed under **Provided credentials**, then select **Start discovery** to begin discovering workloads, installed software, and dependencies.  
+
    ![](Images/AIM-image15.png)
 
 1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. 
@@ -239,15 +269,9 @@ In this task, you will explore an Azure Migrate project and the default built-in
   
     ![](Images/AIM-image13.png)
 
-1. Return to the **LabVM**, then navigate to the **Azure Migrate** page in the Azure portal. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** and scroll down. Then click on **Click here** to view details in the old experience.
+1. On the **Azure Migrate** project **Overview (1)** page, review the **All inventory** section and verify that the **Workloads** count displays **8 (2)**. If the expected workload count is not displayed, select **Refresh** from the top-right corner of the page and wait for the discovery process to complete. Continue refreshing periodically until all workloads are discovered. This process may take several minutes.
 
-     ![](Images/AIM-image40.png)
-
-    >**Note:** Some Azure Migrate capabilities used in this lab are currently not fully supported in the new portal experience.To ensure a consistent experience and complete all lab objectives, we are performing this lab using the classic Azure Migrate experience.
-
-1. On the **Azure Migrate** page, under Migration goals, select **Servers, databases and web apps (1)**, then click **Refresh (2)**. In the Azure Migrate: Discovery and assessment panel, you should see a count of **Discovered servers (3)**. If discovery is still in progress, continue clicking Refresh periodically until all 7 servers are shown. This may take several minutes.
-
-   ![](Images/15-7-25-l1-31.png) 
+   ![](Images/H1E1T1S33.png) 
 
     > **Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
 
