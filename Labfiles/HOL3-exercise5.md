@@ -1,10 +1,10 @@
-# Exercise 01: Enable Microsoft Defender for Cloud, Microsoft Sentinel, and Azure Monitor, and setup Log analytics for each source
+# Exercise 01: Enable Microsoft Defender for Cloud, Microsoft Sentinel, and Azure Monitor, and set up Log Analytics for each source
 
 ### Estimated Duration: 4 hours
 
 ## Overview
 
-In this exercise, you will learn how to enable enhanced security features by enabling the Defender for Cloud plans through the Azure portal. The Defender plans show you the monitoring coverage for each Defender plan. You will be enabling the same for Microsoft Sentinel and Azure Monitor. Also, you will set up a Log Analytics workspace to collect logs and data of these resources, and their information will be stored in a workspace.
+In this exercise, you will learn how to enable enhanced security features by enabling the Defender for Cloud plans through the Azure portal. The Defender plans show the monitoring coverage for each plan. You will also enable Microsoft Sentinel and Azure Monitor. Additionally, you will set up a Log Analytics workspace to collect logs and data from these resources, and that information will be stored in the workspace.
 
 > **Note:** 
 > - Microsoft Defender for Cloud, Azure Sentinel and Monitor Insights can take several hours to surface after the completion of a scan.
@@ -17,7 +17,7 @@ In this exercise, you will complete the following tasks:
 
 - Task 1: Enable Microsoft Defender for Cloud
 - Task 2: Enable Microsoft Sentinel
-- Task 3:  Enable Azure Monitor
+- Task 3: Enable Azure Monitor
 
 ## Task 1: Enable Microsoft Defender for Cloud
 
@@ -27,11 +27,11 @@ In this task, you will enable Microsoft Defender for Cloud to enhance the securi
 
     ![Screenshot of the search Microsoft Defender for Cloud.](Images/lab07-t1s2.png "Microsoft Defender for Cloud")
    
-4. Select **+ Create** on the Log Analytics workspaces page.
+1. Select **+ Create** on the Log Analytics workspaces page.
 
     ![Screenshot of the search Microsoft Defender for Cloud.](Images/lab07-t1s3.png "Microsoft Defender for Cloud")
    
-5. Within the Create Log Analytics workspace pane, enter the following details:
+1. Within the Create Log Analytics workspace pane, enter the following details:
    
    * Subscription: Select the default **subscription (1)**.
      
@@ -45,44 +45,44 @@ In this task, you will enable Microsoft Defender for Cloud to enhance the securi
 
       ![Screenshot of the search Microsoft Defender for Cloud.](Images/lab07-t1s4.png "Microsoft Defender for Cloud")
      
-6.  then click on **Create** and wait for the deployment to complete.
+1. Then click on **Create** and wait for the deployment to complete.
 
     ![Screenshot of the search Microsoft Defender for Cloud.](Images/lab07-t1s5.png "Microsoft Defender for Cloud")
    
-7. Once the deployment is completed, search for **Microsoft Defender for Cloud (1)** in **Azure Portal** and select **Microsoft Defender for Cloud (2)** from suggestions.
+1. Once the deployment is completed, search for **Microsoft Defender for Cloud (1)** in **Azure Portal** and select **Microsoft Defender for Cloud (2)** from suggestions.
 
     ![Screenshot of the search Microsoft Defender for Cloud.](Images/lab07-t1s6.png "Microsoft Defender for Cloud")
     
     > **Note:** If you are prompted with a new upgrade pop-up, click on Skip.
     
-9. On the **Microsoft Defender for Cloud** page, click on **Environment settings (2)** under **Management (1)** and click on the **down arrow (3)** of your subscription name and click on **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (4)**.
+1. On the **Microsoft Defender for Cloud** page, click **Environment settings (2)** under **Management (1)**. Then click the **down arrow (3)** next to your subscription name and select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (4)**.
 
     ![Screenshot of the search Microsoft Defender for Cloud settings.](Images/lab07-t1s7.png "Microsoft Defender for Cloud settings") 
      
-10. On the **Defender plans (1)** page, switch the plan blade **On (2)** for **Servers** and then click on **Save (3)**.    
+1. On the **Defender plans (1)** page, switch the **Servers** plan **On (2)** and then click **Save (3)**.
 
     ![Screenshot of the search Microsoft Defender plans](Images/lab07-t1s8.png "Microsoft Defender plans")
     
-11. In the Microsoft Defender for Cloud dashboard, go to **General (1)** > **Overview (2)**, **scroll down (3)**, and click **Click here to upgrade (4)** under the Upgrade to new Defender CSPM plan section.
+1. In the Microsoft Defender for Cloud dashboard, go to **General (1)** > **Overview (2)**, **scroll down (3)**, and click **Click here to upgrade (4)** under the Upgrade to new Defender CSPM plan section.
 
     ![Screenshot of the setup workspace](Images/lab07-t1s9a.png "setup workspace")
 
-12. Under the **Upgrade tab** select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (1)** workspace and click on **Upgrade (2)**.
+1. Under the **Upgrade tab** select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (1)** workspace and click on **Upgrade (2)**.
 
      ![Screenshot of the setup workspace](Images/lab07-t1s9b1.png "setup workspace")
 
-1. The **Microsoft Defender for Cloud Overview page** offers a consolidated perspective for security experts. This section combines various independent cloud security components, such as **Secure Score, Regulatory Compliance, and Workloads Protection**, and provides detailed insights on the security posture on a distinct dashboard
+1. The **Microsoft Defender for Cloud Overview page** offers a consolidated perspective for security experts. This section combines various cloud security components, such as **Secure Score, Regulatory Compliance, and Workload Protection**, and provides detailed insights into your security posture on a single dashboard.
 
     ![Screenshot of the overview page](Images/imagelab07t121.png "overview page")
 
-1. In the Microsoft Defender for Cloud portal, click **General (1)**, then select **Recommendations (2)** to view risk-based recommendations and resource health insights..
+1. In the Microsoft Defender for Cloud portal, click **General (1)**, then select **Recommendations (2)** to view risk-based recommendations and resource health insights.
     
     ![Screenshot of the Recommendations page](Images/imagelab07t13.png "Recommendations page")
    
-1. On the **Security alerts page** under General, you can see the alerts that describe details of the affected resources, suggested remediation steps, and in some cases, an option to trigger a logic app in response. (The Remediation steps contain the remediation logic where you can remediate the selected resource/s. To simplify remediation, improve your environment's security, and increase your secure score, many recommendations include a Fix option. Fix helps you quickly remediate a recommendation on multiple resources.)
+1. On the **Security alerts** page under **General**, you can view alerts that provide details about affected resources, suggested remediation steps, and, in some cases, an option to trigger a logic app in response. (The remediation steps contain the logic required to remediate the selected resources. To simplify remediation, improve your environment's security, and increase your secure score, many recommendations include a **Fix** option. This helps you quickly remediate a recommendation across multiple resources.)
 
 ## Task 2: Enable Microsoft Sentinel
-In this task, you will create and enable Microsoft Sentinel and review the Content Hub for enhanced security monitoring and threat detection in your Azure environment.
+In this task, you will create and enable Microsoft Sentinel and review the Content Hub to enhance security monitoring and threat detection in your Azure environment.
 
 1. In the Azure portal search bar, type **Microsoft Sentinel (1)** and select **Microsoft Sentinel (2)** from the results.
 
@@ -99,13 +99,9 @@ In this task, you will create and enable Microsoft Sentinel and review the Conte
     > **Note:** If you are prompted with the Microsoft Sentinel free trial activated pop-up, click on ok.
     
 1. In the **Microsoft Sentinel** window, navigate to the left-hand pane and, under **Configuration (1)**, select **Data connectors (2)**. This will take you to the **Data Connectors** page. 
-Microsoft Sentinel includes a wide range of built-in connectors for Microsoft solutions, enabling real-time integration out of the box. For non-Microsoft products, it also offers prebuilt interfaces to integrate with major security and application ecosystems.
+Microsoft Sentinel includes a wide range of built-in connectors for Microsoft solutions, enabling real-time integration out of the box. For non-Microsoft products, it also offers prebuilt interfaces that integrate with major security and application ecosystems.
 
    ![Screenshot of the get started.](Images/lab07t2s4-5.png "get started")
-
-1. From the left pane, select **Analytics** present under **Configuration**. You can create custom analytics rules to help discover threats and anomalous behaviours in your environment. (Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and remediation processes.)
-
-    ![Screenshot of the Analytics.](Images/lab07t2s6.png "Analytics")
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
@@ -122,7 +118,7 @@ In this task, you will enable Azure Monitor to track and manage the performance 
     ![Screenshot of the search Azure Monitor.](Images/image731.png "Azure Monitor")
     
 
-1. In the Azure portal, go to **Monitor** , select **Log Analytics Workspaces (2)** present under **Insights (1)** (You will see your subscription and all the workspaces in it, listed here) and click on **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (2)** workspace under azure migrate rg.
+1. In the Azure portal, open **Monitor**, then under **Insights (1)** select **Log Analytics Workspaces (2)**. On the list of available workspaces, filter by **All (3)**  in the resource group **(4)**, select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (4)**, and then choose the workspace from the **AzureMigrateRG** resource group.
 
     ![Screenshot of the search Azure workspace Monitor.](Images/image732new.png "Azure Monitor")
 

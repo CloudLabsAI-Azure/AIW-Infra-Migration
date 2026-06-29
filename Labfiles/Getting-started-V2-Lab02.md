@@ -26,7 +26,7 @@ In this hands-on lab, you will work through the architecture flow illustrated in
 
 - **On-Premises Hyper-V Host:** Source environment for Windows VMs.
 - **Azure Migrate Project:** Central hub to initiate and manage discovery and migration.
-- **Replicate VMs:** Using Azure Site Recovery unde the hood.
+- **Replicate VMs:** Using Azure Site Recovery under the hood.
 - **Azure Virtual Machines:** Target IaaS VMs created in Azure.
 - **Networking & Security:** Configure NSGs, VNets and IPs as needed post migration.
 
@@ -81,7 +81,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![](./Images/tpwrd.png)
  

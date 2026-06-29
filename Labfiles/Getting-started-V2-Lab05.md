@@ -79,7 +79,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![](./Images/tpwrd.png)
  

@@ -1,4 +1,4 @@
-# Exercise 02: Creating VM Scale sets from Azure VMs
+# Exercise 02: Creating VM Scale Sets from Azure VMs
 
 ### Estimated Duration: 3 hours
 
@@ -29,11 +29,11 @@ In this task, you will capture a specialized image from an existing virtual mach
 
    ![](Images/create-image-6-0407new1.png)
 
-1. In **Gallery details**, create a new gallery by selecting **Create new (1)** and enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)** and click **Ok (3)**.
+1. In **Gallery details**, create a new gallery by selecting **Create new (1)** and enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)** and click **OK (3)**.
 
    ![](Images/create-image-7-0407new.png)
 
-1. In the **Operating System state**, select **Specialized (1)**, then click **Create new (2)** under image definition to create a new VM image definition and click **Ok (7)**.
+1. In the **Operating System state**, select **Specialized (1)**, then click **Create new (2)** under image definition to create a new VM image definition and click **OK (7)**.
 
    - Image VM definition name: **imagedefinition<inject key="DeploymentID" enableCopy="false" /> (2)**
 
@@ -61,7 +61,7 @@ In this task, you will capture a specialized image from an existing virtual mach
 
    ![](Images/image-overview-0407new.png)
 
-1. On the **Create a Virtual Machine Scale Set (VMSS)** page, under **Basics** tab, select the **SmartHotelHostRG (1)** resource group, enter **migrationscaleset<inject key="DeploymentID" enableCopy="false" /> (2)** as the **Virtual machine scale set name**.
+1. On the **Create a Virtual Machine Scale Set (VMSS)** page, under the **Basics** tab, select the **SmartHotelHostRG (1)** resource group, enter **migrationscaleset<inject key="DeploymentID" enableCopy="false" /> (2)** as the **Virtual machine scale set name**. Make sure the appropriate region is selected: **<inject key="Region" enableCopy="false" />**.
 
    ![](Images/createvmss1-0407new.png)
 
@@ -69,9 +69,9 @@ In this task, you will capture a specialized image from an existing virtual mach
 
    ![](Images/createvmss2-0407new.png)
 
-   > **Note:** If the validation fails on the **Networking** page, perform the below step.
+   > **Note:** If validation fails on the **Networking** page, perform the following step.
 
-   > Select **None (1)** under **Load balancing options** and click on **Review + create (2)** to proceed.Re-run the validation after applying these changes.
+   > Select **None (1)** under **Load balancing options** and click on **Review + create (2)** to proceed. Rerun validation after applying these changes.
 
    ![](Images/IM3.png)
 
@@ -81,17 +81,17 @@ In this task, you will capture a specialized image from an existing virtual mach
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 <validation step="3435fc35-adbc-4789-885e-d2231cc767d4" />
 
-In this task, you have created an Image from the smarhotelweb1 virtual machine, and using that image, you successfully created a Virtual Machine Scale Set (VMSS).
+In this task, you created an image from the smarthotelweb1 virtual machine, and using that image, you successfully created a Virtual Machine Scale Set (VMSS).
 
 ## Task 2: Enabling Azure Automanage on Virtual Machines
 
-Azure Automanage automatically applies best practice configurations like backup, monitoring, and security to your VMs, simplifying management and ensuring compliance. In this task, you will enable Automanage on existing machines.
+Azure Automanage automatically applies best-practice configurations such as backup, monitoring, and security to your VMs, simplifying management and ensuring compliance. In this task, you will enable Automanage on existing machines.
 
 1. In the **Azure portal**, search for **Automanage (1)** in the top search bar and select the **Automanage (2)** service from the results.
 
    ![](Images/Task2-Step3a.png)
 
-1. From the left side panel, expand **Machine best practices (1)**, select **Automanage machines (2)**, and click **Enable on existing machine (3)** to onboard a VM to Automanage.
+1. From the left-side panel, expand **Machine best practices (1)**, select **Automanage machines (2)**, and click **Enable on existing machine (3)** to onboard a VM to Automanage.
    
    ![](Images/T2S3-0407new.png)
 
@@ -99,7 +99,7 @@ Azure Automanage automatically applies best practice configurations like backup,
    
    ![](Images/upd-existing-vm-quick-createnew.png)
    
-   > Click **View best practice profiles** to see the differences between the environments.
+   > Click **View best practice profiles** to see the differences between the available environments.
     
    ![](Images/upd-browse-production-profilenew.png)
 
