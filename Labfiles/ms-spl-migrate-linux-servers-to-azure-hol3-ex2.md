@@ -17,7 +17,7 @@ In this exercise, you will complete the following tasks:
 
 ## Task 1: Review your on-prem Hyper-V Linux Server and OSS DB
 
-In this task, you will access the Hyper-V Manager to start and connect to the redhat VM, which contains an OSS Database. You'll log into this Red Hat server, preparing it for migration to Azure using Azure Migrate.
+In this task, you will access Hyper-V Manager to start and connect to the redhat VM, which contains an OSS database. You'll log in to this Red Hat server, preparing it for migration to Azure using Azure Migrate.
  
 1. Click the **Start (1)** button, type **Hyper-V Manager (2)** in the search bar, and select **Hyper-V Manager (3)** from the results.
 
@@ -37,15 +37,15 @@ In this task, you will access the Hyper-V Manager to start and connect to the re
 
 1. Log into the VM with the **Administrator password**: **<inject key="SmartHotel Admin Password" />** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
 
-1. You should be able to log in to your on-prem Redhat server hosted on Hyper-V. 
+1. You should be able to log in to your on-premises Red Hat server hosted on Hyper-V.
 
     ![Screenshot of the Azure Migrate appliance terms of use.](Images/redhathome.png "Desktop shortcut")
 
-1. In the next task you will be migrating the Redhat server, and the OSS Database hosted in the Red Hat VM to the Azure with the help of Azure Migrate.
+1. In the next task, you will migrate the Red Hat server and the OSS database hosted on the Red Hat VM to Azure with the help of Azure Migrate.
 
 ## Task 2: Register the Hyper-V Host with Migration and modernization
 
-In this task, you will register your Hyper-V host(LabVM) with the Migration and Modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
+In this task, you will register your Hyper-V host (LabVM) with the Migration and Modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
 
 1. Click on **Show Portal Menu (☰) (1)**  bar and select **All services (2)** from the left navigation pane.
  
@@ -64,7 +64,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
     ![](Images/E1T2S3.png)
 
 
-    > **Note:** If you do not see the **Discover** option under **Migrations**, perform the below steps.
+    > **Note:** If you do not see the **Discover** option under **Migrations**, perform the following steps.
 
     1. On the **Migrations** page, click on **click here** in the notification banner to switch to the classic experience.
 
@@ -131,7 +131,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
      ![](Images/E1T2S13.png)
 
-1. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 5-10 minutes.
+1. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for registration to complete. This may take 5-10 minutes.
 
      ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/image(10)1.png "Finalizing registration...")
 
@@ -153,7 +153,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![Screenshot highlighting the 'Replicate' button in the 'Azure Migrate: Server Migration' panel of the Azure Migrate - Servers blade.](Images/E1T3S1.png "Replicate link")
    
-1. Under the **Specific intent** page, provide the following details:
+1. Under the **Specify intent** page, provide the following details:
 
     -  What do you want to migrate? : Select **Servers or Virtual machines (VM)** **(1)**
     
@@ -165,7 +165,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
        ![](Images/E1T3S2.png)
 
-       >**Note:** If you get any error kindly refresh the screen periodically or Please try signing in to the Azure portal using incognito mode.
+        > **Note:** If you get any error, kindly refresh the screen periodically or try signing in to the Azure portal using Incognito mode.
 
 1. On the **Virtual machines** tab, set **Import migration settings from an assessment** to **No, I'll specify the migration settings manually (1)**. Then, select the virtual machine **redhat (2)**, and click **Next (5)** to proceed.
 
@@ -195,7 +195,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
 1. On the **Compute** tab, select the below configuration, and select **Next (4)**. 
 
-      | **Virtual Machine** | **VM Size (1)**    | **OS Type (2)** | **OS Dish (3)**    |
+    | **Virtual Machine** | **VM Size (1)**    | **OS Type (2)** | **OS Disk (3)**    |
       |---------------------|----------------|-------------|-------------------------|
       | redhat           | Standard_F2s_v2 | Linux      | redhat (1)    |
 
@@ -211,7 +211,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![](Images/E1T3S8-1.png)
 
-1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (3)** and wait until the machine have a **Protected (4)** status, which shows the initial replication is complete. This will take 5-10 minutes.
+1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (3)** and wait until the machine has a **Protected (4)** status, which shows the initial replication is complete. This will take 5-10 minutes.
 
      ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/image(17)new1.png "Replication status")
 
@@ -233,7 +233,7 @@ In this task, you will modify the settings for each replicated VM to use a stati
     
     ![Screenshot showing the link to edit the network interface settings for a replicated VM.](Images/15-7-25-l2-33new.png "Network Interface settings link")
 
-    >**Note:** If you get any error kindly refresh the screen periodically or Please try signing in to the Azure portal using incognito mode.
+    > **Note:** If you get any error, kindly refresh the screen periodically or try signing in to the Azure portal using Incognito mode.
 
 1. In the **Network interface** settings:
 
@@ -247,7 +247,7 @@ In this task, you will modify the settings for each replicated VM to use a stati
 
     ![](Images/15-7-25-l2-35new.png)
 
-     In this task, you modified the settings for redhat VM to use a static private IP address that matches the on-premises IP addresses for that machine.
+    In this task, you modified the settings for the redhat VM to use a static private IP address that matches its on-premises IP address.
 
 ## Task 5: Server migration
 
@@ -273,11 +273,11 @@ In this task, you will perform a migration of the redhat machine to Azure.
 
     ![Screenshot showing 3 VM migration notifications.](Images/Task4-Step4donew.png "Migration started notifications")
 
-1. On the **Azure Migrate: Server Migration** page, to monitor progress, expand **Migration (1)** on the left menu and select **Jobs (2)** and review the status of the one **Planned failover (3)** job.
+1. On the **Azure Migrate: Server Migration** page, to monitor progress, expand **Migration (1)** on the left menu and select **Jobs (2)** and review the status of the **Planned Failover (3)** job.
 
     ![Screenshot showing the **Jobs* link and a jobs list with 3 in-progress 'Planned failover' jobs.](Images/Task4-Step5donew.png "Migration jobs")
 
-1. **Wait** until the **Planned failover** job show **Status** to **Successful**. You should not need to refresh your browser. This could take up to **15 minutes**.
+1. **Wait** until the **Planned Failover** job shows a **Status** of **Successful**. You should not need to refresh your browser. This could take up to **15 minutes**.
 
     ![Screenshot showing the **Jobs* link and a jobs list with all 'Planned failover' jobs successful.](Images/Task4-Step6donew.png "Migration status")
 
@@ -285,7 +285,7 @@ In this task, you will perform a migration of the redhat machine to Azure.
 
     ![](Images/rg-ak-new1.png)
 
-1. Check that the **VM, disk** resources have been created for each of the migrated virtual machines.
+1. Check that the **VM and disk** resources have been created for the migrated virtual machine.
 
     ![Screenshot showing resources created by the test failover (VMs, disks, and network interfaces).](Images/Task4-Step8donew.png "Migrated resources")
 

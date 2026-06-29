@@ -1,6 +1,6 @@
 # Lab - 06: Infrastructure Migration - Deploy Azure Site Recover and Failover to DR
  
-### Overall Estimated Duration: 8 Hours
+### Overall Estimated Duration: 5 Hours
 
 ## Overview
 In this lab, you will gain hands-on experience deploying and configuring Azure Site Recovery (ASR) to protect your on-premises workloads and ensure business continuity in the event of a disaster. Throughout the lab, you'll work with on-premises Hyper-V VMs and extend their availability to Azure by setting up replication, failover, and failback processes. By the end of the lab, you’ll have a solid understanding of how to orchestrate disaster recovery (DR) to Azure and test failover scenarios to ensure that your applications can continue running seamlessly in the cloud.
@@ -34,7 +34,7 @@ Once the environment is provisioned, a virtual machine (LabVM) and lab guide wil
  
 Once you're ready to dive in, your virtual machine and Guide will be right at your fingertips within your web browser.
 
-   ![](./Images/FIRST_Page-lab06.png)
+   ![](./Images/lab06.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -78,7 +78,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![](./Images/tpwrd.png)
  
