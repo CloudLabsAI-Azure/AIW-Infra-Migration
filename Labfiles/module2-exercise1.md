@@ -22,21 +22,17 @@ In this Exercise, you will complete the following task:
 
 In this task, you will review the environment discovered in Azure Migrate. After logging into the Azure portal, we'll go to All Services and search for Azure Migrate. In the overview, you will see that seven servers have been discovered, and we will focus on migrating and modernizing the Red Hat and Open Source Database (OSS DB) servers.
 
-1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
- 
-    ![Screenshot of the All services overview blade.](Images/15-7-25-1l.png "All services Overview blade")
+1. Search for **Azure Migrate (1)** and select it **Azure Migrate (2)** from the search results.
 
-1. In the search bar, type **Azure Migrate (1)** and select **Azure Migrate (2)** from the suggestions to open.
-   
-    ![Screenshot of the Azure migrate overview blade.](Images/15-7-25-l5-1.png "Azmigrate Overview blade")
+    ![](Images/L1E1T1S1.png)
 
-1. On the **Azure Migrate** page in the **Azure portal**. From the left navigation pane, select **All projects**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />**. Then click on **Click here** to view details in the old experience.
+1. On Azure Migrate page, click on **All projects (1)** and click on the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" /> (2)**.
 
-   ![](Images/AIM-image40.png)
+    ![](Images/H1E3T2S2.png)
 
-1. On the **Azure Migrate | Servers, databases and web apps** page, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Azure Migrate: Discovery and assessment**, you'll see **Discovered servers: 7 (3)**. 
- 
-    ![](Images/cor_1_1.png)
+1. On the **Azure Migrate** project **Overview (1)** page, review the **All inventory** section and verify that the **Workloads** count displays **8 (2)**. If the expected workload count is not displayed, select **Refresh** from the top-right corner of the page and wait for the discovery process to complete. Continue refreshing periodically until all workloads are discovered. This process may take several minutes.
+
+   ![](Images/H1E1T1S33.png) 
 
     > **Note:** We have already migrated 3 servers in the previous HOL, and now we will be migrating and modernizing the Red Hat and OSS DB in this HOL
  

@@ -246,31 +246,27 @@ In this task, you will run a test migration for the virtual machines after delta
 
     ![](Images/H1E3T4S6.png)
 
+1. Repeat the test migration and test migration cleanup steps for the **smarthotelweb2** and **UbuntuWAF** virtual machines.
+
 ### Task 5: Server migration
 
 In this task, you will perform a migration of the UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines to Azure.
 
-1. On the **Azure Migrate: Server Migration** page, click on **Overview (1) section** and under **Migrate to Azure**, select **Migrate (2)**. 
+1. Under **Execute**, select **Migrations (1)**. On the **Migrations** page, select **smarthotelweb1 (2)**. On the workload details page, expand **Completion (3)** and select **Migrate (4)** to begin the final migration of the replicated virtual machine to Azure.
 
-    ![](Images/15-7-25-l2-36.png)
+    ![](Images/H1E3T5S1.png)
 
-1. On the **Specify Intent** page, select **Azure VM (1)** for **Where do you want to migrate to?** and click on **Continue (2)**
+1. On the **Migrate** page, keep the default settings. Ensure **Shutdown virtual machines and perform a planned migration with no data loss?** is set to **Yes** and **Capacity Reservation** is set to **None**. Then, click **Migrate** to start the migration.
 
-    ![](Images/15-7-25-l2-37.png)
+   ![](Images/H1E3T5S2.png)
+
+    > **Note**: You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
+
+1. Repeat the migration steps for the **smarthotelweb2** and **UbuntuWAF*** virtual machines.
    
-1. On the **Migrate** page, select the 3 VMs **(1)**, choose **Yes, Shutdown virtual machines (Ensure no data loss) (2)** under the **Shutdown virtual machines** section, and click **Migrate (3)** to start the migration.
+1. To monitor the migration progress, navigate to **Manage** and select **Jobs (1)**. Verify that the **Planned failover** job is in the **In progress** state. The migration process may take up to **15 minutes** to complete. Refresh the page periodically until the job status changes to **Successful** before proceeding to the next step. You can also select the **Planned failover** job to view detailed information about the migration and its sub-tasks.
 
-    ![Screenshot of the 'Migrate' blade, with 3 machines selected and the 'Migrate' button highlighted.](Images/15-7-25-l2-38.png)
-
-   > **Note**: You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
-
-1. On the **Azure Migrate: Server Migration** page, to monitor progress, expand **Migration (1)** on the left menu and select **Jobs (2)** and review the status of the three **Planned failover (3)** jobs.
-
-    ![Screenshot showing the **Jobs* link and a jobs list with 3 in-progress 'Planned failover' jobs.](Images/15-7-25-l2-39.png "Migration jobs")
-
-1. **Wait** until all three **Planned failover** jobs show a **Status** of **Successful**. You should not need to refresh your browser. This could take up to **15 minutes**.
-
-    ![Screenshot showing the **Jobs* link and a jobs list with all 'Planned failover' jobs successful.](Images/15-7-25-l2-40.png "Migration status")
+    ![](Images/H1E3T5S4.png)
 
 1. Navigate to the resource group, on the **Resource group** page, select the **SmartHotelHostRG** resource group. and check that the VM, network interface, and disk resources have been created for each of the virtual machines being migrated.
 

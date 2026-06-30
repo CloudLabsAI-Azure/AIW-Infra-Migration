@@ -10,157 +10,163 @@ In this exercise, you will review the registered Hyper-V host, LabVM, using Azur
 
 In this exercise, you will complete the following tasks:
 
-- Task 1: Register the Hyper-V Host with Migration and modernization
-- Task 2: Enable Replication from Hyper-V to Azure Migrate
-- Task 3: Configure Networking
+- Task 1: Enable Replication from Hyper-V to Azure Migrate
+- Task 2: Configure Networking
+- Task 3: Run a Test Migration
 - Task 4: Server migration
 
-## Task 1: Register the Hyper-V Host with Migration and modernization
-
-In this task, you will review the already registered Hyper-V host (LabVM) with the Migration and modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, we have already deployed the Azure Site Recovery Provider on your Hyper-V host in HOL1 and we will be using the same here as well.
-
-1. Return to the **Azure Migrate | Servers, databases and web apps** page in the Azure Portal, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Azure Migrate: Discovery and assessment**, you should be able to see 7 discovered servers **(3)**. Now, click on the **Discovered servers** to view all the servers that have been discovered with the help of Azure Migrate.
-
-    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/infra-l8-1.png "Discovered servers")
-
-1. On the **Discovered servers** page, locate the **redhat** VM in the list. We will be replicating this **redhat** VM in the next task using **Azure Migrate**.
-
-    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/15-7-25-l7-l2.png "Discovered servers")
-
-### Task 2: Enable Replication from Hyper-V to Azure Migrate
+### Task 1: Enable Replication from Hyper-V to Azure Migrate
 
 In this task, you will configure and enable the replication of your on-premises virtual machine from Hyper-V to the Azure Migrate Server Migration service.
 
-1. Return to the **Azure Migrate | Servers, databases and web apps** page and under **Migration and modernization**, select **Replicate**. This opens the **Replicate** wizard.
+1. Navigate to Azure portal, search for **Azure Migrate (1)** and select it **Azure Migrate (2)** from the search results.
 
-    ![Screenshot highlighting the 'Replicate' button in the 'Azure Migrate: Server Migration' panel of the Azure Migrate - Servers blade.](Images/15-7-25-l7-l3.png "Replicate link")
+    ![](Images/L1E1T1S1.png)
+
+1. On Azure Migrate page, click on **All projects (1)** and click on the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" /> (2)**.
+
+    ![](Images/H1E3T2S2.png)
+
+1. Select **Migrations (1)** under Execute, then click on **Start execution (2)**. 
+
+     ![](Images/H1E3T1S1-new.png)
    
-1. On the **Specific Intent** page, provide the following details:
+1. On the Specify intent panel, provide the following details, then click on **Continue (5)**.
 
-    - What do you want to migrate? : Select **Servers or Virtual machines (VM)** **(1)**
-    - Where do you want to migrate to? : Select **Azure VM** **(2)**
-    - Are your machines virtualized? : Select **Yes, with Hyper-V (3)**
-    - Click on **Continue (4)**
+    - What do you want to migrate to? : Select **Servers or Virtual Machines(VM) (1)** from the dropdown.
 
-       ![](Images/15-7-25-l7-l4.png)
+    - Where do you want to migrate to?: Select **Azure VM (2)** from the dropdown.
 
-1. On the **Replicate** page, under the **Virtual machines** tab, set **Target VM security type** to **Standard or Trusted Launch Virtual machines (1)**. Under **Import migration settings from an assessment**, select **Yes, apply migration settings from an Azure Migrate assessment (2)**. Then choose **SmartHotelAssessment (3)** as the migration assessment.
+    - How will you select workload?: Select **From all inventory (3)** from the dropdown.
 
-    ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The Azure Migrate assessment created earlier is selected.](Images/15-7-25-l7-l5.png "Replicate - Virtual machines")
+    - Discovery method: Select **SmartHotelAppl(HyperV) (4)** from the dropdown.
 
-1. On the **Virtual machines** tab, you’ll now see the VMs included in the selected assessment. Select the **redhat (1)** virtual machine, then click **Next (2)**.
+       ![](Images/H1E3T2S4.png)
 
-    ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](Images/infra-l8-2.png "Replicate - Virtual machines")
+1. In the Workloads tab, select **redhat (1)** virtual machine, then select **Next (2)**.
 
-1. On the **Target settings** tab, configure the following values:
-   
-    - Select your subscription and the existing **SmartHotelRG (1)** resource group.  
-    - For **Cache storage account**, choose **migrationstorage1794187 (2)**.  
-    - Under **Virtual network**, select **SmartHotelVNet (3)**.  
-    - For **Subnet**, select **SmartHotel (4)**.  
-    - **Availability option:** Select **No infrastructure redundancy required (5)**.
-    - Click **Next (6)** to continue.
- 
-       ![](Images/infra-l8-3.png)
+    ![](Images/H2E3T1S5.png)
 
-       > **Note:** For simplicity, in this lab you will not configure the migrated VM for high availability, since each application tier is implemented using a single VM.
 
-1. On the **Compute** tab, configure the following for the **redhat** virtual machine:
-   
-   - Select **Standard_F2s_v2** as the Azure VM size and set the **OS Type** to **Linux** **(1)**.  
-   - Click **Next (2)** to proceed.
+1. On the **Target settings** tab, configure the following settings. Select **Next (6)** to continue.
 
-     ![](Images/15-7-25-l7-l8.png)
-   
-1. In the **Disks** tab, review the settings but do not make any changes. Select **Next**, then select **Next** in the **Tags** tab.
+    - Keep the default values for **Region** and **Subscription**.
+    - **Resource group**: Select the existing **SmartHotelHostRG (1)**.
+    - **Cache storage account**: Verify that the **Cache storage account** created in the previous exercise is already selected **(2)**.
+    - **Virtual network**: Select **SmartHotelVNet (3)**.
+    - **Subnet**: Select **SmartHotel (4)**.
+    - **Availability options**: Select **No infrastructure redundancy required (5)**.
 
-   ![](Images/15-7-25-l7-l9.png)
+        ![](Images/H2E3T1S6.png)
 
-1. On the **Review + Start replication** tab, review the selected configuration details. Once confirmed, click **Replicate** to start the replication process.
+        > **Note:** For simplicity, in this lab, you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
-    ![](Images/infra-l8-4.png)
+1. On the **Compute** tab, configure the following settings for the **redhat** virtual machine:
 
-1. In the **Azure Migrate | Servers, databases and web apps** page, under **Migration and modernization**, select the **Overview** button.
+   - Verify that the **Azure VM size** is set to **Standard_F2s_v2 (1)**.
+   - Verify that the **OS Type** is set to **Linux (2)**.
+   - Verify that the **Operating System** is set to **Red Hat Enterprise Linux 7 (3)**.
+   - Select **Next** to continue.
 
-    ![](Images/15-7-25-l7-l11.png)
+     ![](Images/H2E3T1S7.png)
     
-1. On the **Azure Migrate: Server Migration** overview page, you’ll see the **Replicate** tile under the migration dashboard. The count under **Azure VM** should show `1`, indicating that replication is in progress.
+1. In the **Disks** tab, review the settings but do not make any changes. Select **Next** , then select **Next** in the **Tags** tab. 
 
-     ![](Images/cor_1_4.png)
+    ![](Images/H2E3T1S8.png)
 
-1. On the **Azure Migrate: Server Migration** page, select **Replications (1)** under the **Migration** section on the left. Click **Refresh (2)** occasionally and wait until the **redhat** VM shows a **Protected (3)** status. This indicates the initial replication is complete. It may take 15 - 20 minutes.
+1. On the **Review + Start execution** tab, verify the replication settings for the selected virtual machines. After confirming the configuration, click **Execute migration** to start the replication process.
 
-     ![](Images/cor_1_5.png)
+    ![](Images/H2E3T1S9.png)
 
-## Task 3: Configure Networking
+1. In the Azure Migrate project, under **Execute**, select **Migrations**. On the **Migrations** page, verify that the selected workload is listed with the **Execution stage** as **Testing** This will take 15-20 minutes.
+
+    ![](Images/H2E3T1S10.png)
+    
+1. Under **Manage**, select **Jobs** to view the detailed status of the migration jobs. The **Jobs** page displays the progress and status of each migration operation performed by Azure Migrate. Verify that the **Enable replication** and **Finalize protection** jobs for the selected virtual machines have completed successfully.
+
+    ![](Images/H2E3T1S11.png)
+
+## Task 2: Configure Networking
 
 In this task, you will modify the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine.
 
-1. On the **Migration and modernization | Replications** page, select the **redhat** virtual machine to open its detailed migration and replication settings. Review the replication health, status, and other migration-related information carefully.
+1. Navigate to **Migrations (1)** under **Execute**, and select **redhat (2)** from the list. This opens the migration details page for the virtual machine. Take a moment to review the migration status, and then select **Go to execution details (3)** to view the detailed replication configuration.
 
-   ![](Images/15-7-25-l7-l14.png)
+   ![](Images/H2E3T2S1.png)
 
-1. In the **redhat Replicating machines** page, expand **General (1)** and select **Compute and Network (2)**. Confirm that the **Azure VM size** is set to **F2s_v2 (3)**.
+1. On the **redhat | Compute and Network** page, review the target Azure virtual machine configuration. Verify that the **Azure VM size** is set to **F2s_v2** and that the **Target network** is set to **SmartHotelVNet**.
 
-     ![](Images/15-7-25-l7-2.png)
+     ![](Images/H2E3T2S2.png)
 
-1. On the **redhat Replicating machines** section, locate the **Network interfaces** field. Select the **Edit icon** next to **nic-redhat-00 (Primary)** to configure the NIC settings.
+1. On the **Compute and Network** page, review the target Azure virtual machine configuration. Verify that the **Azure VM size** is set to **F2s_v2** and the **Target network** is set to **SmartHotelVNet**. Under **Network interfaces**, select the **pencil (✏️) icon** next to **nic-redhat-00 (Primary)** to configure the network interface.
 
-    ![](Images/15-7-25-l7-l16.png) 
+    ![](Images/H2E3T2S3.png) 
 
-1. In the **Network interface** configuration panel, set the following:
-     
-     - **IP address type**: `Static` **(1)**  
-     - **Private IP address**: `192.168.0.19` **(2)**
-     - Then click **Apply (3)** to save the changes.
+1. On the **Network interface** page, set the **IP address type** to **Static (1)** and configure the **Private IP address** as **192.168.0.19 (2)** to preserve the existing IP address. Select **Apply (3)** to save the configuration.
 
-       ![](Images/15-7-25-l7-3.png)
+    ![](Images/H2E3T2S4.png)
 
-1. Back in the **Compute and Network** pane, click **Save** to apply the network interface changes.
+1. After applying the network interface configuration, verify that the updated network settings are reflected on the **Compute and Network** page. Select **Save** to save the replication configuration.
 
-    ![](Images/m2e3.png)
+    ![](Images/H2E3T2S5.png)
 
 > **Note**: Azure Migrate makes a "best guess" at the VM settings, but you have full control over the settings of migrated items. In this case, setting a static private IP address ensures the virtual machine in Azure retains the same IPs they had on-premises, which avoids having to reconfigure the VM during migration (for example, by editing web.config files).
+
+### Task 3: Run a Test Migration
+
+In this task, you will run a test migration for the virtual machine after delta replication begins and before performing the final migration to Azure. It is highly recommended that you perform a test migration at least once for each machine before migrating it.
+
+1. Under **Execute**, select **Migrations**. On the **Migrations** page, select **redhat (1)**. On the workload details page, expand **Testing (2)** and select **Start test migration (3)** to begin a test migration of the replicated virtual machine.
+
+    ![](Images/H2E3T3S1.png)
+
+1. On the **Test migration** page, select **SmartHotelVNet (1)** from the **Virtual network** dropdown, and then click **Test migration (2)** to start the test migration.
+
+    ![](Images/H2E3T3S2.png)
+
+1. To monitor the test migration progress, under **Manage**, select **Jobs (1)**. Verify that the **Test failover** job displays the **Status** as **In progress (2)**. You can select the **Test failover** job to view additional details, including the sub-jobs and their current status. The test migration may take a few minutes to complete. Refresh the page periodically until the job status changes to **Successful** before proceeding to the next step.
+
+    ![](Images/H2E3T3S3.png)
+
+1. After the test migration completes, clean up the test migration resources to remove the temporary test virtual machine before proceeding with the actual migration. Under **Execute**, select **Migrations (1)**. On the **Migrations** page, select **redhat (2)**, expand **Testing (3)**, and then select **Clean up test migration (4)**.
+
+    ![](Images/H2E3T3S4.png)
+
+1. On the **Test migrate cleanup** page, enter any note in the **Notes (1)** field, select **Testing is complete. Delete test virtual machine (2)**, and then click **Cleanup test (3)** to remove the test migration resources.
+
+    ![](Images/H2E3T3S5.png)
+
+1. Under **Manage**, select **Jobs (1)** to monitor the cleanup progress. Verify that the **Test failover cleanup** job is **In progress**. You can select the job to view additional details, including the sub-jobs and their current status. Refresh the page periodically until the **Test failover cleanup** job displays the **Status** as **Successful (2)** before proceeding to the next task.
+
+    ![](Images/H2E3T3S6.png)
 
 ### Task 4: Server migration
 
 In this task, you will perform a migration of the Red Hat virtual machine to Azure.
 
-> **Note**: In a real-world scenario, you would perform a test migration before the final migration. To save time, you will skip the test migration in this lab. The test migration process is very similar to the final migration.
+In this task, you will perform a migration of the Red Hat virtual machine to Azure.
 
-1. On the Azure Migrate: Server Migration **overview (1)** blade, under the **Migrate (2)** section, click **Migrate (3)** to initiate migration for additional servers.
+1. Under **Execute**, select **Migrations (1)**. On the **Migrations** page, select **redhat (2)**. On the workload details page, expand **Completion (3)** and select **Migrate (4)** to begin the final migration of the replicated virtual machine to Azure.
 
-    ![](Images/15-7-25-l7-4.png)
+    ![](Images/H2E3T4S1.png)
+
+1. On the **Migrate** page, keep the default settings. Ensure **Shutdown virtual machines and perform a planned migration with no data loss?** is set to **Yes** and **Capacity Reservation** is set to **None**. Then, click **Migrate** to start the migration.
+
+   ![](Images/H2E3T4S2.png)
+
+    > **Note**: You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
    
-1. On the **Specify Intent** blade, select **Azure VM (1)** for **Where do you want to migrate to?** and click on **Continue (2)**
+1. To monitor the migration progress, navigate to **Manage** and select **Jobs (1)**. Verify that the **Planned failover** job is in the **In progress** state. The migration process may take up to **15 minutes** to complete. Refresh the page periodically until the job status changes to **Successful** before proceeding to the next step. You can also select the **Planned failover** job to view detailed information about the migration and its sub-tasks.
 
-    ![](Images/cor_1_6.png)
+    ![](Images/H2E3T4S3.png)
 
-1. On the **Migrate** blade, perform the following actions:
-  
-     - Select the **redhat** virtual machine **(1)**.
-     - Choose **Yes, shut down virtual machines (Ensures no data loss)** **(2)**.
-     - Click **Migrate** **(3)** to begin the migration.
+1. Navigate to the resource group, on the **Resource group** page, select the **SmartHotelHostRG** resource group. and check that the VM, network interface, and disk resources have been created for each of the virtual machines being migrated.
 
-        ![](Images/15-7-25-l7-5.png)
-
-        > **Note**: You can optionally choose whether the on-premises virtual machine should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
-
-1. The migration process will start. To monitor its progress, select the **Notifications** icon **(1)** and verify that the **Migration of redhat** status shows as **Running** **(2)**.
-
-    ![](Images/15-7-25-l7-l22.png)
-
-1. To monitor migration progress, expand **Migration (1)** and select **Jobs** **(2)**. Locate the **Planned failover** job for **redhat** and verify that its status shows as **In progress (3)**.
-
-    ![](Images/e2lab3.png)
-
-1. Under the **Migration** section, select **Jobs** **(1)**. **Wait** until the **Planned failover** jobs show a **Status** of **Successful (2)**. You should not need to refresh your browser. This could take up to **20 - 25 minutes**.
-
-    ![](Images/15-7-25-l7-l24.png)
+    ![](Images/infra-l3-5.png)
    
-1. In the **SmartHotelRG** resource group, verify that the **Virtual machine**, **Disk**, and **Network Interface** for **redhat** have been successfully created.
+1. On the **SmartHotelHostRG** resource group, verify that the VM, network interface, and disk resources have been created for each migrated virtual machine.
 
-    ![](Images/infra-l8-5.png)
+   ![](Images/H2E3T4S5.png)
 
 ## Summary 
 
