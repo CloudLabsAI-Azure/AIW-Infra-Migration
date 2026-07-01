@@ -69,7 +69,7 @@ In this task, you will configure Azure Site Recovery (ASR) to replicate an on-pr
 
    ![](Images/H3E2T1S11.png)
 
-1. The replication process may take **15–20 minutes** to complete.
+1. The replication process may take **15-20 minutes** to complete.
 
    > **Note:** Refresh the page periodically by selecting **Refresh (1)** until the **AzureArcVM** replication **Status** changes to **Protected (2)**.
 

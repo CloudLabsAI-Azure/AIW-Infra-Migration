@@ -16,13 +16,13 @@ In this exercise, you will complete the following task:
 
 In this task, you will perform a failover of the replicated VM from on-premises to Azure. This action brings the VM online in Azure and confirms disaster recovery readiness by committing the failover.
 
-1. In the **search resources, services and docs bar**, type **Recovery services vaults (1)**. From the dropdown results under **Services**, click on **Recovery Services vaults (2)**.
+1. In the Azure portal, search for **Recovery Services vaults (1)** using the search bar. From the search results, select **Recovery Services vaults (2)** to open the service.
    
-    ![](Images/15-7-25-l10-1.png)
+    ![](Images/H3E2T1S1.png)
     
-1. On the **Recovery service vaults** page, click on **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-MigrateVault-xxxx**.  
-
-    ![](Images/infra-l11-1.png "create Recovery service vaults")
+1. On the **Recovery Services vaults** page, select the **SmartHotelMigration<inject key="DeploymentID" />-MigrateVault (1)** Recovery Services vault.
+   
+    ![Screenshot of the Create Recovery service vaults.](Images/H3E2T1S2.png "create Recovery service vaults")
     
 1. On the **Recovery Service Vault page**, click on **Replicated Items (1)** under **Protected Items** section and select **AzureArcVM (2)**.     
 
