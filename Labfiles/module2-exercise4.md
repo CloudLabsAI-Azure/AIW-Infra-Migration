@@ -17,41 +17,35 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will be enabling the AAD authentication using a VM extension and enabling Managed Identity. 
 
-1. In the Azure portal `https://portal.azure.com`, navigate to your newly migrated **Red Hat** VM and select it.
+1. Navigate to the resource group, on the **Resource group** page, select the **SmartHotelHostRG** resource group. Select **redhat** virtual machine from the list. 
+
+    ![](Images/infra-l3-5.png)
+
+    ![](Images/H2E4T1S2.png)
     
-    ![](Images/infra-l9-1.png)
-    
-1. On the **redhat** virtual machine blade, expand **Security (1)** from the left-hand menu and select **Identity (2)**.
+1. Under **Security**, select **Identity (1)**. On the **System assigned** tab, set the **Status** to **On (2)**, and then select **Save (3)** to enable the system-assigned managed identity. When prompted with the Enable system-assigned managed identity pop-up, click on **Yes**.
 
-   ![](Images/15-7-25-l8-1.png)
+   ![](Images/H2E4T1S3.png)
 
-1. In Identity, under the **System assigned** tab, turn the **Status** to **On (1)** and select **Save (2)**.
- 
-     > **Note**: If prompted with the Enable system-assigned managed identity pop-up, click on Yes.
+   ![](Images/H2E4T1S3-1.png) 
 
-     ![](Images/15-7-25-l8-2.png)
-
-     ![](Images/15-7-25-l8-3.png)
-
-      > **Note:** It may take a few moments to complete the process, as background operations like creating service principals are performed automatically.
-
-      ![](Images/15-7-25-l8-4.png)
+    > **Note:** It may take a few moments to complete the process, as background operations like creating service principals are performed automatically.
       
-1. On the **redhat** virtual machine blade, expand **Settings** and select **Extensions + applications (1)** from the left-hand menu. On the **Extensions** tab, click **+ Add (2)** to install an extension that allows you to connect using your Entra ID account.
+1. Under **Settings**, select **Extensions + applications (1)**. On the **Extensions** tab, select **+ Add (2)** to add a new virtual machine extension.
    
-   ![](Images/m2e4.png)
+   ![](Images/H2E4T1S4.png)
 
-1. On the **Install an Extension** page, search for **Azure AD based SSH Login (1)** and select it. Click **Next (2)** to proceed with the extension installation.
+1. On the **Install an Extension** page, select the **Azure AD based SSH Login (1)** extension, and then select **Next (2)** to continue.
 
-    ![](Images/15-7-25-l8-l1.png)
+    ![](Images/H2E4T1S5.png)
 
 1. On the **Configure Azure AD based SSH Login Extension** page, click on **Review + create**.
 
-    ![](Images/15-7-25-l8-7.png)
+    ![](Images/H2E4T1S6.png)
 
 1. On the **Review + create** tab, click **Create** to start installing the extension into your Redhat VM.
 
-    ![](Images/infra-new-2.png)
+    ![](Images/H2E4T1S7.png)
 
 <!--
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -68,33 +62,34 @@ In this task, you will enable Automanage on existing machines.
 
 1. In the **Azure portal**, type **Automanage (1)** in the search bar and select **Automanage (2)** from the search results.
 
-    ![](Images/15-7-25-l4-l16.png)
+    ![](Images/H2E4T2S1.png)
 
 1. Select **Automanage machines (1)** under **Machine best practices** and click on **+ Enable on existing machine (2)**.
    
-   ![](Images/15-7-25-l8-10.png)
+   ![](Images/H2E4T2S2.png)
 
 1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure Best Practices - Production (1)** and click **Next : Machines (2)**.
    
-   ![](Images/infra-l9-2-new.png)
+   ![](Images/H2E4T2S3.png)
    
-   > **Note:** Click View best practice profiles to see the differences between the environments.
+    > **Note:** Click View best practice profiles to see the differences between the environments.
     
-   ![](Images/upd-browse-production-profile.png)
+    ![](Images/H2E4T2S3-1.png)
 
-1. On the **Enable Automanage** page, select the following details.
+    ![](Images/H2E4T2S3-2.png)
 
-     - Filter the list by your Subscription and Resource group and click on **Check eligibility on machines (1)**.
+1. On the **Enable Automanage** page, select **Check eligibility on machines (1)**. After confirming that the **redhat** virtual machine is eligible, select the **redhat (2)** virtual machine, and then select **Review + Create (3)**.
    
-     - **Check the checkbox of the Red Hat virtual machine (2)**
-   
-     - Click on the **Review + Create (3)** button.
-   
-        ![](Images/15-7-25-l8-12.png)
+    ![](Images/H2E4T2S4.png)
 
-1. On the **Review + Create** tab, verify the selected configuration and click **Create** to enable Automanage. Once the Configuration profile assignment is completed successfully, it will take around **5-10 minutes** to get the Status as Conformant.
+1. On the **Review + Create** tab, verify the selected configuration and click **Create** to enable Automanage. 
 
-    ![](Images/15-7-25-l8-13.png)
+    ![](Images/H2E4T2S5.png)
+
+1. After the configuration profile assignment completes successfully, it may take 5-10 minutes for the Status to change to **Conformant**. Refresh the page periodically to view the latest status.
+
+    ![](Images/H2E4T2S6.png)
+
 
 ## Summary
 
