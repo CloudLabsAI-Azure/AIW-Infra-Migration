@@ -66,13 +66,13 @@ In this task, you will register your Hyper-V host (LabVM) with the Migration and
 
     > **Note:** If you do not see the **Discover** option under **Migrations**, perform the following steps.
 
-    1. On the **Migrations** page, click on **click here** in the notification banner to switch to the classic experience.
+1. On the **Migrations** page, click on **click here** in the notification banner to switch to the classic experience.
 
-        ![](Images/IM1.png)
+    ![](Images/IM1.png)
 
-    1. On the **Azure Migrate: Server Migration** page, click on **Discover** from the top menu to begin the server discovery process.
+1. On the **Azure Migrate: Server Migration** page, click on **Discover** from the top menu to begin the server discovery process.
 
-        ![](Images/IM2.png)
+    ![](Images/IM2.png)
 
 5. On the **Discover** pane, provide the following configuration:
 
