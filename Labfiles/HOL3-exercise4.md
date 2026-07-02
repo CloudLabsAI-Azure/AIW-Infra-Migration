@@ -24,55 +24,55 @@ In this task, you will perform a failover of the replicated VM from on-premises 
    
     ![Screenshot of the Create Recovery service vaults.](Images/H3E2T1S2.png "create Recovery service vaults")
     
-1. On the **Recovery Service Vault page**, click on **Replicated Items (1)** under **Protected Items** section and select **AzureArcVM (2)**.     
+1. On the **Recovery Service Vault page**, expand **Protected items (1)**, click on **Replicated Items (2)** and select **AzureArcVM (3)**.     
 
-    ![Screenshot of the replicate items.](Images/15-7-25-l11-1.png) 
+    ![Screenshot of the replicate items.](Images/H3E4T1S3.png) 
     
 1. On the **AzureArcVM** page, click on **Cleanup test Failover**.   
 
-   ![Screenshot of the cleanup test failover.](Images/5-7-25-h4-1a.png "cleanup test failover") 
+   ![Screenshot of the cleanup test failover.](Images/H3E4T1S4.png "cleanup test failover") 
    
 1. On the **Test failover cleanup** page, enter `Test failover ok.` under **Notes (1)** and make sure to **(2) check the box: Testing is complete. Delete test failover virtual machine(s)** and then click on **OK (3)**.
 
    > **Note:** Wait for the cleanup test failover to get completed successfully.
    
-   ![Screenshot of the cleanup test failover.](Images/5-7-25-h4-2.png "cleanup test failover") 
+   ![Screenshot of the cleanup test failover.](Images/H3E4T1S5.png "cleanup test failover") 
    
 1. On the **AzureArcVM** page, click on **Failover**.
 
-   ![Screenshot of the failover.](Images/5-7-25-h4-3.png "failover") 
+   ![Screenshot of the failover.](Images/H3E4T1S6.png "failover") 
    
 1. On the **Failover** page, review the settings and click on **Ok**.  
 
-   ![Screenshot of the failover page.](Images/5-7-25-h4-4a.png) 
+   ![Screenshot of the failover page.](Images/H3E4T1S7.png) 
    
 1. Go back to the Replicated items page and select **Site Recovery Jobs (1)** under **Monitoring (2)** from the left-hand side panel and click on **Failover (3)** to view the job status.
 
-   ![Screenshot of the failover jobs.](Images/5-7-25-h4-5.png "failover jobs") 
+   ![Screenshot of the failover jobs.](Images/H3E4T1S8.png "failover jobs") 
    
 1. On the **Failover** page, wait for **10-15 minutes** for the failover job to complete. The **Status** column should show **Successful** for all key steps.
 
     ![Screenshot of the Failover status.](Images/5-7-25-h4-6.png "Failover status")    
    
-1. After the Failover is completed successfully, go to **Protected items (1)** → **Replicated items (2)** and verify that the status of the replicated **AzureArcVM (3)** shows **Failover completed** with **Active location** as **Microsoft Azure**.
+1. After the Failover is completed successfully, go to **Protected items (1)** **Replicated items (2)** and verify that the status of the replicated **AzureArcVM (3)** shows **Failover completed** with **Active location** as **Microsoft Azure**.
 
-   ![Screenshot of the failover done.](Images/5-7-25-h4-7.png "failover done")  
+   ![Screenshot of the failover done.](Images/H3E4T1S10.png "failover done")  
    
    > **Note:** If you want to switch to a different recovery point to use for the failover, use **Change recovery point**.   
   
-   ![Screenshot of the recovery points.](Images/5-7-25-h4-8.png "recovery points") 
+   ![Screenshot of the recovery points.](Images/H3E4T1S10-1.png "recovery points") 
    
 1. On the **replicated AzureArcVM** page, click on **Commit** to commit the failover (The Commit action deletes all the recovery points available with the service). 
 
-   ![Screenshot of the commit.](Images/5-7-25-h4-9a.png)
+   ![Screenshot of the commit.](Images/H3E4T1S11.png)
    
 1. On the **Commit** page, click on **Ok**.   
 
-   ![Screenshot of the commit page.](Images/5-7-25-h4-10.png "commit page") 
+   ![Screenshot of the commit page.](Images/H3E4T1S12.png "commit page") 
    
 1. After the Failover is **committed successfully**,  In the **Search resources, services, and docs** bar, type **Virtual Machines** **(1)** and select **Virtual machines** from the Services **(2)**.
 
-   ![](Images/15-7-25-l11-4.1.png) 
+   ![](Images/H3E3T1S6.png) 
 
 1. Under the **Virtual Machines** page, select the **AzureArcVM**, which is automatically created from replicated data after a Failover.
 
