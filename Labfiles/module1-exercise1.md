@@ -148,15 +148,12 @@ In this task, you will explore an Azure Migrate project and the default built-in
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/AIM-image11.png "Register with Azure Migrate")
 
-1. **Wait** while the wizard installs the latest Azure Migrate updates. If prompted, log in using the credentials, enter username as **Administrator** and password **<inject key="SmartHotel Admin Password" />**. Once the update completes, if a **New update installed** pop-up appears, click **Refresh** to restart the appliance management app and clik on **Verify** again.
+1. **Wait** while the wizard installs the latest Azure Migrate updates. If prompted, log in using the credentials, enter username as **Administrator** and password **<inject key="SmartHotel Admin Password" />**.
 
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the prompt to restart the management app after installing updates.](Images/15-7-25-l1-16.png "New update installed - Refresh")
+1. The verification process would take a few minutes. Once completed, click **Login (2)** to sign in with your Azure credentials.
 
-1. Under **Check latest updates and register appliance**, wait for the **Appliance auto-update status (1)** to show successful completion. This may take up to **5 minutes**. Once completed, click **Login (2)** to sign in with your Azure credentials.
-
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/15-7-25-l1-17.png)
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/E1T1S21-0407.png)
    
-    
 1. After clicking Login, in the **Continue with Azure Login** dialog, copy the code and click **Copy code & Login** to copy the device code.
     
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/15-7-25-l1-18.png "Azure Migrate login code")
