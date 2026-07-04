@@ -114,14 +114,14 @@ When migrating a workload to Azure, it is important to understand all workload d
 
 1. In the **Azure Migrate** project, under **Explore inventory**, select **All inventory (1)**. Locate the **smarthotelweb1** workload. Under the **Dependencies** column, click **View dependencies (2)**.
 
-    ![](Images/H1E3T1S1.png)
+      ![](Images/H1E3T1S1.png)
 
 
 1. Review the dependency map for the selected workload to understand its communication with other workloads in the environment.
 
     > **Note**: After enabling guest discovery, Azure Migrate may take up to **24 hours** to collect and display workload dependencies. During this time, you may see the message **"Unable to generate the new dependency view. Switch to the old view for previously gathered data."** This is expected behavior. You can ignore this message and continue with the remaining exercises. Once the dependency discovery process completes, the dependency view will be generated automatically.
 
-    ![](Images/H1E3T1S2.png)
+      ![](Images/H1E3T1S2.png)
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

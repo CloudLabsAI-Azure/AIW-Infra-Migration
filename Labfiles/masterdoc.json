@@ -52,12 +52,8 @@
         "Order": 12
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Infra-Migration/main/Labfiles/HOL3-exercise5.md",
-        "Order": 13
-      },
-      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Infra-Migration/main/Labfiles/business-case.md",
-        "Order": 14
+        "Order": 13
       }
     ]
   }

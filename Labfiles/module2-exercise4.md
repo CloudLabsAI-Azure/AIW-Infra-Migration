@@ -19,7 +19,7 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
 1. Navigate to the resource group, on the **Resource group** page, select the **SmartHotelHostRG** resource group. Select **redhat** virtual machine from the list. 
 
-    ![](Images/infra-l3-5.png)
+    ![](H1E4T1S1.png)
 
     ![](Images/H2E4T1S2.png)
     

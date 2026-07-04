@@ -40,7 +40,7 @@ In this task, you will explore an Azure Migrate project and the default built-in
 
 1. On the **Azure Migrate** page, from the left navigation pane, select **All projects (1)**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" /> (2)**.
  
-    ![](./Images/AIM-image8.png)
+    ![](Images/H3E6S3.png)
 
 1. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** page, select the down arrow next to **Start discovery (1)**, then choose **Using appliance (2)**, and select **For Azure (3)**.
 
