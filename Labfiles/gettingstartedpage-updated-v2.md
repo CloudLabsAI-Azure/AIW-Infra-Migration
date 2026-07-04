@@ -152,13 +152,13 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 6. From the **Azure Portal** Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
 
-   ![](Images/Infra-g1.png)
+   ![](RG.png)
 
    >**Note:** If you see pop-up notification to **Restore pages**, please close it.
    
 7. On the **Resource groups** page in the Azure portal, confirm you have all resource groups present as shown below.
 
-   ![](Images/Infra-g3.png)
+   ![](./Images/resourcegroup.png)
 
 ## Support Contact
 

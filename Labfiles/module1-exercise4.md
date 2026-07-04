@@ -20,17 +20,17 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 1. In the Azure portal's navigation pane, select **Resource groups**. From the Resource groups page, select the **SmartHotelHostRG** resource group. Select **smarthotelweb1** VM to create an image.
 
-   ![](Images/infra-l3-5.png)
+   ![](Images/H1E4T1S1.png)
 
-   ![](Images/infra-l4-1.png)
+   ![](Images/H1E4T1S1i.png)
 
 1. On the **smarthotelweb1** VM page, on the upper menu, select **Capture (1) -> Image (2)**.
    
-   ![](Images/15-7-25-l4-1.png)
+   ![](Images/H1E4T1S2.png)
 
 1. On the **Create an image** page, on the **Basics** tab under the **Instance details** section, select: **Yes, share it to a gallery as a VM image version.**
 
-   ![](Images/15-7-25-l4-l1.png)
+   ![](Images/H1E4T1S3.png)
 
 1. In the **Gallery details** section, in the **Target Azure compute gallery**, select **Create new (1)**, enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)**, and then click **OK (3)** to create a new Azure compute gallery.
 
@@ -94,7 +94,7 @@ In this task, you will enable Automanage on existing machines to streamline mana
 
 1. In the **Automanage** page, select **Automanage machines (1)** from the left menu under **Machine best practices** section and click **+ Enable on existing machine (2)**.
 
-    ![](Images/15-7-25-l4-l11.png)
+    ![](Images/H1E4T2S2.png)
 
 1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure best practices: Production (1)** and click **Next : Machines (2)**.
    
@@ -102,7 +102,7 @@ In this task, you will enable Automanage on existing machines to streamline mana
    
      > Click **View best practice profiles** to see the differences between the environments.
     
-      ![](Images/upd-browse-production-profile.png)
+      ![](Images/H1E4T2S3N.png)
 
 1. On the **Enable Automanage** page, select the following details.
 
@@ -116,7 +116,11 @@ In this task, you will enable Automanage on existing machines to streamline mana
 
 1. On the **Review + Create** tab, verify the selected configuration and click **Create** to enable Automanage.
 
-   ![](Images/15-7-25-l4-l15.png)
+   ![](Images/H1E4T2S5.png)
+
+1. Once after the automage is enabled, on the overview page you should the newly created automanage service is listed.
+
+    ![](Images/H1E4T2S6.png)
 
 ## Summary 
 
