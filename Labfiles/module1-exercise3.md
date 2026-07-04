@@ -164,7 +164,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
     ![](Images/H1E3T2S9.png)
 
-1. In the Azure Migrate project, under **Execute**, select **Migrations (1)**. On the **Migrations** page, verify that the selected workloads are listed with the **Execution stage** as **Testing** This will take 15-20 minutes.
+1. In the Azure Migrate project, under **Execute**, select **Migrations (1)**. On the **Migrations** page, verify that the selected workloads are listed with the **Execution stage** as **Testing**. This will take 15-20 minutes to list the servers.
 
     ![](Images/H1E3T2S10.png)
     
