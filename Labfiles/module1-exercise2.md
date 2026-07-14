@@ -130,9 +130,9 @@ When migrating a workload to Azure, it is important to understand all workload d
 
      <validation step="d14e0cfe-d2dd-42a0-b16d-08a9dec2913c" />
 
-## Summary 
+## Summary
 
-In this exercise, you created and configured a migration assessment in Azure Migrate and its dependency visualization feature by creating a Log Analytics workspace and deploying the Azure Monitoring Agent and Dependency Agent on both Windows and Linux on-premises machines.
+In this exercise, you created an Azure Migrate assessment for the SmartHotel application to evaluate Azure readiness and migration recommendations. You also generated workload communication between application servers and reviewed the dependency analysis to understand workload relationships and validate the migration plan.
 
 Click on **Next** from the lower right corner to move on to the next page.
 
