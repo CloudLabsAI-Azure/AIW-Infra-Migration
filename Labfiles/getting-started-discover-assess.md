@@ -2,7 +2,15 @@
 
 ### Estimated Duration: 4 Hours
 
-## Overview
+## 📘Workshop Scenario
+
+**SmartHotel** is a leading global hospitality company operating hotels, resorts, and conference centers across multiple regions. Its on-premises datacenter hosts critical business applications, including hotel reservation systems, property management services, SQL Server databases, Linux-based web applications, and supporting infrastructure.
+
+As part of its cloud transformation strategy, SmartHotel plans to migrate its infrastructure to Microsoft Azure to improve scalability, enhance operational resilience, strengthen security, and reduce infrastructure management costs. Before migrating, the IT team must discover existing servers, analyze application dependencies, assess Azure readiness, and plan migrations with minimal disruption to business operations.
+
+In this lab, you will use **Azure Migrate** to discover on-premises Windows Servers, create migration assessments, configure dependency visualization, and assess the **WideWorldImporters** SQL Server database using **Azure Data Studio** to evaluate its readiness for migration to Azure.
+
+## 📋Overview
 
 Azure Migrate is Microsoft's centralized platform designed to assist organizations in planning, assessing, and executing their migration journey to Azure. It provides a suite of tools and features to simplify the process of moving on-premises workloads, applications, databases, and virtual machines to the Azure cloud.
 
@@ -10,7 +18,7 @@ Azure Data Studio helps you upgrade to a modern data platform by detecting compa
 
 In this Hands-On Lab, you will use Azure Migrate: Server Assessment to evaluate the on-premises environment. This process includes selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using Azure Migrate dependency visualization. 
  
-## Objectives
+## 🎯Objectives
 
 - **Discover your Windows Server:** Leverage the Azure Migrate Appliance to comprehensively discover and assess your Windows Server environment with Hyper-V, enabling detailed analysis and readiness evaluation for a seamless migration to Azure.
 
@@ -18,7 +26,7 @@ In this Hands-On Lab, you will use Azure Migrate: Server Assessment to evaluate 
 
 - **Perform database assessments:** Use the Azure SQL Migration extension in Azure Data Studio to assess the on-premises database named WideWorldImporters for Azure readiness. Evaluate performance metrics, compatibility issues, and dependencies to create a comprehensive migration strategy that ensures a smooth transition to the Azure platform.
 
-## Pre-requisites
+## ⚙️Pre-requisites
 
 Participants should have:
 - An active Microsoft Azure subscription to deploy and manage Azure resources.
@@ -27,7 +35,7 @@ Participants should have:
 - Basic knowledge of database management, SQL Server architecture, and backup processes.
 - Understanding of assessment and migration workflows for servers and databases to Azure environments.
 
-## Architecture
+## 🏗️Architecture
 
 The lab architecture involves integrating on-premises infrastructure with Azure to enable the discovery and assessment of Windows Servers and SQL Server databases. The Azure Migrate Appliance, deployed on-premises, acts as the key component for discovering and collecting metadata about servers and databases. This data is securely transmitted to an Azure Migrate project, which facilitates assessments to evaluate migration readiness. The architecture also includes Azure Data Studio for database assessments, leveraging its SQL Server Migration extension to analyze database compatibility with Azure SQL solutions. Azure resources, such as resource groups and Azure SQL databases, are set up to act as the target environment, ensuring a seamless workflow from discovery to assessment while maintaining data integrity and security.
 
@@ -35,7 +43,7 @@ The lab architecture involves integrating on-premises infrastructure with Azure 
 
 ![](./Images/architecture.png)
 
-## Explanation of Components
+## 🔍Explanation of Components
 
 - **Azure Migrate Appliance:** A virtual appliance deployed in the on-premises environment. It connects to on-premises servers, collects metadata (such as server configurations, performance metrics, and database details), and securely sends this data to Azure for analysis.
 
@@ -49,7 +57,7 @@ The lab architecture involves integrating on-premises infrastructure with Azure 
 
 - **SQL Server Migration Extension (in Azure Data Studio):** An extension in Azure Data Studio specifically designed for assessing SQL Server instances. It generates compatibility reports, identifies potential migration blockers, and facilitates schema and data migration to Azure SQL.
 
-## Getting started with the lab
+## 🚀Getting started with the lab
 
  We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
@@ -86,8 +94,14 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
 ![Manage Your Virtual Machine](./Images/new/zoom.png)
+
+## Resize the Virtual Machine View
+
+Use the **slider (three vertical dots)** located between the **Virtual Machine** and the **Lab Guide** panes to adjust the display size, allowing you to customize the layout based on your preference.
+
+![](./Images/slider.png)
    
-## Login to Azure Portal
+## Let's Get Started with Azure Portal
  
 1. On your **LabVM**, click on the **Azure Portal** icon as shown below:
  
