@@ -12,7 +12,7 @@ In this lab, you will assume the role of a Cloud Administrator responsible for m
 
 After migration, you will configure Microsoft Entra ID authentication, onboard servers to Azure Arc for hybrid management, enable Azure Automanage, validate disaster recovery through Azure Site Recovery, and generate Business Case reports to evaluate migration readiness, projected costs, and potential savings.
 
-## 📋 Overview
+## 📋Overview
 
 In this hands-on lab, you will use the Azure Migrate appliance to perform agentless discovery, software inventory, and dependency analysis of on-premises servers. Based on the collected inventory and dependency information, you will assess workloads for Azure readiness, replicate and migrate Windows, SQL Server, Linux, and open-source database workloads using Azure Migrate and Azure Site Recovery.
 
@@ -41,12 +41,12 @@ After migration, you will configure Microsoft Entra ID authentication, onboard s
 * **Unified Azure Management:** Manage migrated resources through Azure's centralized management platform, enabling consistent governance, automation, compliance, and lifecycle management across hybrid and cloud environments.
 
 
-## 🎯 Objectives
+## 🎯Objectives
 
 By the end of this lab, you will be able to discover on-premises servers using the Azure Migrate appliance and perform agentless software inventory and dependency analysis to understand your environment. You will assess workloads for Azure readiness and migration planning, replicate and migrate Windows, SQL Server, Linux, and open-source database workloads using Azure Migrate and Azure Site Recovery, and configure Microsoft Entra ID authentication and Azure Automanage. Additionally, you will manage hybrid servers using Azure Arc, configure and validate disaster recovery through Azure Site Recovery, and analyze migration readiness, cost optimization, and potential savings using Azure Migrate Business Case reports.
 
 
-## ⚙️ Pre-requisites
+## ⚙️Pre-requisites
 
 - **Access to Azure Environment:** An active Azure subscription with necessary permissions to deploy and configure resources, including enabling Azure Migrate and Azure Site Recovery (ASR).  
 
@@ -60,7 +60,7 @@ The architecture diagram illustrates a comprehensive infrastructure migration an
 
 The migration workflow continues by replicating and migrating workloads to Azure using **Azure Migrate** and **Azure Site Recovery (ASR)** while minimizing downtime and ensuring business continuity. After migration, users configure **Microsoft Entra ID** authentication, onboard hybrid servers to **Azure Arc**, and enable **Azure Automanage** to simplify ongoing operations and management. Finally, **Azure Site Recovery** is used to validate disaster recovery through test failover and planned failover operations, while **Azure Migrate Business Case** provides migration readiness assessments, cost analysis, and projected savings, enabling organizations to optimize their cloud migration strategy and make informed business decisions.
 
-## 🔍 Explanation of Components
+## 🔍Explanation of Components
 
 1. **On-premises Environment:** Represents SmartHotel's on-premises infrastructure hosting Windows Server, SQL Server, Linux virtual machines, and open-source database workloads that are prepared for migration to Azure.
 
