@@ -17,100 +17,105 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
 1. Navigate to the [Azure portal](https://portal.azure.com) and select **Resource groups** from the Azure services list.
 
-   ![](./media/new/q1.png)
+   ![](./Images/q1.png)
 
 1. Select the **SQLMigrationRG** resource group from the list.
 
-   ![](./media/L3T1S2-2009.png)
+   ![](./Images/L3T1S2-2009.png)
 
 1. In the list of resources for your resource group, select the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** VM.
 
-   ![](./media/L3T1S3-2009.png)
+   ![](./Images/L3T1S3-2009.png)
 
 1. On the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** VM blade in the Azure portal, in the **Overview** page, click on **Connect (1)** dropdown and select **Connect (2)**.
 
-   ![](./media/L3T1S4-2009.png) 
+   ![](./Images/L3T1S4-2009.png) 
 
 1. On the Connect blade, select **Download RDP File** under **Native RDP**, then open the downloaded RDP file.
 
-   ![](./media/L3T1S5-2009.png)
+   ![](./Images/L3T1S5-2009.png)
 
-1. Open the downloaded RDP file, click on **More choices (1) > Use a different account (2)**, and enter the following credentials when prompted, and then select **OK:**
+1. Open the downloaded RDP file, click on **Connect**. Then, select **More choices (1) > Use a different account (2)**, and enter the following credentials when prompted, and then select **OK:**
 
    - **Username:** `.\sqlmiuser` **(3)**
    - **Password:** `Password.1234567890` **(4)**
 
-      ![](./media/enter-creds.png) 
+      ![](./Images/enter-creds.png) 
 
 1. Select **Yes** to connect if prompted that the remote computer's identity cannot be verified.
 
-   ![In the Remote Desktop Connection dialog box, a warning states that the remote computer's identity cannot be verified and asks if you want to continue anyway. At the bottom, the Yes button is circled.](./media/remote-desktop-connection-identity-verification-sqlserver2008.png "Remote Desktop Connection dialog")
+   ![In the Remote Desktop Connection dialog box, a warning states that the remote computer's identity cannot be verified and asks if you want to continue anyway. At the bottom, the Yes button is circled.](./Images/remote-desktop-connection-identity-verification-sqlserver2008.png "Remote Desktop Connection dialog")
 
 1. Open file explorer on your **sql2019-<inject key="DeploymentID" enableCopy="false"/>** virtual machine, naviagate to **C:\ (1)** drive and double click on **IntegrationRuntime (2)** installer.
 
-   ![](./media/integration-runtime.png)
+   ![](./Images/integration-runtime.png)
 
 1. In **Welcome to the Microsoft Integration Runtime Setup Wizard**, click on **Next**.
 
-   ![](media/Ex1-install-s2.png "Windows start menu search")
+   ![](./Images/Ex1-install-s2.png "Windows start menu search")
 
 1. In **End-User License Agreement**, select the checkbox **I accept the terms in the License Agreement**, and click on **Next**.
 
-   ![](media/Ex1-install-s3.png "Windows start menu search")
+   ![](./Images/Ex1-install-s3.png "Windows start menu search")
 
 1. In **Destination Folder**, click on **Next**.
 
-   ![](media/Ex1-install-s4.png "Windows start menu search")
+   ![](./Images/Ex1-install-s4.png "Windows start menu search")
 
 1. In **Ready to install Microsoft Integration Runtime**, click on **Install**.
 
-   ![](media/new/q2.png)
+   ![](./Images/q2.png)
 
 1. Once the deployment is completed, click on **Finish** and minimize the application.
 
-   ![](media/Ex1-install-s6.png "Windows start menu search")
+   ![](./Images/Ex1-install-s6.png "Windows start menu search")
 
 1. In the **Register Integration Runtime (Self-hosted)** pop up, click on **Cancel**.
 
-   ![](media/new/q3.png)
+   ![](./Images/q3.png)
 
 1. In the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** virtual machine, search for **PowerShell (1)** in the search bar, then select **Windows PowerShell (2)** from the search results to open a new PowerShell window.
 
-   ![](media/new/w1.png)
+   ![](./Images/w1.png)
 
-1. Run the command below to create a database named **WideWorldImporters**.
+1. Run the command below to create a database named **WideWorldImporters**. Replace "YOUR SQL VM NAME" with your actual SQL 2019 VM name **sql2019-<inject key="DeploymentID" enableCopy="false"/>**.
 
    ```
    Invoke-Sqlcmd -Query "CREATE DATABASE WideWorldImporters;" -ServerInstance <YOUR SQL VM NAME>
    ```
 
-   ![](media/new/w2.png)
+   ![](./Images/w2.png)
 
-   > **Note:** Replace "YOUR SQL VM NAME" with your actual SQL 2019 VM name **sql2019-<inject key="DeploymentID" enableCopy="false"/>**,
+1. Open **Visual Studio Code** from the desktop.
 
-1. In the Windows search bar, type **Azure Data Studio (1)**, then select **Azure Data Studio (2)** from the search results to open a new PowerShell window.
+   ![](./Images/.png)
 
-   ![](media/new/w3.png)
-   
-1. In the Azure Data Studio select **Extensions (1)** from the Activity Bar, enter **SQL Migration (2)** into the search bar, select **Azure SQL Migration (3)**, and click on **Install (4)**.  
+1. In Visual Studio Code, select **Extensions (1)** from the Activity Bar. Search for **SQL Server (MSSQL) (2)**, published by **Microsoft**, and select **Install (3)**.
 
-   ![](media/Ex1-Task1-S9b.png)
+   ![](./media/vscode-install-mssql.png)
 
-1. In the Azure Data Studio select **Connections (1)** from the Activity Bar, click on **New Connection (2)** dialog, enter **sql2019-<inject key="DeploymentID" enableCopy="false"/>(3)** into the Server name box, ensure **Windows Authentication (4)** is selected, and then select **Connect (5)**.
-  
-   ![The SQL Server Connect to Search dialog is displayed, with SQL2008-entered into the Server name and Windows Authentication selected.](media/Ex1-Task1-S10.png "Connect to Server")
-    
+1. After the extension is installed, select the **SQL Server** icon from the Activity Bar, and then select **Add Connection**.
+
+   ![](./media/vscode-add-connection.png)
+
+1. In the **Connection** dialog, provide the following information:
+
+   - **Profile Name:** `sql2019-<inject key="DeploymentID" enableCopy="false"/>` **(1)**
+   - **Server:** `sql2019-<inject key="DeploymentID" enableCopy="false"/>` **(2)**
+   - **Authentication Type:** **Windows Authentication** **(3)**
+   - Select **Connect (4)**. 
+
+   ![](./media/vscode-connect.png)
+
    > **Note:** If you see **Connection error** pop-up click on **Enable Trust server certificate**.
 
-   ![](media/new/w4.png)
+1. Expand the connected SQL Server instance and verify that the **WideWorldImporters** database is listed under **Databases**.
 
-1. Once connected, under **sql2019-<inject key="DeploymentID" enableCopy="false"/> (1)** connection, expand **Databases (1)** and verify that you see the `WideWorldImporters`**(2)** database listed.
+   ![](./media/vscode-object-explorer.png)
 
-   ![](media/new/w5.png)
+1. Right-click the **WideWorldImporters** database and select **New Query**.
 
-1. Select the **WideWorldImporters (1)**, navigate to **Home (2)**, and select **New Query (3)** from the **Azure Data Studio** toolbar.
-
-   ![](./media/wwi-new-query.png)
+   ![](./media/vscode-new-query.png)
 
 1. Next, copy and paste the SQL script below into the new query window. This script enables the Service Broker and changes the database recovery model to FULL.
 
@@ -125,7 +130,7 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
    GO
    ```
 
-1. To run the script, click on **Run (1)** from the Azure Data Studio toolbar and verify the results from the **Messages (2)** tab.
+1. Select **Run** from the editor toolbar and verify the results from the **Messages (2)** tab.
 
    ![](./media/run-query-messages.png) 
 
