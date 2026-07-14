@@ -179,31 +179,45 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
     > - You can't remove a specific host from a cluster. You can only remove the entire cluster.
     > - You can add a cluster, even if there are issues with specific hosts in the cluster.
 
-1. In **Step 3: Provide server credentials to perform guest discovery of installed software, dependencies and workloads**, **Disable the slider (1)** and scroll down to select **Start discovery (2)** to kick off VM discovery from the successfully validated hosts/clusters.
+1. In **Step 3: Provide server credentials to perform guest discovery of installed software, dependencies, and workloads**, add credentials for both the Windows and Linux virtual machines. Scroll down and click **Add credentials (1)**.
 
-   > **Note:** The discovery process can take up to 10 minutes. 
-   
-   ![](Images/L1T2S18-2009.png)
+    ![](Images/H1E1T1S31.png)
 
-1. Wait for the Azure Migrate status to show **Discovery has been successfully initiated**.
+1. In the **Add credentials** pane, enter the following details:
+    
+    - **Credentials type**: **Windows (Non-domain) (1)**
+    - **Friendly name**: `WindowsVMs` **(2)**
+    - **Username**: `.\Administrator` **(3)**
+    - **Password**: `demo!pass123` **(4)**
+    - Click **Save (5)**.
 
-   > **Note:** The discovery process sometimes may take 15-20 minutes or more. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table.
+        ![](Images/H1E1T1S34.png)
 
-   ![](Images/DAA-image31.png)
+1. Click **Add credentials** again to add the Linux virtual machine credentials.
 
-   >**Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
+    - **Credentials type**: **Linux (Non-domain) (1)**
+    - **Friendly name**: `LinuxVM` **(2)**
+    - **Username**: `demouser` **(3)**
+    - **Password**: `demo!pass123` **(4)**
+    - Click **Save (5)**.
 
-1. Return to the **LabVM**, then navigate to the **Azure Migrate** page in the Azure portal. From the left navigation pane, select **All projects (1)**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" /> (2)**.
+        ![](Images/H1E1T1S35.png)
 
-    ![](Images/new/10.png)
+1. Verify that both the credentials are listed under **Provided credentials**, then select **Start discovery** to begin discovering workloads, installed software, and dependencies.  
 
-1. Scroll down and click on **click here** to view details in the old experience.
+   ![](Images/AIM-image15.png)
 
-    ![](Images/new/9.png)
+1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. 
 
-1. Return to the **JumpVM** then to **Azure Migrate** blade in the Azure portal.  Select **Servers, databases, and web apps (1)**, then select **Refresh (2)**.  Under **Azure Migrate: Servers, databases and web apps**, you should see a **count (3)** of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 7 discovered servers are shown. This may take several minutes.
+    >**Note:** The discovery process sometimes may take 15-20 minutes or more. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table.
+  
+    ![](Images/AIM-image13.png)
 
-    ![](Images/DAA-image31(1).png)
+1. On the **Azure Migrate** project **Overview (1)** page, review the **All inventory** section and verify that the **Workloads** count displays **8 (2)**. If the expected workload count is not displayed, select **Refresh** from the top-right corner of the page and wait for the discovery process to complete. Continue refreshing periodically until all workloads are discovered. This process may take several minutes.
+
+   ![](Images/H1E1T1S33.png) 
+
+    > **Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
 
 ## Summary 
 
