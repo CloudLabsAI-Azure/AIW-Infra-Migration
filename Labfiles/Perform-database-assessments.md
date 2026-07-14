@@ -88,34 +88,32 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
 1. Open **Visual Studio Code** from the desktop.
 
-   ![](./Images/.png)
+   ![](./Images/L3T1S17.png)
 
-1. In Visual Studio Code, select **Extensions (1)** from the Activity Bar. Search for **SQL Server (MSSQL) (2)**, published by **Microsoft**, and select **Install (3)**.
+1. In Visual Studio Code, select **Extensions (1)** from the Activity Bar. Search for **SQL Server (MSSQL) (2)**, published by **Microsoft**, select it **(4)** and then click **Install (3)**.
 
-   ![](./media/vscode-install-mssql.png)
+   ![](./Images/L3T1S18.png)
 
-1. After the extension is installed, select the **SQL Server** icon from the Activity Bar, and then select **Add Connection**.
+1. After the extension is installed, select the **SQL Server (1)** icon from the Activity Bar, and then select **+ Add Connection (2)**.
 
-   ![](./media/vscode-add-connection.png)
+   ![](./Images/L3T1S19.png)
 
 1. In the **Connection** dialog, provide the following information:
 
-   - **Profile Name:** `sql2019-<inject key="DeploymentID" enableCopy="false"/>` **(1)**
-   - **Server:** `sql2019-<inject key="DeploymentID" enableCopy="false"/>` **(2)**
+   - **Profile Name:** sql2019-<inject key="DeploymentID" enableCopy="false"/> **(1)**
+   - **Server:** sql2019-<inject key="DeploymentID" enableCopy="false"/> **(2)**
    - **Authentication Type:** **Windows Authentication** **(3)**
    - Select **Connect (4)**. 
 
-   ![](./media/vscode-connect.png)
+   ![](./Images/L3T1S20.png)
 
    > **Note:** If you see **Connection error** pop-up click on **Enable Trust server certificate**.
 
-1. Expand the connected SQL Server instance and verify that the **WideWorldImporters** database is listed under **Databases**.
+      ![](./Images/L3T1S20-1.png)
 
-   ![](./media/vscode-object-explorer.png)
+1. In **Visual Studio Code**, expand the connected SQL Server instance **(1)**. Under **Databases**, right-click **WideWorldImporters (2)** and select **New Query (3)**.
 
-1. Right-click the **WideWorldImporters** database and select **New Query**.
-
-   ![](./media/vscode-new-query.png)
+   ![](./Images/L3T1S21.png)
 
 1. Next, copy and paste the SQL script below into the new query window. This script enables the Service Broker and changes the database recovery model to FULL.
 
@@ -129,10 +127,9 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
    ENABLE_BROKER WITH ROLLBACK IMMEDIATE;
    GO
    ```
+1. Select **Run (1)** from the editor toolbar and verify the results from the **Messages (2)** tab.
 
-1. Select **Run** from the editor toolbar and verify the results from the **Messages (2)** tab.
-
-   ![](./media/run-query-messages.png) 
+   ![](./Images/L3T1S22.png)
 
 ## Task 2: Perform assessments for migration
 
