@@ -124,13 +124,13 @@ When migrating a workload to Azure, it is important to understand all workload d
 
 <validation step="57f8f164-88e2-4f8b-bac0-8611fd200a88" />
 
-## Summary 
+## Summary
 
-In this lab, you have completed the following:
+In this lab, you completed the following:
 
-- Created a migration assessment.
-
-- Configured dependency visualization for discovered resources.
+- Created an Azure Migrate migration assessment for the discovered workloads.
+- Generated workload communication between servers to support dependency discovery.
+- Reviewed workload dependency analysis to understand application communication before migration.
 
 ### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
 
