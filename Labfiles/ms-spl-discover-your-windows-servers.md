@@ -137,7 +137,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
 1. Once signed in, return to the Azure Migrate Appliance tab the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
-    ![](Images/DAA-image24.png)
+    ![](Images/L1E1T1S25-3012.png)
 
 1. In **Step 1: Provide Hyper-V host credentials for the discovery of Hyper-V VMs** under **2. Manage credentials and discovery sources**, select **Add credentials**.
 
