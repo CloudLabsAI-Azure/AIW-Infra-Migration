@@ -41,7 +41,7 @@ The lab architecture involves integrating on-premises infrastructure with Azure 
 
 ## Architecture Diagram
 
-![](./Images/architecture.png)
+![](./Images/arch.png)
 
 ## 🔍Explanation of Components
 
