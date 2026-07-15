@@ -61,12 +61,14 @@ In this task, you will create a migration assessment for the SmartHotel applicat
 
     ![](Images/H1E2T1S9.png)  
 
+<!-- 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-<validation step="958a0343-c7f0-44a3-9d43-131766538a1f" />
+<validation step="958a0343-c7f0-44a3-9d43-131766538a1f" /> Need to change as the current validation works on group which no longer exists. 
+-->
 
 ### Task 2: Generate workload communication
 
@@ -114,13 +116,6 @@ When migrating a workload to Azure, it is important to understand all workload d
     > **Note**: After enabling guest discovery, Azure Migrate may take up to **24 hours** to collect and display workload dependencies. During this time, you may see the message **"Unable to generate the new dependency view. Switch to the old view for previously gathered data."** This is expected behavior. You can ignore this message and continue with the remaining exercises. Once the dependency discovery process completes, the dependency view will be generated automatically.
 
       ![](Images/H1E3T1S2.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
-
-<validation step="57f8f164-88e2-4f8b-bac0-8611fd200a88" />
 
 ## Summary
 
