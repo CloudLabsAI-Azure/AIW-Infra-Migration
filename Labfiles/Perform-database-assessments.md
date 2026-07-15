@@ -2,18 +2,18 @@
 
 ### Estimated Duration: 60 Minutes
 
-In this lab, you use the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You create two assessments: one for SQL DB and a second for SQL MI. These assessments provide reports about any feature parity and compatibility issues between the on-premises database and the Azure-managed SQL database service options.
+In this lab, you will use **Visual Studio Code** to connect to the SQL Server instance and prepare the **WideWorldImporters** database for assessment. You will then use **Azure Migrate** to create a SQL migration assessment for the discovered SQL Server workload. Finally, you will review the migration recommendations for Azure SQL Managed Instance, Azure SQL Database, and SQL Server on Azure Virtual Machines to determine the most suitable migration strategy.
 
 ## Lab Objectives
 
 In this lab, you will perform the following tasks:
 
 - Task 1: Connect to the WideWorldImporters database on the SQL 2019 VM
-- Task 2: Perform assessments for migration
+- Task 2: Create and review a SQL migration assessment
 
 ## Task 1: Connect to the WideWorldImporters database on the SQL 2019 VM
 
-In this task, you will create `WideWorldImporters` database on the SQL 2019 VM instance, assess it for Azure SQL Database and Azure SQL Managed Instance using the Azure SQL Migration extension inside Azure Data Studio for migration.
+In this task, you will create the **WideWorldImporters** database on the SQL Server 2019 virtual machine and connect to the SQL Server instance using **Visual Studio Code** with the **SQL Server (MSSQL)** extension. You will then prepare the database for migration assessment by enabling the required database settings.
 
 1. Navigate to the [Azure portal](https://portal.azure.com) and select **Resource groups** from the Azure services list.
 
@@ -131,46 +131,77 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![](./Images/L3T1S22.png)
 
-## Task 2: Perform assessments for migration
+## Task 2: Create and review a SQL migration assessment
 
-In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the `WideWorldImporters` database against Azure SQL Database (Azure SQL DB). The assessment provides a report about any feature parity and compatibility issues between the on-premises database and the Azure SQL DB service.
+In this task, you will create a SQL migration assessment for the discovered SQL Server workload using Azure Migrate. After the assessment is created, you will review the migration recommendations for Azure SQL Managed Instance, Azure SQL Database, and SQL Server on Azure Virtual Machines to evaluate migration readiness and identify the most suitable migration target.
 
-1. In Azure Data Studio, select **sql2019-<inject key="DeploymentID" enableCopy="false"/> (1)** tab from the top, click on **Azure SQL migration (2)** and click on **+ New migration (3)**
+1.  On the **Azure Migrate** project **Overview (1)** page, under the **Assessments** section, click **Create assessment (2)**.
 
-   ![](./media/new/w6.png) 
+    ![Screenshot of the Azure Migrate portal blade, with the '+Assess' button highlighted.](Images/H1E2T1S1.png "Start assessment")
 
-1. In **Step 1: Database for assessment**, choose **No (1)** in "Do you want to track the migration process in Azure Portal?" and then select **WideWordImporters (2)** and click **Next (3)** to proceed. 
+1. On the **Basics** tab, enter **Assessment name** as `SQLAssessment` **(1)**. Then select **Add workloads (2)**.
 
-   ![](./media/new/w7.png)  
+    ![](Images/L3T2S2.png)
 
-1. In **Step 2: Assessment summary and SKU recommendations**, review the assessment summary and SKU recommendations and Azure SQL targets and click on **Next**. 
+1. On the **Select workloads** page, select **smarthotelSQL1 (1)**. This automatically selects the associated **MSSQLSERVER** SQL instance. Click **Review selected workloads (2)**.
 
-   ![](./media/step2-review.png) 
+    ![](Images/L3T2S3.png)
 
-1. In **Step 3: Target platform & assessment results**, select **Azure SQL Database** from the dropdown for **Select target type**.
+1. Back on the **Create assessment** page, verify that the selected workload is listed under **Applications and workloads**, and then select **Review + Create assessment (1)**.
 
-   ![](./media/azure-sql-db.png) 
+    ![](Images/L3T2S4.png)
 
-   > The DMA assessment for migrating the `WideWorldImporters` database to a target platform of Azure SQL DB reveals features in use that are not supported. These features, including Service Broker, prevent WWI from migrating to the Azure SQL DB PaaS offering without making changes to their database.
+1. On the **Review + Create assessment** tab, review the assessment configuration and select **Create**.
 
-1. Now select **Azure SQL Managed Instance** from the dropdowm for **Select target type**. Notice that with one PaaS offering ruled out due to feature parity, the assessment against Azure SQL Managed Instance (SQL MI) provides a report about any feature parity and compatibility issues between the on-premises database and the SQL MI service.
+    ![](Images/L3T2S5.png)
 
-   ![](./media/azure-sql-mi.png)
+    > **Note:** It may take a few minutes for the assessment to be generated. If the assessment is not displayed, select **Refresh** until the **SQLAssessment** assessment appears.
 
-1. The database, including the Service Broker feature, can be migrated as is, providing an opportunity for WWI to have a fully managed PaaS database running in Azure. Previously, their only option for migrating a database using features incompatible with Azure SQL Database, such as Service Broker, was to deploy the database to a virtual machine running in Azure (IaaS) or modify the database and associated applications to remove the use of the unsupported features. The introduction of Azure SQL MI, however, provides the ability to migrate databases into a managed Azure SQL database service with _near 100% compatibility_, including the features that prevented them from using Azure SQL Database.
+1. Once the assessment is created, from the left navigation pane, expand **Decide and plan (1)**, select **Assessments (2)**, and then open the **SQLAssessment (3)** assessment.
 
-1. Once you have reviewed the migration possibilities for both Azure SQL Database and Azure SQL Managed Instance, **Cancel** the migration process.
+    ![](Images/L3T2S6.png)
 
-   ![](./media/cancel-migration.png)
+1. On the **Overview** tab, review the assessment summary, including the migration readiness, migration preference, monthly cost estimate, and monthly emissions estimate.
+    ![](Images/L3T2S7.png)
+
+1. Select the **Recommended path (1)** tab. Under **Workload to Azure Service mapping**, select **SQL instances to Azure SQL MI (2)**.
+
+    ![](Images/L3T2S8.png)
+
+1. Review the recommended migration strategy, migration readiness, and estimated monthly cost for the discovered SQL instance.
+
+    ![](Images/L3T2S9.png)
+
+1. Return to the assessment and select the **Azure SQL MI (1)** tab. Under **Workload to Azure Service mapping**, select **SQL instances to Azure SQL MI (2)**.
+
+    ![](Images/L3T2S10.png)
+
+1. Review the migration readiness, migration strategy, and estimated monthly cost for migrating the SQL instance to **Azure SQL Managed Instance**.
+
+    ![](Images/L3T2S11.png)
+
+1. Select the **Instances to SQL Server on Azure VM (1)** tab. Under **Workload to Azure Service mapping**, select **SQL instances to instances on Azure VM (2)**.
+
+    ![](Images/L3T2S12.png)
+
+1. Review the migration readiness, migration strategy, and estimated monthly cost for migrating the SQL instance to **SQL Server on Azure Virtual Machines**.
+
+    ![](Images/L3T2S13.png)
+
+1. Compare the assessment results for each migration target and determine the most appropriate migration strategy based on the readiness, migration strategy, and estimated monthly cost.
 
 ## Summary
 
 In this lab, you have completed the following:
 
-- Connected to the WideWorldImporters database on the SQL Server 2019 VM.
+- Connected to the **WideWorldImporters** database on the SQL Server 2019 virtual machine using Visual Studio Code.
 
-- Performed migration assessments to evaluate readiness for Azure migration.
+- Created a SQL migration assessment using Azure Migrate.
+
+- Reviewed migration recommendations for Azure SQL Managed Instance, Azure SQL Database, and SQL Server on Azure Virtual Machines.
+
+- Compared the available migration targets to determine the most appropriate migration strategy for the discovered SQL workload.
 
 ## You have successfully completed the Hands-on lab.
 
-By completing the **Discover And Assess On-prem Windows & SQL Servers** hands-on lab, you learned how to discover and assess on-premises Windows Servers and SQL databases using Azure Migrate and Azure Data Studio. You configured the Azure Migrate Appliance, created migration assessments, and used dependency visualization to understand server relationships. You also assessed database readiness using the SQL Migration extension and explored security features, such as Defender for SQL and Data Discovery. These steps help you plan and prepare for a smooth migration of servers and databases to Azure.
+By completing the **Discover and Assess On-prem Windows & SQL Servers** hands-on lab, you learned how to discover SQL Server workloads, prepare databases for migration assessment, and evaluate migration readiness using Azure Migrate. You also compared multiple Azure migration targets based on readiness, migration strategy, and cost estimates, helping you plan an effective SQL Server migration to Azure.
