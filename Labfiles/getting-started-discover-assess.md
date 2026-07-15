@@ -6,56 +6,61 @@
 
 **SmartHotel** is a leading global hospitality company operating hotels, resorts, and conference centers across multiple regions. Its on-premises datacenter hosts critical business applications, including hotel reservation systems, property management services, SQL Server databases, Linux-based web applications, and supporting infrastructure.
 
-As part of its cloud transformation strategy, SmartHotel plans to migrate its infrastructure to Microsoft Azure to improve scalability, enhance operational resilience, strengthen security, and reduce infrastructure management costs. Before migrating, the IT team must discover existing servers, analyze application dependencies, assess Azure readiness, and plan migrations with minimal disruption to business operations.
+As part of its cloud transformation strategy, SmartHotel plans to migrate its infrastructure to Microsoft Azure to improve scalability, enhance operational resilience, strengthen security, and reduce infrastructure management costs. Before migrating, the IT team must discover existing servers, analyze application dependencies, assess Azure readiness, and evaluate SQL workloads to determine the most appropriate migration strategy.
 
-In this lab, you will use **Azure Migrate** to discover on-premises Windows Servers, create migration assessments, configure dependency visualization, and assess the **WideWorldImporters** SQL Server database using **Azure Data Studio** to evaluate its readiness for migration to Azure.
+In this lab, you will use **Azure Migrate** to discover on-premises Windows Servers, create server and SQL migration assessments, and configure dependency visualization for migration planning. You will also use **Visual Studio Code** with the **SQL Server (MSSQL)** extension to connect to the SQL Server instance and prepare the **WideWorldImporters** database for assessment. Finally, you will review migration recommendations for **Azure SQL Managed Instance**, **Azure SQL Database**, and **SQL Server on Azure Virtual Machines** to identify the most suitable migration target.
 
 ## 📋Overview
 
-Azure Migrate is Microsoft's centralized platform designed to assist organizations in planning, assessing, and executing their migration journey to Azure. It provides a suite of tools and features to simplify the process of moving on-premises workloads, applications, databases, and virtual machines to the Azure cloud.
+Azure Migrate is Microsoft's centralized platform designed to assist organizations in planning, assessing, and executing their migration journey to Azure. It provides a comprehensive set of tools to discover, assess, and migrate on-premises servers, applications, databases, and virtual machines to Azure with minimal disruption.
 
-Azure Data Studio helps you upgrade to a modern data platform by detecting compatibility issues that can impact database functionality in your new version of SQL Server or Azure SQL Database. Azure Data Studio recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
+Visual Studio Code, together with the **SQL Server (MSSQL)** extension, provides a lightweight and modern development environment for connecting to SQL Server, executing queries, and managing databases. In this lab, it is used to connect to the SQL Server instance and prepare the **WideWorldImporters** database for migration assessment.
 
-In this Hands-On Lab, you will use Azure Migrate: Server Assessment to evaluate the on-premises environment. This process includes selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using Azure Migrate dependency visualization. 
+In this Hands-On Lab, you will use the Azure Migrate appliance to discover on-premises workloads, create server and SQL migration assessments, and configure dependency visualization for migration planning. You will also use Visual Studio Code to connect to the SQL Server instance, prepare the **WideWorldImporters** database, and review migration recommendations for Azure SQL Managed Instance, Azure SQL Database, and SQL Server on Azure Virtual Machines to determine the most suitable migration strategy.
  
 ## 🎯Objectives
 
-- **Discover your Windows Server:** Leverage the Azure Migrate Appliance to comprehensively discover and assess your Windows Server environment with Hyper-V, enabling detailed analysis and readiness evaluation for a seamless migration to Azure.
+- **Discover your Windows Server:** Leverage the Azure Migrate Appliance to discover and assess your Hyper-V-based Windows Server environment, enabling detailed inventory collection and Azure readiness evaluation for a seamless migration.
 
-- **Set up your environment on Azure to migrate servers:** Develop a migration assessment and configure dependency visualization to facilitate seamless system transition and dependency analysis for seamless server migration. This includes preparing the discovered on-premises servers, configuring necessary permissions, deploying tools, and ensuring connectivity between the on-premises infrastructure and Azure.
+- **Set up your environment on Azure to migrate servers:** Create a migration assessment and configure dependency visualization to analyze workload communication and evaluate Azure readiness. This includes preparing the discovered on-premises servers, configuring the required discovery settings, and validating workload dependencies to support migration planning.
 
-- **Perform database assessments:** Use the Azure SQL Migration extension in Azure Data Studio to assess the on-premises database named WideWorldImporters for Azure readiness. Evaluate performance metrics, compatibility issues, and dependencies to create a comprehensive migration strategy that ensures a smooth transition to the Azure platform.
+- **Perform database assessments:** Use **Visual Studio Code** with the **SQL Server (MSSQL)** extension to connect to the **WideWorldImporters** database and prepare it for assessment. Then, use **Azure Migrate** to create a SQL migration assessment, evaluate migration readiness, and review recommendations for **Azure SQL Managed Instance**, **Azure SQL Database**, and **SQL Server on Azure Virtual Machines** to determine the most suitable migration strategy.
 
-## ⚙️Pre-requisites
+## ⚙️ Prerequisites
 
 Participants should have:
+
 - An active Microsoft Azure subscription to deploy and manage Azure resources.
-- Familiarity with Azure services, including Azure Migrate, Azure Data Studio, and Azure SQL solutions.
-- Experience with network configuration and enabling outbound connectivity for tools like Azure Migrate Appliance.
-- Basic knowledge of database management, SQL Server architecture, and backup processes.
-- Understanding of assessment and migration workflows for servers and databases to Azure environments.
+- Familiarity with Azure services, including **Azure Migrate**, **Visual Studio Code**, and **Azure SQL** solutions.
+- Experience with network configuration and enabling outbound connectivity for the Azure Migrate Appliance.
+- Basic knowledge of SQL Server, database management, and SQL query execution.
+- Understanding of server discovery, assessment, and migration planning for on-premises workloads to Azure.
 
-## 🏗️Architecture
+## 🏗️ Architecture
 
-The lab architecture involves integrating on-premises infrastructure with Azure to enable the discovery and assessment of Windows Servers and SQL Server databases. The Azure Migrate Appliance, deployed on-premises, acts as the key component for discovering and collecting metadata about servers and databases. This data is securely transmitted to an Azure Migrate project, which facilitates assessments to evaluate migration readiness. The architecture also includes Azure Data Studio for database assessments, leveraging its SQL Server Migration extension to analyze database compatibility with Azure SQL solutions. Azure resources, such as resource groups and Azure SQL databases, are set up to act as the target environment, ensuring a seamless workflow from discovery to assessment while maintaining data integrity and security.
+The lab architecture integrates an on-premises Hyper-V environment with Azure to discover, assess, and plan the migration of Windows Server and SQL Server workloads. The Azure Migrate Appliance, deployed in the on-premises environment, performs agentless discovery of servers, software inventory, SQL Server instances, and workload dependencies. The collected metadata is securely transmitted to the Azure Migrate project, where server and SQL migration assessments are generated to evaluate migration readiness, estimate costs, and recommend the most suitable Azure migration targets.
+
+Visual Studio Code, together with the **SQL Server (MSSQL)** extension, is used to connect to the on-premises SQL Server instance and prepare the **WideWorldImporters** database for assessment. Azure Migrate then provides migration recommendations for **Azure SQL Managed Instance**, **Azure SQL Database**, and **SQL Server on Azure Virtual Machines**, enabling informed migration planning while maintaining data integrity and application compatibility.
 
 ## Architecture Diagram
 
 ![](./Images/arch.png)
 
-## 🔍Explanation of Components
+## 🔍 Explanation of Components
 
-- **Azure Migrate Appliance:** A virtual appliance deployed in the on-premises environment. It connects to on-premises servers, collects metadata (such as server configurations, performance metrics, and database details), and securely sends this data to Azure for analysis.
+- **Azure Migrate Appliance:** A virtual appliance deployed in the on-premises Hyper-V environment. It performs agentless discovery of servers, software inventory, SQL Server instances, and workload dependencies, then securely sends the collected metadata to Azure Migrate.
 
-- **Azure Migrate Project:** A centralized service in the Azure portal that organizes and manages the discovery, assessment, and migration workflows. It processes data from the Azure Migrate Appliance to generate readiness reports and migration plans.
+- **On-premises Environment:** Hosts the SmartHotel application workloads, including Windows Servers, Linux Servers, and the SQL Server instance containing the **WideWorldImporters** database. These workloads are discovered and assessed for migration readiness.
 
-- **Windows Servers (On-Premises):** These are the source servers where applications and workloads run. They are the primary targets for discovery, assessment, and eventual migration to Azure.
+- **Azure Migrate Project:** A centralized Azure service that manages discovery, assessments, and migration planning. It analyzes the collected metadata to generate migration readiness reports, cost estimates, and Azure migration recommendations.
 
-- **SQL Server Instances (On-Premises):** On-premises SQL databases that store business-critical data. They are analyzed for compatibility, performance, and potential issues before being migrated to Azure SQL solutions.
+- **Server Assessment:** Evaluates the discovered on-premises servers for Azure readiness by analyzing configuration, performance, sizing, and estimated migration costs.
 
-- **Azure Data Studio:** A lightweight, cross-platform database tool used for managing SQL databases. It provides features for assessing database compatibility with Azure SQL solutions and assists in schema and data migration.
+- **SQL Assessment:** Assesses the discovered SQL Server instance and provides migration recommendations for **Azure SQL Managed Instance**, **Azure SQL Database**, and **SQL Server on Azure Virtual Machines** based on readiness and compatibility.
 
-- **SQL Server Migration Extension (in Azure Data Studio):** An extension in Azure Data Studio specifically designed for assessing SQL Server instances. It generates compatibility reports, identifies potential migration blockers, and facilitates schema and data migration to Azure SQL.
+- **Visual Studio Code with SQL Server (MSSQL) Extension:** Used to connect to the SQL Server instance, execute SQL queries, and prepare the **WideWorldImporters** database before performing the SQL migration assessment.
+
+- **Azure SQL Managed Instance / Azure SQL Database / SQL Server on Azure Virtual Machines:** Azure migration targets evaluated by Azure Migrate. The assessment compares these options to help determine the most suitable migration destination based on workload readiness, migration strategy, and estimated costs.
 
 ## 🚀Getting started with the lab
 
@@ -122,10 +127,6 @@ Use the **slider (three vertical dots)** located between the **Virtual Machine**
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
    ![](./Images/stay-signedin-2009.png)
-
-5. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
-6. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
  
 ## Support Contact
  
