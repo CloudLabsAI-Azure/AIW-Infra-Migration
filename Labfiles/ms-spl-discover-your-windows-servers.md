@@ -213,7 +213,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
   
     ![](Images/AIM-image13.png)
 
-1. On the **Azure Migrate** project **Overview (1)** page, review the **All inventory** section and verify that the **Workloads** count displays **7 (2)**. If the expected workload count is not displayed, select **Refresh** from the top-right corner of the page and wait for the discovery process to complete. Continue refreshing periodically until all workloads are discovered. This process may take several minutes.
+1. On the **Azure Migrate** project **Overview (1)** page, review the **All inventory** section and verify that the **Workloads** count displays **8 (2)**. If the expected workload count is not displayed, select **Refresh** from the top-right corner of the page and wait for the discovery process to complete. Continue refreshing periodically until all workloads are discovered. This process may take several minutes.
 
    ![](Images/H1E1T1S33.png) 
 
