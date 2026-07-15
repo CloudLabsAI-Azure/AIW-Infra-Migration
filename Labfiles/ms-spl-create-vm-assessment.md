@@ -34,8 +34,6 @@ In this task, you will create a migration assessment for the SmartHotel applicat
         ![](Images/H1E2T1S3.png)
 
         > **Note**: Do not select **smarthotelSQL1**, **AzureMigrateAppliance**, or any other workloads, as they are not part of this migration scenario.
-
-        > **Note**: Although the **redhat** workload is included in the assessment, it is not used for the environment setup in this exercise. You will review its assessment results, while the environment setup is performed in HOL2.
     
 1. Back on the **Create assessment** page, verify that the selected workloads **(1)** are listed, then click **Review + Create assessment (2)**.
 
