@@ -1,6 +1,6 @@
 ## Lab 01: Migrate Linux Servers from Hyper-V to Azure
 
-## Exercise 1: Discovery and Preparation
+## Exercise 1: Discover and Prepare the Hyper-V Environment
 
 ### Estimated duration: 120 Minutes
 
@@ -9,10 +9,10 @@ In this exercise, you will prepare an on-premises Hyper-V environment for migrat
 ## Objectives
 In this exercise, you will complete the following tasks:
 
-- Task 1: Discovery, Assess, and Plan: Evaluate your current environment
-- Task 2: Register the Hyper-V Host with Migration and modernization
+- Task 1: Discover Hyper-V Workloads
+- Task 2: Register the Hyper-V Host
 
-## Task 1: Discovery, Assess, and Plan: Evaluate your current environment
+## Task 1: Discover Hyper-V Workloads
 
 In this task, you will explore an Azure Migrate project and the default built-in tools for server assessment and server migration. You will also configure the Azure Migrate appliance in the on-premises Hyper-V environment and start the migration assessment discovery process using Azure Migrate.
 
@@ -248,7 +248,7 @@ In this task, you will explore an Azure Migrate project and the default built-in
 
     > **Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
     
-## Task 2: Register the Hyper-V Host with Migration and modernization
+## Task 2: Register the Hyper-V Host
 
 In this task, you will register the Hyper-V host (LabVM) with the Azure Migrate: Server Migration service using Azure Site Recovery for migration.
 
