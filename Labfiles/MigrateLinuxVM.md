@@ -84,7 +84,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
     ![](Images/H2E3T1S11.png)
 
-## Task 4: Configure Networking
+## Task 2: Configure Networking
 
 In this task, you will modify the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine.
 
@@ -110,7 +110,7 @@ In this task, you will modify the settings for each replicated VM to use a stati
 
 > **Note**: Azure Migrate makes a "best guess" at the VM settings, but you have full control over the settings of migrated items. In this case, setting a static private IP address ensures the virtual machine in Azure retains the same IPs they had on-premises, which avoids having to reconfigure the VM during migration (for example, by editing web.config files).
 
-### Task 2: Run a Test Migration
+### Task 3: Run a Test Migration
 
 In this task, you will run a test migration for the virtual machine after delta replication begins and before performing the final migration to Azure. It is highly recommended that you perform a test migration at least once for each machine before migrating it.
 
@@ -138,7 +138,7 @@ In this task, you will run a test migration for the virtual machine after delta 
 
     ![](Images/H2E3T3S6.png)
 
-### Task 3: Server migration
+### Task 4: Server migration
 
 In this task, you will perform a migration of the Red Hat virtual machine to Azure.
 
@@ -156,8 +156,8 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
 
     ![](Images/H2E3T4S3.png)
 
-1. Navigate to the resource group, on the **Resource group** page, select the **SmartHotelHostRG** resource group. and check that the VM, network interface, and disk resources have been created for each of the virtual machines being migrated.
-
+1. Navigate to the resource group, on the **Resource group** page, select the **SmartHotelHostRG** resource group.
+   
     ![](Images/infra-l3-5.png)
    
 1. On the **SmartHotelHostRG** resource group, verify that the VM, network interface, and disk resources have been created for each migrated virtual machine.
@@ -172,17 +172,10 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
 
 <validation step="fca01519-165a-49c3-897e-6f25ea3468a6" />
 
-## Review
+## Summary
 
-In this exercise, you have accomplished the following:
+In this exercise, you enabled replication for an on-premises Hyper-V virtual machine, configured the target compute and networking settings, performed a test migration to validate the migration process, cleaned up the test resources, and completed the migration of the virtual machine to Azure.
 
-- Enabled replication for the Red Hat virtual machine using Azure Migrate and Azure Site Recovery.
-- Configured the target compute and networking settings for the replicated virtual machine.
-- Performed a test migration and validated the migration process.
-- Cleaned up the test migration resources.
-- Successfully migrated the Red Hat virtual machine to Azure.
-- Verified that the migrated virtual machine and its associated Azure resources were successfully created.
-
-**You have successfully completed this Hands-on Lab.**
+## You have successfully completed the Hands-on lab.
 
 By completing this lab, you gained hands-on experience in discovering, assessing, and migrating on-premises Hyper-V virtual machines to Azure using Azure Migrate and Azure Site Recovery. You began by configuring the Azure Migrate appliance, registering it with an Azure Migrate project, and discovering Hyper-V workloads. You then registered the Hyper-V host with Azure Site Recovery, enabled replication for a Red Hat virtual machine, and configured the target compute and networking settings. Next, you performed a test migration to validate the migration process and cleaned up the temporary test resources. Finally, you completed the planned migration of the virtual machine to Azure and verified that the migrated VM, network interface, and managed disks were successfully created in the target resource group.
