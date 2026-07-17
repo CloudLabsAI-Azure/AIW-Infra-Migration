@@ -174,7 +174,7 @@ In this task, you will explore an Azure Migrate project and the default built-in
     
 1. Once signed in, return to the Azure Migrate Appliance tab the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
-   ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/L1E1T1S25-3012.png "Appliance registered")
+    ![](Images/L1E1T1S25-3012.png)
 
     > **Note**: The sign-in process can take between 5 and 10 minutes.
     
