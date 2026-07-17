@@ -12,131 +12,313 @@ In this exercise, you will complete the following tasks:
 - Task 5: Run a Test Migration
 - Task 6: Server migration
 
-### Task 1: Review your on-prem Hyper-V Linux Server and OSS DB
+## Task 1: Discovery, Assess, and Plan: Evaluate your current environment
 
-In this task, you will access the Hyper-V Manager to start and connect to the redhat VM, which contains an OSS Database. You'll log into this Red Hat server, preparing it for migration to Azure using Azure Migrate.
- 
-1. In the VM, open the **Windows search bar**, type Hyper-V Manager, and then select it from the search results. 
+In this task, you will explore an Azure Migrate project and the default built-in tools for server assessment and server migration. You will also configure the Azure Migrate appliance in the on-premises Hyper-V environment and start the migration assessment discovery process using Azure Migrate.
 
-    > You can also open the **Hyper-v manager** by clicking on the icon that is present in the taskbar. 
-
-    ![Screenshot of Hyper-V Manager, with the 'Hyper-V Manager' action highlighted.](Images/hypsrch.png "Hyperv Manager")
-     
-1. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" />**. You should now see the **redhat** VM and 6 other VMs that we are going to use in other HOLs.
-
-    ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/task1-1.png "Hyper-V Manager")
-     
-1. In Hyper-V Manager, select the **redhat (1)**, then select **Start (2)** on the right if not already running.
-
-    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/task1-2.png "Start AzureMigrateAppliance")
-
-1. In Hyper-V Manager, select the **redhat (1)**, then select **Connect (2)** on the right.
-
-    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/task1-3.png "Connect to AzureMigrateAppliance")
-
-1. Log into the VM with the **Administrator password**: **<inject key="SmartHotel Admin Password" />** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
-
-    ![](Images/task1-4.png)
-
-1. You should be able to log in to your on-prem Redhat server hosted on Hyper-V. 
-
-    ![Screenshot of the Azure Migrate appliance terms of use.](Images/redhathome.png "Desktop shortcut")
-
-1. In the next task you will be migrating the Redhat server, and the OSS Database hosted in the Red Hat VM to the Azure with the help of Azure Migrate.
-
-### Task 2: Register the Hyper-V Host with Migration and modernization
-
-In this task, you will register your Hyper-V host(LabVM) with the Migration and Modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
-
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials.
+1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with the below Azure credentials.
     
-    - **Azure Username/Email:** <inject key="AzureAdUserEmail"></inject> 
-    
-    - **Azure Password:** <inject key="AzureAdUserPassword"></inject>
+    - Enter your **Username/Email:** <inject key="AzureAdUserEmail"></inject> in the **Sign in** field. Click **Next** to continue.
+      
+      ![](./Images/AIM-image1.png)
+      
+    - **Enter Password:** <inject key="AzureAdUserPassword"></inject> and click **Sign in**
 
-1. In the search bar, search for **Azure Migrate (1)** and select **Azure Migrate (2)** from the suggestions to open the Azure Migrate Overview blade, as shown below. 
+      ![](./Images/AIM-image2.png)
+
+1. In the **Azure portal**, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
-    ![Screenshot of the Azure migrate overview blade.](Images/azmig.png "Azmigrate Overview blade")
+    ![Screenshot of the All services overview blade.](Images/AIM-image6.png "All services Overview blade")
 
-1. Select **All Projects (1)** from the left panel and select the project listed which is **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** **(2)**.
+1. In the search bar, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the suggestions to open.
+ 
+    ![Screenshot of the Azure migrate overview blade.](Images/AIM-image7.png "Azmigrate Overview blade")
+
+1. On the **Azure Migrate** page, from the left navigation pane, select **All projects (1)**, and then choose **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" /> (2)**.
+ 
+    ![](Images/H3E6S3.png)
+
+1. On the **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />** page, select the down arrow next to **Start discovery (1)**, then choose **Using appliance (2)**, and select **For Azure (3)**.
+
+   ![](./Images/AIM-image9.png)
    
-     ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](Images/projslct.png "Azure Migrate: Server Migration - Discover")
+1. On the **Discover** page, under **Are your servers virtualized?**, click the drop-down **(1)** and select **Yes, with Hyper-V (2)** from the list.
 
-1. In the project, select **Migrations (1)** under Execute from the left panel and then select **Replications summary (2)** under Track migrations.
+    ![](Images/15-7-25-l1-3.png)
 
-    ![](Images/repsum.png)
+1. On the **Discover page**, under **1: Generate project key**, enter the name below as the appliance name **(1)**, then click **Generate key (2)** to start creating the required Azure resources.
 
-1. Go to **Overview (1)** and select **Discover (2)** under Discovered servers.
+     ```
+     SmartHotelAppl
+     ```
+    ![Screenshot of the Azure Migrate 'Discover machines' blade showing the 'Generate Azure Migrate project key' section.](Images/AIM-image10.png "Generate Azure Migrate project key")
 
-    ![](Images/srvrdis.png)
+    >**Note:** The key generation may take a couple of minutes. 
 
-1. In the **Discover** panel, provide the following details:
+1. Once the project key is generated, click the **copy** icon to the right of the **Project key** field and save it in a **Notepad** for future reference.
 
-   - Under **Where do you want to migrate to?**, select **Azure VM (1)**
+    ![Screenshot of the Azure Migrate 'Discover machines' blade showing the Azure Migrate project key.](Images/infra-l1-1.png)
 
-   - Under **Are your machines virtualized**, select **Yes, with Hyper-V (2)**.
+1.  Read through the instructions on how to download, deploy, and configure the Azure Migrate appliance, then close the 'Discover machines' blade by clicking on the cross button **X** (do **not** download the .VHD file or .ZIP file, the .VHD has already been downloaded for you). 
+ 
+    ![Screenshot of the closing the blade.](Images/15-7-25-l1-6.png "Closing the Azure migrate appliance blade")
 
-   - Under **Target region (3)** make sure to select the **<inject key="Region"></inject>** region as same the Resource Group's region.
+1. As we have created the Azure Migrate project key for the Discover and Assessment, you will be accessing the Hyper-V manager in the next tasks to start the discovery process with the help of the Azure Migrate Appliance.
 
-   - Check the **confirmation (4)** checkbox and select **Create resources (5)** to begin the deployment of the Azure Site Recovery resource used by Migration and modernization for Hyper-V migrations.
+1. On the lab VM, click the **Start (1)** button, search for **Hyper-V Manager (2)**, and select  **Hyper-V Manager (3)** from the results. You will use Hyper-V Manager to access your infrastructure and connect to the Azure Migrate Appliance VM to begin discovery.
 
-     ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](Images/cres.png "Discover machines - source hypervisor and target region")
+    > You can also open the Hyper-V Manager by clicking on the ![](Images/Icon-hyperv.png) icon in the taskbar.
 
-   - Once deployment is complete, the **Discover machines** panel should be updated with additional instructions.
+      ![Screenshot of Hyper-V Manager, with the 'Hyper-V Manager' action highlighted.](Images/15-7-25-l1-7.png "Hyper-V Manager")
+
+1. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (1)** from the left pane. You should now see the AzureMigrateAppliance VM along with other VMs **(2)** that make up the on-premises SmartHotel application and will be used in upcoming hands-on labs.
+
+    ![Screenshot of Hyper-V Manager on the SmartHotelHost.](Images/15-7-25-l1-8.png "Hyper-V Manager")
+     
+1. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Start (2)** from the right-hand Actions pane if it is not already running.
+
+    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](Images/infra-l1-11.png "Start AzureMigrateAppliance")
+    
+     > **Note:** If you encounter an error while starting the **AzureMigrateAppliance** VM, try **turning off** the **AzureArcVM**, then start the **AzureMigrateAppliance** VM again.
+
+     > **Note:** Follow these steps and run the commands one-by-one from the code block.
+
+     1. On the **Lab VM**, open **Windows PowerShell** (blue icon) **Run as administrator.**
+
+     2. Copy the code block below.
+
+     3. Paste **one line at a time** into PowerShell and press **Enter** after each line.
+
+     4. After the last line, confirm the VM **State** shows **Running.**
+
+        ```powershell
+        $vm = "AzureMigrateAppliance"
+    
+        Import-Module Hyper-V -ErrorAction SilentlyContinue
+        
+        if (-not (Get-Command Get-VM -ErrorAction SilentlyContinue)) { DISM /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V-Management-PowerShell /All }
+        
+        Import-Module Hyper-V
+        
+        Remove-VMSavedState -VMName $vm -ErrorAction SilentlyContinue
+        
+        Stop-VM -Name $vm -TurnOff -ErrorAction SilentlyContinue
+        
+        Set-VMProcessor -VMName $vm -CompatibilityForMigrationEnabled $true
+        
+        Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 4096MB -MinimumBytes 2048MB -MaximumBytes 8192MB
+        
+        Start-VM -Name $vm -ErrorAction SilentlyContinue
+        
+        if ((Get-VM -Name $vm).State -ne 'Running') { Set-VMMemory -VMName $vm -DynamicMemoryEnabled $true -StartupBytes 2048MB -MinimumBytes 1024MB -MaximumBytes 8192MB; Start-VM -Name $vm }
+        
+        Get-VM -Name $vm | Select Name, State, Status, MemoryAssigned | Format-Table -Auto
+        ```
+1. In Hyper-V Manager, select the **AzureMigrateAppliance (1)** VM, then click **Connect (2)** from the right-hand Actions pane.
+
+    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/15-7-25-l1-9.png "Connect to AzureMigrateAppliance")    
+   
+1. On the **Connect to AzureMigrateAppliance** window, click **Connect**, then log in to the VM using the administrator password: **<inject key="SmartHotel Admin Password" />** (Note: The login screen may use your local keyboard layout, click the 'eyeball' icon to verify your password.)
+ 
+    ![Screenshot of the Connect to AzureMigrateAppliance.](Images/15-7-25-l1-10.png)
+
+    ![Screenshot of the Connect to AzureMigrateAppliance.](Images/15-7-25-l1-11.png)
+
+1. On the desktop of the **AzureMigrateAppliance** VM, double-click the **Azure Migrate Appliance Configuration Manager** shortcut to launch the wizard. Wait a minute or two for the browser to open and display the configuration wizard.
+
+     > **Note:** If a New updates available pop-up appears, click View updates, then close the settings panel. You can proceed without applying the updates for now.
+
+    ![Screenshot of the Azure Migrate appliance terms of use.](Images/15-7-25-l1-12.png)
+    
+    >**Note:** If you receive a prompt asking for credentials after launching the **Azure Migrate appliance configuration wizard** from the desktop shortcut, follow the instructions [here](https://github.com/CloudLabsAI-Azure/Know-Before-You-Go/blob/main/AIW-KBYG/AIW-Infrastructure-Migration.md#1-exercise1---task3---step3) to connect to the appliance configuration wizard.
+
+1. If a **Terms of use** pop-up appears in the appliance configuration wizard, review the license terms and click **I agree** to accept.
+
+    ![Screenshot of the Azure Migrate appliance terms of use.](Images/15-7-25-l1-13.png "Terms of use")
+
+1. On the **Appliance Configuration Manager Cloud: Public** page, under **Set up prerequisites**, the following two checks, **Check connectivity to Azure** and **Check time is in sync with Azure**, should pass automatically.
+
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the first step 'Set up prerequisites' in progress. The internet connectivity and time sync steps have been completed.](Images/15-7-25-l1-14.png)
+
+1. On the **Appliance Configuration Manager Cloud: Public** page, under **1. Set up prerequisites**, expand **Check latest updates and register appliance**. Paste the **Azure Migrate project key (1)** that you copied earlier, then click **Verify (2)** to validate the key.
+
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/AIM-image11.png "Register with Azure Migrate")
+
+1. **Wait** while the wizard installs the latest Azure Migrate updates. If prompted, log in using the credentials, enter username as **Administrator** and password **<inject key="SmartHotel Admin Password" />**.
+
+1. The verification process would take a few minutes. Once completed, click **Login (2)** to sign in with your Azure credentials.
+
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/E1T1S21-0407.png)
+   
+1. After clicking Login, in the **Continue with Azure Login** dialog, copy the code and click **Copy code & Login** to copy the device code.
+    
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/15-7-25-l1-18.png "Azure Migrate login code")
   
-1. Click on the **Download** link for the Hyper-V replication provider software installer to download the Azure Site Recovery provider installer.
+1. This will open an Azure login prompt in a new browser tab. If it doesn’t appear, ensure that your browser’s pop-up blocker is disabled. Paste the device **code (1)** and click **Next (2)**. You will then be prompted to sign in with your Azure portal credentials to complete the login.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](Images/E1T2S6.png "Replication provider download link")
+     ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/15-7-25-l1-19.png "Azure Migrate Microsoft login")
 
-1. Return to the **Discover** page in your browser select the blue **Download** button and download the registration key file.
+1. Log in using the provided Azure credentials. 
+    
+     - Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
+        
+        ![](./Images/AIM-image41.png)
+       
+     - Azure Temporary Access Pass: <inject key="AzureAdUserPassword"></inject>
+   
+        ![](./Images/AIM-image42.png)
+   
+     - On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue** to complete the login. 
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/E1T2S7.png "Download registration key file")
+        ![](./Images/AIM-image43.png)
+    
+1. Once signed in, return to the Azure Migrate Appliance tab the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
-1. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off (1)** and select **Next (2)**. 
+   ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/L1E1T1S25-3012.png "Appliance registered")
 
-    ![](Images/offnxt.png)
+    > **Note**: The sign-in process can take between 5 and 10 minutes.
+    
+1. Once registration is complete, navigate to the **Manage credentials and discovery sources** panel. Under **Step 1: Provide Hyper-V host credentials for discovery of Hyper-V VMs**, click **Add credentials** to proceed.
 
-1. Accept the default installation location and select **Install**.
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](Images/15-7-25-l1-24.png)
 
-    > **Note:** If you are prompted with a pop-up like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
+1. On the **Add credentials** tab, enter the following details for the Hyper-V host/cluster that the appliance will use to discover VMs, and then click **Save (4)** to continue.
+ 
+      - Friendly name: Enter **hostlogin (1)** 
+      - Username: **<inject key="SmartHotelHost Admin Username" /> (2)**
+      - Password: **<inject key="SmartHotelHost Admin Password" /> (3)**
+
+        ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' panel.](Images/15-7-25-l1-25.png "Credentials")
+
+        > **Note**: The Azure Migrate appliance may not have picked up your local keyboard mapping. Select the 'eyeball' in the password box to check that the password was entered correctly.
+
+1. In **Step 2: Provide Hyper-V host/cluster details**, click **Add discovery source** to specify the IP address or FQDN of the Hyper-V host/cluster
+   
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' button.](Images/15-7-25-l1-26.png "Add discovery source")
+
+1. On the **Add discovery source** blade, provide the following details:
+     
+      - Select **Add single item (1)**
+      - IP Address / FQDN:  Enter **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (2)** 
+      - Map credentials: Select **hostlogin (3)** from the dropdown and 
+      - Select **Save (4)**.
+
+        ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](Images/15-7-25-l1-27.png "Discovery source - SmartHotelHost")
+
+         > **Note:** You can either **Add single item** at a time or **Add multiple items** in one go. There is also an option to provide Hyper-V host/cluster details through **Import CSV**.
+
+1. Once the discovery source is added, the appliance will validate the connection to the Hyper-V host/cluster. A **Validation successful** status will be displayed in the table next to the corresponding host or cluster.
+
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the successful validation of the configured discovery source.](Images/15-7-25-l1-28.png "Discovery source - validation successful")
+
+    > **Note:** When adding discovery sources:
+    > - For successfully validated hosts/clusters, you can view more details by selecting their IP address/FQDN.
+    > - If validation fails for a host, review the error by selecting Validation failed in the Status column of the table. Fix the issue and validate again.
+    > - To remove hosts or clusters, select **Delete**.
+    > - You can't remove a specific host from a cluster. You can only remove the entire cluster.
+    > - You can add a cluster, even if there are issues with specific hosts in the cluster.
+
+1. In **Step 3: Provide server credentials to perform guest discovery of installed software, dependencies, and workloads**, add credentials for both the Windows and Linux virtual machines. Scroll down and click **Add credentials (1)**.
+
+    ![](Images/H1E1T1S31.png)
+
+1. Click **Add credentials** again to add the Red Hat virtual machine credentials.
+
+    - **Credentials type**: **Linux (Non-domain) (1)**
+    - **Friendly name**: `RedHatVM` **(2)**
+    - **Username**: `administrator` **(3)**
+    - **Password**: `demo!pass123` **(4)**
+    - Click **Save (5)**.
+
+        ![](Images/H1E1T1S36.png)
+
+1. Verify that both the credentials are listed under **Provided credentials**, then select **Start discovery** to begin discovering workloads, installed software, and dependencies.  
+
+   ![](Images/AIM-image15.png)
+
+1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. 
+
+    >**Note:** The discovery process sometimes may take 15-20 minutes or more. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table.
   
-     ![Screenshot of the ASR provider installer.](Images/inst.png "Azure Site Recovery Provider Setup")
+    ![](Images/AIM-image13.png)
 
-1. When the installation has completed select **Register**. 
+1. On the **Azure Migrate** project **Overview (1)** page, review the **All inventory** section and verify that the **Workloads** count displays **8 (2)**. If the expected workload count is not displayed, select **Refresh** from the top-right corner of the page and wait for the discovery process to complete. Continue refreshing periodically until all workloads are discovered. This process may take several minutes.
 
-    ![](Images/E1T2S10.png)
+   ![](Images/H1E1T1S33.png) 
 
-1. Click on **Browse (1)** and navigate to the location of the key file you downloaded. When the key is loaded, select **Next (2)**.
+    > **Note:** **Wait for the discovery process to complete before proceeding to the next Task**.
+    
+## Task 1: Register the Hyper-V Host with Migration and modernization
 
-     ![Screenshot of the ASR provider registration settings.](Images/brnxt.png "Key file registration")
+In this task, you will register the Hyper-V host (LabVM) with the Azure Migrate: Server Migration service using Azure Site Recovery for migration.
 
-8. Select **Connect directly to Azure Site Recovery without a proxy server (1)** and select **Next (2)**. The registration of the Hyper-V host with Azure Site Recovery will begin.
+1. Select **Migrations (1)** under Execute, then click on **Start migration (2)**.
 
-     ![Screenshot of the ASR provider registration settings.](Images/prxy.png)
+     ![](Images/H1E3T1S1-new.png)
 
-9. Wait for registration to complete (this may take several minutes). Then select **Finish**.
+1. On the Specify intent panel, provide the following details:
 
-     ![Screenshot of the ASR provider showing successful registration.](Images/fin.png "Registration complete")
+    - What do you want to migrate to? : Select Servers or Virtual Machines(VM) (1) from the dropdown.
 
-10. Return to the Azure Migrate browser window. **Refresh** your browser, then re-open the **Discover machines** panel by selecting **Discover**. Select **Azure VM (1)** for **Where do you want to migrate to?** and then select **Yes, with Hyper-V (2)** for **Are your machines virtualized?**
+    - Where do you want to migrate to?: Select Azure VM (2) from the dropdown.
 
-11. Select **Finalize registration** **(3)**, which should now be enabled.
+    - How will you select workload?: Select From all inventory (3) from the dropdown.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/finreg.png "Finalize registration")
+    - Discovery method: Select MigrateAppl(HyperV) (4) from the dropdown.
+    
+    - A notification will appear indicating that No Hyper-V hosts are registered for this project. This is expected, as no Hyper-V host has been configured yet. To begin the registration process, select Click here to set up (5) and proceed with the required configuration steps.
 
-12. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take several minutes.
+        ![](Images/H1E3T1S2-new.png)
 
-     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/upd-discover-6.png "Finalizing registration...")
+1. On the **Discover** pane, keep the default settings. Select the checkbox to confirm that the target region for migration is **<inject key="Region"></inject> (1)**, and then click **Create resources (2)** to deploy the required Azure Site Recovery resources.
 
-13. Once the **Registration finalized (1)** is complete, **Close (2)** the **Discover** panel.
+    ![](Images/H1E3T1S3.png)
 
-     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](Images/regclose.png "Registration finalized")
+     > **Note:** Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
+  
+1. On the **Discover** pane, under **Prepare Hyper-V host servers**, click the **Download** link to download the **Azure Site Recovery Provider** installer.
 
-14. Navigate to **Azure Migrate: Server Migration** blade, under the **Discovered servers** panel should now show 7 discovered servers.
+    ![](Images/H1E3T1S4.png)
 
-    > **Note:** It may take some time for the number of discovered servers to appear. You can proceed with the next task if the number is not yet visible.
+1. Return to the **Discover** page and click the blue **Download** button to download the **registration key file**.
 
-     ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](./Images/E1T2S17.png "Discovered servers")
+    ![](Images/H1E3T1S5.png)
+
+1. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off (1)** and click on **Next (2)**. On the **Installation** screen, accept the default installation location and click **Install (3)** to begin installation.
+
+    ![](Images/L1E3T2S6.png)
+
+    ![](Images/L1E3T2S6-1.png)
+
+    > **Note:** If you are prompted with a pop-up, like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
+
+1. When the installation has completed, on the **Installation** pane, click on **Register (1)**. On the **Vault Settings** page, select **Browse (2)**, navigate to the Downloads folder, choose the key file, and select Open. Once the key file is loaded, select **Next (3)** to continue.
+
+   ![](Images/L1E3T2S7-1.png)
+   
+   ![](Images/L1E3T2S7-2.png)
+
+1. On the **Proxy Settings** pane, select **Connect directly to Azure Site Recovery without a proxy server (1)**, then click **Next (2)** to proceed. This will initiate the registration of the Hyper-V host with Azure Site Recovery.
+
+    ![](Images/L1E3T2S8.png)
+
+1.  On the **Registration** pane, wait for the message **The server was registered in the Azure Site Recovery vault** to appear. Once registration is complete, select **Finish** to close the wizard.
+
+    ![](Images/L1E3T2S9.png)
+
+    >**Note:** The registration may take about 2-3 minutes to complete.
+
+1. Return to the **Discover** browser window. Click **Refresh**, and once the registration status is updated, select **Finalize registration**.
+
+    ![](Images/H1E3T1S10.png)
+
+1. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 10-15 minutes.
+
+    ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/upd-discover-6.png "Finalizing registration...")
+
+1. Once registration is complete, verify that the registration status displays **Registration finalized**. Then, click **Close (1)** to return to the Azure Migrate project.
+
+    ![](Images/H1E3T1S12.png)
 
 ### Task 1: Enable Replication from Hyper-V to Azure Migrate
 
