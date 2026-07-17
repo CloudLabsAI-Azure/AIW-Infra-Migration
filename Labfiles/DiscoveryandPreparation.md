@@ -4,6 +4,8 @@
 
 ### Estimated duration: 120 Minutes
 
+## Overview
+
 In this exercise, you will prepare an on-premises Hyper-V environment for migration by using Azure Migrate. You will configure and register the Azure Migrate appliance, discover Hyper-V workloads, and register the Hyper-V host with Azure Site Recovery to prepare the environment for migration.
 
 ## Objectives
@@ -264,7 +266,7 @@ In this task, you will register the Hyper-V host (LabVM) with the Azure Migrate:
 
     - How will you select workload?: Select From all inventory (3) from the dropdown.
 
-    - Discovery method: Select MigrateAppl(HyperV) (4) from the dropdown.
+    - Discovery method: Select SmartHotelAppl(HyperV) (4) from the dropdown.
     
     - A notification will appear indicating that No Hyper-V hosts are registered for this project. This is expected, as no Hyper-V host has been configured yet. To begin the registration process, select Click here to set up (5) and proceed with the required configuration steps.
 
@@ -322,7 +324,7 @@ In this task, you will register the Hyper-V host (LabVM) with the Azure Migrate:
 
 ## Summary 
 
-In this exercise, you prepared an on-premises Hyper-V environment for migration using Azure Migrate. You configured and registered the Azure Migrate appliance, discovered Hyper-V workloads, and assessed the migration inventory. You then registered the Hyper-V host with Azure Site Recovery, creating the required resources to enable replication and prepare the environment for migrating virtual machines to Azure in the next exercise.
+In this exercise, you prepared an on-premises Hyper-V environment for migration using Azure Migrate. You configured and registered the Azure Migrate appliance, discovered Hyper-V workloads, and registered the Hyper-V host with Azure Site Recovery to prepare the environment for virtual machine migration in the next exercise.
 
 Click on **Next >>** from the lower right corner to move on to the next page.
 
