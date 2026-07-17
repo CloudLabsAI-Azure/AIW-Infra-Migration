@@ -52,7 +52,7 @@ To get a better understanding of your lab resources and credentials, navigate to
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](./Images/30052025(3)new.png)
+![](./Images/split.png)
  
 ## Managing Your Virtual Machine
  
@@ -65,6 +65,12 @@ Feel free to **Start**, **Stop**, or **Restart** your virtual machine as needed 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
    ![](./Images/30052025(5)new.png)
+
+ ## Resize the Virtual Machine View
+
+Use the **slider (three vertical dots)** located between the **Virtual Machine** and the **Lab Guide** panes to adjust the display size, allowing you to customize the layout based on your preference.
+
+![](./Images/slider.png)
  
 ## Let's Get Started with Azure Portal
  
