@@ -61,12 +61,13 @@ In this task, you will create a migration assessment for the SmartHotel applicat
 
     ![](Images/H1E2T1S9.png)  
 
+<!-- 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-<validation step="d02af13b-6aaf-4dbf-b62a-659da8174d25" />
+<validation step="d02af13b-6aaf-4dbf-b62a-659da8174d25" /> -->
 
 ### Task 2: Generate workload communication
 
