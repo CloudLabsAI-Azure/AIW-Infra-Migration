@@ -8,11 +8,11 @@
           "Order": 1
         }, 
         {
-          "RawFilePath": "https://raw.githubusercontent.com/kaminiw-spektra/AIW-Infra-Migration/refs/heads/guided-labs/Labfiles/DiscoveryandPreparation.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Infra-Migration/refs/heads/guided-labs/Labfiles/DiscoveryandPreparation.md",
           "Order": 2
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/kaminiw-spektra/AIW-Infra-Migration/refs/heads/guided-labs/Labfiles/MigrateLinuxVM.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Infra-Migration/refs/heads/guided-labs/Labfiles/MigrateLinuxVM.md",
           "Order": 3
         }
       ]
